@@ -1,4 +1,8 @@
 ---
+
+import Header from "@components/Header.astro"
+import OurRooms from "@components/OurRooms.astro"
+
 ---
 
 <html lang="es">
@@ -16,7 +20,10 @@
 	</head>
 	<body>
 		<div class="w-full">
+			<Header/>
              <slot/>
+			 <OurRooms></OurRooms>
         </div>
 	</body>
+	<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </html>
