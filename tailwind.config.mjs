@@ -6,7 +6,8 @@ export default {
 			colors:{
 				rojo: '#6A28331',
 				azulOscuro: '#424B59',
-				fondo: '#FFF5E4'
+				fondo: '#FFF5E4',
+				gold:"#ddb97f"
 			},
 
 			fontFamily: {
