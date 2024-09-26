@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import logob from "../assets/LogoBHorizontal.png"
+---
+
+<main>
+
+
+<nav class="bg-transparent dark:bg-gray-900 fixed w-full z-20 top-0 start-0 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <Image src={logob} alt="logo1" class="w-[271px] h-[75px] left-[52px] top-[17px] absolute" />
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button class="w-[188px] h-[63px] p-2.5 left-[1182px] top-[25px] absolute bg-[#6a2831] rounded-[30px] justify-center items-center gap-2.5 inline-flex">
+            <a href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=EN" class="text-white text-base font-semibold font-['Montserrat']">Book Now</a>
+        </button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+            <button class="w-[83px] h-[41px] left-[708px] top-[40px] absolute text-center text-white text-base font-semibold font-['Montserrat']"><a href="/">Home</a> </button>
+        </li>
+        <li>
+            <button class="w-[77px] h-[41px] left-[938px] top-[40px] absolute text-center text-white text-base font-semibold font-['Montserrat']">About</button>
+        </li>
+        <li>
+            <button class="w-[89px] h-[41px] left-[816px] top-[40px] absolute text-center text-white text-base font-semibold font-['Montserrat']">Rooms</button>
+        </li>
+        <li>
+            <button class="w-[113px] h-[41px] left-[1046px] top-[40px] absolute text-center text-white text-base font-semibold font-['Montserrat']">Contacts</button>
+        </li>
+        <li>
+            <button class="w-[188px] h-[63px] p-2.5 left-[1182px] top-[25px] absolute bg-[#6a2831] rounded-[30px] justify-center items-center gap-2.5 inline-flex">
+                <a href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=EN" class="text-white text-base font-semibold font-['Montserrat']">Book Now</a>
+            </button>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  
+
+
+
+
+
+
+
+
+    <!-- <div class="w-[1440px] h-[120px] absolute bg-transparent">
+        <div class="w-[1440px] h-[120px] left-0 top-0 absolute"></div>
+        <a href="/">
+            <Image src={logob} alt="logo1" class="w-[271px] h-[75px] left-[52px] top-[17px] absolute" />
+        </a>
+       
+        
+        <button class="w-[89px] h-[41px] left-[816px] top-[40px] absolute text-center text-white text-base font-semibold font-['Montserrat']">Rooms</button>
+        
+
+    </div> -->
+</main>
