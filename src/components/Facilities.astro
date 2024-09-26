@@ -1,0 +1,87 @@
+---
+import Image from "astro/components/Image.astro";
+import car from "../assets/car.png";
+import bar from "../assets/bar.png"
+import pool from "../assets/pool.png"
+import wifi from "../assets/wifi.png"
+import room1 from "../assets/room1.jpg"
+import bathroom from "../assets/bathroom.jpg"
+---
+
+<section class="bg-fondo">
+  <div>
+    <div class="text-center">
+      <h2 class="font-Lobster text-8xl">Main Facilities</h2>
+      <p class="text-gold font-Montserrat text-3xl">Downtown Hotel</p>
+    </div>
+    <div class="flex flex-row p-6 space-x-8">
+      <div>
+        <Image src={car} alt="parking" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">Private Parking</p>
+        <p class="font-Montserrat">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus at tempora fuga? Repellat corporis tempora, voluptate
+          eveniet omnis recusandae facere, asperiores unde quo repudiandae
+          excepturi placeat consectetur. Ratione, nihil similique?
+        </p>
+      </div>
+      <div>
+        <Image src={wifi} alt="parking" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">WiFi</p>
+        <p class="font-Montserrat">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus at tempora fuga? Repellat corporis tempora, voluptate
+          eveniet omnis recusandae facere, asperiores unde quo repudiandae
+          excepturi placeat consectetur. Ratione, nihil similique?
+        </p>
+      </div>
+      <div>
+        <Image src={bar} alt="parking" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">Bar & Restaurant</p>
+        <p class="font-Montserrat">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus at tempora fuga? Repellat corporis tempora, voluptate
+          eveniet omnis recusandae facere, asperiores unde quo repudiandae
+          excepturi placeat consectetur. Ratione, nihil similique?
+        </p>
+      </div>
+      <div>
+        <Image src={pool} alt="parking" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">Swimming Pool</p>
+        <p class="font-Montserrat">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus at tempora fuga? Repellat corporis tempora, voluptate
+          eveniet omnis recusandae facere, asperiores unde quo repudiandae
+          excepturi placeat consectetur. Ratione, nihil similique?
+        </p>
+      </div>
+    </div>
+   
+    <div class="grid grid-cols-2 items-center">
+        <div class="p-20">
+        <p class="text-xl xl:text-2xl font-semibold text-gold">ABOUT US</p>
+          <p class="text-3xl 2xl:text-5xl font-Montserrat font-semibold">Tailored services and <br/> the experiences of<br/> unique holidays</p>
+          <p class="font-Montserrat xl:text-2xl lg:text-xl pt-4">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+            neque, 
+            
+            accusamus quaerat ipsa, sint mollitia placeat quas corrupti
+            dolores a ipsum commodi magnam recusandae iusto? Quaerat alias quasi
+            atque voluptatum?
+          </p>
+          <p class="font-BadScript text-xl 2xl:text-2xl pt-4">Ricardos Villalobos - General Manager</p>
+        </div>
+      <div>
+        <div class="pl-24 2xl:pl-15 p-4 flex justify-center items-center float-right">
+            <div class="relative">
+                <Image src={room1} alt="room" class="2xl:w-[50rem] 2xl:min-h-[45rem] min-h-[38rem] w-[40rem] rounded-2xl bg-cover"/>
+                
+            </div>
+            <div class="absolute pr-[34rem] pt-6  rounded-lg ">
+                <Image src={bathroom} alt="room" class=" bg-cover shadow-xl min-h-[28rem] min-w-[23rem] 2xl:min-h-[28rem] 2xl:w-[23rem] rounded-2xl border-solid border-8 border-white"/>
+            </div>
+          </div>
+      </div>
+      </div>
+  </div>
+</section>
