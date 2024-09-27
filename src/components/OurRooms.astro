@@ -86,41 +86,47 @@ const rooms = [
     <p class="font-Montserrat text-left pl-9 text-2xl text-gold">LUXURY EXPERIENCE</p>
   </div>
 
-  <div class="swiper">
-    <div class="swiper-wrapper rounde">
-      {
-        rooms.map((room) => (
-          <div class="swiper-slide flex justify-center" key={room.title}>
-            <div class="slider-main relative transition-all duration-500 ease-in-out transform-gpu scale-95 opacity-60 bg-white bg-opacity-40 ">
-              <Image
-                src={room.image}
-                alt={room.title}
-                class="min-w-[32rem] min-h-[32rem] rounded-lg img"
-              />
-              <div class="absolute inset-0 flex flex-col justify-end text-left pl-12 pb-4 bg-white bg-opacity-0 transition-opacity duration-500 ease-in-out">
-                <p class="text-white font-Montserrat text-xl">FROM {room.price}</p>
-                <p class="text-white font-Montserrat text-xl font-semibold">{room.title}</p>
-                <div class="flex text-white space-x-2">
-                  <Image src={person} alt="person" class="w-6 h-6"/>
-                  <p class="font-Montserrat">{room.sleeps} Sleeps</p>
-                  <Image src={bed} alt="bed" class="w-6 h-6"/>
-                  <p class="font-Montserrat">{room.beds}</p>
-                </div>
-                <div>
-                  <button class="text-yellow-400 font-medium underline  text-lg rounded-md font-Montserrat">
-                    See availability ➔
-                  </button>
+  <div class="min-w-[5rem] min-h-[32rem]">
+    <div class="swiper ">
+      <div class="swiper-wrapper">
+        {
+          rooms.map((room) => (
+            <div class="swiper-slide flex justify-center " key={room.title}>
+              <div class="slider-main relative transition-all duration-500 ease-in-out transform-gpu scale-95 opacity-60 bg-white bg-opacity-40 ">
+                <Image
+                  src={room.image}
+                  alt={room.title}
+                  class="min-w-[5rem] min-h-[32rem] sm:min-w-[rem] sm:min-h-[32rem] rounded-lg img"
+                />
+                <div class="absolute inset-0 flex flex-col justify-end text-left pl-12 pb-4 bg-white bg-opacity-0 transition-opacity duration-500 ease-in-out">
+                  <p class="text-white font-Montserrat text-xl">FROM {room.price}</p>
+                  <p class="text-white font-Montserrat text-xl font-semibold">{room.title}</p>
+                  <div class="flex text-white space-x-2">
+                    <Image src={person} alt="person" class="w-6 h-6"/>
+                    <p class="font-Montserrat">{room.sleeps} Sleeps</p>
+                    <Image src={bed} alt="bed" class="w-6 h-6"/>
+                    <p class="font-Montserrat">{room.beds}</p>
+                  </div>
+                  <div>
+                    <button class="text-yellow-400 font-medium underline  text-lg rounded-md font-Montserrat">
+                      See availability ➔
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev rounded-full"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev rounded-full"></div>
-    <div class="swiper-button-next"></div>
   </div>
+  
+
+
+
 </section>
 
 <script>
@@ -134,8 +140,22 @@ const rooms = [
     loop: true,
     centeredSlides: true,
     
-    slidesPerView: 3,
-    spaceBetween: 90,
+     // Responsive configuration
+     breakpoints: {
+      0: {  // Mobile screens (default)
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      768: {  // Tablets
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {  // Desktop
+        slidesPerView: 3,
+        spaceBetween: 90,
+      },
+    },
+    
    
     navigation: {
       prevEl: ".swiper-button-prev",
@@ -151,7 +171,7 @@ const rooms = [
           const imageElement = slide.querySelector('img');
           // Si es la diapositiva activa
           if (index === activeIndex) {
-            slideElement.classList.remove('scale-95', 'opacity-60', 'bg-opacity-40');
+            slideElement.classList.remove('sm:scale-95', 'opacity-60', 'bg-opacity-40');
             slideElement.classList.add( 'opacity-100', 'bg-opacity-0', 'transition-all', 'duration-300', )
             imageElement.classList.add('rounded-lg', 'shadow-lg');
             ;

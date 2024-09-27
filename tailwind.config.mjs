@@ -7,7 +7,8 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage:{
-				'fondo1': "url('../assets/fondo1.png')",
+				'fondo1': "url('./src/assets/fondo1.png')",
+				'fondoMovil':"url('./src/assets/room1.jpg')"
 			},
 			colors:{
 				rojo: '#6A28331',
