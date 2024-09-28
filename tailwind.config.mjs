@@ -7,7 +7,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage:{
-				'fondo1': "url('/src/assets/fondo1.png')",
+				
 				'fondo2':"url('/src/assets/room1.jpg')"
 			},
 			colors:{
