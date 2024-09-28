@@ -8,7 +8,7 @@ export default {
 		extend: {
 			backgroundImage:{
 				'fondo1': "url('/public/fondo1.png')",
-				'fondoMovil':"url('/src/assets/room1.jpg')"
+				'fondo2':"url('/src/assets/room1.jpg')"
 			},
 			colors:{
 				rojo: '#6A28331',
