@@ -86,7 +86,7 @@ const rooms = [
     <p class="font-Montserrat text-left pl-9 text-2xl text-gold">LUXURY EXPERIENCE</p>
   </div>
 
-  <div class="min-w-[5rem] min-h-[32rem]">
+  <div class="min-w-[5rem] min-h-[32rem] sm:min-w-[0rem] sm:min-h-[0rem] ">
     <div class="swiper ">
       <div class="swiper-wrapper">
         {
@@ -96,7 +96,7 @@ const rooms = [
                 <Image
                   src={room.image}
                   alt={room.title}
-                  class="min-w-[5rem] min-h-[32rem] sm:min-w-[rem] sm:min-h-[32rem] rounded-lg img"
+                  class="min-w-[5rem] min-h-[32rem] sm:min-w-[31rem] sm:min-h-[32rem] rounded-lg img"
                 />
                 <div class="absolute inset-0 flex flex-col justify-end text-left pl-12 pb-4 bg-white bg-opacity-0 transition-opacity duration-500 ease-in-out">
                   <p class="text-white font-Montserrat text-xl">FROM {room.price}</p>
@@ -152,7 +152,7 @@ const rooms = [
       },
       1024: {  // Desktop
         slidesPerView: 3,
-        spaceBetween: 90,
+        spaceBetween: 100,
       },
     },
     
