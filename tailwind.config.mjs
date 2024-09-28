@@ -8,7 +8,7 @@ export default {
 		extend: {
 			backgroundImage:{
 				'fondo1': "url('/src/assets/fondo1.png')",
-				'fondo2': "url('/src/assets/fondo1.png')",
+				'fondo2': "url('/src/assets/fondo2.png')",
 				
 			},
 			colors:{
