@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import fondo1 from "../assets/fondo1.png"
+import fondo1 from "../assets/fondo1.webp"
+import fondo2 from "../assets/fondo2cc.png"
 import MouseScroll from  "../assets/mouse-scroll.png"
 
 import Header from "./Header.astro";
@@ -9,12 +10,18 @@ import Header from "./Header.astro";
 
 
 
-<div class="h-screen w-screen bg-cover bg-center  bg-fondo2 bg-black bg-no-repeat bg-fixed sm:bg-fondo1 snap-start">
-    <!-- <Image src={fondo1} alt="Fondo1" class="w-full bg-black fixed  -z-10" /> -->
+<!-- <div class="h-screen w-screen bg-cover bg-center  bg-fondo2 bg-black bg-no-repeat bg-fixed sm:bg-fondo1 snap-start"> -->
+ <div class=" w-screen h-screen">
+    <div class="sm:hidden">
+        <Image src={fondo1} alt="Fondo1" class="w-screen h-screen bg-black absolute -z-10" />
+    </div>
+    <Image src={fondo2} alt="Fondo1" class="w-screen h-screen bg-black absolute bg-cover" />
     
-    <div class="grid content-center place-self-center absolute sm:top-[300px] sm:mx-[320px] top-[16rem] ">
+    <div class="grid content-center place-self-center absolute sm:top-[300px] sm:mx-[320px] top-[16rem] relative">
         <h2 class="   text-center  text-gold sm:text-[32.43px] font-semibold font-Montserrat">🇨🇷 PURA VIDA HOTEL EXPERIENCE  🇨🇷 </h2>
         <p class=" sm:p-0 p-5 text-left text-[45px] sm:text-center text-white sm:text-[70px] font-bold font-Montserrat">A UNIQUE EXPERIENCE <br>WHERE TO SAY</p>
     </div>
+ </div>
  
-</div>
+ 
+<!-- </div> -->
