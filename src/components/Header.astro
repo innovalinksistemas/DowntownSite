@@ -32,13 +32,13 @@ import logob from "../assets/LogoBHorizontal.png"
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0 font-medium">
               <li>
-                <a href="" class="text-white text-base font-semibold">Home</a>
+                <a href="#Home" class="text-white text-base font-semibold">Home</a>
               </li>
               <li>
                 <a href="#About" class="text-white text-base font-semibold">About</a>
               </li>
               <li>
-                <a href="#" class="text-white text-base font-semibold">Rooms</a>
+                <a href="#Rooms" class="text-white text-base font-semibold">Rooms</a>
               </li>
               <li>
                 <a href="#" class="text-white text-base font-semibold">Contacts</a>
@@ -47,25 +47,34 @@ import logob from "../assets/LogoBHorizontal.png"
           </div>
         </div>
       </nav>
-      
-  
-
-
-
-
-
-
-
-
-    <!-- <div class="w-[1440px] h-[120px] absolute bg-transparent">
-        <div class="w-[1440px] h-[120px] left-0 top-0 absolute"></div>
-        <a href="/">
-            <Image src={logob} alt="logo1" class="w-[271px] h-[75px] left-[52px] top-[17px] absolute" />
-        </a>
-       
-        
-        <button class="w-[89px] h-[41px] left-[816px] top-[40px] absolute text-center text-white text-base font-semibold font-['Montserrat']">Rooms</button>
-        
-
-    </div> -->
+    
 </main>
+
+<script>
+  // Seleccionar el enlace "About" y el elemento de destino "About"
+document.querySelector('a[href="#About"]').addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+  document.querySelector('#About').scrollIntoView({
+    behavior: 'smooth', // Desplazamiento suave
+    block: 'start'      // Alinear la sección al inicio de la ventana
+  });
+});
+  // Seleccionar el enlace "About" y el elemento de destino "About"
+  document.querySelector('a[href="#Home"]').addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+  document.querySelector('#Home').scrollIntoView({
+    behavior: 'smooth', // Desplazamiento suave
+    block: 'start'      // Alinear la sección al inicio de la ventana
+  });
+});
+  // Seleccionar el enlace "About" y el elemento de destino "About"
+  document.querySelector('a[href="#Rooms"]').addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+  document.querySelector('#Rooms').scrollIntoView({
+    behavior: 'smooth', // Desplazamiento suave
+    block: 'start'      // Alinear la sección al inicio de la ventana
+  });
+});
+
+
+</script>
