@@ -135,56 +135,60 @@ const rooms = [
   import "swiper/css/navigation";
 
   const swiper = new Swiper(".swiper", {
-    modules: [Navigation],
-    loop: true,
-    centeredSlides: true,
-    
-     // Responsive configuration
-     breakpoints: {
-      0: {  // Mobile screens (default)
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-      768: {  // Tablets
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1024: {  // Desktop
-        slidesPerView: 3,
-        spaceBetween: 100,
-      },
-    },
-    
-   
-    navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
-    },
-    on: {
-      slideChange: function () {
-        const slides = this.slides;
-        const activeIndex = this.activeIndex;  // Obtén el índice de la diapositiva activa
+  modules: [Navigation],
+  loop: true,
+  centeredSlides: true,
 
-        slides.forEach((slide, index) => {
-          const slideElement = slide.querySelector('.slider-main');
-          const imageElement = slide.querySelector('img');
-          // Si es la diapositiva activa
-          if (index === activeIndex) {
-            slideElement.classList.remove('sm:scale-95', 'opacity-60', 'bg-opacity-40');
-            slideElement.classList.add( 'opacity-100', 'bg-opacity-0', 'transition-all', 'duration-300', )
-            imageElement.classList.add('rounded-lg', 'shadow-lg');
-            ;
-          } else {
-            // Si es una diapositiva lateral (no activa)
-            slideElement.classList.remove('scale-95', 'opacity-100', 'bg-opacity-0');
-            slideElement.classList.add( 'scale-95', 'opacity-60', 'bg-opacity-40', 'transition-all', 'duration-300');
-            imageElement.classList.remove('shadow-lg');
-            
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 100,
+    },
+  },
+
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+
+  on: {
+    slideChange: function () {
+      const slides = this.slides;
+      const activeIndex = this.activeIndex;
+
+      slides.forEach((slide, index) => {
+        const slideElement = slide.querySelector('.slider-main');
+        const imageElement = slide.querySelector('img');
+
+        if (index === activeIndex) {
+          slideElement.classList.remove('opacity-60', 'bg-opacity-40');
+          slideElement.classList.add('opacity-100', 'bg-opacity-0', 'transition-all', 'duration-300');
+
+          // Si el tamaño de pantalla es mayor a 768px, aplica el scale
+          if (window.innerWidth >= 768) {
+            slideElement.classList.add('scale-100');
           }
-        });
-      }
+
+          imageElement.classList.add('rounded-lg', 'shadow-lg');
+        } else {
+          slideElement.classList.remove('opacity-100', 'bg-opacity-0', 'scale-100');
+          slideElement.classList.add('opacity-60', 'bg-opacity-40', 'transition-all', 'duration-300');
+
+          imageElement.classList.remove('shadow-lg');
+        }
+      });
     }
-  });
+  }
+});
+
 </script>
 
 
