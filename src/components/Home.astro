@@ -12,10 +12,10 @@ import Header from "./Header.astro";
 
 <!-- <div class="h-screen w-screen bg-cover bg-center  bg-fondo2 bg-black bg-no-repeat bg-fixed sm:bg-fondo1 snap-start"> -->
  <div id="Home" class=" w-screen h-screen">
-    <div class="sm:hidden">
-        <Image src={fondo1} alt="Fondo1" class="w-screen h-screen bg-black absolute -z-10" />
-    </div>
-    <Image src={fondo2} alt="Fondo1" class="w-screen h-screen bg-black absolute bg-cover" />
+    
+        <Image src={fondo1} alt="Fondo1" class="w-screen h-screen bg-black absolute" />
+    
+    <Image src={fondo2} alt="Fondo1" class="w-screen h-screen bg-black absolute bg-cover sm:hidden" />
     
     <div class="grid content-center place-self-center  sm:top-[300px] sm:mx-[320px] top-[16rem] relative">
         <h2 class="   text-center  text-gold sm:text-[32.43px] font-semibold font-Montserrat">🇨🇷 PURA VIDA HOTEL EXPERIENCE  🇨🇷 </h2>
