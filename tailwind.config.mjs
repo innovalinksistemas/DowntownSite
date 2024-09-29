@@ -8,7 +8,7 @@ export default {
 		extend: {
 			backgroundImage:{
 				'fondo1': "url('/src/assets/fondo1.webp')",
-				'fondo2': "url('/src/assets/fondo2.webp')",
+				'fondo2': "url('/src/assets/fondo2c.webp')",
 				
 			},
 			colors:{
