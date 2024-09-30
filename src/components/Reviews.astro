@@ -5,32 +5,35 @@ import tripadvisor from "../assets/tripadvisor.png"
 import expedia from "../assets/expedia.png"
 import booking from "../assets/booking.png"
 import google from "../assets/google.png"
+import googleIcon from "../assets/googleIcon.png"
+import expediaIcon from "../assets/expediaIcon.png"
+import bookingIcon from "../assets/bookingIcon.png"
 const reviews = [
   {
     name:"Tim B",
     title: "Great Stay",
-    commentary: "Great Hotel. Smooth check in and check out. You can park right in front of the hotel and there’s another parking lot nearby. Breakfast is included. There’s a pool and restaurant. Clean rooms. Hotel is centrally located near shops, bars, restaurants, spas, etc. Mayfel and the rest of the staff were great. Gave lots of suggestions about activities in the area. I’d definitely recommend this hotel.",
+    commentary: "Great Hotel. Smooth check in and check out. You can park right in front of the hotel and there’s another parking lot nearby. Breakfast is included. There’s a pool and restaurant. Clean rooms. Hotel is centrally located near shops, bars, restaurants, spas, etc.",
     platform: trip,
     
   },
   {
-    name:"Tim B",
-    title: "Great Stay",
-    commentary: "Great Hotel. Smooth check in and check out. You can park right in front of the hotel and there’s another parking lot nearby. Breakfast is included. There’s a pool and restaurant. Clean rooms. Hotel is centrally located near shops, bars, restaurants, spas, etc. Mayfel and the rest of the staff were great. Gave lots of suggestions about activities in the area. I’d definitely recommend this hotel.",
-    platform: trip,
+    name:"David M",
+    title: "Excelente lugar",
+    commentary: "Un lugar REALMENTE ESPECTACULAR y ubicado en el centro de La Fortuna, su restaurante MARIA BONITA STEAK HOUSE es realmente DELICIOSO.",
+    platform: googleIcon,
     
   },
   {
-    name:"Tim B",
-    title: "Great Stay",
-    commentary: "Great Hotel. Smooth check in and check out. You can park right in front of the hotel and there’s another parking lot nearby. Breakfast is included. There’s a pool and restaurant. Clean rooms. Hotel is centrally located near shops, bars, restaurants, spas, etc. Mayfel and the rest of the staff were great. Gave lots of suggestions about activities in the area. I’d definitely recommend this hotel.",
-    platform: trip,
+    name:"Ian",
+    title: "Volcanic visit",
+    commentary:"Large comfortable room. Great pool area. Really friendly staff. Close to all amenities and restaurants. Great transfers!",
+    platform: bookingIcon,
   },
   {
-    name:"Tim B",
-    title: "Great Stay",
-    commentary: "Great Hotel. Smooth check in and check out. You can park right in front of the hotel and there’s another parking lot nearby. Breakfast is included. There’s a pool and restaurant. Clean rooms. Hotel is centrally located near shops, bars, restaurants, spas, etc. Mayfel and the rest of the staff were great. Gave lots of suggestions about activities in the area. I’d definitely recommend this hotel.",
-    platform: trip,
+    name:"Wahid",
+    title: "Loved my balcony",
+    commentary: "Loved my balcony view of the church and the city square. Room was comfortable, and staff was very helpful and friendly.",
+    platform: expediaIcon,
     
   },
 
@@ -45,9 +48,9 @@ const reviews = [
       background-position: center;
       background-size: 20px;
       background-repeat: no-repeat;
-      padding: 8px 20px;
+      padding: 8px 10px;
       border-radius: 100%;
-  
+      
       color: transparent;
     }
     
@@ -60,9 +63,9 @@ const reviews = [
       background-position: center;
       background-size: 20px;
       background-repeat: no-repeat;
-      padding: 8px 20px;
+      padding: 8px 10px;
       border-radius: 100%;
-  
+    
       color: transparent;
     }
     
@@ -72,40 +75,40 @@ const reviews = [
     }
     </style>
 
-<section id="reviews" class="bg-fondo  text-center py-20  h-full snap-start">
-    <div class="flex flex-row items-stretch space-x-8 justify-center font-Montserrat font-semibold align-baseline text-2xl">
+<section id="reviews" class="bg-fondo  text-center sm:py-20  h-full snap-start">
+    <div class="flex flex-col sm:flex-row pb-5 items-center space-y-4 sm:space-y-0 sm:items-stretch sm:space-x-8 justify-center font-Montserrat font-semibold align-baseline text-xl sm:text-2xl">
         <div>
          <p>8.3/10</p>
          <p class="text-gray-600"><span class="number" data-value="500">0</span> notes</p>
-          <Image src={tripadvisor} alt="tripadvisor" class="w-[20rem]"/>
+          <Image src={tripadvisor} alt="tripadvisor" class="w-[8rem] sm:w-[20rem]"/>
         </div>
         <div>
             <p>8.3/10</p>
           <p class="text-gray-600"><span class="number" data-value="2123">0</span> notes</p>
-          <Image src={google} alt="google" class="w-[15rem]"/>
+          <Image src={google} alt="google" class="w-[8rem] sm:w-[15rem]"/>
         </div>
         <div>
             <p>8.3/10</p>
           <p class="text-gray-600"><span class="number" data-value="1500">0</span> comments</p>
-          <Image src={booking} alt="booking" class="w-[20rem] pt-3"/>
+          <Image src={booking} alt="booking" class="w-[8rem] sm:w-[20rem] pt-3"/>
         </div>
         <div>
             <p>8.3/10</p>
           <p class="text-gray-600"><span class="number" data-value="2123">0</span> notes</p>
-          <Image src={expedia} alt="expedia" class="w-[20rem] "/>
+          <Image src={expedia} alt="expedia" class="w-[8rem] sm:w-[20rem] "/>
         </div>
       </div>
       
 
 <div>
-    <div class=" sm:m-9 ">
-        <div class="swiper rounded-xl">
+    <div class=" m-7 sm:m-0 ">
+        <div class="swiper rounded-2xl">
           <div class="swiper-wrapper ">
             {
               reviews.map((review) => (
-                <div class="swiper-slide flex justify-center " key={review.title}>
+                <div class="swiper-slide flex justify-center align-middle text-center" key={review.title}>
                   <div class="slider-main  font-Montserrat">
-                    <div class="min-w-64 min-h-36 bg-white rounded-xl p-5">
+                    <div class=" sm:min-w-80 sm:min-h-[22rem] bg-white rounded-xl p-12 m-3 sm:m-0">
                         <p class="font-semibold">{review.title}</p>
                         <p>{review.commentary}</p>
                         <div class="flex space-x-3 align-baseline">
@@ -119,9 +122,10 @@ const reviews = [
               ))
             }
           </div>
+
           <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev rounded-full"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev rounded-full "></div>
+          <div class="   swiper-button-next"></div>
         </div>
       </div>
 </div>

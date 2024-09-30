@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+	
 	content: [
 		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
 		'./node_modules/flowbite/**/*.js'
 	],
 	theme: {
+		
 		extend: {
+
+			
 			backgroundImage:{
 				'fondo1': "url('/src/assets/fondo1.webp')",
 				'fondo2': "url('/src/assets/fondo2cc.png')",
@@ -23,6 +27,7 @@ export default {
 				Lobster: ["Lobster", "sans-serif"],
 				Montserrat: ["Montserrat", "sans-serif"],
 			  },
+			  
 		},
 
 	},
