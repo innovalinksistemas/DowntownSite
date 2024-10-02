@@ -5,12 +5,19 @@ import fondo3   from "../assets/fondo3.png"
 ---
 
 <main>
-    <div class=" sm:h-[580px]">
-        <Image src={fondo3} alt="Fondo1" class="sm:w-full sm:h-[580px] bg-black absolute" />
-
-        <div class="grid content-center place-self-center  sm:top-[200px] sm:mx-[320px] top-[10rem] relative">
-            <h2 class="   text-center  text-gold sm:text-[32px] font-semibold font-Montserrat">🇨🇷 PURA VIDA HOTEL EXPERIENCE  🇨🇷 </h2>
-            <p class=" sm:p-0 p-5 text-left text-[45px] sm:text-center text-white sm:text-[70px] font-bold font-Montserrat">A UNIQUE EXPERIENCE <br>WHERE TO SAY</p>
-        </div>
+    <div class="relative h-[580px]">
+      <!-- Fondo de imagen -->
+      <Image src={fondo3} alt="Fondo1" class="w-full h-[580px] object-cover absolute" />
+  
+      <!-- Contenido -->
+      <div class="relative top-[10rem] sm:top-[200px] flex flex-col items-center sm:mx-[320px] mx-5">
+        <h2 class="text-center text-gold text-[24px] sm:text-[32px] font-semibold font-Montserrat">
+          🇨🇷 PURA VIDA HOTEL EXPERIENCE 🇨🇷
+        </h2>
+        <p class="text-center text-[36px] sm:text-[70px] leading-snug text-white font-bold font-Montserrat mt-4 sm:mt-0">
+          A UNIQUE EXPERIENCE <br>WHERE TO STAY
+        </p>
+      </div>
     </div>
-</main>
+  </main>
+  

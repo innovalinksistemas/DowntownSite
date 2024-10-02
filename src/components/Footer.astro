@@ -1,25 +1,38 @@
 ---
 import { Image } from "astro:assets"
 import logov from "../assets/logov.png"
-
+import instagram from "../assets/instagram.png"
+import facebook from "../assets/facebook.png"
 ---
 
 <main>
-    <div class="sm:h-[400px] bg-[#424b59]">
-        <div class="grid grid-cols-3">
-            <div>
-                <Image src={logov} alt="logo" class="w-[400px]" />
-            </div>
-            <div class="mx-auto">
-                <h2 class="text-center">Quick links</h2>
-                <ul class="text-center">
-                    <li><a href="">Our Rooms</a></li>
-                    <li><a href="">Package</a></li>
-                    <li><a href="">Tours</a></li>
-                    <li><a href="">Galery</a></li>
-                </ul>
-            </div>
-            <div></div>
+    <div class="sm:h-[400px] bg-[#424b59] flex items-center pb-3 sm:pb-0">
+      <div class="grid grid-cols-1 sm:grid-cols-3 w-full items-center max-w-7xl mx-auto text-white">
+     
+        <div class="flex justify-center sm:justify-start items-center">
+          <Image src={logov} alt="logo" class="sm:w-96 sm:h-96 h-48 w-48" />
         </div>
+  
+      
+        <div class="mx-auto text-center space-y-4">
+          <h2 class="text-lg font-semibold">Quick links</h2>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:underline">Our Rooms</a></li>
+            <li><a href="#" class="hover:underline">Package</a></li>
+            <li><a href="#" class="hover:underline">Tours</a></li>
+            <li><a href="#" class="hover:underline">Gallery</a></li>
+          </ul>
+        </div>
+  
+       
+        <div class="flex flex-col justify-center sm:justify-end items-center">
+          <h2 class="text-lg font-semibold mb-3">Follow Us</h2>
+          <div class="flex space-x-5">
+            <Image class="sm:w-12 sm:h-12 w-8 h-8 rounded-xl" src={instagram} alt="Instagrak"/>
+            <Image class="sm:w-12 sm:h-12 w-8 h-8 rounded-xl"  src={facebook} alt="Facebook"/>
+          </div>
+        </div>
+      </div>
     </div>
-</main>
+  </main>
+  
