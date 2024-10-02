@@ -1,0 +1,37 @@
+---
+import Image from "astro/components/Image.astro";
+import room1 from "../assets/room1.jpg"
+
+---
+
+<main>
+    <div class="bg-fondo py-8 grid grid-cols-2">
+        <div class="ml-10">
+            <h2 class="font-Montserrat text-[#6a2831] ">PACKAGES</h2>
+            <h3 class="font-Lobster text-[80px]">Temporada Verde</h3>
+            <span class="font-Montserrat">Septiembre y Octubre 2024</span>
+            <div class="my-10">
+                    <ul>
+                        <li>🛏️1 noche de hospedaje en habitacion estándar en <strong>Downtown La Fortuna Boutique Hotel</strong>.</li>
+                        <li>☕️Desayuno incluido.</li>
+                        <li>🍹Bebida de Bienvenida.</li>
+                        <li>💰Impuestos IVA incluido.</li>
+                        <li>🚗Parqueo gratis incluido</li>
+                    </ul>
+                    <br>
+                    <p class="font-Montserrat">Tarifa: <br>
+                    <strong>c39.000 para 2 personas</strong><br>
+                    c15.00 tercera persona <br>
+                    Niños: 0 a 5 años GRATIS
+                    Niños: 6 a 11 años c7.500
+                    </p>
+                    <br>
+                    <button class="h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex"> <a class="text-center text-[#6a2831] text-xl font-semibold font-['Montserrat']" href="">Book Now</a></button>
+            </div>
+        </div>
+        <div class="relative pl-20">
+            <Image src={room1} alt="room" class="2xl:w-[50rem] 2xl:min-h-[45rem] ml-14 sm:ml-0 w-72 h-96 sm:pl-0 sm:min-h-[32rem] sm:w-[35rem] rounded-xl sm:rounded-2xl bg-cover"/>
+        </div>
+
+    </div>
+</main>

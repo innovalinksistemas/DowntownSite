@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets"
+import mail from "../assets/mail.png"
+import location from "../assets/location.png"
+import reloj from "../assets/reloj.png"
+import phone from "../assets/phone.png"
+
+
+---
+
+<main class="h-[500px] bg-fondo">
+  <div class="grid grid-cols-2">
+    <div class="mx-8" >
+      <h2 class=" text-4xl font-Montserrat ">Contacts</h2>
+      <p class="font-Montserrat">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+        repudiandae, distinctio nostrum rem commodi dolore iusto molestiae.
+        Corrupti eveniet tempore.
+      </p>
+      <div class="flex flex-wrap pt-7 ">
+        <div class=" inline-flex p-2 w-[350px]">
+            <div>
+                <Image class=" w-24" src={mail} alt="mail" />
+            </div>
+            <div class="px-2 font-Montserrat text-xs">
+                <h4>Email</h4>
+                <p>info@lafortunadowntown.com</p>
+            </div>
+        </div>
+
+        <div class=" inline-flex p-2">
+            <div>
+                <Image class=" w-24" src={reloj} alt="mail" />
+            </div>
+            <div class="px-2 font-Montserrat text-xs">
+                <h4>Working time</h4>
+                <p>everydat <br> 24 H</p>
+            </div>
+        </div>
+
+
+        <div class=" inline-flex p-2 w-[350px]">
+            <div>
+                <Image class=" w-24" src={location} alt="mail" />
+            </div>
+            <div class="px-2 font-Montserrat text-xs">
+                <h4>Location</h4>
+                <p>South side of the Cathedral, <br>
+                    diagonal to the Central Park.</p>
+            </div>
+        </div>
+        
+        <div class=" inline-flex p-2">
+            <div>
+                <Image class=" w-24" src={phone} alt="mail" />
+            </div>
+            <div class="px-2 font-Montserrat text-xs">
+                <h4>Phone</h4>
+                <p>+506 4000-2027 <br> +506 8527-4677 </p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d622.8260670461028!2d-84.64578216232306!3d10.471007440779312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sLa%20Fortuna%2C%20C.%20470%20Centro%2C%20Provincia%20de%20Alajuela%2C%20Arenal%2C%2021007!3m2!1d10.4710807!2d-84.645608!5e1!3m2!1ses-419!2scr!4v1727807316646!5m2!1ses-419!2scr"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+</main>

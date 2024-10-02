@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets"
+import logov from "../assets/logov.png"
+
+---
+
+<main>
+    <div class="sm:h-[400px] bg-[#424b59]">
+        <div class="grid grid-cols-3">
+            <div>
+                <Image src={logov} alt="logo" class="w-[400px]" />
+            </div>
+            <div class="mx-auto">
+                <h2 class="text-center">Quick links</h2>
+                <ul class="text-center">
+                    <li><a href="">Our Rooms</a></li>
+                    <li><a href="">Package</a></li>
+                    <li><a href="">Tours</a></li>
+                    <li><a href="">Galery</a></li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+    </div>
+</main>
