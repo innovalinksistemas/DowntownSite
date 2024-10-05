@@ -55,15 +55,15 @@ const rooms = [
 
   <div class="min-w-[5rem] min-h-[32rem] sm:min-w-[0rem] sm:min-h-[0rem] sm:m-12">
     <div class="swiper">
-      <div class="swiper-wrapper pb-10 pt-10">
+      <div class="swiper-wrapper pb-10 pt-10 w-fit">
         {
           rooms.map((room) => (
-            <div class="swiper-slide flex justify-center" key={room.title}>
+            <div class="swiper-slide sm:ml-48 flex justify-center" key={room.title}>
               <div class="slider-main relative transition-all duration-500 ease-in-out transform scale-95 opacity-70 bg-white bg-opacity-40">
                 <Image
                   src={room.image}
                   alt={room.title}
-                  class="min-w-[5rem] min-h-[32rem] sm:min-w-[26rem] sm:min-h-[32rem] rounded-lg shadow-lg transition-transform duration-500 ease-in-out"
+                  class="min-w-[5rem] min-h-[32rem] sm:min-w-[38rem] sm:min-h-[30rem] rounded-lg shadow-lg transition-transform duration-500 ease-in-out"
                 />
                 <div class="absolute inset-0 flex flex-col justify-end text-left pl-12 pb-4 bg-white bg-opacity-0 transition-opacity duration-500 ease-in-out">
                   <p class="text-white font-Montserrat text-xl">FROM {room.price}</p>
@@ -114,13 +114,16 @@ const rooms = [
 
   .slider-main {
     transition: all 0.5s ease-in-out;
+    
   }
 
   /* Estilos para pantallas grandes: aplica el scale */
   @media (min-width: 768px) {
+
     .swiper-slide-active .slider-main {
       transform: scale(1.05);
       opacity: 1;
+      
     }
 
     .swiper-slide-next,
@@ -139,6 +142,7 @@ const rooms = [
   img.rounded-lg:hover {
     border-radius: 1rem;
   }
+  
 </style>
 
 <script>
@@ -150,7 +154,7 @@ const rooms = [
   const swiper = new Swiper(".swiper", {
     modules: [Navigation],
     loop: true,
-    centeredSlides: true,
+    
 
     breakpoints: {
       0: {
