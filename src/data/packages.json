@@ -16,7 +16,7 @@
         "Niños: 0 a 5 años GRATIS",
         "Niños: 6 a 11 años c7.500"
       ],
-      "image": "../src/assets/room1.jpg"
+      "image": "/src/assets/room1.jpg"
     },
     {
       "id":2,
@@ -35,7 +35,7 @@
         "Niños: 0 a 5 años GRATIS",
         "Niños: 6 a 11 años c7.500"
       ],
-      "image": "../src/assets/room1.jpg"
+      "image": "/src/assets/room1.jpg"
     },
     {
       "id":3,
@@ -54,7 +54,7 @@
         "Niños: 0 a 5 años GRATIS",
         "Niños: 6 a 11 años c7.500"
       ],
-      "image": "../src/assets/room1.jpg"
+      "image": "/src/assets/room1.jpg"
     },
     {
       "id":4,
@@ -73,7 +73,7 @@
         "Niños: 0 a 5 años GRATIS",
         "Niños: 6 a 11 años c7.500"
       ],
-      "image": "../src/assets/room1.jpg"
+      "image": "/src/assets/room1.jpg"
     }
   ]
   
