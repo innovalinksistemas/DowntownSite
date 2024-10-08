@@ -5,101 +5,8 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
-
-const packages = [
-  {
-    title: "Temporada Verde",
-    season: "Septiembre y Octubre 2024",
-    price: "c39.000 para 2 personas",
-    extras: [
-      "🛏️ 1 noche de hospedaje en habitación estándar en Downtown La Fortuna Boutique Hotel.",
-      "☕️ Desayuno incluido.",
-      "🍹 Bebida de Bienvenida.",
-      "💰 Impuestos IVA incluido.",
-      "🚗 Parqueo gratis incluido."
-    ],
-    additional: [
-      "c15.00 tercera persona",
-      "Niños: 0 a 5 años GRATIS",
-      "Niños: 6 a 11 años c7.500"
-    ],
-    image: room1,
-  },
-  
-  {
-    title: "Temporada Verde",
-    season: "Septiembre y Octubre 2024",
-    price: "c39.000 para 2 personas",
-    extras: [
-      "🛏️ 1 noche de hospedaje en habitación estándar en Downtown La Fortuna Boutique Hotel.",
-      "☕️ Desayuno incluido.",
-      "🍹 Bebida de Bienvenida.",
-      "💰 Impuestos IVA incluido.",
-      "🚗 Parqueo gratis incluido."
-    ],
-    additional: [
-      "c15.00 tercera persona",
-      "Niños: 0 a 5 años GRATIS",
-      "Niños: 6 a 11 años c7.500"
-    ],
-    image: room1,
-  },
-  {
-    title: "Temporada Verde",
-    season: "Septiembre y Octubre 2024",
-    price: "c39.000 para 2 personas",
-    extras: [
-      "🛏️ 1 noche de hospedaje en habitación estándar en Downtown La Fortuna Boutique Hotel.",
-      "☕️ Desayuno incluido.",
-      "🍹 Bebida de Bienvenida.",
-      "💰 Impuestos IVA incluido.",
-      "🚗 Parqueo gratis incluido."
-    ],
-    additional: [
-      "c15.00 tercera persona",
-      "Niños: 0 a 5 años GRATIS",
-      "Niños: 6 a 11 años c7.500"
-    ],
-    image: room1,
-  },
-  {
-    title: "Temporada Verde",
-    season: "Septiembre y Octubre 2024",
-    price: "c39.000 para 2 personas",
-    extras: [
-      "🛏️ 1 noche de hospedaje en habitación estándar en Downtown La Fortuna Boutique Hotel.",
-      "☕️ Desayuno incluido.",
-      "🍹 Bebida de Bienvenida.",
-      "💰 Impuestos IVA incluido.",
-      "🚗 Parqueo gratis incluido."
-    ],
-    additional: [
-      "c15.00 tercera persona",
-      "Niños: 0 a 5 años GRATIS",
-      "Niños: 6 a 11 años c7.500"
-    ],
-    image: room1,
-  },
-  {
-    title: "Temporada Verde",
-    season: "Septiembre y Octubre 2024",
-    price: "c39.000 para 2 personas",
-    extras: [
-      "🛏️ 1 noche de hospedaje en habitación estándar en Downtown La Fortuna Boutique Hotel.",
-      "☕️ Desayuno incluido.",
-      "🍹 Bebida de Bienvenida.",
-      "💰 Impuestos IVA incluido.",
-      "🚗 Parqueo gratis incluido."
-    ],
-    additional: [
-      "c15.00 tercera persona",
-      "Niños: 0 a 5 años GRATIS",
-      "Niños: 6 a 11 años c7.500"
-    ],
-    image: room1,
-  },
-  // Puedes agregar más paquetes aquí.
-];
+import packages from '../data/packages.json';
+const packagedetails = "/packagedetails/";
 ---
 
 <style>
@@ -139,7 +46,7 @@ const packages = [
           packages.map((pkg) => (
             <div class="swiper-slide flex justify-center" key={pkg.title}>
               <div class="slider-main relative transition-all duration-500 ease-in-out transform-gpu scale-95 opacity-60 bg-white bg-opacity-40 p-6 rounded-lg">
-                <Image
+                <img
                   src={pkg.image}
                   alt={pkg.title}
                   class="min-w-[5rem] min-h-[32rem] sm:min-w-[31rem] sm:min-h-[40rem] rounded-lg img"
@@ -158,9 +65,10 @@ const packages = [
                       <span key={add}>{add}<br /></span>
                     ))}
                   </p>
+                 
                   <div class="mt-4">
                     <button class="h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex">
-                      <a class="text-center text-[#6a2831] text-xl font-semibold font-Montserrat" href="">Book Now</a>
+                      <a class="text-center text-[#6a2831] text-xl font-semibold font-Montserrat" href={ packagedetails + pkg.id}>Book Now</a>
                     </button>
                   </div>
                 </div>

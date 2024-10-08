@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import packages from "../../data/packages.json";
+import HeaderSections from "@components/HeaderSections.astro";
+
+
+const { id } = Astro.params;
+
+const pkg = packages.find(p => p.id.toString() === id);
+
+
+if (!pkg) {
+  throw new Error(`Paquete con ID ${id} no encontrado`);
+}
+
+
+export async function getStaticPaths() {
+
+  const paths = packages.map(pkg => ({
+    params: { id: pkg.id.toString() }  
+  }));
+
+  
+  return paths.map(path => ({
+    params: path.params,
+  }));
+}
+---
+
+<Layout>
+  <HeaderSections/>
+  <div class="grid grid-cols-2 content-center pl-36 bg-fondo h-screen">
+   
+    <div class="font-Montserrat">
+      <p class="text-gold text-2xl">Packages</p>
+      <p class="font-bold text-3xl">{pkg.title}</p>
+      <p class="pt-2">{pkg.season}</p>
+      <div class="pb-5 pt-4">
+        <h3>Extras</h3>
+        <ul>
+          {pkg.extras.map((extra, index) => (
+            <li key={index}>{extra}</li>
+          ))}
+        </ul>
+      </div>
+ <div class="pb-6">
+  <h3>Adicionales</h3>
+  <ul>
+    {pkg.additional.map((add, index) => (
+      <li key={index}>{add}</li>
+    ))}
+  </ul>
+ </div>
+
+ <button class="h-11 w-52  rounded-lg bg-gold justify-center items-center">
+  <a class="text-center text-white text-xl font-semibold font-Montserrat" href="">Book Now</a>
+</button>
+    </div>
+
+    <div class="pl-24">
+      <img class="border-white border-8 h-[32rem] w-[26rem] rounded-2xl shadow-lg" src={pkg.image} alt={pkg.title} /> 
+    </div>
+  </div>
+</Layout>
