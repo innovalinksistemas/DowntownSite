@@ -154,7 +154,7 @@ const rooms = [
   const swiper = new Swiper(".swiper", {
     modules: [Navigation],
     loop: true,
-    
+    centeredSlides: true,
 
     breakpoints: {
       0: {
@@ -179,7 +179,7 @@ const rooms = [
     on: {
       slideChange: function () {
         const slides = this.slides;
-        const activeIndex = this.activeIndex;
+        const activeIndex = this.activeIndex ;
 
         slides.forEach((slide, index) => {
           const slideElement = slide.querySelector('.slider-main');
