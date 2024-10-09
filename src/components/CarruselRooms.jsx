@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 export default function ImageGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [rooms, setRooms] = useState([]);
@@ -9,7 +10,7 @@ export default function ImageGallery() {
   // Función para obtener las habitaciones desde el JSON
   useEffect(() => {
     const fetchRooms = async () => {
-      const response = await fetch('https://raw.githubusercontent.com/WdSevilla/Downtown/refs/heads/main/public/rooms.json'); // Cambia la ruta si es necesario
+      const response = await fetch('https://raw.githubusercontent.com/WdSevilla/Downtown/refs/heads/main/public/rooms.json'); 
       const data = await response.json();
       setRooms(data);
     };
@@ -24,8 +25,6 @@ export default function ImageGallery() {
   const prevImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + rooms.length) % rooms.length);
   };
-
-
 
   const getVisibleImages = () => {
     const visibleImages = [];
@@ -51,9 +50,11 @@ export default function ImageGallery() {
                 key={room.id}
                 className={`transition-all duration-500 transform mx-4 ${
                   isActive ? 'scale-105 opacity-100' : 'scale-90 opacity-50'
-                }`}
+                } ${
+                  index === 0 || index === 2 ? 'hidden md:block' : ''
+                }`} // Ocultar imágenes laterales en pantallas móviles
                 style={{
-                  width: isActive ? '35%' : '25%',
+                  width: isActive ? '100%' : '100%',
                   filter: isActive ? 'none' : 'brightness(50%)',
                   transition: 'transform 0.5s, opacity 0.5s',
                 }}
@@ -61,18 +62,18 @@ export default function ImageGallery() {
                 <img
                   src={room.image}
                   alt={room.title}
-                  className="object-cover w-[38rem] h-[30rem] rounded-lg shadow-lg"
+                  className="object-cover h-96 sm:w-[38rem] sm:h-[30rem] rounded-lg shadow-lg"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end text-left pl-12 pb-4">  
-                <p className="text-white font-Montserrat text-xl">FROM {room.price}</p>
-                <p className="text-white font-Montserrat text-xl font-semibold">{room.title}</p>
-                <div className="flex text-white space-x-2">
-                <img src="src/assets/person.png" alt="person" className="w-6 h-6" />
-                <p className="font-Montserrat">{room.sleeps} Sleeps</p>
-                <img src="src/assets/bed.png" alt="bed" className="w-6 h-6" />
-                <p className="font-Montserrat">{room.beds}</p>
-                </div>
-                <div>
+                  <p className="text-white font-Montserrat text-xl">FROM {room.price}</p>
+                  <p className="text-white font-Montserrat text-xl font-semibold">{room.title}</p>
+                  <div className="flex text-white space-x-2">
+                    <img src="/assets/person.png" alt="person" className="w-6 h-6" />
+                    <p className="font-Montserrat">{room.sleeps} Sleeps</p>
+                    <img src="/assets/bed.png" alt="bed" className="w-6 h-6" />
+                    <p className="font-Montserrat">{room.beds}</p>
+                  </div>
+                  <div>
                     <button className="text-yellow-400 font-medium underline text-lg rounded-md font-Montserrat">
                       See availability ➔
                     </button>
