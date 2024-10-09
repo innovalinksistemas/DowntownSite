@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import bed from '../assets/bed.png'
-import person from '../assets/person.png'
 export default function ImageGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [rooms, setRooms] = useState([]);
@@ -11,7 +9,7 @@ export default function ImageGallery() {
   // Función para obtener las habitaciones desde el JSON
   useEffect(() => {
     const fetchRooms = async () => {
-      const response = await fetch('/src/data/rooms.json'); // Cambia la ruta si es necesario
+      const response = await fetch('Downtown/src/data/rooms.json'); // Cambia la ruta si es necesario
       const data = await response.json();
       setRooms(data);
     };
