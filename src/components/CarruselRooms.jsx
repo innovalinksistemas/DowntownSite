@@ -68,7 +68,7 @@ export default function ImageGallery() {
                   <p className="text-white font-Montserrat text-xl">FROM {room.price}</p>
                   <p className="text-white font-Montserrat text-xl font-semibold">{room.title}</p>
                   <div className="flex text-white space-x-2">
-                    <img src="/src/assets/person.png" alt="person" className="w-6 h-6" />
+                    <img src="../../src/assets/person.png" alt="person" className="w-6 h-6" />
                     <p className="font-Montserrat">{room.sleeps} Sleeps</p>
                     <img src="/src/assets/bed.png" alt="bed" className="w-6 h-6" />
                     <p className="font-Montserrat">{room.beds}</p>
