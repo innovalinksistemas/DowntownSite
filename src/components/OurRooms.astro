@@ -1,9 +1,7 @@
 
 ---
-
-
-
 import Image from "astro/components/Image.astro";
+import CarruselRooms from "@components/CarruselRooms.jsx"
 import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
 import room3 from "../assets/room3.jpg";
@@ -12,27 +10,31 @@ import bed from "../assets/bed.png"
 import prev from "../assets/flecha.png"
 const rooms = [
   {
-    title: "DownTown Standard Doble",
+    id:1,
+    title: "DownTown Standard Doble1",
     price: "$128/NIGHT",
     sleeps: 2,
     beds: "2 twin beds",
     image: room1,
   },
   {
-    title: "DownTown Standard",
+    id:2,
+    title: "DownTown Standard Dobleid2",
     price: "$110/NIGHT",
     sleeps: 2,
     beds: "2 queen beds",
     image: room2,
   },
   {
-    title: "DownTown Standard Doble",
+    id:3,
+    title: "DownTown Standard2",
     price: "$128/NIGHT",
     sleeps: 2,
     beds: "2 twin beds",
     image: room1,
   },
   {
+    id:4,
     title: "DownTown Standard",
     price: "$130/NIGHT",
     sleeps: 2,
@@ -54,158 +56,11 @@ const rooms = [
   </div>
 
   <div class="min-w-[5rem] min-h-[32rem] sm:min-w-[0rem] sm:min-h-[0rem] sm:m-12">
-    <div class="swiper">
-      <div class="swiper-wrapper pb-10 pt-10 w-fit">
-        {
-          rooms.map((room) => (
-            <div class="swiper-slide sm:ml-48 flex justify-center" key={room.title}>
-              <div class="slider-main relative transition-all duration-500 ease-in-out transform scale-95 opacity-70 bg-white bg-opacity-40">
-                <Image
-                  src={room.image}
-                  alt={room.title}
-                  class="min-w-[5rem] min-h-[32rem] sm:min-w-[38rem] sm:min-h-[30rem] rounded-lg shadow-lg transition-transform duration-500 ease-in-out"
-                />
-                <div class="absolute inset-0 flex flex-col justify-end text-left pl-12 pb-4 bg-white bg-opacity-0 transition-opacity duration-500 ease-in-out">
-                  <p class="text-white font-Montserrat text-xl">FROM {room.price}</p>
-                  <p class="text-white font-Montserrat text-xl font-semibold">{room.title}</p>
-                  <div class="flex text-white space-x-2">
-                    <Image src={person} alt="person" class="w-6 h-6"/>
-                    <p class="font-Montserrat">{room.sleeps} Sleeps</p>
-                    <Image src={bed} alt="bed" class="w-6 h-6"/>
-                    <p class="font-Montserrat">{room.beds}</p>
-                  </div>
-                  <div>
-                    <button class="text-yellow-400 font-medium underline text-lg rounded-md font-Montserrat">
-                      See availability ➔
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev rounded-full"></div>
-      <div class="swiper-button-next"></div>
-    </div>
+<CarruselRooms client:visible/>
   </div>
 </section>
 
-<style>
-  .swiper-button-prev,
-  .swiper-button-next {
-    background-color: white;
-    background-position: center;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    padding: 8px 20px;
-    border-radius: 100%;
-    color: transparent;
-  }
 
-  .swiper-button-prev {
-    background-image: url("../assets/flecha.png");
-  }
-
-  .swiper-button-next {
-    background-image: url("../assets/flechader.png");
-  }
-
-  .slider-main {
-    transition: all 0.5s ease-in-out;
-    
-  }
-
-  /* Estilos para pantallas grandes: aplica el scale */
-  @media (min-width: 768px) {
-
-    .swiper-slide-active .slider-main {
-      transform: scale(1.05);
-      opacity: 1;
-      
-    }
-
-    .swiper-slide-next,
-    .swiper-slide-prev {
-      transform: scale(0.95);
-      opacity: 0.7;
-    }
-  }
-
-  /* Mantiene el border-radius de las imágenes */
-  img.rounded-lg {
-    border-radius: 1rem; 
-    transition: border-radius 0.3s ease;
-  }
-
-  img.rounded-lg:hover {
-    border-radius: 1rem;
-  }
-  
-</style>
-
-<script>
-  import Swiper from 'swiper';
-  import 'swiper/css';
-  import { Navigation } from "swiper/modules";
-  import "swiper/css/navigation";
-
-  const swiper = new Swiper(".swiper", {
-    modules: [Navigation],
-    loop: true,
-    centeredSlides: true,
-
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 100,
-      },
-    },
-
-    navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
-    },
-
-    on: {
-      slideChange: function () {
-        const slides = this.slides;
-        const activeIndex = this.activeIndex ;
-
-        slides.forEach((slide, index) => {
-          const slideElement = slide.querySelector('.slider-main');
-          const imageElement = slide.querySelector('img');
-
-          if (index === activeIndex) {
-            slideElement.classList.remove('opacity-60', 'bg-opacity-40');
-            slideElement.classList.add('opacity-100', 'bg-opacity-0', 'transition-all', 'duration-300');
-
-            // Aplica el scale solo si el tamaño de pantalla es mayor a 768px
-            if (window.innerWidth >= 768) {
-              slideElement.classList.add('scale-100');
-            }
-
-            imageElement.classList.add('rounded-lg', 'shadow-lg');
-          } else {
-            slideElement.classList.remove('opacity-100', 'bg-opacity-0', 'scale-100');
-            slideElement.classList.add('opacity-60', 'bg-opacity-40', 'transition-all', 'duration-300');
-
-            imageElement.classList.remove('shadow-lg');
-          }
-        });
-      }
-    }
-  });
-</script>
 
 
 
