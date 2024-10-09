@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import packages from '../data/rooms.json';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 export default function ImageGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,7 +10,7 @@ export default function ImageGallery() {
   // Función para obtener las habitaciones desde el JSON
   useEffect(() => {
     const fetchRooms = async () => {
-      const response = await fetch('/data/rooms.json'); // Cambia la ruta si es necesario
+      const response = await fetch(packages); // Cambia la ruta si es necesario
       const data = await response.json();
       setRooms(data);
     };
