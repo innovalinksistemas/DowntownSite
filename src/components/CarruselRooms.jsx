@@ -11,7 +11,7 @@ export default function ImageGallery() {
   // Función para obtener las habitaciones desde el JSON
   useEffect(() => {
     const fetchRooms = async () => {
-      const response = await fetch('/public/rooms.json'); // Cambia la ruta si es necesario
+      const response = await fetch('/src/data/rooms.json'); // Cambia la ruta si es necesario
       const data = await response.json();
       setRooms(data);
     };
@@ -66,16 +66,16 @@ export default function ImageGallery() {
                   className="object-cover w-[38rem] h-[30rem] rounded-lg shadow-lg"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end text-left pl-12 pb-4">  
-                <p class="text-white font-Montserrat text-xl">FROM {room.price}</p>
-                <p class="text-white font-Montserrat text-xl font-semibold">{room.title}</p>
-                <div class="flex text-white space-x-2">
-                <img src="src/assets/person.png" alt="person" class="w-6 h-6" />
-                <p class="font-Montserrat">{room.sleeps} Sleeps</p>
-                <img src="src/assets/bed.png" alt="bed" class="w-6 h-6" />
-                <p class="font-Montserrat">{room.beds}</p>
+                <p className="text-white font-Montserrat text-xl">FROM {room.price}</p>
+                <p className="text-white font-Montserrat text-xl font-semibold">{room.title}</p>
+                <div className="flex text-white space-x-2">
+                <img src="src/assets/person.png" alt="person" className="w-6 h-6" />
+                <p className="font-Montserrat">{room.sleeps} Sleeps</p>
+                <img src="src/assets/bed.png" alt="bed" className="w-6 h-6" />
+                <p className="font-Montserrat">{room.beds}</p>
                 </div>
                 <div>
-                    <button class="text-yellow-400 font-medium underline text-lg rounded-md font-Montserrat">
+                    <button className="text-yellow-400 font-medium underline text-lg rounded-md font-Montserrat">
                       See availability ➔
                     </button>
                   </div>
