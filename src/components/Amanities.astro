@@ -3,58 +3,90 @@ import { Image } from "astro:assets";
 import suve from "../assets/suve.png";
 import resta from "../assets/resta.png";
 import logomaria from "../assets/logomaria.png";
-
 ---
 
 <main>
-  <div class="bg-fondo ">
-    <div class="sm:grid sm:grid-cols-2 px-4 pt-20 flex flex-col-reverse items-center ">
+  <div class="bg-fondo">
+    <div
+      class="sm:grid sm:grid-cols-2 px-4 pt-20 flex flex-col-reverse items-center"
+    >
       <div class="sm:ml-0 mt-10 sm:mt-0 sm:order-last order-none">
-        <h2 class="text-left text-[#7b7b7b] text-lg sm:text-xl font-semibold font-Montserrat">LOCAL AMENITIES</h2>
-        <h2 class="w-full sm:w-[432px] text-[#424b59] text-2xl sm:text-[32px] font-semibold font-Montserrat">Maria Bonita Steak House</h2>
+        <h2
+          class="text-left text-[#7b7b7b] text-lg sm:text-xl font-semibold font-Montserrat"
+        >
+          LOCAL AMENITIES
+        </h2>
+        <h2
+          class="w-full sm:w-[432px] text-[#424b59] text-2xl sm:text-[32px] font-semibold font-Montserrat"
+        >
+          Maria Bonita Steak House
+        </h2>
 
         <p class="font-Montserrat text-sm sm:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-          itaque eligendi asperiores animi inventore similique consequatur
-          corporis ea natus, ad aliquid distinctio fuga officiis quis explicabo
-          tenetur at, nobis alias!
+          Disfrute de una experiencia gastronómica en Maria Bonita Steak House,
+          nuestro restaurante especializado en carnes a la parrilla, mariscos,
+          mixología, vinos y auténtica cocina libanesa. Además, ofrecemos
+          desayuno buffet gratuito para que inicie cada día de su estancia de la
+          mejor manera.
         </p>
-        <div class="flex flex-col sm:grid sm:grid-cols-2 mt-6 sm:mt-12 items-center sm:items-start">
-          <button class="h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex mb-4 sm:mb-0">
-            <a class="text-center text-[#6a2831] text-base sm:text-xl font-semibold font-['Montserrat']" href="">Read More</a>
+        <div
+          class="flex flex-col sm:grid sm:grid-cols-2 mt-6 sm:mt-12 items-center sm:items-start"
+        >
+          <button
+            class="h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex mb-4 sm:mb-0"
+          >
+            <a
+              class="text-center text-[#6a2831] text-base sm:text-xl font-semibold font-['Montserrat']"
+              href="">Read More</a
+            >
           </button>
-          <Image class="w-full sm:w-[600px]" src={logomaria} alt="maria"/>
+          <Image class="w-full sm:w-[600px]" src={logomaria} alt="maria" />
         </div>
       </div>
 
       <div class="w-screen sm:w-auto">
-        <Image src={resta} alt="resta" class="sm:ml-2 w-full sm:w-auto"/>
+        <Image src={resta} alt="resta" class="sm:ml-2 w-full sm:w-auto" />
       </div>
     </div>
 
     <div class="sm:grid sm:grid-cols-2 px-4 pt-20 flex flex-col items-center">
       <div class="sm:mr-0 mt-10 sm:mt-0 order-last sm:order-none">
-        <h2 class="text-left text-[#7b7b7b] text-lg sm:text-xl font-semibold font-Montserrat">LOCAL AMENITIES</h2>
-        <h2 class="w-full sm:w-[432px] text-[#424b59] text-2xl sm:text-[32px] font-semibold font-Montserrat">Nuwa Souvenir</h2>
+        <h2
+          class="text-left text-[#7b7b7b] text-lg sm:text-xl font-semibold font-Montserrat"
+        >
+          LOCAL AMENITIES
+        </h2>
+        <h2
+          class="w-full sm:w-[432px] text-[#424b59] text-2xl sm:text-[32px] font-semibold font-Montserrat"
+        >
+          Nuwa Souvenir
+        </h2>
 
         <p class="font-Montserrat text-sm sm:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-          itaque eligendi asperiores animi inventore similique consequatur
-          corporis ea natus, ad aliquid distinctio fuga officiis quis explicabo
-          tenetur at, nobis alias!
+          Es un espacio vibrante dedicado a la celebración del arte y la cultura
+          costarricense. Presentamos obras de artistas locales, ofreciendo una
+          experiencia única que conecta a los visitantes con la creatividad y la
+          inspiración de nuestra tierra. ¡Descubre y apoye el arte costarricense
+          en su máxima expresión en Nuwa Gallery!
         </p>
-        <div class="flex flex-col sm:grid sm:grid-cols-2 mt-6 sm:mt-12 items-center sm:items-start">
-          <button class="h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex mb-4 sm:mb-0">
-            <a class="text-center text-[#6a2831] text-base sm:text-xl font-semibold font-['Montserrat']" href="">Read More</a>
+        <div
+          class="flex flex-col sm:grid sm:grid-cols-2 mt-6 sm:mt-12 items-center sm:items-start"
+        >
+          <button
+            class="h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex mb-4 sm:mb-0"
+          >
+            <a
+              class="text-center text-[#6a2831] text-base sm:text-xl font-semibold font-['Montserrat']"
+              href="">Read More</a
+            >
           </button>
-          <Image class="w-full sm:w-[600px]" src={logomaria} alt="maria"/>
+          <Image class="w-full sm:w-[600px]" src={logomaria} alt="maria" />
         </div>
       </div>
 
       <div class="w-screen sm:w-auto">
-        <Image src={resta} alt="resta" class="w-full sm:w-auto"/>
+        <Image src={resta} alt="resta" class="w-full sm:w-auto" />
       </div>
     </div>
   </div>
 </main>
-

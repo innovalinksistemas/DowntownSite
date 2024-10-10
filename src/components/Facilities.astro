@@ -1,86 +1,117 @@
 ---
 import Image from "astro/components/Image.astro";
 import car from "../assets/car.png";
-import bar from "../assets/bar.png"
-import pool from "../assets/pool.png"
-import wifi from "../assets/wifi.png"
-import room1 from "../assets/room1.jpg"
-import bathroom from "../assets/bathroom.jpg"
+import bar from "../assets/bar.png";
+import pool from "../assets/pool.png";
+import wifi from "../assets/wifi.png";
+import room1 from "../assets/room1.jpg";
+import bathroom from "../assets/bathroom.jpg";
 ---
 
-<section class="bg-fondo  sm:w-full">
+<section class="bg-fondo sm:w-full">
   <div>
     <div class="text-center">
-      <h2 class="font-Lobster text-5xl sm:text-8xl">Main Facilities</h2>
-      <p class="text-gold font-Montserrat font-medium text-xl sm:text-3xl">Downtown Hotel</p>
+      <h2 class="font-Lobster text-5xl sm:text-6xl">FACILIDADES PRINCIPALES</h2>
+      <p class="text-gold font-Montserrat font-medium text-xl sm:text-3xl">
+        La Fortuna Downtown Boutique Hotel
+      </p>
     </div>
-    <div class="sm:flex flex-row space-y-5  sm:space-y-0 sm:p-6 sm:space-x-8 p-4">
+    <div
+      class="sm:flex flex-row space-y-5 sm:space-y-0 sm:p-6 sm:space-x-8 p-4"
+    >
       <div>
         <Image src={car} alt="parking" class="mx-auto" />
-        <p class="text-center font-Montserrat font-semibold text-xl">Private Parking</p>
+        <p class="text-center font-Montserrat font-semibold text-xl">
+          Parqueo Privado
+        </p>
         <p class="font-Montserrat">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus at tempora fuga? Repellat corporis tempora, voluptate
-          eveniet omnis recusandae facere, asperiores unde quo repudiandae
-          excepturi placeat consectetur. Ratione, nihil similique?
+          Disfrute de un espacio seguro para su vehículo mientras explora La
+          Fortuna sin preocupaciones. Ofrecemos parqueo gratuito 24 horas con
+          seguridad privada para su comodidad, además de estación de carga
+          eléctrica.
         </p>
       </div>
       <div>
-        <Image src={wifi} alt="parking" class="mx-auto" />
+        <Image src={wifi} alt="wifi" class="mx-auto" />
         <p class="text-center font-Montserrat font-semibold text-xl">WiFi</p>
         <p class="font-Montserrat">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus at tempora fuga? Repellat corporis tempora, voluptate
-          eveniet omnis recusandae facere, asperiores unde quo repudiandae
-          excepturi placeat consectetur. Ratione, nihil similique?
+          Disfrute de <strong>Wi-Fi de alta velocidad</strong> en todo el hotel. Manténgase
+          conectado para compartir momentos, planificar actividades o trabajar
+          mientras explora La Fortuna.
         </p>
       </div>
       <div>
-        <Image src={bar} alt="parking" class="mx-auto" />
-        <p class="text-center font-Montserrat font-semibold text-xl">Bar & Restaurant</p>
+        <Image src={bar} alt="bar" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">
+          Bar & Restaurante
+        </p>
         <p class="font-Montserrat">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus at tempora fuga? Repellat corporis tempora, voluptate
-          eveniet omnis recusandae facere, asperiores unde quo repudiandae
-          excepturi placeat consectetur. Ratione, nihil similique?
+          Una experiencia gastronómica excepcional en el corazón de La Fortuna.
+          Disfrute de cortes de carne de alta calidad, mariscos frescos y
+          opciones vegetarianas, todo en un ambiente acogedor. ¡Le esperamos!
         </p>
       </div>
       <div>
-        <Image src={pool} alt="parking" class="mx-auto" />
-        <p class="text-center font-Montserrat font-semibold text-xl">Swimming Pool</p>
+        <Image src={pool} alt="pool" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">Piscina</p>
         <p class="font-Montserrat">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus at tempora fuga? Repellat corporis tempora, voluptate
-          eveniet omnis recusandae facere, asperiores unde quo repudiandae
-          excepturi placeat consectetur. Ratione, nihil similique?
+          Relájese en nuestra piscina, ideal para descansar después de un día de
+          aventuras. Disfrute del sol y del ambiente tropical mientras se
+          refresca con un coctel o cerveza artesanal.
         </p>
       </div>
     </div>
-   
-    <div id="About" class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse mt-8 snap-start">
-        <div class="sm:p-20 p-10">
+
+    <div
+      id="About"
+      class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse mt-8 snap-start"
+    >
+      <div class="sm:p-20 p-10">
         <p class="text-xl xl:text-2xl font-semibold text-gold">ABOUT US</p>
-          <p class="text-3xl 2xl:text-5xl font-Montserrat font-semibold">Tailored services and <br/> the experiences of<br/> unique holidays</p>
-          <p class="font-Montserrat xl:text-2xl lg:text-xl pt-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
-            neque, 
-            
-            accusamus quaerat ipsa, sint mollitia placeat quas corrupti
-            dolores a ipsum commodi magnam recusandae iusto? Quaerat alias quasi
-            atque voluptatum?
-          </p>
-          <p class="font-BadScript text-lg sm:text-xl 2xl:text-2xl pt-4">Ricardos Villalobos - General Manager</p>
-        </div>
+        <p class="text-3xl 2xl:text-5xl font-Montserrat font-semibold">
+          Tu Escapada Perfecta en el Corazón de La Fortuna
+        </p>
+        <p class="font-Montserrat xl:text-2xl lg:text-xl pt-4">
+          En La <strong>Fortuna Downtown Boutique Hotel</strong>, ofrecemos
+          servicios personalizados y experiencias únicas para que su estancia
+          sea inolvidable. Nuestro hotel es el más céntrico de La Fortuna,
+          combina comodidad y estilo, brindándole acceso fácil a las mejores
+          atracciones, como el imponente <strong
+            >Volcán Arenal, La Catarata Río Fortuna</strong
+          >
+          y las relajantes aguas termales. ¡Y lo mejor de todo, <strong
+            >hablamos tu idioma!</strong
+          > Disfrute la auténtica experiencia de conocer las raíces del pueblo turístico
+          más emblemático de Costa Rica. Accede a los mejores expertos locales hospedándote
+          en nuestro hotel, te ayudaremos a planificar actividades emocionantes y
+          experiencias memorables…
+        </p>
+        <p class="font-BadScript text-lg sm:text-xl 2xl:text-2xl pt-4">
+          Ricardos Villalobos - Gerente General
+        </p>
+      </div>
       <div>
-        <div class="sm:pl-24 2xl:pl-15 sm:p-10 flex justify-center sm:items-center sm:float-right ">
-            <div class="relative">
-                <Image src={room1} alt="room" class="2xl:w-[50rem] 2xl:min-h-[45rem] ml-14 sm:ml-0 w-72 h-96 sm:pl-0 sm:min-h-[32rem] sm:w-[35rem] rounded-xl sm:rounded-2xl bg-cover"/>
-            </div>
-            <div class="absolute mr-44 pt-24 sm:mr-[350px] sm:right-[44px] sm:pt-6  rounded-lg ">
-                <Image src={bathroom} alt="room" class=" w-44 h-52  bg-cover shadow-xl sm:min-h-[23rem] sm:min-w-[23rem] 2xl:min-h-[28rem] 2xl:w-[23rem] rounded-2xl border-solid sm:border-8 border-4 border-white"/>
-            </div>
+        <div
+          class="sm:pl-24 2xl:pl-15 sm:p-10 flex justify-center sm:items-center sm:float-right"
+        >
+          <div class="relative">
+            <Image
+              src={room1}
+              alt="room"
+              class="2xl:w-[50rem] 2xl:min-h-[45rem] ml-14 sm:ml-0 w-72 h-96 sm:pl-0 sm:min-h-[32rem] sm:w-[35rem] rounded-xl sm:rounded-2xl bg-cover"
+            />
           </div>
+          <div
+            class="absolute mr-44 pt-24 sm:mr-[350px] sm:right-[44px] sm:pt-6 rounded-lg"
+          >
+            <Image
+              src={bathroom}
+              alt="room"
+              class="w-44 h-52 bg-cover shadow-xl sm:min-h-[23rem] sm:min-w-[23rem] 2xl:min-h-[28rem] 2xl:w-[23rem] rounded-2xl border-solid sm:border-8 border-4 border-white"
+            />
+          </div>
+        </div>
       </div>
-      </div>
+    </div>
   </div>
 </section>
