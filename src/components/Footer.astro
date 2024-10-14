@@ -5,6 +5,10 @@ import logon from "../assets/logon.png"
 import instagram from "../assets/instagram.png"
 import facebook from "../assets/facebook.png"
 import whatsapp from "../assets/whatsapp.png"
+import phone from "../assets/phone.png"
+import location from "../assets/location.png"
+import mail from "../assets/mail.png"
+import web from "../assets/world.png"
 ---
 
 <main>
@@ -14,14 +18,14 @@ import whatsapp from "../assets/whatsapp.png"
         <div class="flex justify-center sm:justify-start items-center">
           <Image src={logov} alt="logo" class="sm:w-96 sm:h-80 h-48 w-48" />
         </div>
-        <div class="mx-auto text-center space-y-4">
+        <div class="mx-auto text-center ">
           <h2 class="text-lg font-semibold text-left">Contactenos</h2>
-          <ul class="space-y-2 text-left">
-            <li><span></span>+506 4000-2027</li>
-            <li><span></span>+506 8527-4777</li>
-            <li><span></span>reservations@lafortunahotel.com</li>
-            <li><span></span>25 m sur de la iglesia católica<br/>La Fortuna, Alajuela, Costa Rica</li>
-            <li><span></span>www.lafortunadowntown.com</li>
+          <ul class="space-y-4 text-left align-middle">
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2 " src={phone} alt="telefono"/></span>+506 4000-2027</li>
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2" src={phone} alt="telefono"/></span>+506 8527-4777</li>
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2" src={mail} alt="mail"/></span>reservations@lafortunahotel.com</li>
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2" src={location} alt="location"/></span>25 m sur de la iglesia católica<br/>La Fortuna, Alajuela, Costa Rica</li>
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2" src={web} alt="web"/></span>www.lafortunadowntown.com</li>
           </ul>
         </div>
         <div class="flex flex-col justify-center sm:justify-start items-center">
@@ -72,7 +76,7 @@ import whatsapp from "../assets/whatsapp.png"
       </div>
       <div class="bg-[#424b59] w-full flex flex-col">
         <div class="flex flex-col sm:text-left text-center">
-          <ul class="flex sm:flex-row flex-col text-white font-Montserrat text-sm space-y-2 sm:space-x-6 pl-2">
+          <ul class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2">
             <li><a href="">Aviso legal</a></li>
             <li><a href="">Politica de privacidad</a></li>
             <li><a href="">Preferencias de cookies</a></li>
