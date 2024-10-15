@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import mail from "../assets/mail.png";
+import location from "../assets/location.png";
+import reloj from "../assets/reloj.png";
+import phone from "../assets/phone.png";
+---
+
+<main class="h-full sm:h-[500px] bg-fondo">
+    <div>
+      <div class="mx-4 sm:mx-8">
+        <h2 class="text-3xl sm:text-4xl font-Montserrat text-center sm:text-left">Contacts</h2>
+        <p class="font-Montserrat text-sm sm:text-base text-center sm:text-left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repudiandae, distinctio nostrum rem commodi dolore iusto molestiae. Corrupti eveniet tempore.
+        </p>
+      </div>
+    </div>
+    
+    <div class="flex flex-col sm:grid sm:grid-cols-2 gap-6 p-4 sm:p-8">
+      <div class="sm:grid sm:grid-cols-2 gap-6">
+        <div class="flex flex-col items-center sm:items-start text-center sm:text-left space-y-8">
+          <div class="space-y-2">
+            <div class="flex justify-center sm:justify-start">
+              <Image class="w-16 sm:w-24" src={mail} alt="mail" />
+            </div>
+            <div class="font-Montserrat text-xs sm:text-sm">
+              <h4>Email</h4>
+              <p>info@lafortunadowntown.com</p>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="flex justify-center sm:justify-start">
+              <Image class="w-16 sm:w-24" src={reloj} alt="working time" />
+            </div>
+            <div class="font-Montserrat text-xs sm:text-sm">
+              <h4>Working time</h4>
+              <p>Everyday <br /> 24 H</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flex flex-col items-center sm:items-start text-center sm:text-left space-y-8">
+          <div class="space-y-2">
+            <div class="flex justify-center sm:justify-start">
+              <Image class="w-16 sm:w-24" src={location} alt="location" />
+            </div>
+            <div class="font-Montserrat text-xs sm:text-sm">
+              <h4>Location</h4>
+              <p>South side of the Cathedral, <br /> diagonal to the Central Park.</p>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="flex justify-center sm:justify-start">
+              <Image class="w-16 sm:w-24" src={phone} alt="phone" />
+            </div>
+            <div class="font-Montserrat text-xs sm:text-sm">
+              <h4>Phone</h4>
+              <p>+506 4000-2027 <br /> +506 8527-4677</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flex justify-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d622.8260670461028!2d-84.64578216232306!3d10.471007440779312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sLa%20Fortuna%2C%20C.%20470%20Centro%2C%20Provincia%20de%20Alajuela%2C%20Arenal%2C%2021007!3m2!1d10.4710807!2d-84.645608!5e1!3m2!1ses-419!2scr!4v1727807316646!5m2!1ses-419!2scr"
+          class="w-full sm:w-[35rem] h-64 sm:h-80"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </main>
+  

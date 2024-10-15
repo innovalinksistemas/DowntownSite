@@ -1,0 +1,117 @@
+---
+import Image from "astro/components/Image.astro";
+import car from "../../assets/car.png";
+import bar from "../../assets/bar.png";
+import pool from "../../assets/pool.png";
+import wifi from "../../assets/wifi.png";
+import room1 from "../../assets/room1.jpg";
+import bathroom from "../../assets/bathroom.jpg";
+---
+
+<section class="bg-fondo sm:w-full">
+  <div>
+    <div class="text-center">
+      <h2 class="font-Lobster text-5xl sm:text-6xl">MAIN FACILITIES</h2>
+      <p class="text-gold font-Montserrat font-medium text-xl sm:text-3xl">
+        The Fortuna Downtown Boutique Hotel
+      </p>
+    </div>
+    <div
+      class="sm:flex flex-row space-y-5 sm:space-y-0 sm:p-6 sm:space-x-8 p-4"
+    >
+      <div>
+        <Image src={car} alt="parking" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">
+          Private Parking
+        </p>
+        <p class="font-Montserrat">
+          You can relax enjoying La Fortuna knowing your car is in a safe space
+          in our <strong
+            >free 24-hour car park, which includes private security</strong
+          > for your convenience. Additionally, we offer a <strong
+            >charging station for electric vehicles</strong
+          >.
+        </p>
+      </div>
+      <div>
+        <Image src={wifi} alt="wifi" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">WiFi</p>
+        <p class="font-Montserrat">
+          Stay connected with our <strong>high-speed Wi-Fi</strong> available throughout
+          the hotel, perfect for browsing the web or catching up on work during your
+          stay. Our reliable internet connection ensures you can easily stay connected
+          to share moments, plan activities, or work while exploring La Fortuna.
+        </p>
+      </div>
+      <div>
+        <Image src={bar} alt="bar" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">
+          Bar & Restaurant
+        </p>
+        <p class="font-Montserrat">
+          Indulge in an exceptional dining experience in the heart of La Fortuna
+          offering a variety of local and international cuisine options with
+          premium quality beef cuts, fresh seafood, and vegetarian options, all
+          encompassed in an inviting atmosphere. We are waiting for you!
+        </p>
+      </div>
+      <div>
+        <Image src={pool} alt="pool" class="mx-auto" />
+        <p class="text-center font-Montserrat font-semibold text-xl">
+          Swimming pool
+        </p>
+        <p class="font-Montserrat">
+          In a tropical setting, unwind and relax by our sparkling swimming pool
+          after a day of adventures. You may delight in a refreshing dip or soak
+          up the sun on our comfortable lounge chairs while sipping on a
+          delicious cocktail or local craft beer.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="About"
+      class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse mt-8 snap-start"
+    >
+      <div class="sm:p-20 p-10">
+        <p class="text-xl xl:text-2xl font-semibold text-gold">ABOUT US</p>
+        <p class="text-3xl 2xl:text-5xl font-Montserrat font-semibold">
+          Your Perfect Getaway in the Heart of La Fortuna
+        </p>
+        <p class="font-Montserrat xl:text-2xl lg:text-xl pt-4">
+          At <strong>La Fortuna Downtown Boutique Hotel</strong>, we provide personalized
+          services and unique experiences to create an unforgettable stay for
+          you. Our hotel is the most centrally located in La Fortuna, with a
+          balance of comfort and style; it allows you to have easy access to top
+          attractions, such as the impressive <strong>Arenal Volcano National Park, La
+          Fortuna Waterfall</strong>, and the relaxing hot springs.
+        </p>
+        <p class="font-BadScript text-lg sm:text-xl 2xl:text-2xl pt-4">
+          Ricardos Villalobos - Gerente General
+        </p>
+      </div>
+      <div>
+        <div
+          class="sm:pl-24 2xl:pl-15 sm:p-10 flex justify-center sm:items-center sm:float-right"
+        >
+          <div class="relative">
+            <Image
+              src={room1}
+              alt="room"
+              class="2xl:w-[50rem] 2xl:min-h-[45rem] ml-14 sm:ml-0 w-72 h-96 sm:pl-0 sm:min-h-[32rem] sm:w-[35rem] rounded-xl sm:rounded-2xl bg-cover"
+            />
+          </div>
+          <div
+            class="absolute mr-44 pt-24 sm:mr-[350px] sm:right-[44px] sm:pt-6 rounded-lg"
+          >
+            <Image
+              src={bathroom}
+              alt="room"
+              class="w-44 h-52 bg-cover shadow-xl sm:min-h-[23rem] sm:min-w-[23rem] 2xl:min-h-[28rem] 2xl:w-[23rem] rounded-2xl border-solid sm:border-8 border-4 border-white"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

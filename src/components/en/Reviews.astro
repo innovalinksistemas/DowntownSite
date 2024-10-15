@@ -1,0 +1,235 @@
+---
+import Image from "astro/components/Image.astro";
+import trip from "../../assets/tripadvisorlog.png"
+import tripadvisor from "../../assets/tripadvisor.png"
+import expedia from "../../assets/expedia.png"
+import booking from "../../assets/booking.png"
+import google from "../../assets/google.png"
+import googleIcon from "../../assets/googleIcon.png"
+import expediaIcon from "../../assets/expediaIcon.png"
+import bookingIcon from "../../assets/bookingIcon.png"
+const reviews = [
+  {
+    name:"Tim B",
+    title: "Great Stay",
+    commentary: "Great Hotel. Smooth check in and check out. You can park right in front of the hotel and there’s another parking lot nearby. Breakfast is included. There’s a pool and restaurant. Clean rooms. Hotel is centrally located near shops, bars, restaurants, spas, etc.",
+    platform: trip,
+    
+  },
+  {
+    name:"David M",
+    title: "Excelente lugar",
+    commentary: "Un lugar REALMENTE ESPECTACULAR y ubicado en el centro de La Fortuna, su restaurante MARIA BONITA STEAK HOUSE es realmente DELICIOSO.",
+    platform: googleIcon,
+    
+  },
+  {
+    name:"Ian",
+    title: "Volcanic visit",
+    commentary:"Large comfortable room. Great pool area. Really friendly staff. Close to all amenities and restaurants. Great transfers!",
+    platform: bookingIcon,
+  },
+  {
+    name:"Wahid",
+    title: "Loved my balcony",
+    commentary: "Loved my balcony view of the church and the city square. Room was comfortable, and staff was very helpful and friendly.",
+    platform: expediaIcon,
+    
+  },
+
+  
+  // Agrega más habitaciones aquí
+];
+---
+
+<style>
+    .swiper-button-prev {
+      background-color: white;
+      background-position: center;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      padding: 8px 10px;
+      border-radius: 100%;
+      
+      color: transparent;
+    }
+    
+    .swiper-button-prev {
+      background-image: url("../assets/flecha.png");
+      
+    }
+    .swiper-button-next {
+      background-color: white;
+      background-position: center;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      padding: 8px 10px;
+      border-radius: 100%;
+    
+      color: transparent;
+    }
+    
+    .swiper-button-next {
+      background-image: url("../assets/flechader.png");
+      
+    }
+    </style>
+
+<section id="reviews" class="bg-fondo  text-center sm:py-20  h-full snap-start">
+    <div class="flex  flex-col sm:flex-row pb-5 items-center space-y-4 sm:space-y-0 sm:items-stretch sm:space-x-8 justify-center font-Montserrat font-semibold align-baseline text-xl sm:text-2xl">
+        <div>
+         <p>8.3/10</p>
+         <p class="text-gray-600"><span class="number" data-value="500">0</span> notes</p>
+          <Image src={tripadvisor} alt="tripadvisor" class="w-[8rem] sm:w-[20rem]"/>
+        </div>
+        <div>
+            <p>8.3/10</p>
+          <p class="text-gray-600"><span class="number" data-value="2123">0</span> notes</p>
+          <Image src={google} alt="google" class="w-[8rem] sm:w-[15rem]"/>
+        </div>
+        <div>
+            <p>8.3/10</p>
+          <p class="text-gray-600"><span class="number" data-value="1500">0</span> comments</p>
+          <Image src={booking} alt="booking" class="w-[8rem] sm:w-[20rem] pt-3"/>
+        </div>
+        <div>
+            <p>8.3/10</p>
+          <p class="text-gray-600"><span class="number" data-value="2123">0</span> notes</p>
+          <Image src={expedia} alt="expedia" class="w-[8rem] sm:w-[20rem] "/>
+        </div>
+      </div>
+      
+
+<div>
+    <div class=" p-7 sm:m-0 ">
+        <div class="swiper rounded-2xl">
+          <div class="swiper-wrapper ">
+            {
+              reviews.map((review) => (
+                <div class="swiper-slide flex justify-center align-middle text-center" key={review.title}>
+                  <div class="slider-main  font-Montserrat">
+                    <div class=" sm:min-w-80 sm:min-h-[22rem] bg-white rounded-xl p-12 m-3 sm:m-0">
+                        <p class="font-semibold">{review.title}</p>
+                        <p>{review.commentary}</p>
+                        <div class="flex space-x-3 align-baseline">
+                            <Image class="w-12 h-12" src={review.platform} alt="platform" />
+                            <p class="text-yellow-300">★★★★★</p>
+                            <p>{review.name}</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev rounded-full "></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+</div>
+
+</section>
+
+<script>
+    import Swiper from 'swiper';
+    import 'swiper/css';
+    import { Navigation } from "swiper/modules";
+    import "swiper/css/navigation";
+  
+    const swiper = new Swiper(".swiper", {
+    modules: [Navigation],
+    loop: true,
+    centeredSlides: true,
+  
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 90,
+      },
+    },
+  
+    navigation: {
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+    },
+  
+    on: {
+      slideChange: function () {
+        const slides = this.slides;
+        const activeIndex = this.activeIndex;
+  
+        slides.forEach((slide, index) => {
+          const slideElement = slide.querySelector('.slider-main');
+          const imageElement = slide.querySelector('img');
+  
+          if (index === activeIndex) {
+            slideElement.classList.remove('opacity-60', 'bg-opacity-40');
+            slideElement.classList.add('opacity-100', 'bg-opacity-0', 'transition-all', 'duration-300');
+  
+            // Si el tamaño de pantalla es mayor a 768px, aplica el scale
+            if (window.innerWidth >= 768) {
+              slideElement.classList.add('scale-100');
+            }
+  
+            imageElement.classList.add('rounded-lg', 'shadow-lg');
+          } else {
+            slideElement.classList.remove('opacity-100', 'bg-opacity-0', 'scale-100');
+            slideElement.classList.add('opacity-60', 'bg-opacity-40', 'transition-all', 'duration-300');
+  
+            imageElement.classList.remove('shadow-lg');
+          }
+        });
+      }
+    }
+  });
+  
+
+  function animateNumbers() {
+  const numbers = document.querySelectorAll('.number');
+
+  numbers.forEach((number) => {
+    number.innerText = '0';  // Reiniciar el número a 0 cuando vuelva a entrar en la vista
+    const updateCount = () => {
+      const target = +number.getAttribute('data-value');  // Valor final (data-value)
+      const count = +number.innerText;  // Valor actual mostrado
+
+      const increment = target / 100;  // Velocidad del incremento
+
+      if (count < target) {
+        number.innerText = Math.ceil(count + increment);  // Incrementar el número
+        setTimeout(updateCount, 20);  // Llamar la función nuevamente para continuar
+      } else {
+        number.innerText = target;  // Asegurarse que llega al valor final
+      }
+    };
+
+    updateCount();
+  });
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Si la sección es visible, comienza la animación
+      animateNumbers();
+    }
+  });
+}, {
+  threshold: 0.5  // La animación se ejecutará cuando el 50% de la sección sea visible
+});
+
+// Observa la sección con id 'reviews'
+observer.observe(document.querySelector('#reviews'));
+
+
+  </script>
