@@ -1,0 +1,144 @@
+---
+import Image from "astro/components/Image.astro";
+import room1 from "../../assets/room1.jpg";
+import Swiper from 'swiper';
+import 'swiper/css';
+import { Navigation } from "swiper/modules";
+import "swiper/css/navigation";
+import packages from '../../data/en/packages.json';
+const packagedetails = "/packagedetails/";
+---
+
+<style>
+  .swiper-button-prev {
+    background-color: white;
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 8px 20px;
+    border-radius: 100%;
+    color: transparent;
+    background-image: url("../assets/flecha.png");
+  }
+
+  .swiper-button-next {
+    background-color: white;
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 8px 20px;
+    border-radius: 100%;
+    color: transparent;
+    background-image: url("../assets/flechader.png");
+  }
+</style>
+
+<section id="Packages" class="text-center py-20 bg-fondo h-full snap-start">
+  <div class="flex flex-col pl-4">
+    <h2 class="text-7xl font-bold mb-8 font-Lobster text-left">Our Packages</h2>
+    <p class="font-Montserrat text-left text-2xl text-gold">EXCLUSIVE OFFERS</p>
+  </div>
+
+  <div class="min-w-[5rem] min-h-[32rem]">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {
+          packages.map((pkg) => (
+            <div class="swiper-slide flex justify-center" key={pkg.title}>
+              <div class="slider-main relative transition-all duration-500 ease-in-out transform-gpu scale-95 opacity-60 bg-white bg-opacity-40 p-6 rounded-lg">
+                <img
+                  src={pkg.image}
+                  alt={pkg.title}
+                  class="min-w-[5rem] min-h-[32rem] sm:min-w-[31rem] sm:min-h-[40rem] rounded-lg img"
+                />
+                <div class="absolute inset-9 sm:inset-8 flex flex-col justify-end text-left pl-12 bg-white bg-opacity-0 transition-opacity duration-500 ease-in-out">
+                  <h3 class="font-Lobster text-[30px] sm:text-[40px] text-white">{pkg.title}</h3>
+                  <span class="text-white text-lg font-Montserrat">{pkg.season}</span>
+                  <ul class="text-white font-Montserrat my-4">
+                    {pkg.extras.map((extra) => (
+                      <li key={extra}>{extra}</li>
+                    ))}
+                  </ul>
+                  <p class="font-Montserrat text-white">Tarifa: <br>
+                    <strong>{pkg.price}</strong><br>
+                    {pkg.additional.map((add) => (
+                      <span key={add}>{add}<br /></span>
+                    ))}
+                  </p>
+                 
+                  <div class="mt-4">
+                    <button class="h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex">
+                      <a class="text-center text-[#6a2831] text-xl font-semibold font-Montserrat" href={ `/Downtown/packagedetails/${pkg.id}`}>Book Now</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      
+    </div>
+  </div>
+</section>
+
+<script>
+  const swiper = new Swiper(".swiper", {
+    modules: [Navigation],
+    loop: true,
+    centeredSlides: true,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 100,
+      },
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+      
+    },
+
+    on: {
+      slideChange: function () {
+        const slides = this.slides;
+        const activeIndex = this.activeIndex;
+
+        slides.forEach((slide, index) => {
+          const slideElement = slide.querySelector('.slider-main');
+          const imageElement = slide.querySelector('img');
+
+          if (index === activeIndex) {
+            slideElement.classList.remove('opacity-60', 'bg-opacity-40');
+            slideElement.classList.add('opacity-100', 'bg-opacity-0', 'transition-all', 'duration-300');
+
+            // Si el tamaño de pantalla es mayor a 768px, aplica el scale
+            if (window.innerWidth >= 768) {
+              slideElement.classList.add('scale-100');
+            }
+
+            imageElement.classList.add('rounded-lg', 'shadow-lg');
+          } else {
+            slideElement.classList.remove('opacity-100', 'bg-opacity-0', 'scale-100');
+            slideElement.classList.add('opacity-60', 'bg-opacity-40', 'transition-all', 'duration-300');
+
+            imageElement.classList.remove('shadow-lg');
+          }
+        });
+      }
+    }
+  });
+</script>

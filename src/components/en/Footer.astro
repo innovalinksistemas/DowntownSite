@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets"
+import logov from "../../assets/logov.png"
+import logon from "../../assets/logon.png"
+import instagram from "../../assets/instagram.png"
+import facebook from "../../assets/facebook.png"
+import whatsapp from "../../assets/whatsapp.png"
+import phone from "../../assets/phone.png"
+import location from "../../assets/location.png"
+import mail from "../../assets/mail.png"
+import web from "../../assets/world.png"
+---
+
+<main>
+    <div class="sm:h-[400px] bg-[#424b59] flex flex-col items-center pb-3 sm:pb-0">
+      <div class="grid grid-cols-1 sm:grid-cols-4 w-full items-center max-w-7xl mx-auto text-white">
+     
+        <div class="flex justify-center sm:justify-start items-center">
+          <Image src={logov} alt="logo" class="sm:w-96 sm:h-80 h-48 w-48" />
+        </div>
+        <div class="mx-auto text-center ">
+          <h2 class="text-lg font-semibold text-left">Contactenos</h2>
+          <ul class="space-y-4 text-left align-middle">
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2 " src={phone} alt="telefono"/></span>+506 4000-2027</li>
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2" src={phone} alt="telefono"/></span>+506 8527-4777</li>
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2" src={mail} alt="mail"/></span>reservations@lafortunahotel.com</li>
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2" src={location} alt="location"/></span>25 m sur de la iglesia católica<br/>La Fortuna, Alajuela, Costa Rica</li>
+            <li class="flex"><span><Image class="w-[33px] h-[33px] mr-2" src={web} alt="web"/></span>www.lafortunadowntown.com</li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-center sm:justify-start items-center">
+          <h2 class="text-lg font-semibold mb-3">Siguenos</h2>
+          <div class="flex space-x-3">
+            <a href=""> <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={instagram} alt="Instagrak"/></a>
+            <a href=""><Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"  src={facebook} alt="Facebook"/></a>
+           <a href="">  <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"  src={whatsapp} alt="Whatsapp"/></a>
+          
+          </div>
+        </div>
+        <div class="flex flex-col justify-center p-4">
+          <p>Visitanos</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d622.8260670461028!2d-84.64578216232306!3d10.471007440779312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sLa%20Fortuna%2C%20C.%20470%20Centro%2C%20Provincia%20de%20Alajuela%2C%20Arenal%2C%2021007!3m2!1d10.4710807!2d-84.645608!5e1!3m2!1ses-419!2scr!4v1727807316646!5m2!1ses-419!2scr"
+            class="w-full sm:w-[21rem] h-64 sm:h-72 pt-2"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="bg-fondo w-full">
+        <div class="flex flex-row space-x-12 p-4">
+          <div class="">
+            <p class="text-[#424b59] font-semibold font-Montserrat text-lg">La Fortuna Hotels Accesos</p>
+            <ul>
+              <li><a href="#Home" class="text-base font-Montserrat">La Fortuna Blog</a></li>
+              <li><a href="#Home" class="text-base font-Montserrat">Ubicacion</a></li>
+              <li><a href="#Home" class="text-base font-Montserrat">Paquetes y Ofertas</a></li>
+              <li><a href="#Home" class="text-base font-Montserrat">Suscripciones</a></li>
+              <li><a href="#Home" class="text-base font-Montserrat">Tours & Transporte</a></li>
+              <li><a href="#Home" class="text-base font-Montserrat">Planificador de Viaje</a></li>
+              <li><a href="#Home" class="text-base font-Montserrat">Experiencias Extraordinarias</a></li>
+              <li><a href="#Home" class="text-base font-Montserrat">Empleos</a></li>
+              <li><a href="#Home" class="text-base font-Montserrat">Reuniones y Eventos</a></li>
+          </div>
+          <div>
+            <p class="text-[#424b59] font-semibold font-Montserrat text-lg">Nuestros Socios</p>
+            <div class="flex sm:flex-row flex-col  space-x-1">
+              <Image src={logon} alt="socio1"/>
+              <Image src={logon} alt="socio1"/>
+              <Image src={logon} alt="socio1"/>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#424b59] w-full flex flex-col">
+        <div class="flex flex-col sm:text-left text-center">
+          <ul class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2">
+            <li><a href="">Aviso legal</a></li>
+            <li><a href="">Politica de privacidad</a></li>
+            <li><a href="">Preferencias de cookies</a></li>
+            <li><a href="">No vender mis datos personales</a></li>
+            <li><a href="">Accesibilidad</a></li>
+          </ul>
+        </div>
+        <div class="grid sm:grid-cols-2 sm:pl-2 grid-rows-2 sm:text-left text-center gap-2 sm:gap-0">
+          <p class="text-white font-Montserrat text-sm">© La Fortuna Downtown. Derechos Reservados.</p>
+          <p class="text-white font-Montserrat text-sm  sm:place-self-end sm:pr-2">Desarrollado & Diseñado por InnovaLinkCR</p>
+        </div>
+       
+      </div>
+    </div>
+  </main>
+  

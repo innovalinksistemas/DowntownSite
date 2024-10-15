@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+import logob from "../../assets/LogoBHorizontal.png"
+import logon from "../../assets/logon.png"
+import burgerw from "../../assets/burger-white.svg"
+import burgerb from "../../assets/burger-black.svg"
+---
+
+<main>
+
+    <nav id="navbar" class="bg-transparent text-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600 transition-all duration-300">
+        <div class="w-[100%] flex flex-wrap items-center justify-between mx-auto p-4">
+          <!-- Logo -->
+          <a  href="" class="flex items-center">
+            <Image id="logob" src={logob} alt="logo1" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] " />
+            <Image id="logon" src={logon} alt="logo2" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] hidden" />
+          </a>
+          <!-- Botón de Reservar y Menú hamburguesa para móviles -->
+          <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
+            <a href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=EN">
+              <button class="w-[120px] h-[40px] md:w-[188px] md:h-[63px] bg-[#6a2831] rounded-full text-white text-base font-semibold">
+                Book Now
+              </button>
+            </a>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <Image class="" id="burger-white" src={burgerw} alt="menu-white"/>
+              <Image class="hidden" id="burger-black" src={burgerb} alt="menu-black"/>  
+            </button>
+          </div>
+      
+          <!-- Menú de navegación -->
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0 font-medium">
+              <li>
+                <a href="#Home" class="text-base font-semibold">La Fortuna Blog</a>
+              </li>
+              <li>
+                <a href="#About" class="text-base font-semibold">Hotel</a>
+              </li>
+              <li>
+                <a href="#Rooms" class="text-base font-semibold">Rooms</a>
+              </li>
+              <li>
+                <a href="en/packagesinfo" class=" text-base font-semibold">Packages</a>
+              </li>
+              <li>
+                <a href="packagesinfo" class=" text-base font-semibold">Tours & Transportation</a>
+              </li>
+              <li>
+                <a href="packagesinfo" class=" text-base font-semibold">Contact & Location</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+</main>
+
+<script>
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    const logob = document.getElementById('logob');
+    const logon = document.getElementById('logon');
+    const menub = document.getElementById('burger-white');
+    const menun = document.getElementById('burger-black');
+
+    if (window.scrollY > 50) {
+        navbar.classList.remove('bg-transparent', 'text-white');
+        navbar.classList.add('bg-white', 'shadow-lg', 'text-black', 'rounded-b-lg');
+        
+        logob.classList.add('hidden');
+        logon.classList.remove('hidden');
+        
+        // Cambiar color del menú móvil a negro
+        menub.classList.add('hidden');
+        menun.classList.remove('hidden');
+    } else {
+        navbar.classList.remove('bg-white', 'shadow-lg', 'text-black', 'rounded-b-lg');
+        navbar.classList.add('bg-transparent', 'text-white');
+        
+        logob.classList.remove('hidden');
+        logon.classList.add('hidden');
+        
+        // Cambiar color del menú móvil a blanco
+        menub.classList.remove('hidden');
+        menun.classList.add('hidden');
+    }
+});
+
+  // Desplazamiento suave para los enlaces
+  document.querySelector('a[href="#About"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#About').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+
+  document.querySelector('a[href="#Home"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#Home').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+
+  document.querySelector('a[href="#Rooms"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#Rooms').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+</script>
