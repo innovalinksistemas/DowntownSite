@@ -34,7 +34,7 @@
 	  // Redirigir solo si aún no se ha redirigido
 	  if (userLang.startsWith('en') && !currentPath.startsWith('/en')) {
 		localStorage.setItem('redirected', 'true');  // Evitar futuros bucles
-		window.location.href = '/en';
+		window.location.href = 'Downtown/en';
 	  } else if (!userLang.startsWith('en') && currentPath.startsWith('/en')) {
 		localStorage.setItem('redirected', 'true');  // Evitar futuros bucles
 		window.location.href = '/';
