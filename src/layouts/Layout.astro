@@ -22,23 +22,3 @@
 	</body>
 	<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </html>
-
-<script>
-	const userLang = navigator.language;
-	const currentPath = window.location.pathname;
-  
-	// Verificar si ya se ha hecho la redirección
-	const redirected = localStorage.getItem('redirected');
-  
-	if (!redirected) {
-	  // Redirigir solo si aún no se ha redirigido
-	  if (userLang.startsWith('en') && !currentPath.startsWith('/en')) {
-		localStorage.setItem('redirected', 'true');  // Evitar futuros bucles
-		window.location.href = 'Downtown/en';
-	  } else if (!userLang.startsWith('en') && currentPath.startsWith('/en')) {
-		localStorage.setItem('redirected', 'true');  // Evitar futuros bucles
-		window.location.href = '/';
-	  }
-	}
-  </script>
-  
