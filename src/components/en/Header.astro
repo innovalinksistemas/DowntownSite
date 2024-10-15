@@ -4,6 +4,8 @@ import logob from "../../assets/LogoBHorizontal.png"
 import logon from "../../assets/logon.png"
 import burgerw from "../../assets/burger-white.svg"
 import burgerb from "../../assets/burger-black.svg"
+import spain from "../../assets/SPAIN.png"
+import usa from "../../assets/USA.png"
 ---
 
 <main>
@@ -15,6 +17,14 @@ import burgerb from "../../assets/burger-black.svg"
             <Image id="logob" src={logob} alt="logo1" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] " />
             <Image id="logon" src={logon} alt="logo2" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] hidden" />
           </a>
+          <!-- Idioma switch -->
+          <button
+          id="languageToggle"
+          class="flex items-center gap-2 px-3 py-2 rounded-md text-2xl font-medium bg-trasparent "
+        >
+          <span id="flagIcon" class="w-5 h-5">🇪🇸</span>
+          <span class="sr-only" id="srText">Cambiar a inglés</span>
+        </button>
           <!-- Botón de Reservar y Menú hamburguesa para móviles -->
           <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
             <a href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=EN">
@@ -112,4 +122,33 @@ window.addEventListener('scroll', function() {
       block: 'start'
     });
   });
+
+    // Lógica para cambiar idioma
+    const button = document.getElementById("languageToggle");
+  const flagIcon = document.getElementById("flagIcon");
+  const srText = document.getElementById("srText");
+
+  // Verificar el idioma actual basado en la URL
+  let language = window.location.pathname.includes("/en") ? "en" : "es";
+
+  // Ajustar el ícono y el texto del botón según el idioma actual
+  if (language === "en") {
+    flagIcon.textContent = "🇺🇸";
+    srText.textContent = "Change to Spanish";
+  } else {
+    flagIcon.textContent = "🇪🇸";
+    srText.textContent = "Cambiar a inglés";
+  }
+
+  // Cambiar el idioma al hacer clic en el botón
+  button?.addEventListener("click", () => {
+    if (language === "es") {
+      // Cambiar a inglés
+      window.location.pathname = "/en" + window.location.pathname.substring(1);
+    } else {
+      // Cambiar a español
+      window.location.pathname = window.location.pathname.replace("/en", "/");
+    }
+  });
+
 </script>
