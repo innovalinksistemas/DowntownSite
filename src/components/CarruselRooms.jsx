@@ -54,7 +54,7 @@ export default function ImageGallery() {
                   index === 0 || index === 2 ? 'hidden md:block' : ''
                 }`} // Ocultar imágenes laterales en pantallas móviles
                 style={{
-                  width: isActive ? '100%' : '100%',
+                  width: isActive ? '170%' : '100%',
                   filter: isActive ? 'none' : 'brightness(50%)',
                   transition: 'transform 0.5s, opacity 0.5s',
                 }}
