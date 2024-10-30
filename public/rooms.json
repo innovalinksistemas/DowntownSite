@@ -1,35 +1,35 @@
 [
     {
       "id": 1,
-      "title": "DownTown Standard Doble1",
+      "title": "DownTown Standard",
       "price": "$128/NIGHT",
       "sleeps": 2,
       "beds": "2 twin beds",
-      "image": "https://i.ibb.co/S6VcYs9/fondomovil.jpg"
+      "image": "https://i.ibb.co/hVC3Mht/Downtown-Standar.png"
     },
     {
       "id": 2,
-      "title": "DownTown Standard Dobleid2",
+      "title": "Tropical Triple",
       "price": "$110/NIGHT",
       "sleeps": 2,
       "beds": "2 queen beds",
-      "image": "https://i.ibb.co/bHXJJyZ/perezoso.jpg"
+      "image": "https://i.ibb.co/0ZMzqTJ/Tropical-Triple.png"
     },
     {
       "id": 3,
-      "title": "DownTown Standard2",
+      "title": "Tropical Family",
       "price": "$128/NIGHT",
       "sleeps": 2,
       "beds": "2 twin beds",
-      "image": "https://i.ibb.co/S6VcYs9/fondomovil.jpg"
+      "image": "https://i.ibb.co/0cfnMKj/Tropical-Family.png"
     },
     {
       "id": 4,
-      "title": "DownTown Standard",
+      "title": "DownTown Superior",
       "price": "$130/NIGHT",
       "sleeps": 2,
       "beds": "2 queen beds",
-      "image": "https://i.ibb.co/bHXJJyZ/perezoso.jpg"
+      "image": "https://i.ibb.co/BGWRp5f/Downtown-Superior.png"
     }
   ]
   
