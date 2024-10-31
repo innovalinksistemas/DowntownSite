@@ -3,7 +3,10 @@ import { Image } from "astro:assets";
 import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
 import room3 from "../assets/room3.jpg";
-
+import galeria1 from "../assets/1.png";
+import galeria2 from "../assets/3.png";
+import galeria3 from "../assets/5.png";
+import galeria4 from "../assets/7.png";
 
 const roomsPhotos = [
   {
@@ -51,19 +54,23 @@ const roomsPhotos = [
 <div class="max-w-4xl mx-auto py-8">
 
 
-    <h2 class="text-2xl font-semibold text-center mb-6">Photos of our rooms</h2>
+    <h2 class="text-2xl font-semibold text-center mb-6">Nuestra Habitaciones</h2>
 
-    <div class="sm:grid grid-cols-3 gap-4 hidden">
-        <div class="min-h-64 min-w-64 bg-gray-500">1</div>
+    <div class="sm:grid grid-cols-3 gap-4 hidden ">
+        <div class="min-h-64 min-w-72 bg-gray-500">
+          <Image class="min-h-full" src={galeria1} alt=""/>
+        </div>
         <div>
             <div>
                 <div class="flex flex-col space-y-6">
-                    <div class="min-h-32 min-w-36 bg-gray-500">4</div>
-                    <div class="min-h-32 min-w-36 bg-gray-500">5</div>
+                  <Image src={galeria2} alt=""/>
+                  <Image src={galeria3} alt=""/>
                 </div>
             </div>
         </div>
-        <div class="min-h-64 min-w-64 bg-gray-500">3</div>
+        <div class="min-h-64 min-w-72 bg-gray-500">
+          <Image class="min-h-full" src={galeria4} alt=""/>
+        </div>
     </div>
 
 
