@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import suve from "../../assets/suve.png";
-import resta from "../../assets/resta.png";
+import resta from "../../assets/LangostaMariaBonita.png";
+import nuwa from "../../assets/NUWA.png";
+import nuwalog from "../../assets/NUWAlog.png";
 import logomaria from "../../assets/logomaria.png";
 ---
 
@@ -11,18 +13,14 @@ import logomaria from "../../assets/logomaria.png";
       class="sm:grid sm:grid-cols-2 px-4 pt-20 flex flex-col-reverse items-center"
     >
       <div class="sm:ml-0 mt-10 sm:mt-0 sm:order-last order-none">
+
         <h2
-          class="text-left text-[#7b7b7b] text-lg sm:text-xl font-semibold font-Montserrat"
-        >
-          Local Amanities
-        </h2>
-        <h2
-          class="w-full sm:w-[432px] text-[#424b59] text-2xl sm:text-[32px] font-semibold font-Montserrat"
+          class="w-full sm:pl-3 sm:w-[450px] text-[#424b59] text-2xl sm:text-[32px] font-semibold font-Montserrat"
         >
           Maria Bonita Steak House
         </h2>
 
-        <p class="font-Montserrat text-sm sm:text-base">
+        <p class="font-Montserrat text-sm sm:text-base sm:pl-3">
           Enjoy a dining experience at Maria Bonita Steak House, our restaurant
           that specializes in grilled meats, seafood, mixology, wines, and
           authentic Lebanese cuisine. Additionally, we offer free buffet
@@ -30,14 +28,14 @@ import logomaria from "../../assets/logomaria.png";
           possible.
         </p>
         <div
-          class="flex flex-col sm:grid sm:grid-cols-2 mt-6 sm:mt-12 items-center sm:items-start"
+          class="sm:pl-3 flex flex-col sm:grid sm:grid-cols-2 mt-6 sm:mt-12 items-center sm:items-start"
         >
           <button
-            class="h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex mb-4 sm:mb-0"
+            class=" h-11 w-52 px-1 py-2.5 rounded-[25px] border-2 border-[#6a2831] justify-center items-center gap-3.5 inline-flex mb-4 sm:mb-0"
           >
             <a
-              class="text-center text-[#6a2831] text-base sm:text-xl font-semibold font-['Montserrat']"
-              href="">Read More</a
+              class=" text-center text-[#6a2831] text-base sm:text-xl font-semibold font-['Montserrat']"
+              href="">Menú</a
             >
           </button>
           <Image class="w-full sm:w-[600px]" src={logomaria} alt="maria" />
@@ -45,24 +43,20 @@ import logomaria from "../../assets/logomaria.png";
       </div>
 
       <div class="w-screen sm:w-auto">
-        <Image src={resta} alt="resta" class="sm:ml-2 w-full sm:w-auto" />
+        <Image src={resta} alt="resta" class="sm:ml-2 w-full sm:w-auto rounded-lg" />
       </div>
     </div>
 
     <div class="sm:grid sm:grid-cols-2 px-4 pt-20 flex flex-col items-center">
       <div class="sm:mr-0 mt-10 sm:mt-0 order-last sm:order-none">
+
         <h2
-          class="text-left text-[#7b7b7b] text-lg sm:text-xl font-semibold font-Montserrat"
-        >
-          Local Amanities
-        </h2>
-        <h2
-          class="w-full sm:w-[432px] text-[#424b59] text-2xl sm:text-[32px] font-semibold font-Montserrat"
+          class="w-full pr-3 sm:w-[432px] text-[#424b59] text-2xl sm:text-[32px] font-semibold font-Montserrat"
         >
           Nuwa Souvenir
         </h2>
 
-        <p class="font-Montserrat text-sm sm:text-base">
+        <p class="font-Montserrat text-sm sm:text-base sm:pr-3">
           Our art gallery is a vibrant space dedicated to the celebration of
           Costa Rican art and culture. We present works by local artists,
           offering a unique experience that connects visitors with the
@@ -77,16 +71,22 @@ import logomaria from "../../assets/logomaria.png";
           >
             <a
               class="text-center text-[#6a2831] text-base sm:text-xl font-semibold font-['Montserrat']"
-              href="">Read More</a
+              href="">Menú</a
             >
           </button>
-          <Image class="w-full sm:w-[600px]" src={logomaria} alt="maria" />
+          <Image class="w-full sm:w-[250px]" src={nuwalog} alt="maria" />
         </div>
       </div>
 
       <div class="w-screen sm:w-auto">
-        <Image src={resta} alt="resta" class="w-full sm:w-auto" />
+        <Image src={nuwa} alt="resta" class="w-full sm:w-auto rounded-lg" />
       </div>
     </div>
   </div>
 </main>
+
+
+
+
+
+
