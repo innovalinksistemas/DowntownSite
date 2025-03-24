@@ -18,8 +18,12 @@ export default {
 			colors:{
 				rojo: '#6A28331',
 				azulOscuro: '#424B59',
-				fondo: '#FFF5E4',
-				gold:"#ddb97f"
+				fondo: '#FFFFFF',
+				fondog:'#F2F2F2',
+				fondoF:'#CCCACA',
+				gold:"#ddb97f",
+				botones:"#AA1A2B",
+				gris:"#424b59"
 			},
 
 			fontFamily: {
@@ -27,7 +31,10 @@ export default {
 				Lobster: ["Lobster", "sans-serif"],
 				Montserrat: ["Montserrat", "sans-serif"],
 			  },
-			  
+
+			borderRadius: {
+				'4xl': '8rem'
+			},
 		},
 
 	},

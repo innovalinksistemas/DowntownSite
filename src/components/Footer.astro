@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logov from "../assets/logov.png";
-import logon from "../assets/logon.png";
+
 import instagram from "../assets/instagram.png";
 import facebook from "../assets/facebook.png";
 import whatsapp from "../assets/whatsapp.png";
@@ -9,22 +8,20 @@ import phone from "../assets/phone.png";
 import location from "../assets/location.png";
 import mail from "../assets/mail.png";
 import web from "../assets/world.png";
-import nuwa from "../assets/NUWAlog.png"
-import ventanita from "../assets/laventanita.png"
-import mariabonita from "../assets/mariabonita.png"
-import miradorarenal from "../assets/miradorarenal.png"
-import tropical from "../assets/tropical.png"
+import nuwa from "../assets/nuwaBlanco.png";
+import logoTierra from "../assets/logoTierra.png";
+import logoPinto from "../assets/logoPinto.png";
+import tropicalB from "../assets/tropicalB.png";
+import SNBlanco from "../assets/SNBlanco.png";
+import MBBlanco from "../assets/MBBlanco.png";
+import ventanitaBlanco from "../assets/ventanitaBlanco.png";
 ---
 
-<main>
-  <div class="sm:h-[400px] bg-[#424b59] flex flex-col sm:flex-row items-center pb-3 sm:pb-0">
-    <div class="grid grid-cols-1 sm:grid-cols-4 w-full items-stretch max-w-7xl mx-auto text-white">
-      <div class="flex justify-center sm:justify-start items-center h-full">
-        <Image src={logov} alt="logo" class="sm:w-96 sm:h-80 h-48 w-48" />
-      </div>
-
-      <div class="mx-auto text-center h-auto">
-        <h2 class="text-lg font-semibold text-left">Contáctenos</h2>
+<div id="Footer" class="bg-fondoF flex flex-col p-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="text-center md:text-left">
+      <h3 class=" text-xl text-gris mb-4 font-bold">Contáctanos</h3>
+      <div class=" space-y-4 text-gris">
         <ul class="space-y-4 text-left align-middle">
           <li class="flex">
             <span>
@@ -39,7 +36,7 @@ import tropical from "../assets/tropical.png"
           <li class="flex">
             <span>
               <Image class="w-[33px] h-[33px] mr-2" src={mail} alt="mail" />
-            </span> reservations@lafortunahotel.com
+            </span> reservations@lafortunahotels.com
           </li>
           <li class="flex">
             <span>
@@ -53,119 +50,79 @@ import tropical from "../assets/tropical.png"
           </li>
         </ul>
       </div>
-
-      <div class="flex flex-col justify-center align-baseline sm:justify-start items-center h-full">
-        <h2 class="text-lg font-semibold mb-3">Síguenos</h2>
-        <div class="flex space-x-3">
-          <a href="">
-            <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={instagram} alt="Instagram" />
-          </a>
-          <a href="">
-            <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={facebook} alt="Facebook" />
-          </a>
-          <a href="">
-            <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={whatsapp} alt="Whatsapp" />
-          </a>
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-center h-full">
-        <h2 class="text-lg font-semibold text-left">Visitanos</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825808.876441441!2d-86.3484886938268!3d9.881747931855228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sDowntown%20La%20Fortuna%20Boutique%20Hotel!5e1!3m2!1ses-419!2scr!4v1729309104000!5m2!1ses-419!2scr"
-          class="w-full sm:w-[21rem] h-64 sm:h-72 rounded-lg"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
     </div>
-  </div>
-  <div class="bg-fondo w-full">
-    <div class="flex flex-row space-x-12 p-4">
-      <div class="flex flex-col mx-auto sm:flex-row sm:space-x-16">
-        <div>
-          <p class="text-[#424b59] font-semibold font-Montserrat text-lg">
-            La Fortuna Hotels Accesos
-          </p>
-          <ul>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >La Fortuna Blog</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat">Ubicacion</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Paquetes y Ofertas</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Suscripciones</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Tours & Transporte</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Planificador de Viaje</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Experiencias Extraordinarias</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat">Empleos</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Reuniones y Eventos</a>
-            </li>
-          </ul>
-        </div>
 
-        <div>
-          <p class="text-[#424b59] font-semibold font-Montserrat text-lg">
-            Nuestros Socios
-          </p>
-          <div class="flex sm:flex-row flex-col space-x-1">
-            <Image src={mariabonita} class="w-48 h-40" alt="Maria Bonita La Fortuna" />
-            <Image src={ventanita} class="w-48 h-40" alt="La Ventanita La Fortuna" />
-            <Image src={nuwa} class="w-48 h-40" alt="Nuwa Art Gallery" />
-            <Image src={miradorarenal} class="w-48 h-40" alt="Mirador La Fortuna Arenal" />
-            <Image src={tropical} class="w-48 h-40" alt="Tropical Experiences La Fortuna" />
-            
-          </div>
-        </div>
-      </div>
+    <div class="">
+      <h3 class=" text-xl text-gris mb-4 font-bold">Visitanos</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2012765.6315218944!2d-85.00654464706574!3d9.83500312456571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa00c62873c2a79%3A0x109e54e1dc56503b!2sMar%C3%ADa%20Bonita%20Steak%20House!5e0!3m2!1ses-419!2scr!4v1739563689459!5m2!1ses-419!2scr"
+        width="400"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <div class="bg-[#424b59] w-full flex flex-col">
-      <div class="sm:flex flex-row sm:text-left text-center items-center">
-        <ul
-          class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2"
-        >
-          <li><a href="">Aviso legal</a></li>
-          <li><a href="">Politica de privacidad</a></li>
-          <li><a href="">Preferencias de cookies</a></li>
-          <li><a href="">Accesibilidad</a></li>
-        </ul>
-        <div
-          class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baseline"
-        >
-          <p class="text-white font-Montserrat text-sm">
-            © La Fortuna Downtown. Derechos Reservados.
-          </p>
-          <p
-            class="text-white font-Montserrat text-sm sm:place-self-end sm:pr-2"
-          >
-            Desarrollado & Diseñado por InnovaLinkCR
-          </p>
-        </div>
+
+    <div class="">
+      <h3 class=" text-xl text-gris mb-4 font-bold">Redes sociales</h3>
+      <div class="flex space-x-6">
+        <a href="">
+          <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={instagram} alt="Instagram" />
+        </a>
+        <a href="">
+          <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={facebook} alt="Facebook" />
+        </a>
+        <a href="">
+          <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={whatsapp} alt="Whatsapp" />
+        </a>
       </div>
     </div>
   </div>
 </div>
-</main>
+
+<div class="bg-black w-full">
+  <div class="flex flex-row space-x-12 overflow-x-auto p-4">
+    <div class="flex flex-col mx-auto sm:flex-row ">
+      
+        <div class="flex sm:flex-row flex-col sm:space-x-1 overflow-x-auto min-w-full">
+          <Image src={logoTierra} class="w-[160px] h-[160px] flex-shrink-0" alt="Tierra Gastro" />
+          <Image src={MBBlanco} class="w-[160px] h-[160px] flex-shrink-0" alt="Maria Bonita La Fortuna" />
+          <Image src={ventanitaBlanco} class="w-[160px] h-[160px] flex-shrink-0" alt="La Ventanita La Fortuna" />
+          <Image src={logoPinto} class="w-[160px] h-[160px] flex-shrink-0" alt="Pinto e' Gallo" />
+          <Image src={tropicalB} class="w-[160px] h-[160px] flex-shrink-0" alt="Tropical Experiences La Fortuna" />
+          <Image src={nuwa} class="w-[160px] h-[160px] flex-shrink-0" alt="Nuwa Art Gallery" />
+          <Image src={tropicalB} class="w-[160px] h-[160px] flex-shrink-0" alt="Lava Drinks" />
+          <Image src={SNBlanco} class="w-[160px] h-[160px] flex-shrink-0" alt="Selva Negra" />
+        </div>
+        
+    </div>
+  </div>
+
+  <div class="bg-[#424b59] w-full flex flex-col">
+    <div class="sm:flex flex-row sm:text-left text-center items-center">
+      <ul
+        class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2"
+      >
+        <li><a href="">Aviso legal</a></li>
+        <li><a href="">Politica de privacidad</a></li>
+        <li><a href="">Preferencias de cookies</a></li>
+        <li><a href="">Accesibilidad</a></li>
+      </ul>
+      <div
+        class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baseline"
+      >
+        <p class="text-white font-Montserrat text-sm">
+          © La Fortuna Downtown. Derechos Reservados.
+        </p>
+        <p
+          class="text-white font-Montserrat text-sm sm:place-self-end sm:pr-2"
+        >
+          Desarrollado & Diseñado por InnovaLinkCR
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 

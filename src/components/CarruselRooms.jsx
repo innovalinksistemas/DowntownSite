@@ -86,14 +86,14 @@ export default function ImageGallery() {
       </div>
       <button
         onClick={prevImage}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute left-2 top-1/2 transform -translate-y-1/2  bg-red-600 text-white p-2 rounded-full"
         aria-label="Imágenes anteriores"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={nextImage}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-red-600  text-white p-2 rounded-full"
         aria-label="Siguientes imágenes"
       >
         <ChevronRight className="w-6 h-6" />

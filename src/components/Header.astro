@@ -10,37 +10,37 @@ import usa from "../assets/USA.png";
 
 <main>
   <nav
-    id="navbar"
-    class="bg-transparent text-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600 transition-all duration-300"
+  id="navbar"
+  class="bg-transparent text-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600 transition-all duration-300 flex justify-center"
+>
+  <div
+    class="w-[90%] flex flex-wrap items-center justify-between mx-auto p-4 border-b-2 border-white/90"
   >
-    <div
-      class="w-[100%] flex flex-wrap items-center justify-between mx-auto p-4"
-    >
       <!-- Logo -->
       <a href="" class="flex items-center">
         <Image
           id="logob"
           src={logob}
           alt="logo1"
-          class="w-[150px] h-[50px] md:w-[271px] md:h-[75px]"
+          class="lg:w-[200px] lg:h-[60px] md:w-[271px] md:h-[75px] w-[150px] h-[50px]"
         />
         <Image
           id="logon"
           src={logon}
           alt="logo2"
-          class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] hidden"
+          class="lg:w-[200px] lg:h-[60px] md:w-[271px] md:h-[75px] w-[150px] h-[50px] hidden"
         />
       </a>
       <!-- Idioma switch -->
-<div class="">
-  <button
-  id="languageToggle"
-  class="sm:flex sm:items-center sm:gap-2 sm:px-3 sm:py-2 px-1 sm:rounded-md text-2xl sm:font-medium bg-trasparent  "
->
-  <span id="flagIcon" class="sm:w-5 sm:h-5">🇪🇸</span>
-  <span class="sr-only" id="srText">Cambiar a inglés</span>
-</button>
-</div>
+      <div class="">
+        <button
+          id="languageToggle"
+          class="sm:flex sm:items-center sm:gap-2 sm:px-3 sm:py-2 px-1 sm:rounded-md text-2xl sm:font-medium bg-trasparent"
+        >
+          <span id="flagIcon" class="sm:w-5 sm:h-5">🇪🇸</span>
+          <span class="sr-only" id="srText">Cambiar a inglés</span>
+        </button>
+      </div>
 
       <!-- Botón de Reservar y Menú hamburguesa para móviles -->
       <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
@@ -53,7 +53,7 @@ import usa from "../assets/USA.png";
             Reserve Ahora
           </button>
         </a>
-        
+
         <button
           data-collapse-toggle="navbar-sticky"
           type="button"
@@ -81,7 +81,7 @@ import usa from "../assets/USA.png";
           class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0 font-medium"
         >
           <li>
-            <a href="#Home" class="text-base font-semibold">La Fortuna Blog</a>
+            <a href="#Home" class="text-base font-semibold  hover:text-botones">La Fortuna Blog</a>
           </li>
           <li>
             <a href="#About" class="text-base font-semibold">Hotel</a>
@@ -121,8 +121,7 @@ import usa from "../assets/USA.png";
       navbar.classList.add(
         "bg-white",
         "shadow-lg",
-        "text-black",
-        "rounded-b-lg"
+        "text-black"
       );
 
       logob.classList.add("hidden");
@@ -135,8 +134,8 @@ import usa from "../assets/USA.png";
       navbar.classList.remove(
         "bg-white",
         "shadow-lg",
-        "text-black",
-        "rounded-b-lg"
+        "text-black"
+       
       );
       navbar.classList.add("bg-transparent", "text-white");
 
@@ -160,7 +159,7 @@ import usa from "../assets/USA.png";
       });
     });
 
-    // Lógica para cambiar idioma
+  // Lógica para cambiar idioma
   const button = document.getElementById("languageToggle");
   const flagIcon = document.getElementById("flagIcon");
   const srText = document.getElementById("srText");
@@ -171,11 +170,11 @@ import usa from "../assets/USA.png";
     if (language === "es") {
       flagIcon.textContent = "🇪🇸";
       srText.textContent = "Cambiar a inglés";
-      window.location.href = "";  // Redirigir a la versión en español
+      window.location.href = ""; // Redirigir a la versión en español
     } else {
       flagIcon.textContent = "🇺🇸";
       srText.textContent = "Cambiar a español";
-      window.location.href = "/Downtown/en";  // Redirigir a la versión en inglés
+      window.location.href = "/Downtown/en"; // Redirigir a la versión en inglés
     }
   });
 </script>

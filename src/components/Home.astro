@@ -1,27 +1,43 @@
 ---
 import { Image } from "astro:assets";
-import fondo1 from "../assets/fondo1.webp"
-import fondo2 from "../assets/fondo2cc.png"
-import MouseScroll from  "../assets/mouse-scroll.png"
+import fondo1 from "../assets/fondo1.webp";
+import fondo2 from "../assets/fondo2cc.png";
+import MouseScroll from "../assets/mouse-scroll.png";
 
 import Header from "./Header.astro";
-
 ---
 
+<div
+  class="h-screen w-full bg-cover bg-center bg-fondo2 bg-black bg-no-repeat bg-fixed sm:bg-fondo1 snap-start"
+>
+  <div id="Home" class="h-screen relative">
+    <Image
+      src={fondo1}
+      alt="Fondo1"
+      class="w-full h-screen bg-black absolute"
+    />
 
+    <Image
+      src={fondo2}
+      alt="Fondo1"
+      class="w-full h-screen bg-black absolute bg-cover sm:hidden"
+    />
 
-<!-- <div class="h-screen w-screen bg-cover bg-center  bg-fondo2 bg-black bg-no-repeat bg-fixed sm:bg-fondo1 snap-start"> -->
- <div id="Home" class=" h-screen">
-    
-        <Image src={fondo1} alt="Fondo1" class="w-screen h-screen bg-black absolute" />
-    
-    <Image src={fondo2} alt="Fondo1" class="w-screen h-screen bg-black absolute bg-cover sm:hidden" />
-    
-    <div class="grid content-center place-self-center  sm:top-[300px] sm:mx-[210px] top-[16rem] relative">
-        <h2 class="   text-center  text-gold sm:text-[29px] font-semibold font-Montserrat">El mejor hotel 3 estrellas en el Arenal, La Fortuna. Costa Rica</h2>
-        <p class=" sm:p-0 p-5 text-left text-[38px] sm:text-center text-white sm:text-[65px] font-bold font-Montserrat">UNA EXPERIENCIA UNICA <br> DE HOSPEDAJE EN LA FORTUNA</p>
+    <div
+      class="grid content-center place-self-center sm:top-[300px] sm:mx-[210px] top-[16rem] relative"
+    >
+      <p
+        class="sm:p-0 p-5 text-left text-[38px] sm:text-center text-white sm:text-[65px] font-bold font-Montserrat"
+      >
+        UNA EXPERIENCIA UNICA <br /> DE HOSPEDAJE EN LA FORTUNA
+      </p>
+      <div class="border"></div>
+      <h2
+        class="text-center text-white sm:text-[29px] font-semibold font-Montserrat"
+      >
+        El mejor hotel 3 estrellas en el Arenal, La Fortuna. Costa Rica
+      </h2>
     </div>
- </div>
- 
- 
-<!-- </div> -->
+  </div>
+</div>
+
