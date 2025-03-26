@@ -14,15 +14,16 @@ import usa from "../assets/USA.png";
   class="bg-transparent text-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600 transition-all duration-300 flex justify-center"
 >
   <div
-    class="w-[90%] flex flex-wrap items-center justify-between mx-auto p-4 border-b-2 border-white/90"
+    class="w-[90%] flex flex-wrap items-center justify-between mx-auto p-4  relative"
   >
+  <div class="absolute bottom-0 left-0 w-[83%] h-[2px] bg-white/90"></div>
       <!-- Logo -->
       <a href="" class="flex items-center">
         <Image
           id="logob"
           src={logob}
           alt="logo1"
-          class="lg:w-[200px] lg:h-[60px] md:w-[271px] md:h-[75px] w-[150px] h-[50px]"
+          class="lg:w-[200px] lg:h-[50px] md:w-[270px] md:h-[75px] w-[150px] h-[50px]"
         />
         <Image
           id="logon"
@@ -48,7 +49,7 @@ import usa from "../assets/USA.png";
           href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=EN"
         >
           <button
-            class="w-[120px] h-[40px] md:w-[188px] md:h-[63px] bg-[#6a2831] rounded-full text-white text-base font-semibold"
+            class="mx-6 w-[120px] h-[40px] md:w-[160px] md:h-[45px] bg-botones rounded-full text-white text-base font-semibold"
           >
             Reserve Ahora
           </button>
@@ -84,21 +85,21 @@ import usa from "../assets/USA.png";
             <a href="#Home" class="text-base font-semibold  hover:text-botones">La Fortuna Blog</a>
           </li>
           <li>
-            <a href="#About" class="text-base font-semibold">Hotel</a>
+            <a href="#About" class="text-base font-semibold hover:text-botones">Hotel</a>
           </li>
           <li>
-            <a href="#Rooms" class="text-base font-semibold">Habitaciones</a>
+            <a href="#Rooms" class="text-base font-semibold hover:text-botones">Habitaciones</a>
           </li>
           <li>
-            <a href="packagesinfo" class="text-base font-semibold">Paquetes</a>
+            <a href="packagesinfo" class="text-base font-semibold hover:text-botones">Paquetes</a>
           </li>
           <li>
-            <a href="packagesinfo" class="text-base font-semibold"
+            <a href="packagesinfo" class="text-base font-semibold hover:text-botones"
               >Tours & Transporte</a
             >
           </li>
           <li>
-            <a href="contacto" class="text-base font-semibold"
+            <a href="contacto" class="text-base font-semibold hover:text-botones"
               >Contacto & Ubicación</a
             >
           </li>
