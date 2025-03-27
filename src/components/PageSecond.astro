@@ -1,21 +1,90 @@
 ---
-import { Image } from "astro:assets"
-import fondo3   from "../assets/fondo3.png"
-
+import { Image } from "astro:assets";
+import fondo3 from "../assets/fondo3.png";
+import room from "../assets/room1.jpg"
 ---
 
 <main>
-    <div class="relative h-[580px]">
-      <!-- Fondo de imagen -->
-      <Image src={fondo3} alt="Fondo1" class="w-full h-[580px] object-cover absolute" />
-  
-      <!-- Contenido -->
-      <div class="relative top-[10rem] sm:top-[200px] flex flex-col items-center ">
+  <div class="relative h-[580px]">
+    <!-- Fondo de imagen -->
+    <Image
+      src={fondo3}
+      alt="Fondo1"
+      class="w-full h-[580px] object-cover absolute"
+    />
+
+    <div class="bg-gray-100 ">
+      <div class="p-20">
+       <!-- <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">Tours</h2>--> 
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-24">
+
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-72">
+            <Image
+              src={room}
+              alt="Alone with nature"
+              class="w-full h-80 object-cover"
+            />
+        
+            <div class="p-4 flex justify-between items-center">
+              <h3 class="text-lg font-semibold">Aventura</h3>
+         
+              <button class=" bg-gray-900 text-white rounded-full p-2"
+                >➡</button
+              >
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-72">
+            <Image
+              src={room}
+              alt="Alone with nature"
+              class="w-full h-80 object-cover"
+            />
+       
+            <div class="p-4 flex justify-between items-center">
+              <h3 class="text-lg font-semibold">Naturaleza</h3>
+           
+              <button class=" bg-gray-900 text-white rounded-full p-2"
+                >➡</button
+              >
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-72">
+            <Image
+              src={room}
+              alt="Alone with nature"
+              class="w-full h-80 object-cover"
+            />
+     
+            <div class="p-4 flex justify-between items-center">
+              <h3 class="text-lg font-semibold">Cultura</h3>
+            
+              <button class=" bg-gray-900 text-white rounded-full p-2"
+                >➡</button
+              >
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-72">
+            <Image
+              src={room}
+              alt="Alone with nature"
+              class="w-full h-80 object-cover"
+            />
       
-        <p class="text-center text-[36px] sm:text-[50px] leading-snug text-white font-bold font-Montserrat mt-4 sm:mt-0">
-          "En el Corazón de las experiencias"
-        </p>
+            <div class="p-4 flex justify-between items-center">
+              <h3 class="text-lg font-semibold">Transportes</h3>
+         
+              <button class=" bg-gray-900 text-white rounded-full p-2"
+                >➡</button
+              >
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-  </main>
-  
+  </div>
+</main>
