@@ -1,42 +1,28 @@
 ---
 import { Image } from "astro:assets";
-import fondo1 from "../assets/fondo1.webp";
-import fondo2 from "../assets/fondo2cc.png";
-import MouseScroll from "../assets/mouse-scroll.png";
-
-import Header from "./Header.astro";
+import fondoPrincipal from "../assets/fondoPrincipal.jpg";
 ---
 
-<div
-  class="h-screen w-full bg-cover bg-center bg-fondo2 bg-black bg-no-repeat bg-fixed sm:bg-fondo1 snap-start"
->
-  <div id="Home" class="h-screen relative">
-    <Image
-      src={fondo1}
-      alt="Fondo1"
-      class="w-full h-screen bg-black absolute"
-    />
-
-    <Image
-      src={fondo2}
-      alt="Fondo1"
-      class="w-full h-screen bg-black absolute bg-cover sm:hidden"
-    />
-
-    <div
-      class="grid content-center place-self-center sm:top-[300px] sm:mx-[210px] top-[16rem] relative text-center"
+<div id="Home" class="h-screen relative">
+  <Image
+    src={fondoPrincipal}
+    alt="Area piscina Downtown"
+    class="w-full h-full absolute"
+  />
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div
+    class="grid content-center place-self-center sm:top-[300px] sm:mx-[210px] top-[16rem] relative text-center"
+  >
+    <p
+      class="sm:p-0  p-2 text-[20px] text-white sm:text-[45px] font-bold font-Montserrat"
     >
-      <p
-        class="sm:p-0 p-5 text-left text-[28px] sm:text-center text-white sm:text-[45px] font-bold font-Montserrat"
-      >
-        UNA EXPERIENCIA UNICA <br /> DE HOSPEDAJE EN LA FORTUNA
-      </p>
-      <div class="w-full max-w-[80%] h-[2px] bg-white/90 mx-auto"></div>
-      <h2
-        class="text-center text-white sm:text-[29px] font-semibold font-Montserrat"
-      >
-        El mejor hotel 3 estrellas en La Fortuna, Costa Rica
-      </h2>
-    </div>
+      UNA EXPERIENCIA ÚNICA <br /> DE HOSPEDAJE EN LA FORTUNA
+    </p>
+
+    <div class="lg:w-[100%] w-[90%] h-[2px] bg-white/90 mx-auto"></div>
+
+    <h2 class="text-white text-xs sm:text-[20px] font-semibold font-Montserrat p-2">
+      El mejor hotel 3 estrellas en La Fortuna, Costa Rica
+    </h2>
   </div>
 </div>

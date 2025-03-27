@@ -16,14 +16,13 @@ export default {
 				
 			},
 			colors:{
-				rojo: '#6A28331',
-				azulOscuro: '#424B59',
 				fondo: '#FFFFFF',
 				fondog:'#F2F2F2',
 				fondoF:'#CCCACA',
-				gold:"#ddb97f",
 				botones:"#AA1A2B",
-				gris:"#424b59"
+				gris:"#424b59",
+				titulo:"#6D6C6C",
+				texto:"#3F3F3F"
 			},
 
 			fontFamily: {

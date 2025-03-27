@@ -2,11 +2,11 @@
 import CarruselRooms from "@components/CarruselRooms.jsx";
 ---
 
-<section id="Rooms" class="text-center py-10 bg-fondog h-screen w-full snap-start">
-  <div class="flex flex-col">
-    <h2 class="text-6xl font-bold font-Lobster">Nuestras Habitaciones</h2>
-    <p class="font-Montserrat text-2xl text-gold">Comodidad y Descanso</p>
-    <p class="font-Montserrat text-xs">
+<section id="Rooms" class="text-center bg-fondog h-screen w-full snap-start">
+  <div class="flex flex-col p-4">
+    <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">Nuestras Habitaciones</h2>
+    
+    <p class="font-Montserrat lg:text-base text-sm text-texto">
       Nuestras habitaciones, con una decoración cómoda y acogedora, cuentan con
       aire acondicionado, TV por cable, Wi-Fi de alta velocidad, minibar,
       balcones privados y baños con duchas de agua caliente.
@@ -14,7 +14,7 @@ import CarruselRooms from "@components/CarruselRooms.jsx";
   </div>
 
   <div
-    class="min-w-[5rem] min-h-[32rem] sm:min-w-[0rem] sm:min-h-[0rem] sm:m-12"
+    class="min-w-[5rem] min-h-[32rem] sm:min-w-[0rem] sm:min-h-[0rem] sm:m-6"
   >
     <CarruselRooms client:visible />
   </div>

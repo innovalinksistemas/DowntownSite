@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import logob from "../assets/LogoBHorizontal.png";
-import logon from "../assets/logon.png";
+import logoBlancoDowntown from "../assets/logoBlancoDowntown.png";
+import logoNegroDowntown from "../assets/logoNegroDowntown.png";
 import burgerw from "../assets/burger-white.svg";
 import burgerb from "../assets/burger-black.svg";
 import spain from "../assets/SPAIN.png";
@@ -14,21 +14,21 @@ import usa from "../assets/USA.png";
   class="bg-transparent text-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600 transition-all duration-300 flex justify-center"
 >
   <div
-    class="w-[90%] flex flex-wrap items-center justify-between mx-auto p-4  relative"
+    class="w-[90%] flex items-center justify-between mx-auto p-4  relative"
   >
   <div class="absolute bottom-0 left-0 w-[83%] h-[2px] bg-white/90"></div>
       <!-- Logo -->
       <a href="" class="flex items-center">
         <Image
           id="logob"
-          src={logob}
-          alt="logo1"
+          src={logoBlancoDowntown}
+          alt="Hotel Downtown "
           class="lg:w-[200px] lg:h-[50px] md:w-[270px] md:h-[75px] w-[150px] h-[50px]"
         />
         <Image
           id="logon"
-          src={logon}
-          alt="logo2"
+          src={logoNegroDowntown}
+          alt="Hotel Downtown"
           class="lg:w-[200px] lg:h-[60px] md:w-[271px] md:h-[75px] w-[150px] h-[50px] hidden"
         />
       </a>
