@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import logoBlancoDowntown from "../assets/logoBlancoDowntown.png";
 import logoNegroDowntown from "../assets/logoNegroDowntown.png";
+import logoRojoDowntown from "../assets/logoRojoDT.png";
 import burgerw from "../assets/burger-white.svg";
 import burgerb from "../assets/burger-black.svg";
 import spain from "../assets/SPAIN.png";
@@ -14,22 +15,22 @@ import usa from "../assets/USA.png";
   class="bg-transparent text-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600 transition-all duration-300 flex justify-center"
 >
   <div
-    class="w-[90%] flex items-center justify-between mx-auto p-4  relative"
+    class="w-[90%] flex items-center justify-between mx-auto p-4  relative h-[100px] lg:h-[80px]"
   >
-  <div class="absolute bottom-0 left-0 w-[83%] h-[2px] bg-white/90"></div>
+  <div class="absolute bottom-0 left-0 lg:w-[83%] h-[2px] bg-white/90"></div>
       <!-- Logo -->
       <a href="" class="flex items-center">
         <Image
           id="logob"
           src={logoBlancoDowntown}
           alt="Hotel Downtown "
-          class="lg:w-[200px] lg:h-[50px] md:w-[270px] md:h-[75px] w-[150px] h-[50px]"
+          class="lg:w-[170px] lg:h-[50px] md:w-[270px] md:h-[75px] w-[150px] h-[50px]"
         />
         <Image
           id="logon"
           src={logoNegroDowntown}
           alt="Hotel Downtown"
-          class="lg:w-[200px] lg:h-[60px] md:w-[271px] md:h-[75px] w-[150px] h-[50px] hidden"
+          class="lg:w-[170px] lg:h-[50px] md:w-[270px] md:h-[75px] w-[150px] h-[50px] hidden"
         />
       </a>
       <!-- Idioma switch -->
@@ -46,10 +47,12 @@ import usa from "../assets/USA.png";
       <!-- Botón de Reservar y Menú hamburguesa para móviles -->
       <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
         <a
-          href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=EN"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=ES"
         >
           <button
-            class="mx-6 w-[120px] h-[40px] md:w-[160px] md:h-[45px] bg-botones rounded-full text-white text-base font-semibold"
+            class="mx-6 w-[120px] h-[40px] md:w-[140px] md:h-[45px] bg-botones rounded-full text-white text-base md:text-sm font-semibold"
           >
             Reserve Ahora
           </button>
@@ -82,24 +85,25 @@ import usa from "../assets/USA.png";
           class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0 font-medium"
         >
           <li>
-            <a href="#Home" class="text-base font-semibold  hover:text-botones">La Fortuna Blog</a>
+            <a href="#Home" class="text-base md:text-sm font-semibold  hover:text-botones">La Fortuna Blog</a>
           </li>
           <li>
-            <a href="#About" class="text-base font-semibold hover:text-botones">Hotel</a>
+            <a href="#Rooms" class="text-base md:text-sm font-semibold hover:text-botones">Habitaciones</a>
           </li>
           <li>
-            <a href="#Rooms" class="text-base font-semibold hover:text-botones">Habitaciones</a>
+            <a href="#facilidades" class="text-base md:text-sm font-semibold hover:text-botones">Hotel</a>
+          </li>
+
+          <li>
+            <a href="#paquetes" class="text-base md:text-sm font-semibold hover:text-botones">Paquetes</a>
           </li>
           <li>
-            <a href="packagesinfo" class="text-base font-semibold hover:text-botones">Paquetes</a>
-          </li>
-          <li>
-            <a href="packagesinfo" class="text-base font-semibold hover:text-botones"
+            <a href="#infoPaquetes" class="text-base md:text-sm font-semibold hover:text-botones"
               >Tours & Transporte</a
             >
           </li>
           <li>
-            <a href="contacto" class="text-base font-semibold hover:text-botones"
+            <a href="#Footer" class="text-base md:text-sm font-semibold hover:text-botones"
               >Contacto & Ubicación</a
             >
           </li>

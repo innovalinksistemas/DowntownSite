@@ -8,7 +8,7 @@ import areaPiscina from "../assets/AreaPiscina.jpg";
 import bathroom from "../assets/bathroom.jpg";
 ---
 
-<section class="bg-fondo sm:w-full">
+<section id="facilidades"  class="bg-fondo sm:w-full">
   <div>
     <div class="text-center p-6">
       <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">Facilidades Principales</h2>
@@ -17,8 +17,8 @@ import bathroom from "../assets/bathroom.jpg";
     <div
       class="sm:flex flex-row space-y-5 sm:space-y-0 sm:p-6 sm:space-x-8 p-4"
     >
-      <div>
-        <Image src={wifi} alt="parking" class="mx-auto" />
+      <div class="flex flex-col items-center text-center">
+        <Image src={car} alt="parking" class="h-12 w-12" />
         <p class="text-center font-Montserrat font-bold text-base text-titulo p-4">
           Parqueo Privado
         </p>
@@ -28,8 +28,8 @@ import bathroom from "../assets/bathroom.jpg";
           eléctrica.
         </p>
       </div>
-      <div>
-        <Image src={wifi} alt="wifi" class="mx-auto" />
+      <div class="flex flex-col items-center text-center">
+        <Image src={wifi} alt="wifi" class="h-12 w-12" />
         <p class="text-center font-Montserrat font-bold text-base text-titulo p-4">WiFi</p>
         <p class="font-Montserrat text-justify text-texto">
           Disfrute de Wi-Fi de alta velocidad en todo el hotel. Manténgase
@@ -37,19 +37,19 @@ import bathroom from "../assets/bathroom.jpg";
           mientras explora La Fortuna.
         </p>
       </div>
-      <div>
-        <Image src={bar} alt="bar" class="mx-auto" />
+      <div class="flex flex-col items-center text-center">
+        <Image src={bar} alt="bar" class="h-12 w-12" />
         <p class="text-center font-Montserrat font-bold text-base text-titulo p-4">
           Bar & Restaurante
         </p>
         <p class="font-Montserrat text-justify text-texto">
           Una experiencia gastronómica excepcional en el corazón de La Fortuna.
-          Disfrute de cortes de carne de alta calidad, mariscos frescos y
-          opciones vegetarianas, todo en un ambiente acogedor. ¡Le esperamos!
+          Disfrute de cortes de carne de alta calidad, mariscos frescos,
+          opciones vegetarianas y cócteles, todo en un ambiente acogedor. ¡Le esperamos!
         </p>
       </div>
-      <div>
-        <Image src={pool} alt="pool" class="mx-auto" />
+      <div class="flex flex-col items-center text-center">
+        <Image src={pool} alt="pool" class="h-12 w-12" />
         <p class="text-center font-Montserrat font-bold text-base text-titulo p-4">Piscina</p>
         <p class="font-Montserrat text-justify text-texto">
           Relájese en nuestra piscina, ideal para descansar después de un día de
@@ -65,7 +65,7 @@ import bathroom from "../assets/bathroom.jpg";
       id="About"
       class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse mt-8"
     >
-      <div class="p-6">
+      <div class="p-20">
         <p class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo ">Sobre Nosotros</p>
       
         <p class="font-Montserrat lg:text-base text-sm pt-4">
@@ -90,13 +90,11 @@ import bathroom from "../assets/bathroom.jpg";
         <div
           class="sm:pl-24 2xl:pl-15 sm:p-10 flex justify-center sm:items-center sm:float-right"
         >
-          <div class="relative p-4">
             <Image
               src={areaPiscina}
               alt="Area Piscina Downtown"
-              class=" lg:rounded-br-4xl lg:rounded-tl-4xl rounded-2xl  bg-cover"
+              class=" w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl"
             />
-          </div>
 
         </div>
       </div>

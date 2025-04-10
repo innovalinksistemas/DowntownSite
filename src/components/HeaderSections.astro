@@ -1,23 +1,24 @@
 ---
 import { Image } from "astro:assets";
-import logob from "../assets/LogoBHorizontal.png"
+import logoBlancoDowntown from "../assets/logoBlancoDowntown.png";
+import logoRojoDowntown from "../assets/logoRojoDT.png";
 import logon from "../assets/logon.png"
 import burgerw from "../assets/burger-white.svg"
 import burgerb from "../assets/burger-black.svg"
 ---
-
+<!-- 
 <main>
 
 
     <nav  id="navbar" class="text-white  bg-slate-400 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600">
         <div class="w-[100%] flex flex-wrap items-center justify-between mx-auto p-4">
-          <!-- Logo -->
+         
           <a href="" class="flex items-center">
-            <Image id="logob" src={logob} alt="logo1" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px]" />
-            <Image id="logon" src={logon} alt="logo2" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] hidden" />
+            <Image id="logob" src={logoBlancoDowntown} alt="logo1" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px]" />
+            <Image id="logon" src={logoRojoDowntown} alt="logo2" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] hidden" />
           </a>
           
-          <!-- Botón de Reservar y Menú hamburguesa para móviles -->
+          
           <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
             <a href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=EN">
               <button class="w-[120px] h-[40px] md:w-[188px] md:h-[63px] bg-[#6a2831] rounded-full text-white text-base font-semibold">
@@ -31,7 +32,7 @@ import burgerb from "../assets/burger-black.svg"
             </button>
           </div>
       
-          <!-- Menú de navegación -->
+         
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0 font-medium">
               <li>
@@ -47,7 +48,7 @@ import burgerb from "../assets/burger-black.svg"
                 <a href="packages" class="text-base font-semibold">Paquetes</a>
               </li>
               <li>
-                <a href="packages" class="text-base font-semibold">Tour & Transporte</a>
+                <a href="#infoPaquetes" class="text-base font-semibold">Tour & Transporte</a>
               </li>
               <li>
                 <a href="contacto" class="text-base font-semibold">Contacto & Ubicación</a>
@@ -117,4 +118,4 @@ document.querySelector('a[href="#About"]').addEventListener('click', function(ev
 });
 
 
-</script>
+</script>-->

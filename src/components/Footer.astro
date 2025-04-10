@@ -19,15 +19,13 @@ import ventanitaBlanco from "../assets/ventanitaBlanco.png";
 ---
 
 <style>
-  .slider-wrapper {
-  display: flex;
-  overflow: hidden;
-  white-space: nowrap;
+.slider a {
+  display: inline-block;
 }
 
 .slider {
   display: flex;
-  gap: 3rem; /* Espacio entre imágenes */
+  gap: 1rem; /* Espacio entre imágenes */
   animation: scroll 5s linear infinite;
 }
 
@@ -35,8 +33,8 @@ import ventanitaBlanco from "../assets/ventanitaBlanco.png";
   width: 120px;
   height: 120px;
   flex-shrink: 0;
+  min-width: 120px; /* Evita que las imágenes se reduzcan */
 }
-
 @keyframes scroll {
   from {
     transform: translateX(0%);
@@ -115,21 +113,21 @@ import ventanitaBlanco from "../assets/ventanitaBlanco.png";
     <div class="">
       <h3 class="text-xl text-gris mb-4 font-bold">Redes sociales</h3>
       <div class="flex space-x-6">
-        <a href="">
+        <a href="https://www.instagram.com/lafortunadowntown?igsh=MWt1bngybWZ6YmVvcw==">
           <Image
             class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
             src={instagram}
             alt="Instagram"
           />
         </a>
-        <a href="">
+        <a href="https://www.facebook.com/share/1XH5v8bUr3/?mibextid=wwXIfr">
           <Image
             class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
             src={facebook}
             alt="Facebook"
           />
         </a>
-        <a href="">
+        <a href="https://wa.me/message/EPD5JVA2SLQ2D1">
           <Image
             class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
             src={whatsapp}
@@ -145,29 +143,28 @@ import ventanitaBlanco from "../assets/ventanitaBlanco.png";
   <div class="slider-wrapper">
     <div class="slider">
       <!-- Original -->
-      <Image src={logoTierra} class="image" alt="Tierra Gastro" />
-      <Image src={MBBlanco} class="image" alt="Maria Bonita La Fortuna" />
-      <Image src={ventanitaBlanco} class="image" alt="La Ventanita La Fortuna" />
-      <Image src={logoPinto} class="image" alt="Pinto e' Gallo" />
-      <Image src={tropicalB} class="image" alt="Tropical Experiences" />
-      <Image src={nuwa} class="image" alt="Nuwa Art Gallery" />
-      <Image src={logoLavaDrink} class="image" alt="Lava Drinks" />
-      <Image src={SNBlanco} class="image" alt="Selva Negra" />
+      <a href="https://www.instagram.com/tierragastrocr?igsh=MTd5d2p4aTU4eXhnYw==" target="_blank" rel="noopener noreferrer"><Image src={logoTierra} class="image" alt="Tierra Gastro" /></a>
+      <a href="https://www.instagram.com/mariabonita.cr?igsh=MXhtdXZvZzFyZjgzdw==" target="_blank" rel="noopener noreferrer"><Image src={MBBlanco} class="image" alt="Maria Bonita La Fortuna" /></a>
+      <a href="https://www.instagram.com/ventanitamariabonita?igsh=a3djZDFhZ3pxMnl5"target="_blank" rel="noopener noreferrer"><Image src={ventanitaBlanco} class="image" alt="La Ventanita La Fortuna" /></a>
+      <a href="/pinto-gallo" target="_blank" rel="noopener noreferrer"><Image src={logoPinto} class="image" alt="Pinto e' Gallo" /></a>
+      <a href="/tropical" target="_blank" rel="noopener noreferrer"><Image src={tropicalB} class="image" alt="Tropical Experiences" /></a>
+      <a href="/nuwa" target="_blank" rel="noopener noreferrer"><Image src={nuwa} class="image" alt="Nuwa Art Gallery" /></a>
+      <a href="/lava-drinks" target="_blank" rel="noopener noreferrer"><Image src={logoLavaDrink} class="image" alt="Lava Drinks" /></a>
+      <a href="https://www.instagram.com/selvanegra.bar?igsh=MTBzcHRsZ3RmNG1nMA==" target="_blank" rel="noopener noreferrer"><Image src={SNBlanco} class="image" alt="Selva Negra" /></a>
 
-      <!-- Duplicado (para hacer el loop) -->
-      <Image src={logoTierra} class="image" alt="Tierra Gastro" />
-      <Image src={MBBlanco} class="image" alt="Maria Bonita La Fortuna" />
-      <Image src={ventanitaBlanco} class="image" alt="La Ventanita La Fortuna" />
-      <Image src={logoPinto} class="image" alt="Pinto e' Gallo" />
-      <Image src={tropicalB} class="image" alt="Tropical Experiences" />
-      <Image src={nuwa} class="image" alt="Nuwa Art Gallery" />
-      <Image src={logoLavaDrink} class="image" alt="Lava Drinks" />
-      <Image src={SNBlanco} class="image" alt="Selva Negra" />
-
-      
+      <!-- Duplicado para el loop infinito -->
+      <a href="https://www.instagram.com/tierragastrocr?igsh=MTd5d2p4aTU4eXhnYw==" target="_blank" rel="noopener noreferrer"><Image src={logoTierra} class="image" alt="Tierra Gastro" /></a>
+      <a href="https://www.instagram.com/mariabonita.cr?igsh=MXhtdXZvZzFyZjgzdw==" target="_blank" rel="noopener noreferrer"><Image src={MBBlanco} class="image" alt="Maria Bonita La Fortuna" /></a>
+      <a href="https://www.instagram.com/ventanitamariabonita?igsh=a3djZDFhZ3pxMnl5"target="_blank" rel="noopener noreferrer"><Image src={ventanitaBlanco} class="image" alt="La Ventanita La Fortuna" /></a>
+      <a href="/pinto-gallo" target="_blank" rel="noopener noreferrer"><Image src={logoPinto} class="image" alt="Pinto e' Gallo" /></a>
+      <a href="/tropical" target="_blank" rel="noopener noreferrer"><Image src={tropicalB} class="image" alt="Tropical Experiences" /></a>
+      <a href="/nuwa" target="_blank" rel="noopener noreferrer"><Image src={nuwa} class="image" alt="Nuwa Art Gallery" /></a>
+      <a href="/lava-drinks" target="_blank" rel="noopener noreferrer"><Image src={logoLavaDrink} class="image" alt="Lava Drinks" /></a>
+      <a href="https://www.instagram.com/selvanegra.bar?igsh=MTBzcHRsZ3RmNG1nMA==" target="_blank" rel="noopener noreferrer"><Image src={SNBlanco} class="image" alt="Selva Negra" /></a>
     </div>
   </div>
 </div>
+
 
 
   <div class="bg-[#424b59] w-full flex flex-col">
