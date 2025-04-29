@@ -3,23 +3,23 @@ import { Image } from "astro:assets";
 import fondoPrincipal from "../assets/fondoPrincipal.jpg";
 ---
 
-<div id="Home" class="h-screen relative">
+<div id="Home" class="h-screen relative " >
   <Image
     src={fondoPrincipal}
     alt="Area piscina Downtown"
-    class="w-full h-full absolute"
+    class="w-full h-full object-cover absolute "
   />
   <div class="absolute inset-0 bg-black/50"></div>
   <div
     class="grid content-center place-self-center sm:top-[300px] sm:mx-[210px] top-[16rem] relative text-center"
   >
     <p
-      class="sm:p-0  p-2 text-[20px] text-white sm:text-[45px] font-bold font-Montserrat"
+      class="sm:p-0  p-2 lg:text-[35px]  text-white sm:text-[20px]  font-bold font-Montserrat"
     >
       UNA EXPERIENCIA ÚNICA <br /> DE HOSPEDAJE EN LA FORTUNA
     </p>
 
-    <div class="lg:w-[80%] w-[50%] h-[2px] bg-white/90 mx-auto"></div>
+    <div class="lg:w-[95%] w-[85%] h-[2px] bg-white/90 mx-auto"></div>
 
     <h2 class="text-white text-xs sm:text-[20px] font-semibold font-Montserrat p-2">
       El mejor hotel 3 estrellas en La Fortuna, Costa Rica

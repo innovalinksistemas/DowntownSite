@@ -2,63 +2,194 @@
 import Layout from "../../layouts/Layout.astro";
 import packages from "../../data/packages.json";
 import HeaderSections from "@components/HeaderSections.astro";
-
+import Footer from "@components/Footer.astro";
+import icono from ""
+import { Image } from "astro:assets";
 
 const { id } = Astro.params;
 
-const pkg = packages.find(p => p.id.toString() === id);
-
+const pkg = packages.find((p) => p.id.toString() === id);
 
 if (!pkg) {
   throw new Error(`Paquete con ID ${id} no encontrado`);
 }
 
-
 export async function getStaticPaths() {
-
-  const paths = packages.map(pkg => ({
-    params: { id: pkg.id.toString() }  
+  const paths = packages.map((pkg) => ({
+    params: { id: pkg.id.toString() },
   }));
 
-  
-  return paths.map(path => ({
+  return paths.map((path) => ({
     params: path.params,
   }));
 }
 ---
 
 <Layout>
-  <HeaderSections/>
-  <div class="sm:grid sm:grid-cols-2 sm:content-center sm:pl-36 sm:h-screen sm:pr-0 sm:pb-0 sm:pt-0 flex flex-col-reverse justify-center p-5 pt-20 bg-fondo h-full">
-   
-    <div class="font-Montserrat sm:text-left text-center">
-      <p class="text-gold text-2xl">Packages</p>
-      <p class="font-bold text-3xl">{pkg.title}</p>
-      <p class="pt-2">{pkg.season}</p>
-      <div class="pb-5 pt-4">
-        <h3>Extras</h3>
-        <ul>
-          {pkg.extras.map((extra, index) => (
-            <li key={index}>{extra}</li>
+  <HeaderSections />
+  <div>
+    <div class="bg-fondog h-full w-full">
+      <div class="max-w-6xl mx-auto p-4">
+        <div
+          class="relative w-full lg:h-[500px] flex items-center justify-center lg:mt-24 mt-24 overflow-hidden"
+        >
+          <div
+            id="carousel"
+            class="flex transition-transform duration-500 ease-in-out"
+          >
+            {
+              pkg.imagenes.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  class=" rounded-xl"
+                  alt={`Imagen ${index + 1}`}
+                />
+              ))
+            }
+          </div>
+
+          <button
+            id="prev"
+            class="hidden absolute top-1/2 left-4 transform -translate-y-1/2 bg-botones p-2 rounded-full text-white shadow-lg"
+          >
+            ‹
+          </button>
+          <button
+            id="next"
+            class="hidden absolute top-1/2 right-4 transform -translate-y-1/2 bg-botones p-2 rounded-full text-white shadow-lg"
+          >
+            ›
+          </button>
+        </div>
+
+        <div class="grid grid-cols-2 lg:mt-6 mt-2">
+          <p class="lg:text-4xl text-base ">{pkg.title}</p>
+          <p class="flex justify-end lg:text-3xl text-lg">{pkg.price}</p>
+        </div>
+        <div class="mt-6">
+          <div class="lg:w-[100%] w-[100%] h-[1px] bg-fondoF mr-auto"></div>
+        </div>
+        <div>
+          <div class="lg:text-2xl text-lg pb-5 pt-4 flex justify-center">
+            <h3>Sobre esta experiencia</h3>
+          </div>
+          <p class="pt-2 lg:text-xl text-base">{pkg.description}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto pb-4 pt-4">
+      <div class="font-Montserrat text-3xl ">
+        <h3>{pkg.itinerario}</h3>
+      </div>
+
+      {
+        (pkg.itinerario1 || []).map((linea, index) =>
+          index === 0 ? (
+            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
+          ) : (
+            <p class="text-xl text-texto ml-4">{linea}</p>
+          )
+        )
+      }
+      {
+        (pkg.itinerario2 || []).map((linea, index) =>
+          index === 0 ? (
+            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
+          ) : (
+            <p class="text-xl text-texto ml-4">{linea}</p>
+          )
+        )
+      }
+      {
+        (pkg.itinerario3 || []).map((linea, index) =>
+          index === 0 ? (
+            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
+          ) : (
+            <p class="text-xl text-texto ml-4">{linea}</p>
+          )
+        )
+      }
+      {
+        (pkg.itinerario4 || []).map((linea, index) =>
+          index === 0 ? (
+            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
+          ) : (
+            <p class="text-xl text-texto ml-4">{linea}</p>
+          )
+        )
+      }
+      {
+        (pkg.itinerario5 || []).map((linea, index) =>
+          index === 0 ? (
+            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
+          ) : (
+            <p class="text-xl text-texto ml-4">{linea}</p>
+          )
+        )
+      }
+    </div>
+
+    <div class="bg-fondog h-full p-4">
+      <div class="max-w-6xl mx-auto  mt-4">
+        <div class="lg:text-3xl text-lg pb-5 pt-4">
+          <h3>Incluye</h3>
+        </div>
+
+        <ul class="lg:text-xl text-base space-y-2 pb-5 ">
+          {pkg.incluye.map((add, index) => (
+            <li key={index} class="flex items-start gap-2">
+              <img
+                src="https://i.ibb.co/8L686vvJ/icono-Incluye.png"
+                alt="Icono"
+                class="w-5 h-5 mt-1 flex-shrink-0"
+              />
+              {add}
+            </li>
           ))}
         </ul>
+        
+        
+        <!-- <div class="p-2">
+          <button class="h-11 w-52 rounded-lg bg-botones">
+            <a
+              class="text-center text-white text-2xl font-semibold font-Montserrat"
+              href=""
+            >
+              Book Now
+            </a>
+          </button>
+        </div>-->
       </div>
- <div class="pb-6">
-  <h3>Adicionales</h3>
-  <ul>
-    {pkg.additional.map((add, index) => (
-      <li key={index}>{add}</li>
-    ))}
-  </ul>
- </div>
-
- <button class="h-11 w-52  rounded-lg bg-gold justify-center items-center">
-  <a class="text-center text-white text-xl font-semibold font-Montserrat" href="">Book Now</a>
-</button>
-    </div>
-
-    <div class="sm:pl-24">
-      <img class="border-white border-8 h-[32rem] w-[26rem] rounded-2xl shadow-lg" src={pkg.image} alt={pkg.title} /> 
     </div>
   </div>
+
+  <Footer/>
+
+  <script>
+    const carousel = document.getElementById("carousel");
+    const totalSlides = carousel.children.length;
+    let currentSlide = 0;
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    document.getElementById("next").addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    });
+
+    // 🔥 Movimiento automático cada 4 segundos
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    }, 3000); // 4000 ms = 4 segundos
+  </script>
 </Layout>
