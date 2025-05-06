@@ -3,12 +3,12 @@
     "id": 1,
     "title": "DownTown Standard Doble",
     "price":"$999 / Por noche",
-    "description": "dfjhsdfjsdfhjkfhsjkdfhsdkjfhsdjkfhskjdfhskjdfhkjsdhfkjsdhfkjsdhfkjhsdfkjhsdfkjhsdkfjhsdkjfhskjdhf",
+    "description": "Una opción cómoda y acogedora, ideal para parejas o viajeros solos que buscan descansar en un ambiente moderno y bien ubicado en el corazón de la ciudad.",
     "beds": "1 cama Matrimonial",
     "image": "https://i.ibb.co/ksT3g1tW/STANDARD-DOBLE-4.jpg",
     "image2": "https://i.ibb.co/ccy2r27P/STANDARD-DOBLE-2.jpg",
     "image3": "https://i.ibb.co/CKRV3S9T/STANDARD-DOBLE.jpg",
-    "image4": "https://i.ibb.co/3yHGtY6q/Standard-Doble-1.jpg"
+    "image4": "https://i.ibb.co/qFVnKcr8/ban-o-Doble.jpg"
   },
   {
     "id": 2,
@@ -29,8 +29,8 @@
       "beds": "1 cama queen",
       "image": "https://i.ibb.co/BGWRp5f/Downtown-Superior.png",
       "image2": "https://i.ibb.co/YTfsgD6q/habitacionsuperior4.webp",
-      "image3": "https://i.ibb.co/ns0ZFTWm/habitacionsuperior3.webp",
-      "image4": "https://i.ibb.co/1fbf29xc/habitacion-Superior2.webp"
+      "image3": "https://i.ibb.co/gbXNZ7mK/habitacionsuperioir2.jpg",
+      "image4": "https://i.ibb.co/N2cLn2Cv/banno-Superior.jpg"
     },
     {
       "id": 4,
@@ -39,9 +39,9 @@
       "description": "dfjhsdfjsdfhjkfhsjkdfhsdkjfhsdjkfhskjdfhskjdfhkjsdhfkjsdhfkjsdhfkjhsdfkjhsdfkjhsdkfjhsdkjfhskjdhf",
       "beds": "1 cama Matrimonial y 2 Individuales",
       "image": "https://i.ibb.co/fGx4k48W/habitacion-Confort-Family.jpg",
-      "image2": "https://i.ibb.co/ccy2r27P/STANDARD-DOBLE-2.jpg",
-      "image3": "https://i.ibb.co/CKRV3S9T/STANDARD-DOBLE.jpg",
-      "image4": "https://i.ibb.co/3yHGtY6q/Standard-Doble-1.jpg"
+      "image2": "https://i.ibb.co/Kj99XtSf/confort-Family.jpg",
+      "image3": "https://i.ibb.co/23ZBgHtX/habitacionesfamily3.jpg",
+      "image4": "https://i.ibb.co/qFVnKcr8/ban-o-Doble.jpg"
     },
   {
     "id": 5,
@@ -50,8 +50,8 @@
     "description": "dfjhsdfjsdfhjkfhsjkdfhsdkjfhsdjkfhskjdfhskjdfhkjsdhfkjsdhfkjsdhfkjhsdfkjhsdfkjhsdkfjhsdkjfhskjdhf",
     "beds": "2 camas Matrimoniales",
     "image": "https://i.ibb.co/0cfnMKj/Tropical-Family.png",
-    "image2": "https://i.ibb.co/ccy2r27P/STANDARD-DOBLE-2.jpg",
-    "image3": "https://i.ibb.co/CKRV3S9T/STANDARD-DOBLE.jpg",
-    "image4": "https://i.ibb.co/3yHGtY6q/Standard-Doble-1.jpg"
+    "image2": "https://i.ibb.co/bjw07Cmq/habitaciontropical1.jpg",
+    "image3": "https://i.ibb.co/Ld837TBh/habitaciontropical3.jpg",
+    "image4": "https://i.ibb.co/7xC82VrT/habitaciontropical2.jpg"
   }
 ]

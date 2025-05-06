@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import packages from "../../data/packages.json";
 import HeaderSections from "@components/HeaderSections.astro";
 import Footer from "@components/Footer.astro";
-import icono from ""
+import icono from "";
 import { Image } from "astro:assets";
 
 const { id } = Astro.params;
@@ -27,22 +27,22 @@ export async function getStaticPaths() {
 
 <Layout>
   <HeaderSections />
-  <div>
-    <div class="bg-fondog h-full w-full">
+  <div class="font-Montserrat">
+    <div class="h-full w-full">
       <div class="max-w-6xl mx-auto p-4">
         <div
           class="relative w-full lg:h-[500px] flex items-center justify-center lg:mt-24 mt-24 overflow-hidden"
         >
           <div
             id="carousel"
-            class="flex transition-transform duration-500 ease-in-out"
+            class="flex transition-transform duration-500 ease-in-out "
           >
             {
               pkg.imagenes.map((img, index) => (
                 <img
                   key={index}
                   src={img}
-                  class=" rounded-xl"
+                  class=" rounded-xl shadow-lg"
                   alt={`Imagen ${index + 1}`}
                 />
               ))
@@ -63,94 +63,119 @@ export async function getStaticPaths() {
           </button>
         </div>
 
-        <div class="grid grid-cols-2 lg:mt-6 mt-2">
-          <p class="lg:text-4xl text-base ">{pkg.title}</p>
-          <p class="flex justify-end lg:text-3xl text-lg">{pkg.price}</p>
+        <div class="grid grid-cols-2 lg:mt-6 mt-2 text-titulo">
+          <p class="lg:text-3xl font-bold text-base">{pkg.title}</p>
+          <p class="flex justify-end font-bold lg:text-3xl text-lg">
+            {pkg.price}
+          </p>
         </div>
         <div class="mt-6">
           <div class="lg:w-[100%] w-[100%] h-[1px] bg-fondoF mr-auto"></div>
         </div>
         <div>
-          <div class="lg:text-2xl text-lg pb-5 pt-4 flex justify-center">
+          <div
+            class="lg:text-2xl font-bold text-lg pb-5 pt-4 flex justify-center text-titulo"
+          >
             <h3>Sobre esta experiencia</h3>
           </div>
-          <p class="pt-2 lg:text-xl text-base">{pkg.description}</p>
+          <p class="pt-2 lg:text-xl text-base text-texto">{pkg.description}</p>
         </div>
       </div>
     </div>
-
-    <div class="max-w-6xl mx-auto pb-4 pt-4">
-      <div class="font-Montserrat text-3xl ">
+  <!-------- Itinirario ------->
+    <div class="max-w-6xl mx-auto p-4">
+      <div class="font-bold lg:text-3xl text-2xl text-titulo pb-6">
         <h3>{pkg.itinerario}</h3>
       </div>
+      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
+        {
+          (pkg.itinerario1 || []).map((linea, index) =>
+            index === 0 ? (
+              <h3 class="lg:text-xl text-xl font-bold p-2 text-titulo">
+                {linea}
+              </h3>
+            ) : (
+              <p class="lg:text-xl text-base ml-4 text-texto">{linea}</p>
+            )
+          )
+        }
+      </div>
+      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
+        {
+          (pkg.itinerario2 || []).map((linea, index) =>
+            index === 0 ? (
+              <h3 class="lg:text-xl text-xl font-bold mt-6 text-titulo">
+                {linea}
+              </h3>
+            ) : (
+              <p class="lg:text-xl text-base ml-4 text-texto">{linea}</p>
+            )
+          )
+        }
+      </div>
+      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
+        {
+          (pkg.itinerario3 || []).map((linea, index) =>
+            index === 0 ? (
+              <h3 class="lg:text-xl text-xl font-bold mt-6 text-titulo">
+                {linea}
+              </h3>
+            ) : (
+              <p class="lg:text-xl text-base ml-4 text-texto">{linea}</p>
+            )
+          )
+        }
+      </div>
+      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
+        {
+          (pkg.itinerario4 || []).map((linea, index) =>
+            index === 0 ? (
+              <h3 class="lg:text-xl text-xl font-bold mt-6 text-titulo">
+                {linea}
+              </h3>
+            ) : (
+              <p class="lg:text-xl text-base ml-4 text-texto">{linea}</p>
+            )
+          )
+        }
+      </div>
 
-      {
-        (pkg.itinerario1 || []).map((linea, index) =>
-          index === 0 ? (
-            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
-          ) : (
-            <p class="text-xl text-texto ml-4">{linea}</p>
+      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
+        {
+          (pkg.itinerario5 || []).map((linea, index) =>
+            index === 0 ? (
+              <h3 class="lg:text-xl text-xl font-bold mt-6 text-titulo">
+                {linea}
+              </h3>
+            ) : (
+              <p class="lg:text-xl text-base  ml-4 text-texto">{linea}</p>
+            )
           )
-        )
-      }
-      {
-        (pkg.itinerario2 || []).map((linea, index) =>
-          index === 0 ? (
-            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
-          ) : (
-            <p class="text-xl text-texto ml-4">{linea}</p>
-          )
-        )
-      }
-      {
-        (pkg.itinerario3 || []).map((linea, index) =>
-          index === 0 ? (
-            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
-          ) : (
-            <p class="text-xl text-texto ml-4">{linea}</p>
-          )
-        )
-      }
-      {
-        (pkg.itinerario4 || []).map((linea, index) =>
-          index === 0 ? (
-            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
-          ) : (
-            <p class="text-xl text-texto ml-4">{linea}</p>
-          )
-        )
-      }
-      {
-        (pkg.itinerario5 || []).map((linea, index) =>
-          index === 0 ? (
-            <h3 class="text-2xl font-bold mt-6">{linea}</h3>
-          ) : (
-            <p class="text-xl text-texto ml-4">{linea}</p>
-          )
-        )
-      }
+        }
+      </div>
     </div>
 
-    <div class="bg-fondog h-full p-4">
-      <div class="max-w-6xl mx-auto  mt-4">
-        <div class="lg:text-3xl text-lg pb-5 pt-4">
+    <div class="h-full p-4">
+      <div class="max-w-6xl mx-auto mt-4">
+        <div class="font-bold lg:text-3xl text-lg pb-5 pt-4 text-titulo">
           <h3>Incluye</h3>
         </div>
 
-        <ul class="lg:text-xl text-base space-y-2 pb-5 ">
-          {pkg.incluye.map((add, index) => (
-            <li key={index} class="flex items-start gap-2">
-              <img
-                src="https://i.ibb.co/8L686vvJ/icono-Incluye.png"
-                alt="Icono"
-                class="w-5 h-5 mt-1 flex-shrink-0"
-              />
-              {add}
-            </li>
-          ))}
+        <ul class="lg:text-xl text-base space-y-2 pb-5 text-texto">
+          {
+            pkg.incluye.map((add, index) => (
+              <li key={index} class="flex items-start gap-2">
+                <img
+                  src="https://i.ibb.co/8L686vvJ/icono-Incluye.png"
+                  alt="Icono"
+                  class="w-5 h-5 mt-1 flex-shrink-0"
+                />
+                {add}
+              </li>
+            ))
+          }
         </ul>
-        
-        
+
         <!-- <div class="p-2">
           <button class="h-11 w-52 rounded-lg bg-botones">
             <a
@@ -165,7 +190,7 @@ export async function getStaticPaths() {
     </div>
   </div>
 
-  <Footer/>
+  <Footer />
 
   <script>
     const carousel = document.getElementById("carousel");

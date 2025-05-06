@@ -8,46 +8,81 @@ import phone from "../assets/phone.png";
 import location from "../assets/location.png";
 import mail from "../assets/mail.png";
 import web from "../assets/world.png";
-import nuwa from "../assets/logoNuwa.png";
-import logoTierra from "../assets/logoTierrraG.png";
-import logoPinto from "../assets/logoPinto.png";
-import tropicalB from "../assets/logoTropical.png";
-import logoLavaDrink from "../assets/logoLavaD.png";
+import nuwa from "../assets/logoNuwaBlanco.png";
+import logoTierra from "../assets/logoTierraGBlanco.png";
+import logoPinto from "../assets/logoPintoeGalloBlanco.png";
+import tropicalB from "../assets/logoTropicalExpBlanco.png";
+import logoLavaDrink from "../assets/logoLavaDrinksBlanco.png";
 import SNBlanco from "../assets/SNBlanco.png";
-import MBBlanco from "../assets/MBBlanco.png";
-import ventanitaBlanco from "../assets/ventanitaBlanco.png";
+import MBBlanco from "../assets/logoMariaBonitaBlanco.png";
+import ventanitaBlanco from "../assets/logoVentanitaBlanco.png";
+import logoDowntown from "../assets/logoBlancoDowntown.png";
+
+const logos = [
+  {
+    src: logoDowntown,
+    alt: "La Fortuna Downtown",
+    href: "https://www.instagram.com/lafortunadowntown",
+  },
+  {
+    src: logoTierra,
+    alt: "Tierra Gastro",
+    href: "https://www.instagram.com/tierragastrocr",
+  },
+  {
+    src: MBBlanco,
+    alt: "Maria Bonita",
+    href: "https://www.instagram.com/mariabonita.cr",
+  },
+  {
+    src: ventanitaBlanco,
+    alt: "La Ventanita",
+    href: "https://www.instagram.com/ventanitamariabonita",
+  },
+  { src: logoPinto, alt: "Pinto e' Gallo", href: "/pinto-gallo" },
+  { src: tropicalB, alt: "Tropical Experiences", href: "/tropical" },
+  { src: nuwa, alt: "Nuwa Art Gallery", href: "/nuwa" },
+  { src: logoLavaDrink, alt: "Lava Drinks", href: "/lava-drinks" },
+  {
+    src: SNBlanco,
+    alt: "Selva Negra",
+    href: "https://www.instagram.com/selvanegra.bar",
+  },
+];
+
+const repeat = 4; // cuántas veces repetir el grupo para animación fluida
+const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
 ---
 
 <style>
-.slider a {
-  display: inline-block;
-}
-
-.slider {
-  display: flex;
-  gap: 1rem; /* Espacio entre imágenes */
-  animation: scroll 5s linear infinite;
-}
-
-.image {
-  width: 120px;
-  height: 120px;
-  flex-shrink: 0;
-  min-width: 120px; /* Evita que las imágenes se reduzcan */
-}
-@keyframes scroll {
-  from {
-    transform: translateX(0%);
+  .slider a {
+    display: inline-block;
   }
-  to {
-    transform: translateX(-50%); /* Mueve solo la mitad */
+
+  .slider {
+    display: flex;
+    gap: 1rem; /* Espacio entre imágenes */
+    animation: scroll 20s linear infinite;
   }
-}
 
-.slider:hover {
-  animation-play-state: paused;
-}
+  .image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    min-width: 120px; /* Evita que las imágenes se reduzcan */
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-200%); /* Mueve solo la mitad */
+    }
+  }
 
+  .slider:hover {
+    animation-play-state: paused;
+  }
 </style>
 
 <div id="Footer" class="bg-fondoF flex flex-col p-10">
@@ -113,7 +148,9 @@ import ventanitaBlanco from "../assets/ventanitaBlanco.png";
     <div class="">
       <h3 class="text-xl text-gris mb-4 font-bold">Redes sociales</h3>
       <div class="flex space-x-6">
-        <a href="https://www.instagram.com/lafortunadowntown?igsh=MWt1bngybWZ6YmVvcw==">
+        <a
+          href="https://www.instagram.com/lafortunadowntown?igsh=MWt1bngybWZ6YmVvcw=="
+        >
           <Image
             class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
             src={instagram}
@@ -142,53 +179,36 @@ import ventanitaBlanco from "../assets/ventanitaBlanco.png";
 <div class="bg-black w-full overflow-hidden">
   <div class="slider-wrapper">
     <div class="slider">
-      <!-- Original -->
-      <a href="https://www.instagram.com/tierragastrocr?igsh=MTd5d2p4aTU4eXhnYw==" target="_blank" rel="noopener noreferrer"><Image src={logoTierra} class="image" alt="Tierra Gastro" /></a>
-      <a href="https://www.instagram.com/mariabonita.cr?igsh=MXhtdXZvZzFyZjgzdw==" target="_blank" rel="noopener noreferrer"><Image src={MBBlanco} class="image" alt="Maria Bonita La Fortuna" /></a>
-      <a href="https://www.instagram.com/ventanitamariabonita?igsh=a3djZDFhZ3pxMnl5"target="_blank" rel="noopener noreferrer"><Image src={ventanitaBlanco} class="image" alt="La Ventanita La Fortuna" /></a>
-      <a href="/pinto-gallo" target="_blank" rel="noopener noreferrer"><Image src={logoPinto} class="image" alt="Pinto e' Gallo" /></a>
-      <a href="/tropical" target="_blank" rel="noopener noreferrer"><Image src={tropicalB} class="image" alt="Tropical Experiences" /></a>
-      <a href="/nuwa" target="_blank" rel="noopener noreferrer"><Image src={nuwa} class="image" alt="Nuwa Art Gallery" /></a>
-      <a href="/lava-drinks" target="_blank" rel="noopener noreferrer"><Image src={logoLavaDrink} class="image" alt="Lava Drinks" /></a>
-      <a href="https://www.instagram.com/selvanegra.bar?igsh=MTBzcHRsZ3RmNG1nMA==" target="_blank" rel="noopener noreferrer"><Image src={SNBlanco} class="image" alt="Selva Negra" /></a>
-
-      <!-- Duplicado para el loop infinito -->
-      <a href="https://www.instagram.com/tierragastrocr?igsh=MTd5d2p4aTU4eXhnYw==" target="_blank" rel="noopener noreferrer"><Image src={logoTierra} class="image" alt="Tierra Gastro" /></a>
-      <a href="https://www.instagram.com/mariabonita.cr?igsh=MXhtdXZvZzFyZjgzdw==" target="_blank" rel="noopener noreferrer"><Image src={MBBlanco} class="image" alt="Maria Bonita La Fortuna" /></a>
-      <a href="https://www.instagram.com/ventanitamariabonita?igsh=a3djZDFhZ3pxMnl5"target="_blank" rel="noopener noreferrer"><Image src={ventanitaBlanco} class="image" alt="La Ventanita La Fortuna" /></a>
-      <a href="/pinto-gallo" target="_blank" rel="noopener noreferrer"><Image src={logoPinto} class="image" alt="Pinto e' Gallo" /></a>
-      <a href="/tropical" target="_blank" rel="noopener noreferrer"><Image src={tropicalB} class="image" alt="Tropical Experiences" /></a>
-      <a href="/nuwa" target="_blank" rel="noopener noreferrer"><Image src={nuwa} class="image" alt="Nuwa Art Gallery" /></a>
-      <a href="/lava-drinks" target="_blank" rel="noopener noreferrer"><Image src={logoLavaDrink} class="image" alt="Lava Drinks" /></a>
-      <a href="https://www.instagram.com/selvanegra.bar?igsh=MTBzcHRsZ3RmNG1nMA==" target="_blank" rel="noopener noreferrer"><Image src={SNBlanco} class="image" alt="Selva Negra" /></a>
+      {
+        repeatedLogos.map(({ src, alt, href }) => (
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            <Image src={src} alt={alt} class="image" />
+          </a>
+        ))
+      }
     </div>
   </div>
 </div>
 
-
-
-  <div class="bg-[#424b59] w-full flex flex-col">
-    <div class="sm:flex flex-row sm:text-left text-center items-center">
-      <ul
-        class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2"
-      >
-        <li><a href="">Aviso legal</a></li>
-        <li><a href="">Politica de privacidad</a></li>
-        <li><a href="">Preferencias de cookies</a></li>
-        <li><a href="">Accesibilidad</a></li>
-      </ul>
-      <div
-        class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baseline"
-      >
-        <p class="text-white font-Montserrat text-sm">
-          © La Fortuna Downtown. Derechos Reservados.
-        </p>
-        <p
-          class="text-white font-Montserrat text-sm sm:place-self-end sm:pr-2"
-        >
-          Desarrollado por InnovaLinkCR
-        </p>
-      </div>
+<div class="bg-[#424b59] w-full flex flex-col">
+  <div class="sm:flex flex-row sm:text-left text-center items-center">
+    <ul
+      class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2"
+    >
+      <li><a href="">Aviso legal</a></li>
+      <li><a href="">Politica de privacidad</a></li>
+      <li><a href="">Preferencias de cookies</a></li>
+      <li><a href="">Accesibilidad</a></li>
+    </ul>
+    <div
+      class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baseline"
+    >
+      <p class="text-white font-Montserrat text-sm">
+        © La Fortuna Downtown. Derechos Reservados.
+      </p>
+      <p class="text-white font-Montserrat text-sm sm:place-self-end sm:pr-2">
+        Desarrollado por InnovaLinkCR
+      </p>
     </div>
   </div>
 </div>

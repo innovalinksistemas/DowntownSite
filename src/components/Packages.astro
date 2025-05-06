@@ -2,17 +2,18 @@
 import CarruselPaquetes from "@components/CarruselPackages.jsx";
 ---
 
-<section id="paquetes" class="text-center bg-fondog min-h-[50rem] sm:min-h-[55rem] md:min-h-[60rem] lg:min-h-[75vh] w-full snap-start">
-
+<section
+  id="paquetes"
+  class="text-center bg-fondog py-10 w-full snap-start"
+>
   <div class="flex flex-col p-4">
-    <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">Nuestros Paquetes</h2>
-
+    <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">
+      Nuestros Paquetes
+    </h2>
   </div>
 
-  <div
-    class="min-w-[5rem] min-h-[32rem] sm:min-w-[0rem] sm:min-h-[0rem] sm:m-6"
-  >
+  <div class="min-h-[32rem] sm:min-h-[32rem] sm:m-6">
     <CarruselPaquetes client:visible />
   </div>
-
 </section>
+

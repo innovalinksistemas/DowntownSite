@@ -109,12 +109,12 @@ const reviews = [
                 <div class="swiper-slide flex justify-center align-middle text-center" key={review.title}>
                   <div class="slider-main  font-Montserrat">
                     <div class=" sm:min-w-80 sm:min-h-[22rem] bg-white rounded-xl p-12 m-3 sm:m-0">
-                        <p class="font-semibold">{review.title}</p>
-                        <p>{review.commentary}</p>
+                        <p class="font-semibold text-titulo">{review.title}</p>
+                        <p class="text-texto">{review.commentary}</p>
                         <div class="flex space-x-3 align-baseline">
                             <Image class="w-12 h-12" src={review.platform} alt="platform" />
                             <p class="text-yellow-300">★★★★★</p>
-                            <p>{review.name}</p>
+                            <p class="text-texto">{review.name}</p>
                         </div>
                     </div>
                   </div>

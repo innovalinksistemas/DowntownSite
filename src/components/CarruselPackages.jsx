@@ -41,7 +41,7 @@ export default function ImageGallery() {
 
 
     return (
-        <div className="relative w-full  ">
+        <div className="relative w-full mx-auto min-h-[44rem] lg:min-h-[30rem]">
 
             <div className="flex justify-center transition-transform duration-500 ease-in-out" >
                 {getVisibleImages().map((paq, index) => {
@@ -59,22 +59,22 @@ export default function ImageGallery() {
                                     <div class="flex justify-start items-center">
                                         <div class="flex gap-x-8 mx-12 lg:mx-0">
                                             <img
-                                                class="lg:w-[17rem] w-[10rem]  aspect-[3/4] rounded-none rounded-tl-[60px]  -translate-x-10"
-                                                src={paq.imagenes}
+                                                class="lg:w-[17rem] w-[10rem] aspect-[3/4] object-cover rounded-none rounded-tl-[60px]  -translate-x-10"
+                                                src={paq.imagenes[3]}
                                                 alt={paq.title}
                                             />
                                             <img
-                                                class="lg:w-[17rem] w-[10rem] aspect-[3/4] rounded-br-[60px] translate-y-10 -translate-x-12 "
-                                                src={paq.imagenes}
+                                                class="lg:w-[17rem] w-[10rem] aspect-[3/4] object-cover rounded-br-[60px] translate-y-10 -translate-x-12 "
+                                                src={paq.imagenes[7]}
                                                 alt={paq.title}
                                             />
                                         </div>
                                     </div>
 
 
-                                    <div class="text-left  mx-4 lg:mx-0">
-                                        <h3 class="text-4xl font-Lobster mb-4">{paq.title}</h3>
-                                        <h3 class="text-2xl font-Lobster mb-4">{paq.subtitle}</h3>
+                                    <div class="text-left  mx-4 lg:mx-0 text-titulo">
+                                        <h3 class="lg:text-4xl text-2xl font-Lobster mb-4">{paq.title}</h3>
+                                        <h3 class="lg:text-base text-xl font-Montserrat font-bold ">{paq.subtitle}</h3>
 
 
                                         <p class="font-Montserrat text-sm sm:text-sm text-texto mb-6">
@@ -82,7 +82,7 @@ export default function ImageGallery() {
                                         </p>
                                         <a
                                             href={`/Downtown/packagedetails/${paq.id}`}
-                                            class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition"
+                                            class="bg-botones text-white px-6 py-2 rounded hover:bg-red-700 transition"
                                         >
                                             VER MÁS
                                         </a>
