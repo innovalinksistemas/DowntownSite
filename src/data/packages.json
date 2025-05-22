@@ -1,9 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Romantic Escape Package",
-    "subtitle": "Classic Love Experience for couples",
+    "title": "Paquete Escapada Romántica.",
+    "subtitle": "Experiencia Clásica de Amor para Parejas.",
     "description": "Disfrute de una escapada inolvidable diseñada para celebrar el amor en un entorno elegante y acogedor. Nuestro paquete Romantic Escape ofrece la combinación perfecta de confort, relajación y detalles cuidadosamente seleccionados para una experiencia verdaderamente especial.",
+    "description2":"Viva una experiencia romántica diseñada especialmente para celebrar el amor en un ambiente íntimo, elegante y lleno de detalles encantadores. Este paquete es ideal para aniversarios, lunas de miel o simplemente una escapada para reconectar con tu pareja. Desde una habitación decorada con pétalos de rosa hasta un masaje relajante en pareja, cada elemento ha sido cuidadosamente seleccionado para crear momentos memorables. Disfrutarán de una botella de vino para brindar por su historia, un desayuno buffet con una amplia variedad de sabores y texturas, y un ambiente acogedor que invita al descanso y la conexión. Es el equilibrio perfecto entre confort, relajación y romanticismo, todo en el corazón de La Fortuna.",
     "price": "$ 999",
     "incluye": [
       "Hospedaje en una habitación tropical decorada para la ocasión.",
@@ -13,17 +14,18 @@
       "Desayuno buffet, con estaciones de frutas tropicales, jugos, cafés, wafles, pancakes, huevos al gusto, barras frías y calientes, asegurando una experiencia gastronómica excepciona."
     ],
     "imagenes": [
-      "https://i.ibb.co/S6VcYs9/fondomovil.jpg",
-      "https://i.ibb.co/1fbf29xc/habitacion-Superior2.webp",
-      "https://i.ibb.co/LzMj92HG/Habitacion-Triple3.webp",
-      "https://i.ibb.co/S6VcYs9/fondomovil.jpg"
+      "https://i.ibb.co/Sw88kpNB/Fotodesayuno.jpg",
+      "https://i.ibb.co/N2zmy5bZ/spa.png",
+      "https://i.ibb.co/PkkhG7q/paq-Romantico2.png",
+      "https://i.ibb.co/spt30Prw/pag-Romantico3.png"
     ]
   },
   {
     "id": 2,
-    "title": "Romantic Escape Package",
-    "subtitle": "Exlusive Fine Dining Edition for couples",
+    "title": "Paquete Escapada Romántica.",
+    "subtitle": "Edición Exclusiva con Cena Gastronómica para Parejas.",
     "description": "Disfrute de una escapada inolvidable diseñada para celebrar el amor en un entorno elegante y acogedor. Nuestro paquete Romantic Escape ofrece la combinación perfecta de confort, relajación y detalles cuidadosamente seleccionados para una experiencia verdaderamente especial.",
+    "description2":"Esta edición exclusiva de nuestra escapada romántica eleva la experiencia a otro nivel, combinando lujo, sabores sofisticados y un servicio personalizado de alta gama. Perfecto para parejas que buscan una celebración íntima con una cena de primer nivel y detalles inolvidables. Además de todos los encantos del paquete clásico —como la habitación decorada con motivos románticos, el masaje en pareja y el desayuno buffet—, esta versión incluye una cena gourmet en el reconocido María Bonita Steak House. Allí, un sommelier les guiará por una experiencia Wine Tasting MB™ acompañada de un menú especial diseñado por el chef Jeffrey Palacios, ideal para deleitar los sentidos. Una experiencia culinaria, sensorial y emocional que convierte cualquier ocasión en un recuerdo imborrable.",
     "price": "$ 999",
     "incluye": [
       "Hospedaje en una habitación Superior decorada para la ocasión",
@@ -34,20 +36,23 @@
       "Cena Romántica en María Bonita Steak House con servicio personalizado por parte de Sommerlier brindando la Experiencia Wine Testing MB™ + Menú Gastronómico 'Experiencias' por el Chef. Jeffrey Palacios."
     ],
    "imagenes": [
-      "https://i.ibb.co/S6VcYs9/fondomovil.jpg",
-      "https://i.ibb.co/S6VcYs9/fondomovil.jpg",
-      "https://i.ibb.co/S6VcYs9/fondomovil.jpg",
-      "https://i.ibb.co/S6VcYs9/fondomovil.jpg"
+    "https://i.ibb.co/hRtLzbmD/paq-Romantico.png",
+    "https://i.ibb.co/PkkhG7q/paq-Romantico2.png",
+    "https://i.ibb.co/Sw88kpNB/Fotodesayuno.jpg",
+    "https://i.ibb.co/spt30Prw/pag-Romantico3.png",
+    "https://i.ibb.co/fYN6Tp9P/paq-Romantico4.png",
+     "https://i.ibb.co/N2zmy5bZ/spa.png"
     ]
   },
   {
     "id": 3,
-    "title": "Arenal Volcano Classic Package",
-    "subtitle": "Nature, Wellness & Foodie Lovers Edition(3 Noches)",
+    "title": "Paquete Clásico al Volcán Arenal.",
+    "subtitle": "Edición para Amantes de la Naturaleza, el Bienestar y la Gastronomía",
     "description": "Descubra la majestuosidad del Arenal con un paquete diseñado para los amantes de la naturaleza, el bienestar y la buena gastronomía. Arenal Volcano Classic combina aventura suave, experiencias sensoriales y momentos de relajación profunda en uno de los destinos más icónicos de Costa Rica.Este paquete está disponible en 3, 4 o 5 noches, y ofrece una inmersión completa en el entorno natural, cultural y culinario de La Fortuna.",
+    "description2":"Sumérjase en la riqueza natural, cultural y gastronómica de La Fortuna con un paquete completo que fusiona bienestar, aventura y placer. Ideal para quienes buscan una conexión auténtica con el entorno sin renunciar a la comodidad y el buen gusto. Este paquete ofrece desde caminatas guiadas por los senderos del Arenal y los impresionantes Puentes Colgantes, hasta sesiones relajantes en aguas termales y masajes terapéuticos. También incluye experiencias culinarias de alto nivel, como almuerzos y cenas en María Bonita Steak House y degustaciones de café y chocolate locales. Disponible en versiones de 3, 4 o 5 noches, el itinerario se adapta para incluir safaris, visitas a cataratas o cenas de despedida especiales. Una propuesta ideal para viajeros conscientes que desean vivir La Fortuna con todos sus sentidos.",
     "price": "$ 999",
     "incluye": [
-      "Hospedaje en una habitación tropical ",
+      "Hospedaje en una habitación tropical.",
       "Desayuno buffet diario con estaciones de frutas tropicales, jugos naturales, cafés especiales, panadería artesanal, platillos calientes, huevos al gusto, waffles y pancakes.",
       "Caminata guiada al Volcán Arenal + Puentes Colgantes, para admirar la biodiversidad local.",
       "Acceso a Paradise Hot Springs con cena incluida, para una noche de relajación inigualable.",
@@ -66,56 +71,64 @@
       "-Cena de bienvenida en María Bonita Steak House, con menú especial del chef y ambiente vibrante."
     ],
     "itinerario2": [
-      "Día 2 – Aventura Natural + Bienestar.",
-      "-Desayuno buffet completo.",
-      "-Caminata guiada al Volcán Arenal + Puentes Colgantes.",
-      "-Almuerzo libre.",
-      "-Tarde de relajación en Baldi Hot Springs. (con cena incluida)"
+      "Día 2 – Aventura Natural + Bienestar",
+      "Desayuno buffet completo",
+      "Caminata guiada al Volcán Arenal + Puentes Colgantes",
+      "Almuerzo libre",
+      "Tarde de relajación en Baldi Hot Springs (con cena incluida)"
     ],
     "itinerario3": [
       "Día 3 – Foodie Experience + Masaje",
-      "-Desayuno buffet.",
-      "-Tour de café y chocolate. (cultural + degustación)",
-      "-Almuerzo incluido en María Bonita Steak House.",
-      "-Masaje de relajación o aromaterapia de 60 minutos.",
-      "-Cena libre."
+      "Desayuno buffet",
+      "Tour de café y chocolate (cultural + degustación)",
+      "Almuerzo incluido en María Bonita Steak House",
+      "Masaje de relajación o aromaterapia de 60 minutos",
+      "Cena libre"
     ],
     "itinerario4": [
-      "Día 4 – Despedida con desayuno.",
-      "-Desayuno buffet.",
-      "-Check-out y obsequio de despedida. (detalle local artesanal)",
-      "-Cena de bienvenida en María Bonita Steak House, con menú especial del chef y ambiente vibrante."
+      "Día 4 – Despedida con desayuno",
+      "Desayuno buffet",
+      "Check-out y obsequio de despedida (detalle local artesanal)",
+      "Cena de bienvenida en María Bonita Steak House, con menú especial del chef y ambiente vibrante"
     ],
     "itinerario5": [
       "Día adicional 4 o 5 – Naturaleza & Tiempo libre",
-      "-Desayuno buffet.",
-      "-La Fortuna ofrece más de 100 tipos diferentes de tours y actividades; disfrute de un tour adicional, un masaje relajante o simplemente explore el pueblo caminando, disfrute de un café o brunch, tome el día libre para descansar o disfrutar del hotel.",
-      "-Cena libre."
+      "Desayuno buffet.",
+      "La Fortuna ofrece más de 100 tipos diferentes de tours y actividades; disfrute de un tour adicional, un masaje relajante o simplemente explore el pueblo caminando, disfrute de un café o brunch, tome el día libre para descansar o disfrutar del hotel.",
+      "Cena libre."
     ],
     "imagenes": [
-      "https://i.ibb.co/cSK5Lzdn/DSC4188.jpg",
-      "https://i.ibb.co/G4jv8BBg/DSC5571.jpg",
-      "https://i.ibb.co/n8qHhGJC/P9-A4113-Mejorado-NR.jpg",
-      "https://i.ibb.co/HD0BG1bQ/Mistico-Park-Puente-Colgante-personas-caminando.jpg",
-      "https://i.ibb.co/fV5vVxJx/AREA-PISCINA.jpg",
-      "https://i.ibb.co/QvQ8VkFB/DSC02931.jpg",
-      "https://i.ibb.co/TqncV9Bh/DSC03083.jpg",
-      "https://i.ibb.co/QvGWJT94/DSC03110.jpg",
-      "https://i.ibb.co/66L0NKZ/DSC04161.jpg",
-      "https://i.ibb.co/YvvMFnn/DSC04340.jpg",
-      "https://i.ibb.co/CKsSGkMh/DSC06900.jpg",
-      "https://i.ibb.co/q3xN7djr/DSC07981.jpg",
-      "https://i.ibb.co/qMQ86G41/Foto-ave-momoto-pichoancho.jpg",
-      "https://i.ibb.co/tpZjV7GC/Foto-puentes-colgantes-19.jpg",
-      "https://i.ibb.co/yng4LczS/Foto-vibora-foseta.jpg",
-      "https://i.ibb.co/hJcXxK0F/Max-BHS-0427.jpg"
+      "https://i.ibb.co/kgm5ZBqx/puentes1.png",
+      "https://i.ibb.co/Q3YYXtsd/DSC03110.png",
+      "https://i.ibb.co/7JrkrMyV/Foto-puentes-colgantes-19.png",
+      "https://i.ibb.co/7dX690gQ/ave1.png",
+      "https://i.ibb.co/6KwDkh8/vibora.png",
+
+      "https://i.ibb.co/hRtLzbmD/paq-Romantico.png",
+      
+      "https://i.ibb.co/Q3YYXtsd/DSC03110.png",
+      "https://i.ibb.co/DfrS1M7H/DSC02931.png",
+      "https://i.ibb.co/Cqfv4qM/cafe.png",
+
+      "https://i.ibb.co/5h0QJJpW/catarata4.png",
+      "https://i.ibb.co/YB0P42FP/catarata3.png",
+      "https://i.ibb.co/qLXty25C/catarata2.png",
+      "https://i.ibb.co/zWpZQ26V/catarata1.png",
+
+      "https://i.ibb.co/0R16Yc59/baldi1.png",
+      "https://i.ibb.co/Xr70WzXY/baldi3.png",
+      "https://i.ibb.co/KjXW6MkG/baldi2.png"
+
+     
+  
     ]
   },
   {
     "id": 4,
-    "title": "Epic Adventure Package",
-    "subtitle": "Adrenaline, Nature & Comfort.",
+    "title": "Paquete de Aventura Épica",
+    "subtitle": "Adrenalina, Naturaleza y Confort.",
     "description": "¡Vive la aventura al máximo! Este paquete está diseñado para los amantes de la adrenalina y la naturaleza. Con actividades de alto impacto y momentos de relajación bien merecidos, esta experiencia lo tiene todo para reconectar con tu espíritu más aventurero en el corazón de La Fortuna.",
+    "description2":"Diseñado para los espíritus intrépidos que aman combinar aventura extrema con momentos de relajación, este paquete ofrece una descarga de adrenalina equilibrada con bienestar y descanso de calidad. Perfecto para quienes buscan experiencias emocionantes sin perder el confort de un buen hospedaje y servicios personalizados. En sus tres noches, este paquete incluye actividades de alto impacto como canyoning y rafting, sumergiéndote en los paisajes más espectaculares de La Fortuna. Cada jornada está pensada para terminar con merecidos momentos de relax, ya sea en aguas termales o con un masaje rejuvenecedor. Además, disfrutarás de desayunos buffet, cenas en nuestro restaurante gourmet y un detalle especial al momento del check-out. Una propuesta redonda para explorar el lado más vibrante y salvaje de La Fortuna sin sacrificar el lujo ni la comodidad.",
     "price": "$ 999",
     "incluye": [
       "3 noches de hospedaje en habitación tropical.",
@@ -157,15 +170,16 @@
       "Check-out y obsequio de despedida."
     ],
     "imagenes": [
-      "https://i.ibb.co/cSK5Lzdn/DSC4188.jpg",
-      "https://i.ibb.co/G4jv8BBg/DSC5571.jpg",
-      "https://i.ibb.co/n8qHhGJC/P9-A4113-Mejorado-NR.jpg",
-      "https://i.ibb.co/qFsBws6C/IMG-6754.jpg",
-      "https://i.ibb.co/5gQrqWJk/Pure-Trek-Make-Digital-Media-37.jpg",
-      "https://i.ibb.co/yB0HdqFp/Pure-Trek-Make-Digital-Media-5.jpg",
-      "https://i.ibb.co/zTKmbPKM/Rafting10.jpg",
-      "https://i.ibb.co/p64WwCxy/Rafting11.jpg",
-      "https://i.ibb.co/3g2znBm/Rafting25.jpg"
+      "https://i.ibb.co/tTsgvXp2/trek3.png",
+      "https://i.ibb.co/7tGKMNXs/Rafting11.png",
+      "https://i.ibb.co/0R16Yc59/baldi1.png",
+      "https://i.ibb.co/Xr70WzXY/baldi3.png",
+      "https://i.ibb.co/KjXW6MkG/baldi2.png",
+      "https://i.ibb.co/hRtLzbmD/paq-Romantico.png",
+      "https://i.ibb.co/9mMLfmsy/trek2.png",
+      "https://i.ibb.co/ksv6zGfh/trek1.png",
+      "https://i.ibb.co/QjCVK40Y/Rafting25.png",
+      "https://i.ibb.co/TprBtrN/Rafting10.png"
     ]
   }
 ]

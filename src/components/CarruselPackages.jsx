@@ -59,13 +59,13 @@ export default function ImageGallery() {
                                     <div class="flex justify-start items-center">
                                         <div class="flex gap-x-8 mx-12 lg:mx-0">
                                             <img
-                                                class="lg:w-[17rem] w-[10rem] aspect-[3/4] object-cover rounded-none rounded-tl-[60px]  -translate-x-10"
-                                                src={paq.imagenes[3]}
+                                                class="lg:w-[17rem] w-[9rem] aspect-[3/4] object-cover rounded-none rounded-tl-[60px]  -translate-x-10"
+                                                src={paq.imagenes[0]}
                                                 alt={paq.title}
                                             />
                                             <img
-                                                class="lg:w-[17rem] w-[10rem] aspect-[3/4] object-cover rounded-br-[60px] translate-y-10 -translate-x-12 "
-                                                src={paq.imagenes[7]}
+                                                class="lg:w-[17rem] w-[9rem] aspect-[3/4] object-cover rounded-br-[60px] translate-y-10 -translate-x-12 "
+                                                src={paq.imagenes[1]}
                                                 alt={paq.title}
                                             />
                                         </div>

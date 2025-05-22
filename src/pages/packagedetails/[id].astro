@@ -3,7 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import packages from "../../data/packages.json";
 import HeaderSections from "@components/HeaderSections.astro";
 import Footer from "@components/Footer.astro";
-import icono from "";
 import { Image } from "astro:assets";
 
 const { id } = Astro.params;
@@ -35,16 +34,17 @@ export async function getStaticPaths() {
         >
           <div
             id="carousel"
-            class="flex transition-transform duration-500 ease-in-out "
+            class="flex transition-transform duration-500 ease-in-out"
           >
             {
               pkg.imagenes.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  class=" rounded-xl shadow-lg"
-                  alt={`Imagen ${index + 1}`}
-                />
+                <div class="min-w-full overflow-hidden p-2" key={index}>
+                  <img
+                    src={img}
+                    class="rounded-xl shadow-lg w-full h-[500px] object-cover"
+                    alt={`Imagen ${index + 1}`}
+                  />
+                </div>
               ))
             }
           </div>
@@ -65,9 +65,9 @@ export async function getStaticPaths() {
 
         <div class="grid grid-cols-2 lg:mt-6 mt-2 text-titulo">
           <p class="lg:text-3xl font-bold text-base">{pkg.title}</p>
-          <p class="flex justify-end font-bold lg:text-3xl text-lg">
+          <!-- <p class="flex justify-end font-bold lg:text-3xl text-lg">
             {pkg.price}
-          </p>
+          </p>-->
         </div>
         <div class="mt-6">
           <div class="lg:w-[100%] w-[100%] h-[1px] bg-fondoF mr-auto"></div>
@@ -78,81 +78,49 @@ export async function getStaticPaths() {
           >
             <h3>Sobre esta experiencia</h3>
           </div>
-          <p class="pt-2 lg:text-xl text-base text-texto">{pkg.description}</p>
+          <p class="pt-2 lg:text-xl text-base text-texto">{pkg.description2}</p>
         </div>
       </div>
     </div>
-  <!-------- Itinirario ------->
+    <!-------- Itinirario ------->
     <div class="max-w-6xl mx-auto p-4">
-      <div class="font-bold lg:text-3xl text-2xl text-titulo pb-6">
-        <h3>{pkg.itinerario}</h3>
-      </div>
-      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
-        {
-          (pkg.itinerario1 || []).map((linea, index) =>
-            index === 0 ? (
-              <h3 class="lg:text-xl text-xl font-bold p-2 text-titulo">
-                {linea}
-              </h3>
-            ) : (
-              <p class="lg:text-xl text-base ml-4 text-texto">{linea}</p>
-            )
-          )
-        }
-      </div>
-      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
-        {
-          (pkg.itinerario2 || []).map((linea, index) =>
-            index === 0 ? (
-              <h3 class="lg:text-xl text-xl font-bold mt-6 text-titulo">
-                {linea}
-              </h3>
-            ) : (
-              <p class="lg:text-xl text-base ml-4 text-texto">{linea}</p>
-            )
-          )
-        }
-      </div>
-      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
-        {
-          (pkg.itinerario3 || []).map((linea, index) =>
-            index === 0 ? (
-              <h3 class="lg:text-xl text-xl font-bold mt-6 text-titulo">
-                {linea}
-              </h3>
-            ) : (
-              <p class="lg:text-xl text-base ml-4 text-texto">{linea}</p>
-            )
-          )
-        }
-      </div>
-      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
-        {
-          (pkg.itinerario4 || []).map((linea, index) =>
-            index === 0 ? (
-              <h3 class="lg:text-xl text-xl font-bold mt-6 text-titulo">
-                {linea}
-              </h3>
-            ) : (
-              <p class="lg:text-xl text-base ml-4 text-texto">{linea}</p>
-            )
-          )
-        }
-      </div>
+      {
+        pkg.itinerario && (
+          <div class="font-bold lg:text-3xl text-2xl text-titulo pb-6">
+            <h3>{pkg.itinerario}</h3>
+          </div>
+        )
+      }
 
-      <div class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6">
-        {
-          (pkg.itinerario5 || []).map((linea, index) =>
-            index === 0 ? (
-              <h3 class="lg:text-xl text-xl font-bold mt-6 text-titulo">
-                {linea}
-              </h3>
-            ) : (
-              <p class="lg:text-xl text-base  ml-4 text-texto">{linea}</p>
-            )
-          )
-        }
-      </div>
+      {
+        [1, 2, 3, 4, 5].map((num) => {
+          const key = `itinerario${num}`;
+          const bloque = pkg[key];
+          if (!Array.isArray(bloque) || bloque.length === 0) return null;
+
+          return (
+            <div
+              class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6"
+              key={key}
+            >
+              {bloque.map((linea, index) =>
+                index === 0 ? (
+                  <h3
+                    class="lg:text-xl text-xl font-bold mt-6 text-titulo"
+                    key={index}
+                  >
+                    {linea}
+                  </h3>
+                ) : (
+                  <p class="lg:text-xl text-base ml-4 text-texto" key={index}>
+                    {linea}
+                  </p>
+                )
+              )}
+            </div>
+          );
+        })
+      }
     </div>
 
     <div class="h-full p-4">
@@ -176,16 +144,19 @@ export async function getStaticPaths() {
           }
         </ul>
 
-        <!-- <div class="p-2">
-          <button class="h-11 w-52 rounded-lg bg-botones">
-            <a
-              class="text-center text-white text-2xl font-semibold font-Montserrat"
-              href=""
-            >
-              Book Now
-            </a>
+        <div class="p-2">
+          <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://wa.me/message/EPD5JVA2SLQ2D1"
+        >
+          <button
+            class="mx-6 w-[100px] h-[40px] md:w-[140px] md:h-[45px] bg-botones hover:bg-red-700 rounded-full text-white lg:text-base md:text-sm text-xs font-semibold"
+          >
+            Reserve Ahora
           </button>
-        </div>-->
+        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -211,10 +182,10 @@ export async function getStaticPaths() {
       carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
     });
 
-    // 🔥 Movimiento automático cada 4 segundos
+    // Movimiento automático cada 3 segundos
     setInterval(() => {
       currentSlide = (currentSlide + 1) % totalSlides;
       updateCarousel();
-    }, 3000); // 4000 ms = 4 segundos
+    }, 3000);
   </script>
 </Layout>

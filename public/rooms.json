@@ -2,56 +2,56 @@
   {
     "id": 1,
     "title": "DownTown Standard Doble",
-    "price":"$999 / Por noche",
+    "price": "$999 / Por noche",
     "description": "Una opción cómoda y acogedora, ideal para parejas o viajeros solos que buscan descansar en un ambiente moderno y bien ubicado en el corazón de la ciudad.",
     "beds": "1 cama Matrimonial",
-    "image": "https://i.ibb.co/ksT3g1tW/STANDARD-DOBLE-4.jpg",
-    "image2": "https://i.ibb.co/ccy2r27P/STANDARD-DOBLE-2.jpg",
-    "image3": "https://i.ibb.co/CKRV3S9T/STANDARD-DOBLE.jpg",
-    "image4": "https://i.ibb.co/qFVnKcr8/ban-o-Doble.jpg"
+    "image": "https://i.ibb.co/PGZPHP1N/Estandar-Doble3.png",
+    "image2": "https://i.ibb.co/SwhzWkZR/Estandar-Doble4.png",
+    "image3": "https://i.ibb.co/B5BTTsvT/Estandar-Doble2.jpg",
+    "image4": "https://i.ibb.co/rRdWHxfw/Estandar-Doble1.png"
   },
   {
     "id": 2,
     "title": "DownTown Standard Triple",
-    "price":"$999 / Por noche",
-    "description": "dfjhsdfjsdfhjkfhsjkdfhsdkjfhsdjkfhskjdfhskjdfhkjsdhfkjsdhfkjsdhfkjhsdfkjhsdfkjhsdkfjhsdkjfhskjdhf",
+    "price": "$999 / Por noche",
+    "description": "Perfecta para pequeños grupos o familias, esta habitación combina funcionalidad y confort, con espacio suficiente para todos.",
     "beds": "1 cama Matrimonial y 1 Individual",
-    "image": "https://i.ibb.co/0ZMzqTJ/Tropical-Triple.png",
-    "image2": "https://i.ibb.co/LzMj92HG/Habitacion-Triple3.webp",
-    "image3": "https://i.ibb.co/202q7yt4/habitaciontriple1.jpg",
-    "image4": "https://i.ibb.co/bRzw5Nhm/habitacion-Triple4.webp"
+    "image": "https://i.ibb.co/SX2LGSHN/Estandar-Triple3.png",
+    "image2": "https://i.ibb.co/whNd3XSv/Estandar-Triple2.png",
+    "image3": "https://i.ibb.co/j90LrhVJ/Estandar-Triple1.png",
+    "image4": "https://i.ibb.co/pvrBmBw4/Estandar-Triple4.webp"
   },
   {
-      "id": 3,
-      "title": "DownTown Superior",
-      "price":"$999 / Por noche",
-      "description": "dfjhsdfjsdfhjkfhsjkdfhsdkjfhsdjkfhskjdfhskjdfhkjsdhfkjsdhfkjsdhfkjhsdfkjhsdfkjhsdkfjhsdkjfhskjdhf",
-      "beds": "1 cama queen",
-      "image": "https://i.ibb.co/BGWRp5f/Downtown-Superior.png",
-      "image2": "https://i.ibb.co/YTfsgD6q/habitacionsuperior4.webp",
-      "image3": "https://i.ibb.co/gbXNZ7mK/habitacionsuperioir2.jpg",
-      "image4": "https://i.ibb.co/N2cLn2Cv/banno-Superior.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Confort Family",
-      "price":"$999 / Por noche",
-      "description": "dfjhsdfjsdfhjkfhsjkdfhsdkjfhsdjkfhskjdfhskjdfhkjsdhfkjsdhfkjsdhfkjhsdfkjhsdfkjhsdkfjhsdkjfhskjdhf",
-      "beds": "1 cama Matrimonial y 2 Individuales",
-      "image": "https://i.ibb.co/fGx4k48W/habitacion-Confort-Family.jpg",
-      "image2": "https://i.ibb.co/Kj99XtSf/confort-Family.jpg",
-      "image3": "https://i.ibb.co/23ZBgHtX/habitacionesfamily3.jpg",
-      "image4": "https://i.ibb.co/qFVnKcr8/ban-o-Doble.jpg"
-    },
+    "id": 3,
+    "title": "DownTown Superior",
+    "price": "$999 / Por noche",
+    "description": "Diseñada para quienes buscan un nivel extra de confort, esta habitación ofrece un ambiente elegante, moderno y espacioso.",
+    "beds": "1 cama queen",
+    "image": "https://i.ibb.co/kshJL68d/superior3.png",
+    "image2": "https://i.ibb.co/jPQ5JDvP/superior4.png",
+    "image3": "https://i.ibb.co/p6DwHt0w/superior2.png",
+    "image4": "https://i.ibb.co/bj0GzzS3/superior1.png"
+  },
+  {
+    "id": 4,
+    "title": "Confort Family",
+    "price": "$999 / Por noche",
+    "description": "Ideal para familias, esta habitación ofrece comodidad y espacio, con una distribución pensada para el descanso de todos los miembros del grupo.",
+    "beds": "1 cama Matrimonial y 2 Individuales",
+    "image": "https://i.ibb.co/wNwC4k4Q/confort-Family4.png",
+    "image2": "https://i.ibb.co/pvRQ5v96/confort-Family2.jpg",
+    "image3": "https://i.ibb.co/bM5JzXD2/confort-Family3.png",
+    "image4": "https://i.ibb.co/4ZGJFhqh/confort-Family1.jpg"
+  },
   {
     "id": 5,
     "title": "Tropical Family pool view",
-    "price":"$999 / Por noche",
-    "description": "dfjhsdfjsdfhjkfhsjkdfhsdkjfhsdjkfhskjdfhskjdfhkjsdhfkjsdhfkjsdhfkjhsdfkjhsdfkjhsdkfjhsdkjfhskjdhf",
+    "price": "$999 / Por noche",
+    "description": "Con vista a la piscina y ubicada en el corazón de la ciudad, esta habitación es ideal para familias o grupos que buscan la comodidad.",
     "beds": "2 camas Matrimoniales",
-    "image": "https://i.ibb.co/0cfnMKj/Tropical-Family.png",
-    "image2": "https://i.ibb.co/bjw07Cmq/habitaciontropical1.jpg",
-    "image3": "https://i.ibb.co/Ld837TBh/habitaciontropical3.jpg",
-    "image4": "https://i.ibb.co/7xC82VrT/habitaciontropical2.jpg"
+    "image": "https://i.ibb.co/gbVPz97Z/tropical3.png",
+    "image2": "https://i.ibb.co/sv7ctyWZ/tropical4.png",
+    "image3": "https://i.ibb.co/kRMTGHk/tropical1.png",
+    "image4": "https://i.ibb.co/gMDhn2Bw/tropical2.png"
   }
 ]
