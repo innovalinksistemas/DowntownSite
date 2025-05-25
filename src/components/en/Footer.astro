@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logov from "../../assets/logov.png";
-import logon from "../../assets/logon.png";
+
 import instagram from "../../assets/instagram.png";
 import facebook from "../../assets/facebook.png";
 import whatsapp from "../../assets/whatsapp.png";
@@ -9,163 +8,208 @@ import phone from "../../assets/phone.png";
 import location from "../../assets/location.png";
 import mail from "../../assets/mail.png";
 import web from "../../assets/world.png";
-import nuwa from "../../assets/NUWAlog.png"
-import ventanita from "../../assets/laventanita.png"
-import mariabonita from "../../assets/mariabonita.png"
-import miradorarenal from "../../assets/miradorarenal.png"
-import tropical from "../../assets/tropical.png"
+import nuwa from "../../assets/logoNuwaBlanco.png";
+import logoTierra from "../../assets/logoTierraGBlanco.png";
+import logoPinto from "../../assets/logoPintoeGalloBlanco.png";
+import tropicalB from "../../assets/logoTropicalExpBlanco.png";
+import logoLavaDrink from "../../assets/logoLavaDrinksBlanco.png";
+import SNBlanco from "../../assets/SNBlanco.png";
+import MBBlanco from "../../assets/logoMariaBonitaBlanco.png";
+import ventanitaBlanco from "../../assets/logoVentanitaBlanco.png";
+import logoDowntown from "../../assets/logoBlancoDowntown.png";
+
+const logos = [
+  {
+    src: logoDowntown,
+    alt: "La Fortuna Downtown",
+    href: "https://www.instagram.com/lafortunadowntown",
+  },
+  {
+    src: logoTierra,
+    alt: "Tierra Gastro",
+    href: "https://www.instagram.com/tierragastrocr",
+  },
+  {
+    src: MBBlanco,
+    alt: "Maria Bonita",
+    href: "https://www.instagram.com/mariabonita.cr",
+  },
+  {
+    src: ventanitaBlanco,
+    alt: "La Ventanita",
+    href: "https://www.instagram.com/ventanitamariabonita",
+  },
+  { src: logoPinto, alt: "Pinto e' Gallo", href: "/pinto-gallo" },
+  { src: tropicalB, alt: "Tropical Experiences", href: "/tropical" },
+  { src: nuwa, alt: "Nuwa Art Gallery", href: "/nuwa" },
+  { src: logoLavaDrink, alt: "Lava Drinks", href: "/lava-drinks" },
+  {
+    src: SNBlanco,
+    alt: "Selva Negra",
+    href: "https://www.instagram.com/selvanegra.bar",
+  },
+];
+
+const repeat = 4; // cuántas veces repetir el grupo para animación fluida
+const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
 ---
 
-<main>
-  <div class="sm:h-[400px] bg-[#424b59] flex flex-col sm:flex-row items-center pb-3 sm:pb-0">
-    <div class="grid grid-cols-1 sm:grid-cols-4 w-full items-stretch max-w-7xl mx-auto text-white">
-      <div class="flex justify-center sm:justify-start items-center h-full">
-        <Image src={logov} alt="logo" class="sm:w-96 sm:h-80 h-48 w-48" />
-      </div>
+<style>
+  .slider a {
+    display: inline-block;
+  }
 
-      <div class="mx-auto text-center h-auto">
-        <h2 class="text-lg font-semibold text-left">Contact</h2>
+  .slider {
+    display: flex;
+    gap: 1rem; /* Espacio entre imágenes */
+    animation: scroll 20s linear infinite;
+  }
+
+  .image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    min-width: 120px; /* Evita que las imágenes se reduzcan */
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-200%); /* Mueve solo la mitad */
+    }
+  }
+
+  .slider:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+<div id="Footer" class="bg-fondoF flex flex-col p-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+
+
+    <div class="text-left md:text-left">
+      <h3 class="text-xl text-gris mb-4 font-bold">Contact us </h3>
+      <div class="space-y-4 text-gris">
         <ul class="space-y-4 text-left align-middle">
           <li class="flex">
             <span>
-              <Image class="w-[33px] h-[33px] mr-2" src={phone} alt="telefono" />
+              <Image
+                class="lg:w-[33px] lg:h-[33px] w-[2rem] h-[2rem] mr-2"
+                src={phone}
+                alt="telefono"
+              />
             </span> +506 4000-2027
           </li>
           <li class="flex">
             <span>
-              <Image class="w-[33px] h-[33px] mr-2" src={phone} alt="telefono" />
+              <Image
+                class="lg:w-[33px] lg:h-[33px]  w-[2rem] h-[2rem] mr-2"
+                src={phone}
+                alt="telefono"
+              />
             </span> +506 8527-4777
           </li>
           <li class="flex">
             <span>
-              <Image class="w-[33px] h-[33px] mr-2" src={mail} alt="mail" />
-            </span> reservations@lafortunahotel.com
+              <Image class="lg:w-[33px] lg:h-[33px]  w-[2rem] h-[2rem] mr-2" src={mail} alt="mail" />
+            </span> reservations@lafortunahotels.com
           </li>
           <li class="flex">
             <span>
-              <Image class="w-[33px] h-[33px] mr-2" src={location} alt="location" />
-            </span> 25 m south of the catholic church<br />La Fortuna, Alajuela, Costa Rica
+              <Image
+                class="lg:w-[33px] lg:h-[33px] w-[2rem] h-[2rem] mr-2"
+                src={location}
+                alt="location"
+              />
+            </span> 25 m south of the Catholic church<br />in La Fortuna, Alajuela, Costa Rica
           </li>
           <li class="flex">
             <span>
-              <Image class="w-[33px] h-[33px] mr-2" src={web} alt="web" />
+              <Image class="lg:w-[33px] lg:h-[33px] w-[2rem] h-[2rem] mr-2" src={web} alt="web" />
             </span> www.lafortunadowntown.com
           </li>
         </ul>
       </div>
-
-      <div class="flex flex-col justify-center align-baseline sm:justify-start items-center h-full">
-        <h2 class="text-lg font-semibold mb-3">Follow Us</h2>
-        <div class="flex space-x-3">
-          <a href="">
-            <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={instagram} alt="Instagram" />
-          </a>
-          <a href="">
-            <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={facebook} alt="Facebook" />
-          </a>
-          <a href="">
-            <Image class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl" src={whatsapp} alt="Whatsapp" />
-          </a>
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-center h-full">
-        <h2 class="text-lg font-semibold text-left">Visit us at</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825808.876441441!2d-86.3484886938268!3d9.881747931855228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sDowntown%20La%20Fortuna%20Boutique%20Hotel!5e1!3m2!1ses-419!2scr!4v1729309104000!5m2!1ses-419!2scr"
-          class="w-full sm:w-[21rem] h-64 sm:h-72 rounded-lg"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
     </div>
-  </div>
-  <div class="bg-fondo w-full">
-    <div class="flex flex-row space-x-12 p-4">
-      <div class="flex flex-col mx-auto sm:flex-row sm:space-x-16">
-        <div>
-          <p class="text-[#424b59] font-semibold font-Montserrat text-lg">
-            La Fortuna Hotels Access
-          </p>
-          <ul>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >La Fortuna Blog</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat">Location</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Packages & Offers</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Subscriptions</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Tours & Transport</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Travel Planner</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Extraordinary Experiences</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat">Careers</a>
-            </li>
-            <li>
-              <a href="#Home" class="text-base font-Montserrat"
-                >Meetings & Events</a>
-            </li>
-          </ul>
-        </div>
 
-        <div>
-          <p class="text-[#424b59] font-semibold font-Montserrat text-lg">
-            Our Partners
-          </p>
-          <div class="flex sm:flex-row flex-col space-x-1">
-            <Image src={mariabonita} class="w-48 h-40" alt="Maria Bonita La Fortuna" />
-            <Image src={ventanita} class="w-48 h-40" alt="La Ventanita La Fortuna" />
-            <Image src={nuwa} class="w-48 h-40" alt="Nuwa Art Gallery" />
-            <Image src={miradorarenal} class="w-48 h-40" alt="Mirador La Fortuna Arenal" />
-            <Image src={tropical} class="w-48 h-40" alt="Tropical Experiences La Fortuna" />
-            
-          </div>
-        </div>
-      </div>
+    <div class="hidden lg:block">
+      <h3 class="text-xl text-gris mb-4 font-bold">Visit us.</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544549.03859969!2d-84.49414550137209!3d9.852802492553035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sDowntown%20Boutique%20Hotel!5e0!3m2!1sen!2scr!4v1747925666942!5m2!1sen!2scr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <div class="bg-[#424b59] w-full flex flex-col">
-      <div class="sm:flex flex-row sm:text-left text-center items-center">
-        <ul
-          class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2"
+
+    <div class="block lg:hidden ">
+      <h3 class="text-xl text-gris mb-4 font-bold">Visit us.</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544549.03859969!2d-84.49414550137209!3d9.852802492553035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sDowntown%20Boutique%20Hotel!5e0!3m2!1sen!2scr!4v1747925666942!5m2!1sen!2scr" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+    
+    <div class="">
+      <h3 class="text-xl text-gris mb-4 font-bold">Social Media</h3>
+      <div class="flex gap-4 justify-start mt-4 md:mt-0">
+        <a
+          href="https://www.instagram.com/lafortunadowntown?igsh=MWt1bngybWZ6YmVvcw=="
         >
-          <li><a href="">Legal Notice</a></li>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Cookie Preference</a></li>
-          <li><a href="">Accessibility</a></li>
-        </ul>
-        <div
-          class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baseline"
-        >
-          <p class="text-white font-Montserrat text-sm">
-            © La Fortuna Downtown. All Rights Reserved.
-          </p>
-          <p
-            class="text-white font-Montserrat text-sm sm:place-self-end sm:pr-2"
-          >
-            Desarrollado & Diseñado por InnovaLinkCR
-          </p>
-        </div>
+          <Image
+            class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
+            src={instagram}
+            alt="Instagram"
+          />
+        </a>
+        <a href="https://www.facebook.com/share/1XH5v8bUr3/?mibextid=wwXIfr">
+          <Image
+            class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
+            src={facebook}
+            alt="Facebook"
+          />
+        </a>
+        <a href="https://wa.me/message/EPD5JVA2SLQ2D1">
+          <Image
+            class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
+            src={whatsapp}
+            alt="Whatsapp"
+          />
+        </a>
       </div>
     </div>
   </div>
 </div>
-</main>
 
+<div class="bg-black w-full overflow-hidden">
+  <div class="slider-wrapper">
+    <div class="slider">
+      {
+        repeatedLogos.map(({ src, alt, href }) => (
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            <Image src={src} alt={alt} class="image" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<div class="bg-[#424b59] w-full flex flex-col">
+  <div class="sm:flex flex-row sm:text-left text-center items-center">
+    <ul
+      class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2"
+    >
+      <li><a href="">Aviso legal</a></li>
+      <li><a href="">Politica de privacidad</a></li>
+      <li><a href="">Preferencias de cookies</a></li>
+      <li><a href="">Accesibilidad</a></li>
+    </ul>
+    <div
+      class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baseline"
+    >
+      <p class="text-white font-Montserrat text-sm">
+        © La Fortuna Downtown. Derechos Reservados.
+      </p>
+      <p class="text-white font-Montserrat text-sm sm:place-self-end sm:pr-2">
+        Desarrollado por InnovaLinkCR
+      </p>
+    </div>
+  </div>
+</div>

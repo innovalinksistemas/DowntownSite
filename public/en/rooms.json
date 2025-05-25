@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "DownTown Standard Doble",
+    "price": "$999 / Por noche",
+    "description": "A comfortable and cozy option, ideal for couples or solo travelers looking to relax in a modern and well-located environment in the heart of the city.",
+    "beds": "1 Double Bed",
+    "image": "https://i.ibb.co/PGZPHP1N/Estandar-Doble3.png",
+    "image2": "https://i.ibb.co/SwhzWkZR/Estandar-Doble4.png",
+    "image3": "https://i.ibb.co/B5BTTsvT/Estandar-Doble2.jpg",
+    "image4": "https://i.ibb.co/rRdWHxfw/Estandar-Doble1.png"
+  },
+  {
+    "id": 2,
+    "title": "DownTown Standard Triple",
+    "price": "$999 / Por noche",
+    "description": "Perfect for small groups or families, this room combines functionality and comfort, with enough space for everyone.",
+    "beds": "1 Double Bed y 1 Single Bed",
+    "image": "https://i.ibb.co/SX2LGSHN/Estandar-Triple3.png",
+    "image2": "https://i.ibb.co/whNd3XSv/Estandar-Triple2.png",
+    "image3": "https://i.ibb.co/j90LrhVJ/Estandar-Triple1.png",
+    "image4": "https://i.ibb.co/pvrBmBw4/Estandar-Triple4.webp"
+  },
+  {
+    "id": 3,
+    "title": "DownTown Superior",
+    "price": "$999 / Por noche",
+    "description": "Designed for those seeking an extra level of comfort, this room offers an elegant, modern, and spacious atmosphere.",
+    "beds": "1 Queen Bed",
+    "image": "https://i.ibb.co/kshJL68d/superior3.png",
+    "image2": "https://i.ibb.co/jPQ5JDvP/superior4.png",
+    "image3": "https://i.ibb.co/p6DwHt0w/superior2.png",
+    "image4": "https://i.ibb.co/bj0GzzS3/superior1.png"
+  },
+  {
+    "id": 4,
+    "title": "Comfort Family Room",
+    "price": "$999 / Por noche",
+    "description": "Ideal for families, this room offers comfort and space, with a layout designed for the rest of all group members.",
+    "beds": "1 Double Bed y 2 singles Bed",
+    "image": "https://i.ibb.co/wNwC4k4Q/confort-Family4.png",
+    "image2": "https://i.ibb.co/pvRQ5v96/confort-Family2.jpg",
+    "image3": "https://i.ibb.co/bM5JzXD2/confort-Family3.png",
+    "image4": "https://i.ibb.co/4ZGJFhqh/confort-Family1.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Tropical Family Room with a swimming pool view",
+    "price": "$999 / Por noche",
+    "description": "With a view of the pool and located in the heart of the city, this room is ideal for families or groups who value comfort.",
+    "beds": "2 Double Bed",
+    "image": "https://i.ibb.co/gbVPz97Z/tropical3.png",
+    "image2": "https://i.ibb.co/sv7ctyWZ/tropical4.png",
+    "image3": "https://i.ibb.co/kRMTGHk/tropical1.png",
+    "image4": "https://i.ibb.co/gMDhn2Bw/tropical2.png"
+  }
+]

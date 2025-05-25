@@ -55,7 +55,7 @@ const reviews = [
     }
     
     .swiper-button-prev {
-      background-image: url("../assets/flecha.png");
+      background-image: url("../../assets/flecha.png");
       
     }
     .swiper-button-next {
@@ -70,51 +70,51 @@ const reviews = [
     }
     
     .swiper-button-next {
-      background-image: url("../assets/flechader.png");
+      background-image: url("../../assets/flechader.png");
       
     }
     </style>
 
-<section id="reviews" class="bg-fondo  text-center sm:py-20  h-full snap-start">
+<section id="reviews" class="bg-fondo  text-center sm:py-20 mt-6 h-full snap-start">
     <div class="flex  flex-col sm:flex-row pb-5 items-center space-y-4 sm:space-y-0 sm:items-stretch sm:space-x-8 justify-center font-Montserrat font-semibold align-baseline text-xl sm:text-2xl">
         <div>
          <p>8.3/10</p>
-         <p class="text-gray-600"><span class="number" data-value="500">0</span> notes</p>
+         <p class="text-gray-600"><span class="number" data-value="500">0</span> nota</p>
           <Image src={tripadvisor} alt="tripadvisor" class="w-[8rem] sm:w-[20rem]"/>
         </div>
         <div>
             <p>8.3/10</p>
-          <p class="text-gray-600"><span class="number" data-value="2123">0</span> notes</p>
+          <p class="text-gray-600"><span class="number" data-value="2123">0</span> nota</p>
           <Image src={google} alt="google" class="w-[8rem] sm:w-[15rem]"/>
         </div>
         <div>
             <p>8.3/10</p>
-          <p class="text-gray-600"><span class="number" data-value="1500">0</span> comments</p>
+          <p class="text-gray-600"><span class="number" data-value="1500">0</span> comentarios</p>
           <Image src={booking} alt="booking" class="w-[8rem] sm:w-[20rem] pt-3"/>
         </div>
         <div>
             <p>8.3/10</p>
-          <p class="text-gray-600"><span class="number" data-value="2123">0</span> notes</p>
+          <p class="text-gray-600"><span class="number" data-value="2123">0</span> nota</p>
           <Image src={expedia} alt="expedia" class="w-[8rem] sm:w-[20rem] "/>
         </div>
       </div>
       
 
-<div>
-    <div class=" p-7 sm:m-0 ">
+<div  class=" ">
+    <div class=" sm:m-0 ">
         <div class="swiper rounded-2xl">
           <div class="swiper-wrapper ">
             {
               reviews.map((review) => (
-                <div class="swiper-slide flex justify-center align-middle text-center" key={review.title}>
+                <div class="swiper-slide flex justify-center align-middle text-center" >
                   <div class="slider-main  font-Montserrat">
                     <div class=" sm:min-w-80 sm:min-h-[22rem] bg-white rounded-xl p-12 m-3 sm:m-0">
-                        <p class="font-semibold">{review.title}</p>
-                        <p>{review.commentary}</p>
+                        <p class="font-semibold text-titulo">{review.title}</p>
+                        <p class="text-texto">{review.commentary}</p>
                         <div class="flex space-x-3 align-baseline">
                             <Image class="w-12 h-12" src={review.platform} alt="platform" />
                             <p class="text-yellow-300">★★★★★</p>
-                            <p>{review.name}</p>
+                            <p class="text-texto">{review.name}</p>
                         </div>
                     </div>
                   </div>
@@ -195,23 +195,24 @@ const reviews = [
   
 
   function animateNumbers() {
-  const numbers = document.querySelectorAll('.number');
+      const numbers = document.querySelectorAll('.number');
 
-  numbers.forEach((number) => {
-    number.innerText = '0';  // Reiniciar el número a 0 cuando vuelva a entrar en la vista
-    const updateCount = () => {
-      const target = +number.getAttribute('data-value');  // Valor final (data-value)
-      const count = +number.innerText;  // Valor actual mostrado
+      numbers.forEach((number) => {
+        number.textContent = '0'; // Reinicia el número
 
-      const increment = target / 100;  // Velocidad del incremento
+        const updateCount = () => {
+          const target = +number.getAttribute('data-value');
+          const count = +number.textContent;
 
-      if (count < target) {
-        number.innerText = Math.ceil(count + increment);  // Incrementar el número
-        setTimeout(updateCount, 20);  // Llamar la función nuevamente para continuar
-      } else {
-        number.innerText = target;  // Asegurarse que llega al valor final
-      }
-    };
+          const increment = target / 100;
+
+          if (count < target) {
+            number.textContent = Math.ceil(count + increment).toString();
+            setTimeout(updateCount, 20);
+          } else {
+            number.textContent = target.toString();
+          }
+        };
 
     updateCount();
   });

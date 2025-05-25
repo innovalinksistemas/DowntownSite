@@ -1,156 +1,213 @@
 ---
 import { Image } from "astro:assets";
-import logob from "../../assets/LogoBHorizontal.png"
-import logon from "../../assets/logon.png"
-import burgerw from "../../assets/burger-white.svg"
-import burgerb from "../../assets/burger-black.svg"
-import spain from "../../assets/SPAIN.png"
-import usa from "../../assets/USA.png"
+import logoBlancoDowntown from "../../assets/logoBlancoDowntown.png";
+import logoNegroDowntown from "../../assets/logoNegroDowntown.png";
+import burgerw from "../../assets/burger-white.svg";
+import burgerb from "../../assets/burger-black.svg";
+import spain from "../../assets/espannol.png";
+import usa from "../../assets/ingles.png";
 ---
 
 <main>
+  <nav
+    id="navbar"
+    class="bg-transparent text-white fixed w-full z-20 top-0 left-0 transition-all duration-300 flex justify-center"
+  >
+    <div
+      class=" flex items-center justify-between mx-auto p-4 relative h-[100px] lg:h-[80px]"
+    >
+      <div class="absolute bottom-0 left-0 lg:w-[83%] h-[2px] bg-white/90"/>
+     
+      <!-- Logo -->
+      <a href="" class="flex items-center">
+        <Image
+          id="logob"
+          src={logoBlancoDowntown}
+          alt="Hotel Downtown "
+          class="lg:w-[160px] lg:h-[150px] md:w-[130px] md:h-[100px] h-[140px] w-[120px]"
+        />
+        <Image
+          id="logon"
+          src={logoNegroDowntown}
+          alt="Hotel Downtown"
+          class="lg:w-[160px] lg:h-[150px] md:w-[130px] md:h-[100px] h-[140px] w-[120px] hidden"
+        />
+      </a>
+      <!-- Idioma switch -->
+      <div class="">
+        <button
+          id="languageToggle"
+          class="sm:flex sm:items-center sm:gap-2 sm:px-3 sm:py-2 px-1 sm:rounded-md text-2xl sm:font-medium bg-trasparent"
+        >
+          <Image
+            id="flagIcon"
+            src={spain}
+            alt="Bandera de España"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+          <span class="sr-only" id="srText">Cambiar a inglés</span>
+        </button>
+      </div>
 
-    <nav id="navbar" class="bg-transparent text-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600 transition-all duration-300">
-        <div class="w-[100%] flex flex-wrap items-center justify-between mx-auto p-4">
-          <!-- Logo -->
-          <a  href="" class="flex items-center">
-            <Image id="logob" src={logob} alt="logo1" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] " />
-            <Image id="logon" src={logon} alt="logo2" class="w-[150px] h-[50px] md:w-[271px] md:h-[75px] hidden" />
-          </a>
-          <!-- Idioma switch -->
-          <div class="">
-            <button
-            id="languageToggle"
-            class="sm:flex sm:items-center sm:gap-2 sm:px-3 sm:py-2 px-1 sm:rounded-md text-2xl sm:font-medium bg-trasparent  "
+      <!-- Botón de Reservar y Menú hamburguesa para móviles -->
+      <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=ES"
+        >
+          <button
+            class="mx-6 w-[100px] h-[40px] md:w-[140px] md:h-[45px] bg-botones hover:bg-red-700 rounded-full text-white lg:text-base md:text-sm text-xs font-semibold"
           >
-            <span id="flagIcon" class="sm:w-5 sm:h-5">🇪🇸</span>
-            <span class="sr-only" id="srText">Cambiar a inglés</span>
+          Reserve Now
           </button>
-          </div>
-          <!-- Botón de Reservar y Menú hamburguesa para móviles -->
-          <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
-            <a href="https://www.simplebooking.it/ibe/hotelbooking/search?hid=9184&lang=EN">
-              <button class="w-[120px] h-[40px] md:w-[188px] md:h-[63px] bg-[#6a2831] rounded-full text-white text-base font-semibold">
-                Book Now
-              </button>
-            </a>
-            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <Image class="" id="burger-white" src={burgerw} alt="menu-white"/>
-              <Image class="hidden" id="burger-black" src={burgerb} alt="menu-black"/>  
-            </button>
-          </div>
-      
-          <!-- Menú de navegación -->
-          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0 font-medium">
-              <li>
-                <a href="#Home" class="text-base font-semibold">La Fortuna Blog</a>
-              </li>
-              <li>
-                <a href="#About" class="text-base font-semibold">Hotel</a>
-              </li>
-              <li>
-                <a href="#Rooms" class="text-base font-semibold">Rooms</a>
-              </li>
-              <li>
-                <a href="packagesinfo" class=" text-base font-semibold">Packages</a>
-              </li>
-              <li>
-                <a href="packagesinfo" class=" text-base font-semibold">Tours & Transportation</a>
-              </li>
-              <li>
-                <a href="packagesinfo" class=" text-base font-semibold">Contact & Location</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    
+        </a>
+
+        <button
+          data-collapse-toggle="navbar-sticky"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-sticky"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <Image class="" id="burger-white" src={burgerw} alt="menu-white" />
+          <Image
+            class="hidden"
+            id="burger-black"
+            src={burgerb}
+            alt="menu-black"
+          />
+        </button>
+      </div>
+
+      <!-- Menú de navegación -->
+      <div
+        id="navbar-sticky"
+        class="hidden tems-center justify-between md:w-auto md:order-1 flex-col lg:flex md:flex-row absolute top-[100%] left-0 rigth-0 bg-white text-black lg:text-white shadow-md md:shadow-none md:bg-transparent md:static z-50 transition-all duration-300"
+      >
+        <ul
+          class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 px-6 py-4 md:py-0 font-medium"
+        >
+          <li>
+            <a
+              href="#Home"
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
+              >La Fortuna Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Rooms"
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
+              >Rooms</a
+            >
+          </li>
+          <li>
+            <a
+              href="#facilidades"
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
+              >Hotel</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="#paquetes"
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
+              >Packages</a
+            >
+          </li>
+          <li>
+            <a
+              href="#infoPaquetes"
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
+              >Tours & Transportation </a
+            >
+          </li>
+          <li>
+            <a
+              href="#Footer"
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
+              >Contact & Location </a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </main>
 
 <script>
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    const logob = document.getElementById('logob');
-    const logon = document.getElementById('logon');
-    const menub = document.getElementById('burger-white');
-    const menun = document.getElementById('burger-black');
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    const logob = document.getElementById("logob");
+    const logon = document.getElementById("logon");
+    const menub = document.getElementById("burger-white");
+    const menun = document.getElementById("burger-black");
+    const links = document.querySelectorAll(".menu-link");
+    const isMobile = window.innerWidth < 768;
 
     if (window.scrollY > 50) {
-        navbar.classList.remove('bg-transparent', 'text-white');
-        navbar.classList.add('bg-white', 'shadow-lg', 'text-black', 'rounded-b-lg');
-        
-        logob.classList.add('hidden');
-        logon.classList.remove('hidden');
-        
-        // Cambiar color del menú móvil a negro
-        menub.classList.add('hidden');
-        menun.classList.remove('hidden');
+      navbar.classList.remove("bg-transparent", "text-white");
+      navbar.classList.add("bg-white", "shadow-lg", "text-black");
+
+      logob.classList.add("hidden");
+      logon.classList.remove("hidden");
+
+      // Cambiar color del menú móvil a negro
+      menub.classList.add("hidden");
+      menun.classList.remove("hidden");
+
+      links.forEach((link) => {
+        if (isMobile || window.scrollY > 50) {
+          link.classList.remove("text-white");
+          link.classList.add("text-black");
+        } else {
+          link.classList.remove("text-black");
+          link.classList.add("text-white");
+        }
+      });
     } else {
-        navbar.classList.remove('bg-white', 'shadow-lg', 'text-black', 'rounded-b-lg');
-        navbar.classList.add('bg-transparent', 'text-white');
-        
-        logob.classList.remove('hidden');
-        logon.classList.add('hidden');
-        
-        // Cambiar color del menú móvil a blanco
-        menub.classList.remove('hidden');
-        menun.classList.add('hidden');
+      navbar.classList.remove("bg-white", "shadow-lg", "text-black");
+      navbar.classList.add("bg-transparent", "text-white");
+
+      logob.classList.remove("hidden");
+      logon.classList.add("hidden");
+
+      // Cambiar color del menú móvil a blanco
+      menub.classList.remove("hidden");
+      menun.classList.add("hidden");
+
+      links.forEach((link) => {
+        if (isMobile || window.scrollY > 50) {
+          link.classList.remove("text-white");
+          link.classList.add("text-black");
+        } else {
+          link.classList.remove("text-black");
+          link.classList.add("text-white");
+        }
+      });
     }
-});
-
-  // Desplazamiento suave para los enlaces
-  document.querySelector('a[href="#About"]').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.querySelector('#About').scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
   });
 
-  document.querySelector('a[href="#Home"]').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.querySelector('#Home').scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
 
-  document.querySelector('a[href="#Rooms"]').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.querySelector('#Rooms').scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-
-    // Lógica para cambiar idioma
-    const button = document.getElementById("languageToggle");
+  // Lógica para cambiar idioma
+  const button = document.getElementById("languageToggle");
   const flagIcon = document.getElementById("flagIcon");
   const srText = document.getElementById("srText");
+  let language = "es";
 
-  // Verificar el idioma actual basado en la URL
-  let language = window.location.pathname.includes("/en") ? "en" : "es";
-
-  // Ajustar el ícono y el texto del botón según el idioma actual
-  if (language === "en") {
-    flagIcon.textContent = "🇺🇸";
-    srText.textContent = "Change to Spanish";
-  } else {
-    flagIcon.textContent = "🇪🇸";
-    srText.textContent = "Cambiar a inglés";
-  }
-
-  // Cambiar el idioma al hacer clic en el botón
   button?.addEventListener("click", () => {
+    language = language === "es" ? "en" : "es";
     if (language === "es") {
-      // Cambiar a inglés
-      window.location.pathname = "/en" + window.location.pathname.substring(1);
+      flagIcon.textContent = "🇪🇸";
+      srText.textContent = "Cambiar a inglés";
+      window.location.href = ""; // Redirigir a la versión en español
     } else {
-      // Cambiar a español
-      window.location.pathname = window.location.pathname.replace("/en", "/");
+      flagIcon.textContent = "🇺🇸";
+      srText.textContent = "Cambiar a español";
+      window.location.href = "/Downtown/"; // Redirigir a la versión en inglés
     }
   });
-
 </script>

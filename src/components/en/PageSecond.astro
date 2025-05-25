@@ -1,23 +1,29 @@
 ---
-import { Image } from "astro:assets"
-import fondo3   from "../../assets/fondo3.png"
-
+import { Image } from "astro:assets";
+import fondoTours from "../../assets/fondoTours.png";
 ---
 
-<main>
-    <div class="relative h-[580px]">
-      <!-- Fondo de imagen -->
-      <Image src={fondo3} alt="Fondo1" class="w-full h-[580px] object-cover absolute" />
-  
-      <!-- Contenido -->
-      <div class="relative top-[10rem] sm:top-[200px] flex flex-col items-center sm:mx-[320px] mx-5">
-        <h2 class="text-center text-gold text-[24px] sm:text-[32px] font-semibold font-Montserrat">
-          Best places to stay in La Fortuna. Costa Rica
-        </h2>
-        <p class="text-center text-[36px] sm:text-[70px] leading-snug text-white font-bold font-Montserrat mt-4 sm:mt-0">
-          La Fortuna Downtown Boutique Hotel
-        </p>
-      </div>
-    </div>
-  </main>
-  
+<div id="infoPaquetes" class="relative w-full h-[300px] md:h-[400px] lg:h-[400px]">
+  <Image
+    src={fondoTours}
+    alt="Jaguar en la selva"
+    class="w-full h-full object-cover"
+  />
+
+  <div
+    class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-30 "
+  >
+    <p class="text-4xl md:text-1xl leading-relaxed">Visit La Fortuna.</p>
+    <h2 class="text-2xl md:text-4xl font-bold leading-relaxed">
+      Your next adventure starts here! 
+    </h2>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://online.flippingbook.com/view/336964967/"
+      class="mt-4 px-6 py-3 bg-botones hover:bg-red-700 text-white font-bold rounded-2xl"
+    >
+    See Tours 
+    </a>
+  </div>
+</div>

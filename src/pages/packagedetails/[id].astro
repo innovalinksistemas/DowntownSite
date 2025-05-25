@@ -38,7 +38,7 @@ export async function getStaticPaths() {
           >
             {
               pkg.imagenes.map((img, index) => (
-                <div class="min-w-full overflow-hidden p-2" key={index}>
+                <div class="min-w-full overflow-hidden p-2" >
                   <img
                     src={img}
                     class="rounded-xl shadow-lg w-full h-[500px] object-cover"
@@ -101,18 +101,18 @@ export async function getStaticPaths() {
           return (
             <div
               class="bg-fondog pl-6 pr-6 pb-6 pt-2 shadow-lg rounded-xl mb-6"
-              key={key}
+             
             >
               {bloque.map((linea, index) =>
                 index === 0 ? (
                   <h3
                     class="lg:text-xl text-xl font-bold mt-6 text-titulo"
-                    key={index}
+                    
                   >
                     {linea}
                   </h3>
                 ) : (
-                  <p class="lg:text-xl text-base ml-4 text-texto" key={index}>
+                  <p class="lg:text-xl text-base ml-4 text-texto" >
                     {linea}
                   </p>
                 )
@@ -132,7 +132,7 @@ export async function getStaticPaths() {
         <ul class="lg:text-xl text-base space-y-2 pb-5 text-texto">
           {
             pkg.incluye.map((add, index) => (
-              <li key={index} class="flex items-start gap-2">
+              <li  class="flex items-start gap-2">
                 <img
                   src="https://i.ibb.co/8L686vvJ/icono-Incluye.png"
                   alt="Icono"

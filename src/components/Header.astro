@@ -19,7 +19,7 @@ import usa from "../assets/ingles.png";
       <div class="absolute bottom-0 left-0 lg:w-[83%] h-[2px] bg-white/90"/>
      
       <!-- Logo -->
-      <a href="" class="flex items-center">
+      <a href="/" class="flex items-center">
         <Image
           id="logob"
           src={logoBlancoDowntown}
@@ -191,16 +191,7 @@ import usa from "../assets/ingles.png";
     }
   });
 
-  // Desplazamiento suave para los enlaces
-  document
-    .querySelector('a[href="#About"]')
-    .addEventListener("click", function (event) {
-      event.preventDefault();
-      document.querySelector("#About").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
+
 
   // Lógica para cambiar idioma
   const button = document.getElementById("languageToggle");
