@@ -5,8 +5,7 @@ import logoNegroDowntown from "../../assets/logoNegroDowntown.png";
 import logoRojoDowntown from "../../assets/logoRojoDT.png";
 import burgerw from "../../assets/burger-white.svg";
 import burgerb from "../../assets/burger-black.svg";
-import spain from "../../assets/SPAIN.png";
-import usa from "../../assets/ingles.png";
+import spain from "../../assets/espannol.png";
 ---
 
 <main>
@@ -28,7 +27,7 @@ import usa from "../../assets/ingles.png";
           class="lg:w-[160px] lg:h-[150px] md:w-[270px] md:h-[75px] h-[140px] w-[120px]"
         />
       </a>
-      <!-- Idioma switch -->
+      <!-- Idioma switch 
       <div class="">
         <button
           id="languageToggle"
@@ -36,13 +35,13 @@ import usa from "../../assets/ingles.png";
         >
           <Image
             id="flagIcon"
-            src={usa}
+            src={spain}
             alt="Bandera de España"
             class="w-5 h-5 sm:w-6 sm:h-6"
           />
           <span class="sr-only" id="srText">Cambiar a inglés</span>
         </button>
-      </div>
+      </div>-->
 
       <!-- Botón de Reservar y Menú hamburguesa para móviles -->
       <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
@@ -146,8 +145,7 @@ import usa from "../../assets/ingles.png";
       });
     });
 
-  // Lógica para cambiar idioma
-  const button = document.getElementById("languageToggle");
+    /**  const button = document.getElementById("languageToggle");
   const flagIcon = document.getElementById("flagIcon");
   const srText = document.getElementById("srText");
   let language = "es";
@@ -163,5 +161,5 @@ import usa from "../../assets/ingles.png";
       srText.textContent = "Cambiar a español";
       window.location.href = "/Downtown/"; // Redirigir a la versión en inglés
     }
-  });
+  });*/
 </script>
