@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import blog from "../assets/blog.jpg";
+---
+
+<main id="blog" class="h-screen relative">
+  <Image
+    src={blog}
+    alt=""
+    class=" h-full object-cover absolute"
+  />
+  <div class="absolute inset-0 bg-black/50"></div>
+  
+</main>

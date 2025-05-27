@@ -55,7 +55,7 @@ export default function ImageGallery() {
             >
               <div className="flex flex-col md:flex-row lg:gap-2 gap-6 items-center md:items-start ">
 
-                <div className="w-full md:w-2/3 mt-2 lg:mt-0">
+                <div className="w-full md:w-2/3 mt-2 lg:mt-0 just">
                   <img
                     src={room.image}
                     alt="Habitaciones Downtown"
