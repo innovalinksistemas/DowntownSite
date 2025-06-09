@@ -81,7 +81,7 @@ export default function ImageGallery() {
                                             {paq.description}
                                         </p>
                                         <a
-                                            href={`/Downtown/packagedetails/en/${paq.id}`}
+                                            href={`/packagedetails/en/${paq.id}`}
                                             class="bg-botones text-white px-6 py-2 rounded hover:bg-red-700 transition"
                                         >
                                             SEE MORE
