@@ -1,11 +1,27 @@
 ---
-
+import { SEO } from "astro-seo";
 ---
 
 <html lang="es">
 	<head>
+		<SEO
+      title="Downtown La Fortuna | Pura Vida"
+      description=" UNA EXPERIENCIA ÚNICA DE HOSPEDAJE EN LA FORTUNA"
+      openGraph={{
+        basic: {
+          title: "Downtown La Fortuna | Pura Vida",
+          type: "Website",
+          image: "Icono.png",
+        }
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/icon.svg" }],
+        // extending the default meta tags
+      }}
+    />
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/public/icon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<style>
@@ -16,7 +32,7 @@
   scroll-behavior: smooth;
 }
 		</style>
-		<title>Downtown</title>
+		<title>Downtown La Fortuna | Pura Vida</title>
 	</head>
 	<body >
 		<div class="w-full snap-y snap-mandatory scroll-smooth">
