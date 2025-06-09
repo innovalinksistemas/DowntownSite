@@ -13,9 +13,6 @@ export default defineConfig({
     locales: ["es","en"],
   },
 
-  site: 'https://wdsevilla.github.io',
-  base:'/Downtown/',
-
   image: {
     service: passthroughImageService(),
   },

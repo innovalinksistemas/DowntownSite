@@ -10,7 +10,7 @@ export default function ImageGallery() {
   // Función para obtener las habitaciones desde el JSON
   useEffect(() => {
     const fetchRooms = async () => {
-      const response = await fetch('/Downtown/rooms.json');
+      const response = await fetch('rooms.json');
       const data = await response.json();
       setRooms(data);
     };
