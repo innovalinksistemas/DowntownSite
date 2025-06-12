@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ImageGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,7 +10,7 @@ export default function ImageGallery() {
   // Función para obtener las habitaciones desde el JSON
   useEffect(() => {
     const fetchRooms = async () => {
-      const response = await fetch('rooms.json');
+      const response = await fetch("rooms.json");
       const data = await response.json();
       setRooms(data);
     };
@@ -23,7 +23,9 @@ export default function ImageGallery() {
   };
 
   const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + rooms.length) % rooms.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + rooms.length) % rooms.length
+    );
   };
 
   const getVisibleImages = () => {
@@ -41,20 +43,17 @@ export default function ImageGallery() {
 
   return (
     <div className="relative w-full mx-auto">
-
       <div className="flex lg:justify-center transition-transform duration-500 ease-in-out">
         {getVisibleImages().map((room, index) => {
           const isActive = index === 1;
           return (
             <div
               key={room.id}
-              className={`transition-all duration-500 transform mx-4 ${isActive ? 'scale-105 opacity-100' : 'scale-90 opacity-50'
-                } ${index === 0 || index === 2 ? 'hidden md:hidden' : ''
-                }`}
-
+              className={`transition-all duration-500 transform mx-4 ${
+                isActive ? "scale-105 opacity-100" : "scale-90 opacity-50"
+              } ${index === 0 || index === 2 ? "hidden md:hidden" : ""}`}
             >
               <div className="flex flex-col md:flex-row lg:gap-2 gap-6 items-center md:items-start ">
-
                 <div className="w-full md:w-2/3 mt-2 lg:mt-0 just">
                   <img
                     src={room.image}
@@ -89,71 +88,98 @@ export default function ImageGallery() {
                     <div className="lg:w-[100%] w-[90%] h-[2px] bg-titulo/90  "></div>
                     <div className="font-Montserrat text-gray-700 flex flex-col space-y-2">
                       {/*<p className="text-left text-texto">{room.price}</p>*/}
-                      <p className="break-words overflow-hidden text-left text-texto">{room.description}</p>
+                      <p className="break-words overflow-hidden text-left text-texto">
+                        {room.description}
+                      </p>
                     </div>
-                    <div className='flex justify-start'>
+                    <div className="flex justify-start">
+
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://wa.me/message/EPD5JVA2SLQ2D1"
+                        href="https://www.simplebooking.it/ibe2/hotel/9184/?hid=9184&lang=ES&cur=USD"
                       >
-                        <button
-                          className="text-white bg-botones hover:bg-red-700 font-semibold text-sm font-Montserrat px-4 py-2 rounded-lg w-[10rem]  "
-                        >
-                          Reserve ahora
+
+                        <button className="text-white bg-botones hover:bg-red-700 font-semibold text-sm font-Montserrat px-4 py-2 rounded-lg w-[13rem]  ">
+                          Consultar disponibilidad
                         </button>
                       </a>
-
                     </div>
-
                   </div>
 
-
                   <div className="bg-white p-4  md:h-[16.5rem] space-y-4">
-                    <p className="text-titulo text-left font-Lobster text-xl lg:text-2xl">Amenidades</p>
+                    <p className="text-titulo text-left font-Lobster text-xl lg:text-2xl">
+                      Amenidades
+                    </p>
                     <div className="lg:w-[100%] w-[90%] h-[2px] bg-titulo/90  "></div>
 
                     <div className="grid grid-cols-2 gap-3">
                       <div className="inline-flex items-center bg-gray-100 px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm text-texto font-Montserrat col-span-2 w-fit">
-                        <img src="https://i.ibb.co/0jC0W3CB/cama.png" alt="bed" className="w-5 h-5 mr-2" />
+                        <img
+                          src="https://i.ibb.co/0jC0W3CB/cama.png"
+                          alt="bed"
+                          className="w-5 h-5 mr-2"
+                        />
                         {room.beds}
                       </div>
 
                       <div className="inline-flex items-center bg-gray-100 px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm text-texto font-Montserrat w-fit">
-                        <img src="https://i.ibb.co/v4nThz4D/cafe.png" alt="desayuno" className="w-5 h-5 mr-2" />
+                        <img
+                          src="https://i.ibb.co/v4nThz4D/cafe.png"
+                          alt="desayuno"
+                          className="w-5 h-5 mr-2"
+                        />
                         Desayuno
                       </div>
 
                       <div className="inline-flex items-center bg-gray-100 px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm text-texto font-Montserrat w-fit">
-                        <img src="https://i.ibb.co/Wb5QYFT/ducha.png" alt="baño" className="w-5 h-5 mr-2" />
+                        <img
+                          src="https://i.ibb.co/Wb5QYFT/ducha.png"
+                          alt="baño"
+                          className="w-5 h-5 mr-2"
+                        />
                         Baño privado
                       </div>
 
                       <div className="inline-flex items-center bg-gray-100 px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm text-texto font-Montserrat w-fit">
-                        <img src="https://i.ibb.co/Xk39FNCD/minibar.png" alt="minibar" className="w-5 h-5 mr-2" />
+                        <img
+                          src="https://i.ibb.co/Xk39FNCD/minibar.png"
+                          alt="minibar"
+                          className="w-5 h-5 mr-2"
+                        />
                         Mini Bar
                       </div>
 
                       <div className="inline-flex items-center bg-gray-100 px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm text-texto font-Montserrat w-fit">
-                        <img src="https://i.ibb.co/6RVMXzBT/television.png" alt="smart tv" className="w-5 h-5 mr-2" />
+                        <img
+                          src="https://i.ibb.co/6RVMXzBT/television.png"
+                          alt="smart tv"
+                          className="w-5 h-5 mr-2"
+                        />
                         Smart TV
                       </div>
 
                       <div className="inline-flex items-center bg-gray-100 px-1 lg:px-3 py-1 rounded-full text-xs lg:text-sm text-texto font-Montserrat w-fit max-w-full overflow-hidden whitespace-nowrap">
-
-                        <img src="https://i.ibb.co/fVtQjcY0/aire-Acondicionado.png" alt="aire acondicionado" className="w-5 h-5 mr-2" />
+                        <img
+                          src="https://i.ibb.co/fVtQjcY0/aire-Acondicionado.png"
+                          alt="aire acondicionado"
+                          className="w-5 h-5 mr-2"
+                        />
                         Aire acondicionado
                       </div>
 
                       <div className="inline-flex items-center bg-gray-100 px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm text-texto font-Montserrat w-fit">
-                        <img src="https://i.ibb.co/hJxXsKtt/wifi.png" alt="wifi" className="w-5 h-5 mr-2" />
+                        <img
+                          src="https://i.ibb.co/hJxXsKtt/wifi.png"
+                          alt="wifi"
+                          className="w-5 h-5 mr-2"
+                        />
                         Wifi
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           );
         })}
@@ -174,8 +200,6 @@ export default function ImageGallery() {
       >
         <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
       </button>
-
-
     </div>
   );
 }

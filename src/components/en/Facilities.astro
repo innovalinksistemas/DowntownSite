@@ -5,16 +5,20 @@ import bar from "../../assets/bar.png";
 import pool from "../../assets/pool.png";
 import wifi from "../../assets/wifi.png";
 import areaPiscina from "../../assets/AreaPiscina.png";
+import logoEslogan from "../../assets/slogan.png"
+
 ---
 
 <section id="facilidades"  class="bg-fondo sm:w-full">
   <div>
     <div class="text-center p-6">
       <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">Main facilities </h2>
-   
+              <h2 class="lg:text-[1.5rem] text-1xl font-BadScript text-titulo mt-4">
+                “At the heart of experiences”     
+              </h2>    
     </div>
     <div
-      class="sm:flex flex-row space-y-5 sm:space-y-0 sm:p-6 sm:space-x-8 p-4"
+      class="sm:flex flex-row space-y-5 sm:space-y-0 sm:p-6 sm:px-[90px] sm:space-x-8 p-4"
     >
       <div class="flex flex-col items-center text-center">
         <Image src={car} alt="parking" class="h-12 w-12" />
@@ -54,7 +58,7 @@ import areaPiscina from "../../assets/AreaPiscina.png";
   <section class="bg-fondog">
     <div
       id="About"
-      class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse mt-8"
+      class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse  lg:p-20 p-10"
     >
       <div class="p-4">
         <p class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo ">About Us</p>
@@ -64,6 +68,12 @@ import areaPiscina from "../../assets/AreaPiscina.png";
 We understand that each traveler is unique, which is why we offer personalized services and unforgettable experiences, whether it's exploring nature, enjoying activities, or relaxing. Additionally, our team of local experts will help you plan your adventure and discover the essence of this iconic destination.
 Your perfect getaway starts here!
         </p>
+
+                <Image
+          class="w-[150px] lg:w-[190px] pt-2"
+          src={logoEslogan}
+          alt="En el corazón de las experiencias"
+        />
       
       </div>
       <div>

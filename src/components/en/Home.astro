@@ -1,20 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import fondoPrincipal from "../../assets/fondoPrincipal.png";
+import Whatsapp from "../../assets/whatsapp.png"
+
 ---
 
 <div id="Home" class="h-screen relative " >
   <Image
     src={fondoPrincipal}
     alt="Area piscina Downtown"
-    class="zz h-full object-cover absolute "
+    class="h-full w-full object-cover fixed -z-10 "
   />
   <div class="absolute inset-0 bg-black/50"></div>
   <div
     class="grid content-center place-self-center sm:top-[300px] sm:mx-[210px] top-[16rem] relative text-center"
   >
     <p
-      class="sm:p-0  p-2 lg:text-[35px]  text-white sm:text-[20px]  font-bold font-Montserrat"
+      class="sm:p-0  p-2 lg:text-[35px] xl:text-[55px]  text-white sm:text-[20px]  font-bold font-Montserrat"
     >
     A UNIQUE HOSPITALITY <br /> EXPERIENCE IN LA FORTUNA 
     </p>
@@ -22,7 +24,14 @@ import fondoPrincipal from "../../assets/fondoPrincipal.png";
     <div class="lg:w-[95%] w-[85%] h-[2px] bg-white/90 mx-auto"></div>
 
     <h2 class="text-white text-xs sm:text-[20px] font-semibold font-Montserrat p-2">
-      The best 3-star hotel in La Fortuna, Costa Rica
+      ¡At the heart of experiences!
     </h2>
+  </div>
+    <div>
+    <a href="https://wa.me/message/EPD5JVA2SLQ2D1">
+      <Image src={Whatsapp}
+      alt="Area piscina Downtown"
+      class=" bottom-5 right-10 h-16 w-16 object-cover fixed"/>
+    </a>
   </div>
 </div>

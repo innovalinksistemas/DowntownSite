@@ -2,28 +2,6 @@
   {
     "id": 1,
     "title": "Paquete Escapada Romántica.",
-    "subtitle": "Experiencia Clásica de Amor para Parejas.",
-    "description": "Disfrute de una escapada inolvidable diseñada para celebrar el amor en un entorno elegante y acogedor. Nuestro paquete Romantic Escape ofrece la combinación perfecta de confort, relajación y detalles cuidadosamente seleccionados para una experiencia verdaderamente especial.",
-    "description2":"Viva una experiencia romántica diseñada especialmente para celebrar el amor en un ambiente íntimo, elegante y lleno de detalles encantadores. Este paquete es ideal para aniversarios, lunas de miel o simplemente una escapada para reconectar con tu pareja. Desde una habitación decorada con pétalos de rosa hasta un masaje relajante en pareja, cada elemento ha sido cuidadosamente seleccionado para crear momentos memorables. Disfrutarán de una botella de vino para brindar por su historia, un desayuno buffet con una amplia variedad de sabores y texturas, y un ambiente acogedor que invita al descanso y la conexión. Es el equilibrio perfecto entre confort, relajación y romanticismo, todo en el corazón de La Fortuna.",
-    "price": "$ 999",
-    "reserva": "https://www.simplebooking.it/ibe2/hotel/9184/package/70563?lang=EN&cur=USD",
-    "incluye": [
-      "Hospedaje en una habitación tropical decorada para la ocasión.",
-      "Ambientación romántica, con pétalos de rosa y detalles exclusivos.",
-      "Masaje en pareja, ideal para una experiencia de relajación total.",
-      "Botella de vino, para brindar por momentos únicos.",
-      "Desayuno buffet, con estaciones de frutas tropicales, jugos, cafés, wafles, pancakes, huevos al gusto, barras frías y calientes, asegurando una experiencia gastronómica excepciona."
-    ],
-    "imagenes": [
-      "https://i.ibb.co/Sw88kpNB/Fotodesayuno.jpg",
-      "https://i.ibb.co/N2zmy5bZ/spa.png",
-      "https://i.ibb.co/PkkhG7q/paq-Romantico2.png",
-      "https://i.ibb.co/spt30Prw/pag-Romantico3.png"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Paquete Escapada Romántica.",
     "subtitle": "Edición Exclusiva con Cena Gastronómica para Parejas.",
     "description": "Disfrute de una escapada inolvidable diseñada para celebrar el amor en un entorno elegante y acogedor. Nuestro paquete Romantic Escape ofrece la combinación perfecta de confort, relajación y detalles cuidadosamente seleccionados para una experiencia verdaderamente especial.",
     "description2":"Esta edición exclusiva de nuestra escapada romántica eleva la experiencia a otro nivel, combinando lujo, sabores sofisticados y un servicio personalizado de alta gama. Perfecto para parejas que buscan una celebración íntima con una cena de primer nivel y detalles inolvidables. Además de todos los encantos del paquete clásico —como la habitación decorada con motivos románticos, el masaje en pareja y el desayuno buffet—, esta versión incluye una cena gourmet en el reconocido María Bonita Steak House. Allí, un sommelier les guiará por una experiencia Wine Tasting MB™ acompañada de un menú especial diseñado por el chef Jeffrey Palacios, ideal para deleitar los sentidos. Una experiencia culinaria, sensorial y emocional que convierte cualquier ocasión en un recuerdo imborrable.",
@@ -44,6 +22,29 @@
     "https://i.ibb.co/spt30Prw/pag-Romantico3.png",
     "https://i.ibb.co/fYN6Tp9P/paq-Romantico4.png",
      "https://i.ibb.co/N2zmy5bZ/spa.png"
+    ]
+    
+  },
+  {
+    "id": 2,
+    "title": "Paquete Escapada Romántica.",
+    "subtitle": "Experiencia Clásica de Amor para Parejas.",
+    "description": "Disfrute de una escapada inolvidable diseñada para celebrar el amor en un entorno elegante y acogedor. Nuestro paquete Romantic Escape ofrece la combinación perfecta de confort, relajación y detalles cuidadosamente seleccionados para una experiencia verdaderamente especial.",
+    "description2":"Viva una experiencia romántica diseñada especialmente para celebrar el amor en un ambiente íntimo, elegante y lleno de detalles encantadores. Este paquete es ideal para aniversarios, lunas de miel o simplemente una escapada para reconectar con tu pareja. Desde una habitación decorada con pétalos de rosa hasta un masaje relajante en pareja, cada elemento ha sido cuidadosamente seleccionado para crear momentos memorables. Disfrutarán de una botella de vino para brindar por su historia, un desayuno buffet con una amplia variedad de sabores y texturas, y un ambiente acogedor que invita al descanso y la conexión. Es el equilibrio perfecto entre confort, relajación y romanticismo, todo en el corazón de La Fortuna.",
+    "price": "$ 999",
+    "reserva": "https://www.simplebooking.it/ibe2/hotel/9184/package/70563?lang=EN&cur=USD",
+    "incluye": [
+      "Hospedaje en una habitación tropical decorada para la ocasión.",
+      "Ambientación romántica, con pétalos de rosa y detalles exclusivos.",
+      "Masaje en pareja, ideal para una experiencia de relajación total.",
+      "Botella de vino, para brindar por momentos únicos.",
+      "Desayuno buffet, con estaciones de frutas tropicales, jugos, cafés, wafles, pancakes, huevos al gusto, barras frías y calientes, asegurando una experiencia gastronómica excepciona."
+    ],
+    "imagenes": [
+      "https://i.ibb.co/Sw88kpNB/Fotodesayuno.jpg",
+      "https://i.ibb.co/N2zmy5bZ/spa.png",
+      "https://i.ibb.co/PkkhG7q/paq-Romantico2.png",
+      "https://i.ibb.co/spt30Prw/pag-Romantico3.png"
     ]
   },
   {

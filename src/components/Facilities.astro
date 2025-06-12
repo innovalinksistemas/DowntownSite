@@ -5,17 +5,22 @@ import bar from "../assets/bar.png";
 import pool from "../assets/pool.png";
 import wifi from "../assets/wifi.png";
 import areaPiscina from "../assets/AreaPiscina.png";
-import bathroom from "../assets/bathroom.jpg";
+import logoEslogan from "../assets/Icono.png"
 ---
 
 <section id="facilidades"  class="bg-fondo sm:w-full">
   <div>
     <div class="text-center p-6">
-      <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">Facilidades Principales</h2>
-   
+      <div class="text-center p-6">      
+        <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">  
+              Facilidades Principales</h2> 
+        <h2 class="lg:text-[1.5rem] text-1xl font-BadScript text-titulo mt-4">
+                "En el corazón de las experiencias"      
+              </h2>    
+            </div>
     </div>
     <div
-      class="sm:flex flex-row space-y-5 sm:space-y-0 sm:p-6 sm:space-x-8 p-4"
+      class="sm:flex flex-row space-y-5 sm:space-y-0 sm:p-6 sm:px-[90px] sm:space-x-8 p-4"
     >
       <div class="flex flex-col items-center text-center">
         <Image src={car} alt="parking" class="h-12 w-12" />
@@ -63,40 +68,44 @@ import bathroom from "../assets/bathroom.jpg";
   <section class="bg-fondog">
     <div
       id="About"
-      class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse mt-8"
+      class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse lg:p-20 p-10"
     >
       <div class="p-4">
-        <p class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo ">Sobre Nosotros</p>
-      
-        <p class="font-Montserrat text-texto lg:text-base text-sm pt-4">
-          La Fortuna Downtown Boutique Hotel es el hotel más
-          céntrico de La Fortuna, Costa Rica, ofreciéndote una
-          experiencia única con comodidad y estilo. Disfruta de
-          fácil acceso a atracciones como el Volcán Arenal, la
-          Catarata Río Fortuna y aguas termales. Entendemos
-          que cada viajero es único, por eso brindamos servicios
-          personalizados y experiencias inolvidables, ya sea explorando
-          la naturaleza, disfrutando de actividades o
-          relajándote. Además, nuestro equipo de expertos locales
-          te ayudará a planificar tu aventura y descubrir la
-          esencia de este destino icónico. ¡Tu escapada perfecta
-          comienza aquí!
+        <p class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">
+          Sobre Nosotros
         </p>
-      
-      </div>
-      <div>
-        <div
-          class="sm:pl-24 2xl:pl-15 sm:p-10 p-4 flex justify-center sm:items-center sm:float-right"
-        >
-            <Image
-              src={areaPiscina}
-              alt="Area Piscina Downtown"
-              class=" w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
-            />
 
+        <p class="font-Montserrat text-texto lg:text-base text-sm pt-4">
+          La Fortuna Downtown Boutique Hotel es el hotel más céntrico de La
+          Fortuna, Costa Rica, ofreciéndote una experiencia única con comodidad
+          y estilo. Disfruta de fácil acceso a atracciones como el Volcán
+          Arenal, la Catarata Río Fortuna y aguas termales. Entendemos que cada
+          viajero es único, por eso brindamos servicios personalizados y
+          experiencias inolvidables, ya sea explorando la naturaleza,
+          disfrutando de actividades o relajándote. Además, nuestro equipo de
+          expertos locales te ayudará a planificar tu aventura y descubrir la
+          esencia de este destino icónico. ¡Tu escapada perfecta comienza aquí!
+        </p>
+
+        <div class="flex justify-start items-center ">
+          <Image
+            class="w-16 lg:w-16"
+            src={logoEslogan}
+            alt="En el corazón de las experiencias" />
+            <h2 class="lg:text-2xl text-1xl font-BadScript text-titulo pt-2 ">
+                        "En el corazón de las experiencias"      
+            </h2>  
         </div>
+
+      </div>
+
+      <div class="flex justify-center sm:items-center sm:float-right -mt-8">
+        <Image
+          src={areaPiscina}
+          alt="Area Piscina Downtown"
+          class="w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
+        />
       </div>
     </div>
-  </div>
-</section>
+  </section>
 

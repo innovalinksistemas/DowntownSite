@@ -3,16 +3,20 @@ import { Image } from "astro:assets";
 import fotoSelvanegra from "../assets/selvaAmenidades.jpg";
 import fotoResta from "../assets/restaAmenidades.jpg";
 import fotoNuwa from "../assets/NUWA.png";
-import LogoNuwa from "../assets/NUWAlog.png";
-import logoMariaBonita from "../assets/logomaria.png";
+import LogoNuwa from "../assets/logoNuwa.png";
+import logoMariaBonita from "../assets/mariabonita.png";
 import LogoSelvaNegra from "../assets/logoSelvaNegra.png";
 import LogoVentanita from "../assets/laventanita.png";
 import FotoVentanita from "../assets/mariaAmanidades.png";
 import logoPintoeGallo from "../assets/logoDesayuno.png";
 import fotoDesayuno from "../assets/TipicoAmanidades.png";
+
+
+import { CalendarDays } from '@lucide/astro';
+
 ---
 
-<main>
+<main class="bg-white">
   <div>
     <!------------------------------Seccion 1------------------------------------------------->
 
@@ -35,6 +39,22 @@ import fotoDesayuno from "../assets/TipicoAmanidades.png";
           una experiencia sensorial única en el corazón de La Fortuna. ¡Te
           garantizamos calidad y una auténtica experiencia!
         </p>
+
+        <div class="flex items-center gap-2 mt-2">
+          <CalendarDays class="w-6 h-6 text-titulo" />
+          <span> 
+              <h1 class="font-Montserrat font-bold text-1xl sm:text-1xl text-titulo">
+                Horario:
+              </h1>
+            </span>
+        </div>
+
+        <div class="mt-2">
+          <p class="font-Montserrat text-sm sm:text-sm text-texto">
+            Lunes a Domingo <br />
+            De: 11:30am a 10:30pm
+          </p>
+        </div>
 
         <div
           class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
@@ -93,9 +113,25 @@ import fotoDesayuno from "../assets/TipicoAmanidades.png";
           gastronomía elaborada por nuestro chef y eventos privados para quienes
           buscan una experiencia personalizada
         </p>
-        <div
-          class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
-        >
+
+        <div class="flex items-center gap-2 mt-2">
+          <CalendarDays class="w-6 h-6 text-titulo" />
+          <span> 
+              <h1 class="font-Montserrat font-bold text-1xl sm:text-1xl text-titulo">
+                Horario:
+              </h1>
+            </span>
+        </div>
+
+        <div class="mt-2">
+          <p class="font-Montserrat text-sm sm:text-sm text-texto">
+            Lunes a Domingo <br />
+            De: 12:00pm a 12:00am
+          </p>
+        </div>
+
+
+        <div class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start">
           <Image
             class="w-[200px] lg:w-[240px] order-2 sm:order-1 mt-8"
             src={LogoSelvaNegra}
@@ -132,6 +168,22 @@ import fotoDesayuno from "../assets/TipicoAmanidades.png";
           inspiración de nuestra tierra. ¡Descubre y apoye el arte costarricense
           en su máxima expresión en Nuwa Gallery!
         </p>
+
+                <div class="flex items-center gap-2 mt-2">
+          <CalendarDays class="w-6 h-6 text-titulo" />
+          <span> 
+              <h1 class="font-Montserrat font-bold text-1xl sm:text-1xl text-titulo">
+                Horario:
+              </h1>
+            </span>
+        </div>
+
+        <div class="mt-2">
+          <p class="font-Montserrat text-sm sm:text-sm text-texto">
+            Lunes a Domingo <br />
+            De: 6:00am a 10:00pm
+          </p>
+        </div>
         <div
           class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
         >
@@ -188,6 +240,23 @@ import fotoDesayuno from "../assets/TipicoAmanidades.png";
         perfección en la parrilla, listos para llevar y sin largas esperas.
         ¡Rapidez, sabor y calidad en cada bocado!
       </p>
+
+        <div class="flex items-center gap-2 mt-2">
+          <CalendarDays class="w-6 h-6 text-titulo" />
+        <span> 
+              <h1 class="font-Montserrat font-bold text-1xl sm:text-1xl text-titulo">
+                Horario:
+              </h1>
+            </span>
+        </div>
+
+        <div class="mt-2">
+          <p class="font-Montserrat text-sm sm:text-sm text-texto">
+            Lunes a Domingo <br />
+            De: 12:00pm a 12:00am
+          </p>
+        </div>
+
       <div
         class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-star"
       >
@@ -228,6 +297,23 @@ import fotoDesayuno from "../assets/TipicoAmanidades.png";
         irresistible de opciones frescas. Ideal para comenzar el día con energía
         y sin prisas. ¡Ven y disfruta de un desayuno completo y delicioso!"
       </p>
+
+        <div class="flex items-center gap-2 mt-2">
+          <CalendarDays class="w-6 h-6 text-titulo" />
+        <span> 
+              <h1 class="font-Montserrat font-bold text-1xl sm:text-1xl text-titulo">
+                Horario:
+              </h1>
+            </span>
+        </div>
+
+        <div class="mt-2">
+          <p class="font-Montserrat text-sm sm:text-sm text-texto">
+            Lunes a Domingo <br />
+            De: 7:00am a 9:30am
+          </p>
+        </div>
+
       <div
         class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
       >
