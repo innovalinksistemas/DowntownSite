@@ -21,8 +21,7 @@ import { CalendarDays } from '@lucide/astro';
     <!------------------------------Seccion 1------------------------------------------------->
 
     <div
-      class="bg-fondog sm:grid sm:grid-cols-2 flex flex-col items-center h-50"
-    >
+      class="bg-fondog sm:grid sm:grid-cols-2 flex flex-col items-center h-50">
       <div class="order-last sm:order-none lg:p-20 p-10">
         <h2
           class="w-full mb-4 pr-6 sm:w-[540px] text-titulo text-2xl sm:text-[30px] lg:text-[40px] font-Lobster"
@@ -39,7 +38,6 @@ import { CalendarDays } from '@lucide/astro';
           una experiencia sensorial única en el corazón de La Fortuna. ¡Te
           garantizamos calidad y una auténtica experiencia!
         </p>
-
         <div class="flex items-center gap-2 mt-2">
           <CalendarDays class="w-6 h-6 text-titulo" />
           <span> 
@@ -55,6 +53,7 @@ import { CalendarDays } from '@lucide/astro';
             De: 11:30am a 10:30pm
           </p>
         </div>
+        
 
         <div
           class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
@@ -64,18 +63,29 @@ import { CalendarDays } from '@lucide/astro';
             src={logoMariaBonita}
             alt="María Bonita Steak House"
           />
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-center text-fondo text-base sm:text-xl font-semibold font-['Montserrat']"
-            href="https://qrfy.io/p/iLG_cBukNI"
-          >
-            <button
-              class="h-11 w-52 lg:mt-20 mt-10 rounded-[20px] bg-botones hover:bg-red-700 justify-center items-center inline-flex order-first sm:order-last"
+          <div>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-center text-fondo text-base sm:text-xl font-semibold font-['Montserrat']"
+              href="https://qrfy.io/p/iLG_cBukNI"
             >
-              Menú
-            </button>
-          </a>
+              <button
+                class="h-11 w-52 lg:mt-14 mt-2 rounded-[20px] bg-botones hover:bg-red-700 justify-center items-center inline-flex order-first sm:order-last"
+              >
+                Menú
+              </button>
+            </a>
+            <a target="_blank"
+                        rel="noopener noreferrer" href="https://www.opentable.com/r/la-parrilla-de-maria-bonita-reservations-provincia-de-alajuela?restref=1069063&lang=es-MX&ot_source=Restaurant%20website">
+              <button
+                class="h-11 w-52 lg:mt-1 mt-2 rounded-[20px] border border-botones hover:bg-botones hover:text-white justify-center items-center inline-flex order-first sm:order-last">
+                  Reservar Ahora
+              </button>
+            </a>
+          </div>
+
+
         </div>
       </div>
 
