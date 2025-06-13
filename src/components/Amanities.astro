@@ -16,7 +16,7 @@ import { CalendarDays } from '@lucide/astro';
 
 ---
 
-<main class="bg-white">
+<main id="amenidades" class="bg-white">
   <div>
     <!------------------------------Seccion 1------------------------------------------------->
 
@@ -159,29 +159,26 @@ import { CalendarDays } from '@lucide/astro';
       </div>
     </div>
 
-    <!-----------------------------Seccion 3------------------------------------------------->
+     <!-----------------------------Seccion 3------------------------------------------------->
 
-    <div
-      class="bg-fondog sm:grid sm:grid-cols-2 flex flex-col items-center h-50"
-    >
-      <div class="order-last sm:order-none lg:p-20 p-10">
-        <h2
-          class="w-full mb-4 pr-3 sm:w-[432px] text-titulo text-2xl sm:text-[30px] lg:text-[40px] font-Lobster"
-        >
-          Nuwa Art Gallery
-        </h2>
+  <div class="bg-fondog sm:grid sm:grid-cols-2 flex flex-col items-center h-50">
+    <div class="order-last sm:order-none lg:p-20 p-10">
+      <h2
+        class="w-full mb-4 pr-3 sm:w-[432px] text-titulo text-2xl sm:text-[30px] lg:text-[40px] font-Lobster"
+      >
+        Pinto e' Gallo
+      </h2>
 
-        <p class="font-Montserrat text-sm sm:text-sm text-texto">
-          Es un espacio vibrante dedicado a la celebración del arte y la cultura
-          costarricense. Presentamos obras de artistas locales, ofreciendo una
-          experiencia única que conecta a los visitantes con la creatividad y la
-          inspiración de nuestra tierra. ¡Descubre y apoye el arte costarricense
-          en su máxima expresión en Nuwa Gallery!
-        </p>
+      <p class="font-Montserrat text-sm sm:text-sm text-texto">
+        Comienza tu día con el mejor sabor en Pinto e' Gallo. Disfruta de
+        nuestro desayuno estilo buffet, donde encontrarás una variedad
+        irresistible de opciones frescas. Ideal para comenzar el día con energía
+        y sin prisas. ¡Ven y disfruta de un desayuno completo y delicioso!"
+      </p>
 
-                <div class="flex items-center gap-2 mt-2">
+        <div class="flex items-center gap-2 mt-2">
           <CalendarDays class="w-6 h-6 text-titulo" />
-          <span> 
+        <span> 
               <h1 class="font-Montserrat font-bold text-1xl sm:text-1xl text-titulo">
                 Horario:
               </h1>
@@ -191,38 +188,38 @@ import { CalendarDays } from '@lucide/astro';
         <div class="mt-2">
           <p class="font-Montserrat text-sm sm:text-sm text-texto">
             Lunes a Domingo <br />
-            De: 6:00am a 10:00pm
+            De: 7:00am a 9:30am
           </p>
         </div>
-        <div
-          class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
-        >
-          <Image
-            class="w-[200px] lg:w-[240px] order-last sm:order-first mt-2"
-            src={LogoNuwa}
-            alt="Nuwa Art Gallery"
-          />
 
-          <!-- <button
-            class="h-11 w-52 mt-10 rounded-[20px] bg-botones hover:bg-red-700 justify-center items-center inline-flex order-first sm:order-last"
-          >
-            <a
-              class="text-center text-fondo text-base sm:text-xl font-semibold font-['Montserrat']"
-              href=""
-            >
-              Catálogo
-            </a>
-          </button>-->
-        </div>
-      </div>
-
-      <div class="w-full sm:w-auto max-w-[80%] mx-auto p-4">
+      <div
+        class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
+      >
         <Image
-          src={fotoNuwa}
-          alt="Nuwa Art Gallery"
-          class="w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
+          class="w-[150px] lg:w-[200px] order-last sm:order-first "
+          src={logoPintoeGallo}
+          alt="María Bonita Steak House"
         />
+
+       <!--  <button
+          class="h-11 w-52 lg:mt-20 mt-10 rounded-[20px] bg-botones hover:bg-red-700 justify-center items-center inline-flex order-first sm:order-last"
+        >
+          <a
+            class="text-center text-fondo text-base sm:text-xl font-semibold font-['Montserrat']"
+            href=""
+          >
+            Menú
+          </a>
+        </button>-->
       </div>
+    </div>
+
+    <div class="w-full sm:w-auto max-w-[80%] mx-auto p-4">
+      <Image
+        src={fotoDesayuno}
+        alt="Pinto e' Gallo"
+        class="w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
+      />
     </div>
   </div>
 
@@ -291,26 +288,31 @@ import { CalendarDays } from '@lucide/astro';
     </div>
   </div>
 
-  <!-----------------------------Seccion 5------------------------------------------------->
 
-  <div class="bg-fondog sm:grid sm:grid-cols-2 flex flex-col items-center h-50">
-    <div class="order-last sm:order-none lg:p-20 p-10">
-      <h2
-        class="w-full mb-4 pr-3 sm:w-[432px] text-titulo text-2xl sm:text-[30px] lg:text-[40px] font-Lobster"
-      >
-        Pinto e' Gallo
-      </h2>
 
-      <p class="font-Montserrat text-sm sm:text-sm text-texto">
-        Comienza tu día con el mejor sabor en Pinto e' Gallo. Disfruta de
-        nuestro desayuno estilo buffet, donde encontrarás una variedad
-        irresistible de opciones frescas. Ideal para comenzar el día con energía
-        y sin prisas. ¡Ven y disfruta de un desayuno completo y delicioso!"
-      </p>
+   <!-----------------------------Seccion 5------------------------------------------------->
 
-        <div class="flex items-center gap-2 mt-2">
+    <div
+      class="bg-fondog sm:grid sm:grid-cols-2 flex flex-col items-center h-50"
+    >
+      <div class="order-last sm:order-none lg:p-20 p-10">
+        <h2
+          class="w-full mb-4 pr-3 sm:w-[432px] text-titulo text-2xl sm:text-[30px] lg:text-[40px] font-Lobster"
+        >
+          Nuwa Art Gallery
+        </h2>
+
+        <p class="font-Montserrat text-sm sm:text-sm text-texto">
+          Es un espacio vibrante dedicado a la celebración del arte y la cultura
+          costarricense. Presentamos obras de artistas locales, ofreciendo una
+          experiencia única que conecta a los visitantes con la creatividad y la
+          inspiración de nuestra tierra. ¡Descubre y apoye el arte costarricense
+          en su máxima expresión en Nuwa Gallery!
+        </p>
+
+                <div class="flex items-center gap-2 mt-2">
           <CalendarDays class="w-6 h-6 text-titulo" />
-        <span> 
+          <span> 
               <h1 class="font-Montserrat font-bold text-1xl sm:text-1xl text-titulo">
                 Horario:
               </h1>
@@ -320,38 +322,40 @@ import { CalendarDays } from '@lucide/astro';
         <div class="mt-2">
           <p class="font-Montserrat text-sm sm:text-sm text-texto">
             Lunes a Domingo <br />
-            De: 7:00am a 9:30am
+            De: 6:00am a 10:00pm
           </p>
         </div>
-
-      <div
-        class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
-      >
-        <Image
-          class="w-[150px] lg:w-[200px] order-last sm:order-first "
-          src={logoPintoeGallo}
-          alt="María Bonita Steak House"
-        />
-
-       <!--  <button
-          class="h-11 w-52 lg:mt-20 mt-10 rounded-[20px] bg-botones hover:bg-red-700 justify-center items-center inline-flex order-first sm:order-last"
+        <div
+          class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 items-center sm:items-start"
         >
-          <a
-            class="text-center text-fondo text-base sm:text-xl font-semibold font-['Montserrat']"
-            href=""
+          <Image
+            class="w-[200px] lg:w-[240px] order-last sm:order-first mt-2"
+            src={LogoNuwa}
+            alt="Nuwa Art Gallery"
+          />
+
+          <!-- <button
+            class="h-11 w-52 mt-10 rounded-[20px] bg-botones hover:bg-red-700 justify-center items-center inline-flex order-first sm:order-last"
           >
-            Menú
-          </a>
-        </button>-->
+            <a
+              class="text-center text-fondo text-base sm:text-xl font-semibold font-['Montserrat']"
+              href=""
+            >
+              Catálogo
+            </a>
+          </button>-->
+        </div>
+      </div>
+
+      <div class="w-full sm:w-auto max-w-[80%] mx-auto p-4">
+        <Image
+          src={fotoNuwa}
+          alt="Nuwa Art Gallery"
+          class="w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
+        />
       </div>
     </div>
-
-    <div class="w-full sm:w-auto max-w-[80%] mx-auto p-4">
-      <Image
-        src={fotoDesayuno}
-        alt="Pinto e' Gallo"
-        class="w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
-      />
-    </div>
   </div>
+
+
 </main>
