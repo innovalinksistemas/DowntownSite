@@ -1,0 +1,157 @@
+
+---
+import { Image } from "astro:assets";
+import { CalendarDays } from "@lucide/astro";
+
+const {
+  titulo,
+  descripcion,
+  horario,
+  logo,
+  linkBoton,
+  textoBoton,
+  imagenesCarrusel = [],
+  bg = "bg-white",
+  reverse = false,
+} = Astro.props;
+---
+
+<div class={`${bg} sm:grid sm:grid-cols-2 flex flex-col items-center h-50`}>
+  <div
+    class={`${reverse ? "sm:order-last" : "sm:order-none"} order-last lg:p-10 mx-12`}
+  >
+    <h2
+      class="w-full lg:mb-4 text-titulo text-2xl sm:text-[30px] lg:text-[40px] font-Lobster"
+    >
+      {titulo}
+    </h2>
+
+    <p class="font-Montserrat text-sm sm:text-sm text-texto">{descripcion}</p>
+
+    {
+      horario && (
+        <>
+          <div class="flex items-center gap-2 mt-2">
+            <CalendarDays class="w-6 h-6 text-titulo" />
+            <h1 class="font-Montserrat font-bold text-1xl sm:text-1xl text-titulo">
+              Horario:
+            </h1>
+          </div>
+
+          <div class="mt-2">
+            <p
+              class="font-Montserrat text-sm sm:text-sm text-texto"
+              set:html={horario}
+            />
+          </div>
+        </>
+      )
+    }
+    <div
+      class="flex flex-col sm:grid sm:grid-cols-2 lg:mt-4 mt-2 items-center sm:items-start"
+    >
+      {
+        logo && (
+          <Image
+            class="w-[150px] lg:w-[200px] mt-4 sm:mt-0 mb-4"
+            src={logo}
+            alt={`Logo de ${titulo ?? "Amenidad"}`}
+          />
+        )
+      }
+
+      {
+        linkBoton && textoBoton && (
+          <a
+            href={linkBoton}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-center text-fondo text-base sm:text-xl font-semibold font-['Montserrat'] sm:mt-0 mb-6"
+          >
+            <button class="h-11 w-52 mt-4 lg:mt-10 rounded-[20px] bg-botones hover:bg-red-700 justify-center items-center inline-flex">
+              {textoBoton}
+            </button>
+          </a>
+        )
+      }
+    </div>
+  </div>
+
+  {
+    imagenesCarrusel.length > 0 && (
+      <div
+        class="relative w-full sm:w-auto max-w-[80%] mx-auto mb-14 mt-6 overflow-hidden"
+        id={`carouselWrapper-${titulo.replace(/\s+/g, "")}`}
+      >
+        <div
+          id={`carousel-${titulo.replace(/\s+/g, "")}`}
+          class="flex transition-transform duration-500 ease-in-out w-full"
+        >
+          {imagenesCarrusel.map((img, index) => (
+            <Image
+          
+              src={img}
+              alt={`Imagen ${index + 1} de ${titulo}`}
+              class="min-w-full h-[300px] lg:h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
+            />
+          ))}
+        </div>
+
+        <div
+          id={`indicators-${titulo.replace(/\s+/g, "")}`}
+          class="flex justify-center gap-2 mt-4"
+        >
+          {imagenesCarrusel.map((_, index) => (
+            <button
+            
+              type="button"
+              class="w-2 h-2 rounded-full bg-fondog transition-all duration-300"
+              data-index={index}
+            />
+          ))}
+        </div>
+      </div>
+    )
+  }
+</div>
+
+<script type="module" is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carouselWrappers = document.querySelectorAll(
+      "[id^='carouselWrapper-']"
+    );
+
+    carouselWrappers.forEach((wrapper) => {
+      const carouselId = wrapper.querySelector("[id^='carousel-']").id;
+      const indicatorsId = wrapper.querySelector("[id^='indicators-']").id;
+
+      const carousel = document.getElementById(carouselId);
+      const indicatorsContainer = document.getElementById(indicatorsId);
+      if (!carousel || !indicatorsContainer) return;
+
+      const indicators = indicatorsContainer.children;
+      const totalSlides = carousel.children.length;
+      let currentSlide = 0;
+
+      function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        Array.from(indicators).forEach((dot, index) => {
+          dot.classList.toggle("bg-gray-800", index === currentSlide);
+          dot.classList.toggle("bg-gray-400", index !== currentSlide);
+
+          dot.addEventListener("click", () => {
+            currentSlide = index;
+            updateCarousel();
+          });
+        });
+      }
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+      }, 4000);
+
+      updateCarousel();
+    });
+  });
+</script>

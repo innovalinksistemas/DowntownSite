@@ -1,0 +1,180 @@
+[
+  {
+    "id": 1,
+    "title": "Romantic Getaway Package",
+    "subtitle": "Exclusive Edition with Gourmet Dinner for Couples.",
+    "description": "Enjoy an unforgettable getaway designed to celebrate love in an elegant and cozy setting. Our Romantic Escape package offers the perfect combination of comfort, relaxation, and carefully selected details for a truly special experience.",
+    "description2":"This exclusive edition of our romantic getaway elevates the experience to another level, combining luxury, sophisticated flavors, and high-end personalized service. Perfect for couples looking for an intimate celebration with a top-notch dinner and unforgettable details. In addition to all the charms of the classic package —such as the room decorated with romantic motifs, the couples massage, and the buffet breakfast—this version includes a gourmet dinner at the renowned María Bonita Steak House. There, a sommelier will guide you through a Wine Tasting MB™ experience accompanied by a special menu designed by Chef Jeffrey Palacios, ideal for delighting the senses.A culinary, sensory, and emotional experience that turns any occasion into an unforgettable memory.",
+    "price": "$ 999",
+    "reserva": "https://www.simplebooking.it/ibe2/hotel/9184/package/70563?lang=EN&cur=USD",
+    "incluye": [
+      "Accommodation in a Tropical Room decorated for the occasion.",
+      "Romantic ambiance, with rose petals and exclusive details.",
+      "Couples massage, ideal for a total relaxation experience.",
+      "Bottle of wine, to toast to unique moments.",
+      "Buffet breakfast, with stations of tropical fruits, juices, coffees, waffles, pancakes, eggs to order, cold and hot bars, ensuring an exceptional gastronomic experience.",
+      "Romantic dinner at María Bonita Steak House with personalized service by the sommelier offering the Wine Testing MB™ Experience + Gastronomic Menu 'Experiences' by Chef Jeffrey Palacios."
+    ],
+   "imagenes": [
+    "https://i.ibb.co/hRtLzbmD/paq-Romantico.png",
+    "https://i.ibb.co/PkkhG7q/paq-Romantico2.png",
+    "https://i.ibb.co/Sw88kpNB/Fotodesayuno.jpg",
+    "https://i.ibb.co/spt30Prw/pag-Romantico3.png",
+    "https://i.ibb.co/fYN6Tp9P/paq-Romantico4.png",
+     "https://i.ibb.co/N2zmy5bZ/spa.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Romantic Getaway Package",
+    "subtitle": "Classic Love Experience for Couples",
+    "description": "Enjoy an unforgettable getaway designed to celebrate love in an elegant and cozy setting. Our Romantic Escape package offers the perfect combination of comfort, relaxation, and carefully selected details for a truly special experience.",
+    "description2":"Experience a romantic getaway designed especially to celebrate love in an intimate, elegant atmosphere filled with charming details. This package is ideal for anniversaries, honeymoons, or simply a getaway to reconnect with your significant other. From a room decorated with rose petals to a relaxing couple's massage, each element has been carefully selected to create memorable moments. You will enjoy a bottle of wine to toast to your story, a buffet breakfast with a wide variety of flavors and textures, and a cozy atmosphere that invites relaxation and connection. It's the perfect balance of comfort, relaxation, and romance, all in the heart of La Fortuna.",
+    "price": "$ 999",
+    "reserva": "https://www.simplebooking.it/ibe2/hotel/9184/package/70563?lang=EN&cur=USD",
+    "incluye": [
+      "Accommodation in a Tropical Room decorated for the occasion.",
+      "Romantic ambiance, with rose petals and exclusive details.",
+      "Couples massage, ideal for a total relaxation experience.",
+      "Bottle of wine, to toast to unique moments.",
+      "Buffet breakfast, with stations of tropical fruits, juices, coffees, waffles, pancakes, eggs to order, cold and hot bars, ensuring an exceptional gastronomic experience."
+    ],
+    "imagenes": [
+      "https://i.ibb.co/Sw88kpNB/Fotodesayuno.jpg",
+      "https://i.ibb.co/N2zmy5bZ/spa.png",
+      "https://i.ibb.co/PkkhG7q/paq-Romantico2.png",
+      "https://i.ibb.co/spt30Prw/pag-Romantico3.png"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Classic Package to Arenal Volcano.",
+    "subtitle": "Nature, Gastronomy, and Wellness Lovers Edition",
+    "description": "Discover the majesty of Arenal with a package designed for lovers of nature, wellness, and fine gastronomy. Arenal Volcano Classic combines soft adventure, sensory experiences, and moments of deep relaxation in one of Costa Rica's most iconic destinations. This package is available for 3, 4, or 5 nights and offers complete immersion in the natural, cultural, and culinary environment of La Fortuna.",
+    "description2":"Experience the natural, cultural, and gastronomic richness of La Fortuna through a comprehensive package that integrates wellness, adventure, and pleasure. It is ideal for those seeking an authentic connection with the surroundings without sacrificing comfort and good taste. This package offers everything from guided walks through the Arenal trails and the impressive Hanging Bridges to relaxing sessions in hot springs and therapeutic massages. It also includes high-level culinary experiences, such as lunches and dinners at María Bonita Steak House and tastings of local coffee and chocolate. Available in 3, 4, or 5-night versions, the itinerary is tailored to include safaris, visits to waterfalls, or special farewell dinners. An ideal proposal for conscious travelers who wish to experience La Fortuna with all their senses.",
+    "price": "$ 999",
+    "reserva": "https://www.simplebooking.it/ibe2/hotel/9184/package/70571?lang=EN&cur=USD",
+    "incluye": [
+      "Accommodation in a tropical room.",
+      "Daily breakfast buffet with stations of tropical fruits, natural juices, specialty coffees, artisanal bakery, hot dishes, eggs to order, waffles, and pancakes.",
+      "Guided walk to Arenal Volcano + Hanging Bridges to admire the local biodiversity.",
+      "Access to Paradise Hot Springs with dinner included, for an unparalleled night of relaxation.",
+      "Therapeutic massage of 45 minutes per person.",
+      "Lunch at María Bonita Steak House.",
+      "Coffee and Chocolate Tour, with local products tasting.",
+      "Safari Float or visit to La Fortuna Waterfall (in 4- and 5-night packages).",
+      "Farewell gourmet dinner (in 5-night packages).",
+      "Handcrafted gift at checkout. "
+    ],
+    "itinerario": "Itinerary",
+    "itinerario1": [
+      "Day 1 – Welcome & Relax.",
+      "-Check-in and tropical welcome cocktail.",
+      "-During your free time, you can explore the hotel, La Fortuna Central Park, and its surroundings.",
+      "-Welcome dinner at María Bonita Steak House, with a special chef's menu and vibrant atmosphere."
+    ],
+    "itinerario2": [
+      "Día 2 – Natural Adventure + Wellness (COMBINED TOUR)",
+      "Full buffet breakfast ",
+      "Guided Walk to Arenal Volcano + Hanging Bridges + Waterfall",
+      "Lunch on your own",
+      "Afternoon of relaxation at Baldi Hot Springs (with dinner included)"
+    ],
+    "itinerario3": [
+      "Día 3 – Foodie Experience + Masaje",
+      "Full buffet breakfast",
+      "Coffee and chocolate tour (cultural + tasting)",
+      "Lunch included at María Bon Bonita Steak House",
+      "60-minute relaxation massage or aromatherapy",
+      "Free dinner"
+    ],
+    "itinerario4": [
+      "Día 4 – Farewell breakfast",
+      "Full buffet breakfast",
+      "Check-out, and farewell gift (local artisanal gift)"
+    ],
+    "itinerario5": [
+      "Additional day 4 or 5 – Nature & Free time",
+      "Full buffet breakfast",
+      "La Fortuna offers more than 100 different types of tours and activities; enjoy an additional tour, a relaxing massage, or simply explore the town on foot, enjoy coffee or brunch, take the day at your leisure, or enjoy the hotel.",
+      "Dinner at your leisure."
+    ],
+    "imagenes": [
+      "https://i.ibb.co/kgm5ZBqx/puentes1.png",
+      "https://i.ibb.co/Q3YYXtsd/DSC03110.png",
+      "https://i.ibb.co/7JrkrMyV/Foto-puentes-colgantes-19.png",
+      "https://i.ibb.co/7dX690gQ/ave1.png",
+      "https://i.ibb.co/6KwDkh8/vibora.png",
+      "https://i.ibb.co/hRtLzbmD/paq-Romantico.png",
+      "https://i.ibb.co/Q3YYXtsd/DSC03110.png",
+      "https://i.ibb.co/DfrS1M7H/DSC02931.png",
+      "https://i.ibb.co/Cqfv4qM/cafe.png",
+      "https://i.ibb.co/5h0QJJpW/catarata4.png",
+      "https://i.ibb.co/YB0P42FP/catarata3.png",
+      "https://i.ibb.co/qLXty25C/catarata2.png",
+      "https://i.ibb.co/zWpZQ26V/catarata1.png",
+      "https://i.ibb.co/0R16Yc59/baldi1.png",
+      "https://i.ibb.co/Xr70WzXY/baldi3.png",
+      "https://i.ibb.co/KjXW6MkG/baldi2.png"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Epic Adventure Package",
+    "subtitle": "Adrenaline, Nature, and Comfort.",
+    "description": "Live the adventure to the fullest! This package is designed for adrenaline and nature lovers. With high-impact activities and well-deserved moments of relaxation, this experience has everything to reconnect with your adventurous spirit in the heart of La Fortuna.",
+    "description2":"Designed for intrepid spirits who love to combine extreme adventure with moments of relaxation, this package offers a balanced adrenaline rush with quality wellness and rest. This package is ideal for individuals who seek exhilarating experiences without compromising the comfort of quality accommodations and personalized services. In its three nights, this package includes high-impact activities like canyoning and rafting, immersing you in the most spectacular landscapes of La Fortuna. Each day is designed to end with well-deserved moments of relaxation, whether in hot springs or with a rejuvenating massage. Additionally, you will enjoy buffet breakfasts, dinners at our gourmet restaurant, and a special treat at check-out. A perfect proposal to explore the most vibrant and wild side of La Fortuna without sacrificing luxury or comfort.",
+    "price": "$ 999",
+    "reserva": "https://www.simplebooking.it/ibe2/hotel/9184/package/70572?lang=EN",
+    "incluye": [
+      "3 accommodation nights in a tropical room.",
+      "Canyoning + Rafting. (guided tour with full equipment)",
+      "60-minute relaxing massage.",
+      "Access to hot springs at Baldi Hot Springs + dinner included.",
+      "Welcome dinner at María Bonita Steak House.",
+      "Daily full buffet breakfast.",
+      "2 lunches.",
+      "Transportation to tours.",
+      "Complimentary gift at check-out."
+    ],
+    "itinerario": "Itinerary",
+    "itinerario1": [
+      "Día 1 – Arrival & Relaxation",
+      "Check-in and welcome cocktail.",
+      "Free time to acclimate or explore downtown La Fortuna.",
+      "CWelcome dinner at María Bonita Steak House, with a special chef's menu and a vibrant atmosphere."
+    ],
+    "itinerario2": [
+      "Día 2 – Canyoning & Massage.",
+      "Full buffet breakfast.",
+      "Canyoning Adventure: descent through stunning waterfalls surrounded by tropical rainforest.",
+      "Lunch included upon return.",
+      "60-minute relaxing massage in the afternoon to rejuvenate the body.",
+      "Dinner at your leisure (optional local recommendation)."
+    ],
+    "itinerario3": [
+      "Día 3 –  Rafting & Hot Springs",
+      "Full buffet breakfast.",
+      "Rafting on the Balsa or Sarapiquí Rivers (depending on level and conditions) II & III.",
+      "Lunch included after the activity.",
+      "Relaxing afternoon at Baldi Hot Springs, with full access to thermal pools and dinner included."
+    ],
+    "itinerario4": [
+      "Día 4 – Farewell.",
+      "Full buffet breakfast.",
+      "Check-out and farewell gift."
+    ],
+    "imagenes": [
+      "https://i.ibb.co/tTsgvXp2/trek3.png",
+      "https://i.ibb.co/7tGKMNXs/Rafting11.png",
+      "https://i.ibb.co/0R16Yc59/baldi1.png",
+      "https://i.ibb.co/Xr70WzXY/baldi3.png",
+      "https://i.ibb.co/KjXW6MkG/baldi2.png",
+      "https://i.ibb.co/hRtLzbmD/paq-Romantico.png",
+      "https://i.ibb.co/9mMLfmsy/trek2.png",
+      "https://i.ibb.co/ksv6zGfh/trek1.png",
+      "https://i.ibb.co/QjCVK40Y/Rafting25.png",
+      "https://i.ibb.co/TprBtrN/Rafting10.png"
+    ]
+  }
+]
