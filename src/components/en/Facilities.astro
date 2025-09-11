@@ -4,91 +4,177 @@ import car from "../../assets/car.png";
 import bar from "../../assets/bar.png";
 import pool from "../../assets/pool.png";
 import wifi from "../../assets/wifi.png";
-import areaPiscina from "../../assets/AreaPiscina.png";
-import logoEslogan from "../../assets/slogan.png"
 
+import logoEslogan from "../../assets/slogan.png";
+
+import areaPiscina from "../assets/AreaPiscina.png";
+import volcanArenal from "../assets/volcanArenal.jpg";
+import fortunacentro from "../assets/fortunaCentro.jpg";
+
+export const aboutCarrusel = [areaPiscina, volcanArenal, fortunacentro];
 ---
 
 <section class="bg-fondo sm:w-full">
   <div>
     <div class="text-center p-6">
-      <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">Main facilities </h2>
-              <h2 class="lg:text-[1.5rem] text-1xl font-BadScript text-titulo mt-4">
-                “At the heart of experiences”     
-              </h2>    
+      <h2 class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">
+        Main facilities
+      </h2>
+      <h2 class="lg:text-[1.5rem] text-1xl font-BadScript text-titulo mt-4">
+        “At the heart of experiences”
+      </h2>
     </div>
     <div
       class="sm:flex flex-row space-y-5 sm:space-y-0 sm:p-6 sm:px-[90px] sm:space-x-8 p-4"
     >
       <div class="flex flex-col items-center text-center">
         <Image src={car} alt="parking" class="h-12 w-12" />
-        <p class="text-center font-Montserrat font-bold text-base text-titulo p-4">
+        <p
+          class="text-center font-Montserrat font-bold text-base text-titulo p-4"
+        >
           Private parking
         </p>
         <p class="font-Montserrat text-justify text-texto">
-          Enjoy a safe space for your vehicle while exploring La Fortuna worry-free. We offer free 24-hour parking with private security, surveillance cameras, and an electric charging station. 
+          Enjoy a safe space for your vehicle while exploring La Fortuna
+          worry-free. We offer free 24-hour parking with private security,
+          surveillance cameras, and an electric charging station.
         </p>
       </div>
       <div class="flex flex-col items-center text-center">
         <Image src={wifi} alt="wifi" class="h-12 w-12" />
-        <p class="text-center font-Montserrat font-bold text-base text-titulo p-4">WiFi</p>
+        <p
+          class="text-center font-Montserrat font-bold text-base text-titulo p-4"
+        >
+          WiFi
+        </p>
         <p class="font-Montserrat text-justify text-texto">
-          Enjoy high-speed Wi-Fi throughout the hotel. Stay connected to share moments, plan activities, or work while exploring La Fortuna. 
+          Enjoy high-speed Wi-Fi throughout the hotel. Stay connected to share
+          moments, plan activities, or work while exploring La Fortuna.
         </p>
       </div>
       <div class="flex flex-col items-center text-center">
         <Image src={bar} alt="bar" class="h-12 w-12" />
-        <p class="text-center font-Montserrat font-bold text-base text-titulo p-4">
+        <p
+          class="text-center font-Montserrat font-bold text-base text-titulo p-4"
+        >
           Bar & restaurant
         </p>
         <p class="font-Montserrat text-justify text-texto">
-          An exceptional dining experience in the heart of La Fortuna. Enjoy high-quality meat cuts, fresh seafood, vegetarian options, and cocktails, all of it in a cozy atmosphere. We look forward to seeing you!
+          An exceptional dining experience in the heart of La Fortuna. Enjoy
+          high-quality meat cuts, fresh seafood, vegetarian options, and
+          cocktails, all of it in a cozy atmosphere. We look forward to seeing
+          you!
         </p>
       </div>
       <div class="flex flex-col items-center text-center">
         <Image src={pool} alt="pool" class="h-12 w-12" />
-        <p class="text-center font-Montserrat font-bold text-base text-titulo p-4">Pool</p>
+        <p
+          class="text-center font-Montserrat font-bold text-base text-titulo p-4"
+        >
+          Pool
+        </p>
         <p class="font-Montserrat text-justify text-texto">
-          Relax in our pool, perfect for unwinding after a day of adventures. Enjoy the sun and the tropical atmosphere while refreshing yourself with a cocktail or craft beer.
+          Relax in our pool, perfect for unwinding after a day of adventures.
+          Enjoy the sun and the tropical atmosphere while refreshing yourself
+          with a cocktail or craft beer.
         </p>
       </div>
     </div>
-  </section>
+  </div>
+
 
   <section class="bg-fondog">
     <div
       id="About"
-      class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse  lg:p-20 p-10"
+      class="sm:grid sm:grid-cols-2 sm:items-center flex flex-col-reverse lg:p-20 p-10"
     >
       <div class="p-4">
-        <p class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo ">About Us</p>
-      
-        <p class="font-Montserrat text-texto lg:text-base text-sm pt-4">
-          La Fortuna Downtown Boutique Hotel is the most centrally located hotel in La Fortuna, Costa Rica, offering you a unique experience with comfort and style. Enjoy easy access to attractions like Arenal Volcano, Río Fortuna Waterfall, and hot springs.
-We understand that each traveler is unique, which is why we offer personalized services and unforgettable experiences, whether it's exploring nature, enjoying activities, or relaxing. Additionally, our team of local experts will help you plan your adventure and discover the essence of this iconic destination.
-Your perfect getaway starts here!
+        <p class="lg:text-5xl text-3xl font-bold font-Lobster text-titulo">
+          About Us
         </p>
 
-                <Image
-          class="w-[150px] lg:w-[190px] pt-2"
-          src={logoEslogan}
-          alt="En el corazón de las experiencias"
-        />
-      
-      </div>
-      <div>
-        <div
-          class="sm:pl-24 2xl:pl-15 sm:p-10 p-4 flex justify-center sm:items-center sm:float-right"
-        >
-            <Image
-              src={areaPiscina}
-              alt="Area Piscina Downtown"
-              class=" w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
-            />
+        <p class="font-Montserrat text-texto lg:text-base text-sm pt-4">
+          La Fortuna Downtown Boutique Hotel is the most centrally located hotel
+          in La Fortuna, Costa Rica, offering you a unique experience with
+          comfort and style. Enjoy easy access to attractions like Arenal
+          Volcano, Río Fortuna Waterfall, and hot springs. We understand that
+          each traveler is unique, which is why we offer personalized services
+          and unforgettable experiences, whether it's exploring nature, enjoying
+          activities, or relaxing. Additionally, our team of local experts will
+          help you plan your adventure and discover the essence of this iconic
+          destination. Your perfect getaway starts here!
+        </p>
 
+        <div class="flex justify-start items-center ">
+          <Image
+            class="w-16 lg:w-16"
+            src={logoEslogan}
+            alt="En el corazón de las experiencias" />
+            <h2 class="lg:text-2xl text-1xl font-BadScript text-titulo pt-2 ">
+                        "At the heart of experiences"      
+            </h2>  
+        </div>
+      </div>
+
+      <div class="relative w-full overflow-hidden">
+        <div
+          id="carousel"
+          class="flex transition-transform duration-500 ease-in-out w-full"
+        >
+          {
+            aboutCarrusel.map((img, index) => (
+              <Image
+                src={img}
+                alt="Area Piscina Downtown"
+                class="min-w-full h-[350px] object-cover lg:rounded-br-4xl lg:rounded-tl-4xl rounded-br-4xl rounded-tl-4xl"
+              />
+            ))
+          }
+        </div>
+
+        <div id="indicators" class="flex justify-center gap-2 mt-4">
+          {
+            aboutCarrusel.map((_, index) => (
+              <button
+                type="button"
+                class="w-2 h-2 rounded-full bg-fondog transition-all duration-300"
+                data-index={index}
+              />
+            ))
+          }
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
 </section>
 
+
+<script>
+    const carousel = document.getElementById("carousel");
+    const indicators = document.getElementById("indicators")?.children;
+    const totalSlides = carousel.children.length;
+    let currentSlide = 0;
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      Array.from(indicators).forEach((dot, index) => {
+        dot.classList.toggle("bg-gray-800", index === currentSlide);
+        dot.classList.toggle("bg-gray-400", index !== currentSlide);
+
+        dot.addEventListener("click", () => {
+          currentSlide = index;
+          updateCarousel();
+        });
+      });
+    }
+
+  
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    }, 3000);
+
+    updateCarousel();
+  </script>

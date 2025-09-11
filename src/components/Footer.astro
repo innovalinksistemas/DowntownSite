@@ -50,7 +50,7 @@ const logos = [
   },
 ];
 
-const repeat = 4; // cuántas veces repetir el grupo para animación fluida
+const repeat = 5; // cuántas veces repetir el grupo para animación fluida
 const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
 ---
 
@@ -61,15 +61,15 @@ const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
 
   .slider {
     display: flex;
-    gap: 1rem; /* Espacio entre imágenes */
+
     animation: scroll 20s linear infinite;
   }
 
   .image {
-    width: 120px;
-    height: 120px;
+    max-width: 60px;
+    max-height: 90px;
     flex-shrink: 0;
-    min-width: 120px; /* Evita que las imágenes se reduzcan */
+    min-width: 110px; /* Evita que las imágenes se reduzcan */
   }
   @keyframes scroll {
     from {
@@ -247,13 +247,13 @@ const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
   </div>
 </div>
 
-<div class="bg-black w-full overflow-hidden">
+<div class="bg-black w-full h-[5rem] overflow-hidden">
   <div class="slider-wrapper">
-    <div class="slider">
+    <div class="slider flex items-center">
       {
         repeatedLogos.map(({ src, alt, href }) => (
           <a href={href} target="_blank" rel="noopener noreferrer">
-            <Image src={src} alt={alt} class="image" />
+            <Image src={src} alt={alt} class="image object-contain mx-auto" />
           </a>
         ))
       }
@@ -261,18 +261,10 @@ const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
   </div>
 </div>
 
-<div class="bg-[#424b59] w-full flex flex-col">
-  <div class="sm:flex flex-row sm:text-left text-center items-center">
-    <ul
-      class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2"
-    >
-      <li><a href="">Aviso legal</a></li>
-      <li><a href="">Politica de privacidad</a></li>
-      <li><a href="">Preferencias de cookies</a></li>
-      <li><a href="">Accesibilidad</a></li>
-    </ul>
+<div class="bg-[#424b59] w-full flex justify-center flex-col">
+  <div class="sm:flex flex-row text-center justify-center items-center">
     <div
-      class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baseline"
+      class="sm:flex flex-row space-x-4 sm:pl-24 text-center gap-2 sm:gap-0 align-baseline"
     >
       <p class="text-white font-Montserrat text-sm">
         © La Fortuna Downtown. Derechos Reservados.
