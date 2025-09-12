@@ -6,6 +6,8 @@ import react from '@astrojs/react';
 
 import netlify from '@astrojs/netlify';
 
+import sitemap from 'astro-sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   i18n:{
@@ -16,7 +18,7 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
-
-  integrations: [tailwind(), react()],
+  site: 'https://lafortunadowntown.com/',
+  integrations: [tailwind(), react(), sitemap()],
   adapter: netlify()
 });

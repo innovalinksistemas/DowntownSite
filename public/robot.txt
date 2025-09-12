@@ -1,0 +1,33 @@
+d# robots.txt para https://www.lafortunadowntown.com
+
+User-agent: *
+Disallow: /admin/
+Disallow: /panel/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /carrito/
+Disallow: /tmp/
+Disallow: /private/
+
+# Evita rastrear parámetros innecesarios
+Disallow: /*?sessionid=
+Disallow: /*?ref=
+
+# Permite rastreo general
+Allow: /
+
+# Sitemap (importantísimo para Google)
+Sitemap: https://lafortunadowntown.com/sitemap.xml
+
+# Políticas de rastreo (opcional)
+Crawl-delay: 5
+
+# Bloquear bots maliciosos comunes (opcional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
