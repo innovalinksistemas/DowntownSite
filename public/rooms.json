@@ -33,19 +33,8 @@
     "image4": "https://i.ibb.co/bj0GzzS3/superior1.png"
   },
   {
-    "id": 4,
-    "title": "Confort Family",
-    "price": "$999 / Por noche",
-    "description": "Ideal para familias, esta habitación ofrece comodidad y espacio, con una distribución pensada para el descanso de todos los miembros del grupo.",
-    "beds": "1 cama Matrimonial y 2 Individuales",
-    "image": "https://i.ibb.co/wNwC4k4Q/confort-Family4.png",
-    "image2": "https://i.ibb.co/pvRQ5v96/confort-Family2.jpg",
-    "image3": "https://i.ibb.co/bM5JzXD2/confort-Family3.png",
-    "image4": "https://i.ibb.co/4ZGJFhqh/confort-Family1.jpg"
-  },
-  {
     "id": 5,
-    "title": "Tropical Family pool view",
+    "title": "Tropical Family",
     "price": "$999 / Por noche",
     "description": "Con vista a la piscina y ubicada en el corazón de la ciudad, esta habitación es ideal para familias o grupos que buscan la comodidad.",
     "beds": "2 camas Matrimoniales",
