@@ -1,25 +1,20 @@
 ---
 import { Image } from "astro:assets";
-import logoBlancoDowntown from "../../assets/logoBlancoDowntown.png";
 import logoNegroDowntown from "../../assets/logoNegroDowntown.png";
-import logoRojoDowntown from "../../assets/logoRojoDT.png";
-import burgerw from "../../assets/burger-white.svg";
 import burgerb from "../../assets/burger-black.svg";
-import spain from "../../assets/espannol.png";
 ---
 
 <main>
   <nav
     id="navbar"
-    class="bg-white text-white fixed w-full z-20 top-0 left-0 transition-all duration-300 flex justify-center"
+    class="bg-white text-black fixed w-full z-20 top-0 left-0 transition-all duration-300 flex justify-center"
   >
     <div
-      class=" flex items-center justify-between mx-auto p-4 relative h-[100px] lg:h-[80px]"
+      class="flex items-center justify-between mx-auto p-4 relative h-[100px] lg:h-[80px] w-full max-w-7xl"
     >
-      <div class="absolute bottom-0 left-0 lg:w-[83%] h-[2px] bg-white/90"/>
-      <!-- Logo -->
-      <a href="/" class="flex items-center">
-       
+      <div class="absolute bottom-0 left-0 lg:w-[83%] h-[2px] bg-white/90"></div>
+      
+      <a href="/en" class="flex items-center">
         <Image
           id="logon"
           src={logoNegroDowntown}
@@ -27,35 +22,28 @@ import spain from "../../assets/espannol.png";
           class="lg:w-[160px] lg:h-[150px] md:w-[270px] md:h-[75px] h-[140px] w-[120px]"
         />
       </a>
-      <!-- Idioma switch 
-      <div class="">
-        <button
-          id="languageToggle"
-          class="sm:flex sm:items-center sm:gap-2 sm:px-3 sm:py-2 px-1 sm:rounded-md text-2xl sm:font-medium bg-trasparent"
-        >
-          <Image
-            id="flagIcon"
-            src={spain}
-            alt="Bandera de España"
-            class="w-5 h-5 sm:w-6 sm:h-6"
-          />
-          <span class="sr-only" id="srText">Cambiar a inglés</span>
-        </button>
-      </div>-->
 
-      <!-- Botón de Reservar y Menú hamburguesa para móviles -->
       <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
-
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.simplebooking.it/ibe2/hotel/9184/?hid=9184&lang=EN&cur=USD"
+        >
+          <button
+            class="mx-6 w-[100px] h-[40px] md:w-[140px] md:h-[45px] bg-botones hover:bg-red-700 rounded-full text-white lg:text-base md:text-sm text-xs font-semibold"
+          >
+            Reserve Now
+          </button>
+        </a>
 
         <button
           data-collapse-toggle="navbar-sticky"
           type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-sticky"
           aria-expanded="false"
         >
           <span class="sr-only">Open main menu</span>
-          
           <Image
             class=""
             id="burger-black"
@@ -65,13 +53,12 @@ import spain from "../../assets/espannol.png";
         </button>
       </div>
 
-      <!-- Menú de navegación -->
       <div
         id="navbar-sticky"
-        class="hidden tems-center justify-between md:w-auto md:order-1 flex-col md:flex md:flex-row absolute top-[100%] left-0 w-full bg-white text-black lg:text-black shadow-md md:shadow-none  md:static z-50 transition-all duration-300"
+        class="hidden items-center justify-between md:w-auto md:order-1 flex-col md:flex md:flex-row absolute top-[100%] left-0 w-full bg-white text-black shadow-md md:shadow-none md:static z-50 transition-all duration-300"
       >
         <ul
-          class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 px-6 py-4 md:py-0 font-medium"
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 px-6 py-4 md:py-0 font-medium"
         >
           <li>
             <a
@@ -80,33 +67,132 @@ import spain from "../../assets/espannol.png";
               >La Fortuna Blog</a
             >
           </li>
-          <li>
-            <a
-              href="/#Rooms"
-              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
-              >Rooms</a
-            >
-          </li>
-          <li>
-            <a
-              href="/#amenidades"
-              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
-              >Gastro & Drink's</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="/#paquetes"
-              class="menu-link text-base md:text-sm font-semibold hover:text-botones"
-              >Packages</a
-            >
-          </li>
-        
 
           <li class="relative group">
             <button
-              class="menu-link text-base md:text-sm font-semibold hover:text-botones flex items-center gap-1"
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones flex items-center gap-1 w-full md:w-auto justify-between md:justify-start"
+            >
+              Eco Hotel
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.586l3.71-3.356a.75.75 0 111.04 1.08l-4.25 3.85a.75.75 0 01-1.04 0l-4.25-3.85a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <ul
+              class="lg:absolute lg:invisible lg:opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 top-[2.8rem] left-0 bg-white text-black rounded-md shadow-md w-full lg:w-56 z-50 py-2 pl-4 lg:pl-0"
+            >
+              <li>
+                <a href="/en/#facilities" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Facilities
+                </a>
+              </li>
+              <li>
+                <a href="/en/#rooms" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Our Rooms
+                </a>
+              </li>
+              <li>
+                <a href="/en/#spa" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Calathea Spa
+                </a>
+              </li>
+              <li>
+                <a href="/en/#sustainability" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Sustainability
+                </a>
+              </li>
+              <li>
+                <a href="/en/#nuwa" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Nuwa Art Gallery
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <button
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones flex items-center gap-1 w-full md:w-auto justify-between md:justify-start"
+            >
+              Gastro & Drink's
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.586l3.71-3.356a.75.75 0 111.04 1.08l-4.25 3.85a.75.75 0 01-1.04 0l-4.25-3.85a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <ul
+              class="lg:absolute lg:invisible lg:opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 top-[2.8rem] left-0 bg-white text-black rounded-md shadow-md w-full lg:w-56 z-50 py-2 pl-4 lg:pl-0"
+            >
+              <li>
+                <a href="/en/#mariabonita" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  María Bonita Steak House
+                </a>
+              </li>
+              <li>
+                <a href="/en/#selva" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Selva Negra 
+                </a>
+              </li>
+              <li>
+                <a href="/en/#gallo" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Pinto e' Gallo
+                </a>
+              </li>
+              <li>
+                <a href="/en/#ventanita" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  La Ventanita de María Bonita
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <button
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones flex items-center gap-1 w-full md:w-auto justify-between md:justify-start"
+            >
+              Packages
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.586l3.71-3.356a.75.75 0 111.04 1.08l-4.25 3.85a.75.75 0 01-1.04 0l-4.25-3.85a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <ul
+              class="lg:absolute lg:invisible lg:opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 top-[2.8rem] left-0 bg-white text-black rounded-md shadow-md w-full lg:w-56 z-50 py-2 pl-4 lg:pl-0"
+            >
+              <li>
+                <a href="/en/packagedetails/1" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Romantic Getaway
+                </a>
+              </li>
+              <li>
+                <a href="/en/packagedetails/2" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Romantic Getaway
+                </a>
+              </li>
+              <li>
+                <a href="/en/packagedetails/3" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Classic to Arenal Volcano
+                </a>
+              </li>
+              <li>
+                <a href="/en/packagedetails/4" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                  Epic Adventure
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <button
+              class="menu-link text-base md:text-sm font-semibold hover:text-botones flex items-center gap-1 w-full md:w-auto justify-between md:justify-start"
             >
               Tours & Transportation
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -117,12 +203,11 @@ import spain from "../../assets/espannol.png";
                 />
               </svg>
             </button>
-
             <ul
-              class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 top-[2.8rem] left-0 bg-white text-black rounded-md shadow-md w-56 z-50 py-2"
+              class="lg:absolute lg:invisible lg:opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 top-[2.8rem] left-0 bg-white text-black rounded-md shadow-md w-full lg:w-56 z-50 py-2 pl-4 lg:pl-0"
             >
               <li>
-                <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                <a href="/en" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
                   Experiences on site
                 </a>
               </li>
@@ -133,7 +218,7 @@ import spain from "../../assets/espannol.png";
                 </a>
               </li>
               <li>
-                <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
+                <a href="/en" class="block px-4 py-2 hover:bg-gray-100 text-sm font-medium">
                   Transportation
                 </a>
               </li>
@@ -147,20 +232,9 @@ import spain from "../../assets/espannol.png";
             </ul>
           </li>
 
-
-
-
-
-
-
-
-
-
-
-
           <li>
             <a
-              href="/#Footer"
+              href="#Footer"
               class="menu-link text-base md:text-sm font-semibold hover:text-botones"
               >Contact & Location</a
             >
@@ -172,33 +246,28 @@ import spain from "../../assets/espannol.png";
 </main>
 
 <script>
- 
+  // Lógica para colapsar/abrir el menú móvil
+  const toggleBtn = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+  const navbarSticky = document.getElementById("navbar-sticky");
+
+  if (toggleBtn && navbarSticky) {
+    toggleBtn.addEventListener("click", () => {
+      navbarSticky.classList.toggle("hidden");
+      // Opcional: Cambiar atributo aria-expanded para accesibilidad
+      const isExpanded = navbarSticky.classList.contains("hidden") ? "false" : "true";
+      toggleBtn.setAttribute("aria-expanded", isExpanded);
+    });
+  }
+
   // Desplazamiento suave para los enlaces
-  document
-    .querySelector('a[href="#About"]')
-    .addEventListener("click", function (event) {
+  const aboutLink = document.querySelector('a[href="#About"]');
+  if(aboutLink){
+      aboutLink.addEventListener("click", function (event) {
       event.preventDefault();
       document.querySelector("#About").scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     });
-
-    /**  const button = document.getElementById("languageToggle");
-  const flagIcon = document.getElementById("flagIcon");
-  const srText = document.getElementById("srText");
-  let language = "es";
-
-  button?.addEventListener("click", () => {
-    language = language === "es" ? "en" : "es";
-    if (language === "es") {
-      flagIcon.textContent = "🇪🇸";
-      srText.textContent = "Cambiar a inglés";
-      window.location.href = ""; // Redirigir a la versión en español
-    } else {
-      flagIcon.textContent = "🇺🇸";
-      srText.textContent = "Cambiar a español";
-      window.location.href = "/Downtown/"; // Redirigir a la versión en inglés
-    }
-  });*/
+  }
 </script>

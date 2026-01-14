@@ -1,22 +1,24 @@
 ---
 import { Image } from "astro:assets";
+import phone from "../../assets/icons/telefono.png";
+import location from "../../assets/icons/ubicacion.png";
+import mail from "../../assets/icons/correo.png";
 
-import instagram from "../../assets/instagram.png";
-import facebook from "../../assets/facebook.png";
-import whatsapp from "../../assets/whatsapp.png";
-import phone from "../../assets/phone.png";
-import location from "../../assets/location.png";
-import mail from "../../assets/mail.png";
-import web from "../../assets/world.png";
-import nuwa from "../../assets/logoNuwaBlanco.png";
-import logoTierra from "../../assets/logoTierraGBlanco.png";
+import cover from "../../assets/icons/sB.png";
+import facebook from "../../assets/icons/facebook.png";
+import instagram from "../../assets/icons/instagram.png";
+import tripadvisor from "../../assets/icons/tripadvisor.png";
+import whats from "../../assets/icons/whats.png";
+
+import TierraGLogo from "../../assets/logoTierraGBlanco.png";
+import LogoSelvaNegra from "../../assets/LogoSelvaNegraBlanco.png";
+import logoDowntown from "../../assets/logoBlancoDowntown.png";
+import logoLavaDrink from "../../assets/logoLavaDrinksBlanco.png";
+import ventanitaBlanco from "../../assets/logoVentanitaBlanco.png";
 import logoPinto from "../../assets/logoPintoeGalloBlanco.png";
 import tropicalB from "../../assets/logoTropicalExpBlanco.png";
-import logoLavaDrink from "../../assets/logoLavaDrinksBlanco.png";
-import SNBlanco from "../../assets/SNBlanco.png";
+import nuwa from "../../assets/logoNuwaBlanco.png";
 import MBBlanco from "../../assets/logoMariaBonitaBlanco.png";
-import ventanitaBlanco from "../../assets/logoVentanitaBlanco.png";
-import logoDowntown from "../../assets/logoBlancoDowntown.png";
 
 const logos = [
   {
@@ -25,7 +27,7 @@ const logos = [
     href: "https://www.instagram.com/lafortunadowntown",
   },
   {
-    src: logoTierra,
+    src: TierraGLogo,
     alt: "Tierra Gastro",
     href: "https://www.instagram.com/tierragastrocr",
   },
@@ -39,44 +41,63 @@ const logos = [
     alt: "La Ventanita",
     href: "https://www.instagram.com/ventanitamariabonita",
   },
-  { src: logoPinto, alt: "Pinto e' Gallo", href: "/pinto-gallo" },
+  {
+    src: logoPinto,
+    alt: "Pinto e' Gallo",
+    href: "https://www.instagram.com/pintoegallo.cr?igsh=MXR1NWUzYzMxN2hoYQ==",
+  },
   { src: tropicalB, alt: "Tropical Experiences", href: "/tropical" },
-  { src: nuwa, alt: "Nuwa Art Gallery", href: "/nuwa" },
+  {
+    src: nuwa,
+    alt: "Nuwa Art Gallery",
+    href: "https://www.instagram.com/nuwagallery?igsh=ejlqNnVsOWY2Zm1v",
+  },
   { src: logoLavaDrink, alt: "Lava Drinks", href: "/lava-drinks" },
   {
-    src: SNBlanco,
+    src: LogoSelvaNegra,
     alt: "Selva Negra",
     href: "https://www.instagram.com/selvanegra.bar",
   },
 ];
 
-const repeat = 4; // cuántas veces repetir el grupo para animación fluida
-const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
+const repeatedLogos = [...logos, ...logos];
 ---
 
 <style>
-  .slider a {
-    display: inline-block;
+  .slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
   }
 
   .slider {
     display: flex;
-    gap: 1rem; /* Espacio entre imágenes */
-    animation: scroll 20s linear infinite;
+    align-items: center;
+    gap: 3rem;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+  }
+
+  .slider a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
 
   .image {
     width: 120px;
-    height: 120px;
+    height: 80px;
+    object-fit: contain;
     flex-shrink: 0;
-    min-width: 120px; /* Evita que las imágenes se reduzcan */
   }
+
   @keyframes scroll {
-    from {
-      transform: translateX(0%);
+    0% {
+      transform: translateX(0);
     }
-    to {
-      transform: translateX(-200%); /* Mueve solo la mitad */
+    100% {
+      transform: translateX(-50%);
     }
   }
 
@@ -85,161 +106,190 @@ const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
   }
 </style>
 
-<div id="Footer" class="bg-fondoF flex flex-col p-10">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+<div id="Footer" class="">
+  <div class="hidden lg:block relative w-full h-[300px] bg-red-400">
+    <div
+      id="load-map-desktop"
+      class="absolute inset-0 w-full h-full flex items-center justify-center bg-black/40 text-black font-bold"
+    >
+      Loading map...
+    </div>
+  </div>
 
-
-    <div class="text-left md:text-left">
-      <h3 class="text-xl text-gris mb-4 font-bold">Contact us </h3>
-      <div class="space-y-4 text-gris">
-        <ul class="space-y-4 text-left align-middle">
-          <li class="flex">
-            <span>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-fondog p-6 md:p-8 lg:p-12 gap-8"
+  >
+    <div class="text-left">
+      <h2 class="titulos text-xl text-black mb-4">Contact Us</h2>
+      <div class="regular space-y-4 text-black text-sm md:text-base">
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <Image
+              class="w-[28px] h-[28px] md:w-[33px] md:h-[33px] mr-2 flex-shrink-0"
+              src={phone}
+              alt="phone"
+            />
+            <span>+506 4000-2027</span>
+          </li>
+          <li class="flex items-start">
+            <Image
+              class="w-[28px] h-[28px] md:w-[33px] md:h-[33px] mr-2 flex-shrink-0"
+              src={phone}
+              alt="phone"
+            />
+            <span>Reservations: +506 8527-4677</span>
+          </li>
+          <li class="flex items-start">
+            <Image
+              class="w-[28px] h-[28px] md:w-[33px] md:h-[33px] mr-2 flex-shrink-0"
+              src={phone}
+              alt="phone"
+            />
+            <span>Concierge: +506 8964-2027</span>
+          </li>
+          <li>
+            <a
+              class="flex items-start"
+              href="mailto:experiencias@mariabonitacr.com"
+            >
               <Image
-                class="lg:w-[33px] lg:h-[33px] w-[2rem] h-[2rem] mr-2"
-                src={phone}
-                alt="telefono"
+                class="w-[28px] h-[28px] md:w-[33px] md:h-[33px] mr-2 flex-shrink-0"
+                src={mail}
+                alt="mail"
               />
-            </span> +506 4000-2027
+              <span class="break-all">concierge@lafortunadowntown.com</span>
+            </a>
           </li>
-          <li class="flex">
-            <span>
+          <li>
+            <a
+              class="flex items-start"
+              href="mailto:experiencias@mariabonitacr.com"
+            >
               <Image
-                class="lg:w-[33px] lg:h-[33px]  w-[2rem] h-[2rem] mr-2"
-                src={phone}
-                alt="telefono"
+                class="w-[28px] h-[28px] md:w-[33px] md:h-[33px] mr-2 flex-shrink-0"
+                src={mail}
+                alt="mail"
               />
-            </span> Reservations: +506 8527-4677
+              <span class="break-all">reservations@lafortunadowntown.com</span>
+            </a>
           </li>
-                    <li class="flex">
-            <span>
-              <Image
-                class="lg:w-[33px] lg:h-[33px]  w-[2rem] h-[2rem] mr-2"
-                src={phone}
-                alt="telefono"
-              />
-            </span> Concierge: +506 8964 2027
-          </li>
-          <li class="flex">
-            <span>
-              <Image class="lg:w-[33px] lg:h-[33px]  w-[2rem] h-[2rem] mr-2" src={mail} alt="mail" />
-            </span> reservations@lafortunadowntown.com
-          </li>
-                    <li class="flex">
-            <span>
-              <Image class="lg:w-[33px] lg:h-[33px]  w-[2rem] h-[2rem] mr-2" src={mail} alt="mail" />
-            </span> concierge@lafortunadowntown.com
-          </li>
-
-          <li class="flex">
-            <span>
-              <Image class="lg:w-[33px] lg:h-[33px] w-[2rem] h-[2rem] mr-2" src={web} alt="web" />
-            </span> www.lafortunadowntown.com
+          <li class="flex items-start">
+            <Image
+              class="w-[28px] h-[28px] md:w-[33px] md:h-[33px] mr-2 flex-shrink-0"
+              src={location}
+              alt="location"
+            />
+            <span
+              >25m south of the Catholic Church, La Fortuna, Alajuela, Costa Rica</span
+            >
           </li>
         </ul>
       </div>
     </div>
 
-    <div class="hidden lg:block">
-      <h3 class="text-xl text-gris mb-4 font-bold">Visit us.</h3>
-                <li class="flex">
-            <span>
-              <Image
-                class="lg:w-[33px] lg:h-[33px] w-[2rem] h-[2rem] mr-2"
-                src={location}
-                alt="location"
-              />
-            </span> 25 m south of the Catholic church<br />in La Fortuna, Alajuela, Costa Rica
+    <div class="text-left">
+      <h2 class="titulos text-xl text-black mb-4">Visit Us</h2>
+      <div class="regular space-y-4 text-black text-sm md:text-base">
+        <ul class="space-y-4">
+          <li>
+            <a href="/blog" class="hover:text-red-600">La Fortuna Blog</a>
           </li>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544549.03859969!2d-84.49414550137209!3d9.852802492553035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sDowntown%20Boutique%20Hotel!5e0!3m2!1sen!2scr!4v1747925666942!5m2!1sen!2scr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div class="block lg:hidden ">
-      <h3 class="text-xl text-gris mb-4 font-bold">Visit us.</h3>
-                <li class="flex">
-            <span>
-              <Image
-                class="lg:w-[33px] lg:h-[33px] w-[2rem] h-[2rem] mr-2"
-                src={location}
-                alt="location"
-              />
-            </span> 25 m south of the Catholic church<br />in La Fortuna, Alajuela, Costa Rica
+          <li>
+            <a href="#facilidades" class="hover:text-red-600">Eco Hotel</a>
           </li>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544549.03859969!2d-84.49414550137209!3d9.852802492553035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sDowntown%20Boutique%20Hotel!5e0!3m2!1sen!2scr!4v1747925666942!5m2!1sen!2scr" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    </div>
-
-    
-    <div class="">
-      <h3 class="text-xl text-gris mb-4 font-bold">Social Media</h3>
-      <div class="flex gap-4 justify-start mt-4 md:mt-0">
-        <a
-          href="https://www.instagram.com/lafortunadowntown?igsh=MWt1bngybWZ6YmVvcw=="
-        >
-          <Image
-            class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
-            src={instagram}
-            alt="Instagram"
-          />
-        </a>
-        <a href="https://www.facebook.com/share/1XH5v8bUr3/?mibextid=wwXIfr">
-          <Image
-            class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
-            src={facebook}
-            alt="Facebook"
-          />
-        </a>
-        <a href="https://wa.me/message/EPD5JVA2SLQ2D1">
-          <Image
-            class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl"
-            src={whatsapp}
-            alt="Whatsapp"
-          />
-        </a>
+          <li>
+            <a href="#gastronimia" class="hover:text-red-600"
+              >Dining & Drinks</a
+            >
+          </li>
+          <li>
+            <a href="#paquetes" class="hover:text-red-600"
+              >Accommodation Packages</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://online.flippingbook.com/view/743187584/2/"
+              target="_blank"
+              class="hover:text-red-600">Tours & Transport</a>
+          </li>
+        </ul>
       </div>
-            <ul class="text-gris my-2">
-        
-        <li class="m-2 hover:translate-x-2 hover:underline hover:text-botones delay-150 duration-300 ease-in-out  ">
-            <a href="/blog">
-              La fortuna blog
-            </a>
-        </li>
+    </div>
 
-        <li class="m-2 hover:translate-x-2 hover:underline hover:text-botones delay-150 duration-300 ease-in-out">
-            <a href="/#About">
-              Eco Hotel
-            </a>
-        </li>
-
-        <li class="m-2 hover:translate-x-2 hover:underline hover:text-botones delay-150 duration-300 ease-in-out">
-            <a href="/#mariabonita">
-              Gastro & Drink's
-            </a>
-        </li>
-
-        <li class="m-2 hover:translate-x-2 hover:underline hover:text-botones delay-150 duration-300 ease-in-out">
-            <a href="/#paquetes">
-              Packages
-            </a>
-        </li>
-
-        <li class="m-2 hover:translate-x-2 hover:underline hover:text-botones delay-150 duration-300 ease-in-out">
-            <a href="">
-              Tours & Transport
-            </a>
-        </li>
-
-      </ul>
+    <div
+      class="block lg:hidden relative w-full h-[250px] bg-gray-200 text-left"
+    >
+      <h2 class="titulos text-xl text-black mb-4">Visit Us</h2>
+      <div
+        id="load-map-mobile"
+        class="absolute inset-0 w-full h-full flex items-center justify-center bg-black/40 text-black font-bold"
+      >
+      </div>
     </div>
   </div>
 </div>
 
-<div class="bg-black w-full overflow-hidden">
+<div class="bg-fondog">
+  <hr class="w-3/4 mx-auto border-t border-red-600 opacity-100" />
+</div>
+
+<div class="bg-fondog w-full py-6 px-6 flex items-center justify-center">
+  <div class="flex space-x-4 md:space-x-6">
+    <a
+      href="https://www.facebook.com/LaFortunaDowntown"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-10 h-10 flex items-center jusftify-center hover:opacity-80 transition-opacity"
+    >
+      <Image class="w-[33px] h-[33px]" src={facebook} alt="Facebook" />
+    </a>
+    <a
+      href="https://wa.me/50685274677"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity"
+    >
+      <Image class="w-[33px] h-[33px]" src={whats} alt="WhatsApp" />
+    </a>
+    <a
+      href="https://www.instagram.com/lafortunadowntown"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity"
+    >
+      <Image class="w-[33px] h-[33px]" src={instagram} alt="Instagram" />
+    </a>
+    <a
+      href="https://www.tripadvisor.com/Hotel_Review-g309226-d12108287-Reviews-Downtown_La_Fortuna_Boutique_Hotel-La_Fortuna_de_San_Carlos_Arenal_Volcano_National_P.html"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity"
+    >
+      <Image class="w-[33px] h-[33px]" src={tripadvisor} alt="TripAdvisor" />
+    </a>
+    <a
+      href="https://www.simplebooking.it/ibe2/hotel/9184/?hid=9184&lang=EN&cur=USD"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity"
+    >
+      <Image class="w-[33px] h-[33px]" src={cover} alt="Cover Manager" />
+    </a>
+  </div>
+</div>
+
+<div class="bg-black w-full h-[5rem] overflow-hidden">
   <div class="slider-wrapper">
     <div class="slider">
       {
         repeatedLogos.map(({ src, alt, href }) => (
-          <a href={href} target="_blank" rel="noopener noreferrer">
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${alt}`}
+          >
             <Image src={src} alt={alt} class="image" />
           </a>
         ))
@@ -247,26 +297,51 @@ const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
     </div>
   </div>
 </div>
-
-<div class="bg-[#424b59] w-full flex flex-col">
-  <div class="sm:flex flex-row sm:text-left text-center items-center">
-    <ul
-      class="flex sm:flex-row flex-col text-white font-Montserrat text-sm sm:space-y-0 space-y-2 sm:space-x-6 pl-2"
-    >
-      <li><a href="">Aviso legal</a></li>
-      <li><a href="">Politica de privacidad</a></li>
-      <li><a href="">Preferencias de cookies</a></li>
-      <li><a href="">Accesibilidad</a></li>
-    </ul>
-    <div
-      class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baseline"
-    >
-      <p class="text-white font-Montserrat text-sm">
-        © La Fortuna Downtown. Derechos Reservados.
-      </p>
-      <p class="text-white font-Montserrat text-sm sm:place-self-end sm:pr-2">
-        Desarrollado por InnovaLinkCR
-      </p>
-    </div>
+<div class="bg-fondog w-full flex flex-col">
+  <div
+    class="sm:flex flex-row space-x-4 sm:pl-24 sm:text-left text-center gap-2 sm:gap-0 align-baselin"
+  >
+    <p class="text-black font-Montserrat text-xs md:text-sm">
+      © La Fortuna Downtown. All rights reserved.
+    </p>
+    <p class="text-black font-Montserrat text-xs md:text-sm">
+      Developed by InnovaLinkCR
+    </p>
   </div>
 </div>
+<script>
+  const iframeSrc =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.2108965499923!2d-84.64559211035048!3d10.47112706466293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa00c88c950b0d9%3A0x87d3b3f008d2807c!2sDowntown%20La%20Fortuna%20Boutique%20Hotel!5e0!3m2!1ses-419!2scr!4v1760390977343!5m2!1ses-419!2scr";
+
+  function insertMap(id, height) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const iframe = document.createElement("iframe");
+    iframe.src = iframeSrc;
+    iframe.loading = "lazy";
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = "no-referrer-when-downgrade";
+    iframe.className = `w-full h-[${height}] border-0`;
+    el.replaceWith(iframe);
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === "load-map-desktop")
+            insertMap("load-map-desktop", "300px");
+          if (entry.target.id === "load-map-mobile")
+            insertMap("load-map-mobile", "250px");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  ["load-map-desktop", "load-map-mobile"].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+</script>

@@ -28,60 +28,63 @@ import desayunoTipico from "../../assets/burrito.jpg";
 import desayunoFrutas2 from "../../assets/pancake.jpg";
 
 const restaCarrusel = [salonMariaBonita, cenaMariaBonita, comidaMariaBonita];
-const selvaCarrusel = [eventoSelvaNegra, barraSelvaNegra,coctelSelvaNegra];
+const selvaCarrusel = [eventoSelvaNegra, barraSelvaNegra, coctelSelvaNegra];
 const NuwaCarrusel = [fotoNuwa, Nuwa2, Nuwa3];
-const VentanitaCarrusel = [hamburguesaMariaBonita,FotoVentanita, choripan];
+const VentanitaCarrusel = [hamburguesaMariaBonita, FotoVentanita, choripan];
 const DesayunoCarrusel = [desayunoTipico, desayunoFrutas1, desayunoFrutas2];
 ---
 
 <main>
   <CarruselAmenidades
-  titulo="María Bonita Steak House"
-  descripcion="María Bonita Steak House is a fusion of gastronomy, entertainment, passion, and art. Here, every dish becomes a spectacle. Enjoy premium cuts of meat cooked to perfection over natural charcoal embers, flambéed at the table with desserts, coffees, and cocktails, fire experiences, and live music. Immerse yourself in a unique sensory experience in the heart of La Fortuna. We guarantee quality and an authentic experience!"
-  horario="Monday to Sunday<br/>11:30am a 10:30pm"
-  logo={logoMariaBonita}
-  imagenesCarrusel={restaCarrusel}
-  linkBoton="https://qrfy.io/p/iLG_cBukNI"
-  textoBoton="Menú"
-  bg="bg-fondog"
-/>
+    titulo="María Bonita Steak House"
+    descripcion="María Bonita Steak House is a fusion of gastronomy, entertainment, passion, and art. Here, every dish becomes a spectacle. Enjoy premium cuts of meat cooked to perfection over natural charcoal embers, flambéed at the table with desserts, coffees, and cocktails, fire experiences, and live music. Immerse yourself in a unique sensory experience in the heart of La Fortuna. We guarantee quality and an authentic experience!"
+    horario="Monday to Sunday<br/>11:30am a 10:30pm"
+    logo={logoMariaBonita}
+    imagenesCarrusel={restaCarrusel}
+    linkBoton="https://qrfy.io/p/iLG_cBukNI"
+    textoBoton="Menú"
+    bg="bg-fondog"
+  />
 
-<CarruselAmenidades
-  titulo="Selva Negra"
-  descripcion="Take a sensory journey inspired by the magic of Costa Rica's nocturnal tropical rainforest, savoring exotic flavors, inventive mixology, fine wines, and experiences. We offer themed mixology nights, wine tastings with guest sommeliers, pairings with cuisine crafted by our chef, and private events for those seeking personal experiences."
-  horario="Monday to Sunday<br/>12:00pm a 12:00am"
-  logo={LogoSelvaNegra}
-  imagenesCarrusel={selvaCarrusel}
-  reverse={true}
-/>
+  <CarruselAmenidades
+    titulo="Selva Negra"
+    descripcion="Take a sensory journey inspired by the magic of Costa Rica's nocturnal tropical rainforest, savoring exotic flavors, inventive mixology, fine wines, and experiences. We offer themed mixology nights, wine tastings with guest sommeliers, pairings with cuisine crafted by our chef, and private events for those seeking personal experiences."
+    horario="Monday to Sunday<br/>12:00pm a 12:00am"
+    logo={LogoSelvaNegra}
+    imagenesCarrusel={selvaCarrusel}
+    linkBoton="https://qrfy.io/p/iLG_cBukNI"
+    textoBoton="Menú"
+    reverse={true}
+  />
 
-<CarruselAmenidades
-  titulo="Pinto e' Gallo"
-  descripcion="Start your day with the best flavor at Pinto e' Gallo. Enjoy our buffet-style breakfast, where you'll find an irresistible variety of fresh options. Ideal for starting the day with energy and without rush. Come and enjoy a complete and delicious breakfast!"
-  horario="Monday to Sunday<br/>07:00am a 11:30am"
-  logo={logoPintoeGallo}
-  imagenesCarrusel={DesayunoCarrusel}
-  bg="bg-fondog"
-/>
+  <CarruselAmenidades
+    titulo="Pinto e' Gallo"
+    descripcion="Start your day with the best flavor at Pinto e' Gallo. Enjoy our buffet-style breakfast, where you'll find an irresistible variety of fresh options. Ideal for starting the day with energy and without rush. Come and enjoy a complete and delicious breakfast!"
+    horario="Monday to Sunday<br/>07:00am a 11:30am"
+    logo={logoPintoeGallo}
+    imagenesCarrusel={DesayunoCarrusel}
+    linkBoton="https://qrfy.io/p/iLG_cBukNI"
+    textoBoton="Menú"
+    bg="bg-fondog"
+  />
 
-<CarruselAmenidades
-  titulo="La Ventanita de María Bonita"
-  descripcion="At La Ventanita de María Bonita, we know that your time is valuable, and so is your appetite. We are a small fast-food grill window where each dish is prepared on the spot with fresh, top-quality ingredients. Enjoy authentic and juicy flavors, cooked to perfection on the grill, ready to go with no long waits. Speed, flavor, and quality in every bite!"
-  horario="Monday to Sunday<br/>12:00pm a 12:00am"
-  logo={LogoVentanita}
-  imagenesCarrusel={VentanitaCarrusel}
-  linkBoton="https://online.flippingbook.com/view/179568887/"
-  textoBoton="Menú"
-  reverse={true}
-/>
+  <CarruselAmenidades
+    titulo="La Ventanita de María Bonita"
+    descripcion="At La Ventanita de María Bonita, we know that your time is valuable, and so is your appetite. We are a small fast-food grill window where each dish is prepared on the spot with fresh, top-quality ingredients. Enjoy authentic and juicy flavors, cooked to perfection on the grill, ready to go with no long waits. Speed, flavor, and quality in every bite!"
+    horario="Monday to Sunday<br/>12:00pm a 12:00am"
+    logo={LogoVentanita}
+    imagenesCarrusel={VentanitaCarrusel}
+    linkBoton="https://online.flippingbook.com/view/179568887/"
+    textoBoton="Menú"
+    reverse={true}
+  />
 
-<CarruselAmenidades
-  titulo="Nuwa Art Gallery"
-  descripcion="It is a vibrant space dedicated to the celebration of Costa Rican art and culture. We showcase works by local artists, offering a unique experience that connects visitors with the creativity and inspiration of our land. Discover and support Costa Rican art in its fullest expression at Nuwa Gallery!"
-  horario="Monday to Sunday<br/>06:00am a 10:00pm"
-  logo={LogoNuwa}
-  imagenesCarrusel={NuwaCarrusel}
-  bg="bg-fondog"
-/>
-
+  <CarruselAmenidades
+    titulo="Nuwa Art Gallery"
+    descripcion="It is a vibrant space dedicated to the celebration of Costa Rican art and culture. We showcase works by local artists, offering a unique experience that connects visitors with the creativity and inspiration of our land. Discover and support Costa Rican art in its fullest expression at Nuwa Gallery!"
+    horario="Monday to Sunday<br/>06:00am a 10:00pm"
+    logo={LogoNuwa}
+    imagenesCarrusel={NuwaCarrusel}
+    bg="bg-fondog"
+  />
 </main>
