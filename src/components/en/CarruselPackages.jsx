@@ -75,13 +75,12 @@ export default function ImageGallery() {
                                     <div class="text-left  mx-4 lg:mx-0 text-titulo">
                                         <h3 class="lg:text-4xl text-2xl font-Lobster mb-4">{paq.title}</h3>
                                         <h3 class="lg:text-base text-xl font-Montserrat font-bold ">{paq.subtitle}</h3>
-
-
+                           
                                         <p class="font-Montserrat text-sm sm:text-sm text-texto mb-6">
                                             {paq.description}
                                         </p>
                                         <a
-                                            href={`/packagedetails/en/${paq.id}`}
+                                            href={`/en/packagedetails/${paq.id}`}
                                             class="bg-botones text-white px-6 py-2 rounded hover:bg-red-700 transition"
                                         >
                                             SEE MORE
