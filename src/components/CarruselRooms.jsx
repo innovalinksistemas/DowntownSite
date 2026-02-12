@@ -53,35 +53,35 @@ export default function ImageGallery() {
                 isActive ? "scale-105 opacity-100" : "scale-90 opacity-50"
               } ${index === 0 || index === 2 ? "hidden md:hidden" : ""}`}
             >
-              <div className="flex flex-col md:flex-row lg:gap-2 gap-6 items-center md:items-start ">
-                <div className="w-full md:w-2/3 mt-2 lg:mt-0 just">
+              <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
+                <div className="w-full md:w-1/2 mt-2 lg:mt-0">
                   <img
                     src={room.image}
                     alt="Habitaciones Downtown"
-                    className="object-cover lg:w-[44rem] lg:h-100 w-[19rem] md:h-[28rem] rounded"
+                    className="object-cover w-full aspect-[4/3] rounded"
                   />
 
-                  <div className="flex w-full lg:grid lg:grid-cols-3 gap-4 mt-2 ">
+                  <div className="grid grid-cols-3 gap-2 mt-2">
                     <img
                       src={room.image2}
                       alt="Habitaciones Downtown"
-                      className="object-cover lg:w-[14rem] lg:h-[9rem] w-[5rem] h-28   rounded  "
+                      className="object-cover w-full aspect-[4/3] rounded"
                     />
                     <img
                       src={room.image3}
                       alt="Habitaciones Downtown"
-                      className="object-cover lg:w-[14rem] lg:h-[9rem]  w-[6rem] h-28  rounded "
+                      className="object-cover w-full aspect-[4/3] rounded"
                     />
                     <img
                       src={room.image4}
                       alt="Habitaciones Downtown"
-                      className="object-cover lg:w-[14rem] lg:h-[9rem] w-[6rem] h-28  rounded "
+                      className="object-cover w-full aspect-[4/3] rounded"
                     />
                   </div>
                 </div>
 
-                <div className="space-y-6">
-                  <div className="bg-white md:w-[26rem] md:h-[19.5rem] w-[19rem] p-6 space-y-4 flex flex-col ">
+                <div className="w-full md:w-1/2 space-y-4">
+                  <div className="bg-white w-full p-6 space-y-4 flex flex-col">
                     <p className="text-titulo text-left font-Lobster text-xl lg:text-2xl">
                       {room.title}
                     </p>
@@ -107,7 +107,7 @@ export default function ImageGallery() {
                     </div>
                   </div>
 
-                  <div className="bg-white p-4  md:h-[16.5rem] space-y-4">
+                  <div className="bg-white p-4 space-y-4">
                     <p className="text-titulo text-left font-Lobster text-xl lg:text-2xl">
                       Amenidades
                     </p>
