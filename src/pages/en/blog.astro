@@ -1,13 +1,13 @@
 ---
-import blog from "../data/blog.json";
-import HeaderSections from "@components/HeaderSections.astro";
+import blog from "../../data/en/blog.json";
+import HeaderSections from "@components/en/HeaderSections.astro";
 import BlogLayout from "@layouts/BlogLayout.astro";
 ---
 
 <BlogLayout>
   <HeaderSections />
 
-  <main class="max-w-7xl mx-auto px-4 py-12 mt-10">
+  <main class="max-w-5xl mx-auto px-4 py-12 mt-10">
 
     <section class="mb-16">
       <div class="bg-white rounded-xl overflow-hidden">
@@ -35,10 +35,10 @@ import BlogLayout from "@layouts/BlogLayout.astro";
   
     <section class="grid md:grid-cols-2 gap-8">
       {blog.map((post) => (
-        <a href={`/entradasblog/${post.id}`}>
+        <a href={`/entradasblog/en/${post.id}`}>
           <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-gray-200">
 
-            <div class="">
+            <div class="h-40 w-full">
               <img 
                 src={post.imagen}
                 alt={post.title}

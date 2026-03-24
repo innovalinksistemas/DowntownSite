@@ -1,0 +1,28 @@
+---
+
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap');
+			html {
+  scroll-behavior: smooth;
+}
+		</style>
+		<title>La Fortuna Blog</title>
+	</head>
+	<body class="scroll-smooth scroll-pt-20" >
+		<div class="w-full snap-y snap-mandatory scroll-smooth">
+             <slot/>
+        </div>
+	</body>
+	<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</html>

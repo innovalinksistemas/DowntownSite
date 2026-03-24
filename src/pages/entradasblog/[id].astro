@@ -1,0 +1,726 @@
+---
+import blogRuta from "../../data/blog.json";
+import HeaderSections from "@components/HeaderSections.astro";
+import BlogLayout from "@layouts/BlogLayout.astro";
+
+const { id } = Astro.params;
+const blog = blogRuta.find((p) => p.id.toString() === id);
+
+if (!blog) {
+  return Astro.redirect("/404");
+}
+
+export async function getStaticPaths() {
+  return blogRuta.map((post) => ({
+    params: { id: post.id.toString() },
+  }));
+}
+---
+
+<BlogLayout>
+  <HeaderSections />
+  {blog.id === 1 ? (
+  <main
+    id="blog"
+    class="relative lg:max-w-7xl lg:ml-20 mt-20 text-[#333] p-6 font-Caption"
+  >
+    <!-- Título principal -->
+    <h1 class="text-xl sm:text-4xl font-bold leading-tight text-center">
+      Cómo Llegar a La Fortuna y Arenal: <br />
+      <span class="lg:text-xl text-base">Tu Guía Completa de Viaje</span>
+    </h1>
+
+    <h2 class="mt-6 text-sm">
+      Descubre cómo llegar a La Fortuna y Arenal fácilmente. Te guiamos a través
+      de rutas pintorescas, llenas de paisajes únicos, para llegar al paraíso en
+      La Fortuna Downtown Boutique Hotel—En el Corazón de las Experiencias-
+      desde cualquier punto de Costa Rica. ¡Tu aventura comienza aquí!
+    </h2>
+
+    <div class="mt-4">
+      <button
+        id="toggle-toc"
+        class="mb-4 px-4 py-2 bg-botones text-white rounded hover:bg-botones transition"
+      >
+        Mostrar índice
+      </button>
+    </div>
+
+    <!-- Índice oculto por defecto -->
+    <div
+      id="toc"
+      class="hidden border border-gray-300 rounded p-4 bg-gray-50 shadow-inner"
+    >
+      <h3 class="text-lg font-semibold mb-3">Índice de contenidos</h3>
+
+      <ul class="list-disc list-inside text-black space-y-2">
+        <!-- Título principal -->
+        <li>
+          <a
+            href=""
+            data-target="introduccion"
+            class="toc-item font-semibold hover:text-blue-500"
+          >
+            Desde San José y el Aeropuerto Internacional Juan Santamaría (SJO):
+          </a>
+          <!-- Subrutas como subtítulos -->
+          <ul class="list-disc list-inside ml-5 mt-2 space-y-1 text-sm">
+            <li>
+              <a
+                href=""
+                data-target="ruta1"
+                class="toc-item hover:text-blue-500"
+              >
+                Ruta 1: La Carretera Panamericana vía San Ramón.
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                data-target="ruta2"
+                class="toc-item hover:text-blue-500"
+              >
+                Ruta 2: La Ruta Artesanal vía Zarcero y Ciudad Quesada.
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                data-target="ruta3"
+                class="toc-item hover:text-blue-500"
+              >
+                Ruta 3: Varablanca, Volcán Poás, y Cataratas.
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Sección siguiente -->
+        <li>
+          <a
+            href=""
+            data-target="ruta4"
+            class="toc-item font-semibold hover:text-blue-500"
+          >
+            Rutas desde otros destinos:
+          </a>
+          <ul class="list-disc list-inside ml-5 mt-2 space-y-1 text-sm">
+            <li>
+              <a
+                href=""
+                data-target="ruta4"
+                class="toc-item hover:text-blue-500"
+              >
+                Ruta 4: Guanacaste.
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                data-target="ruta5"
+                class="toc-item hover:text-blue-500"
+              >
+                Ruta 5: Monteverde (Santa Elena) a La Fortuna.
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="#ruta6"
+            data-target="ruta6"
+            class="toc-item font-semibold hover:text-blue-500">Otras rutas</a
+          >
+          <ul class="list-disc list-inside ml-5 mt-2 space-y-1 text-sm">
+            <li>
+              <a
+                href=""
+                data-target="ruta6"
+                class="toc-item hover:text-blue-500"
+              >
+                Ruta 6: Desde Manuel Antonio o cualquier parte del Pacífico
+                Central o Sur hacia la Fortuna.
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                data-target="ruta7"
+                class="toc-item hover:text-blue-500"
+              >
+                Ruta 7: Desde Puerto Limón / Caribe.
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="extraParagraphs hidden sm:block">
+      <div class="mt-6 space-y-6 text-sm leading-relaxed">
+        <p>
+          En un país que tiene una biodiversidad máxima, todas las rutas de
+          viaje contienen la belleza incuestionable de su naturaleza, la alegría
+          libre de los costarricenses, vistas impresionantes, restaurantes con
+          sabores inolvidables y, en casi todas las carreteras rurales,
+          especialmente si vienes en los meses de lluvia, vas a encontrar
+          inevitablemente una docena de huecos que, si vienes manejando, te
+          mantendrán en alerta.
+        </p>
+
+        <p>
+          En Costa Rica, tus días de ruta son experiencias de viaje y dependerán
+          de tu procedencia y tus gustos personales. ¿Qué quieres ver? ¿Qué
+          quieres vivir?
+        </p>
+        <p>
+          Habiéndote dicho todo eso, y porque estás planificando hacer de La
+          Fortuna y el volcán Arenal una parte de estas vacaciones, en este
+          artículo te vamos a hablar de las rutas que puedes tomar para llegar,
+          pensando sobre todo que en este país espectacular todos los caminos te
+          llevarán, inevitablemente, al alegre descubrimiento de que la vida, en
+          su estado más puro, está en todas partes.
+        </p>
+        <br />
+        <p>
+          Lo primero es saber de dónde vienes hacia La Fortuna e,
+          inevitablemente, para dónde vas desde acá.<br />
+          Acá vamos a cubrir las principales rutas que vienen desde el Valle Central,
+          las Llanuras del Caribe y el Norte de Costa Rica, la zona de Monteverde,
+          y el Pacífico Central y Norte.
+        </p>
+      </div>
+    </div>
+    <button class="toggleParagraphs sm:hidden text-botones font-semibold mt-2">
+      Ver más
+    </button>
+
+    <h2 id="introduccion" class="mt-12 text-xl font-bold">
+      Desde San José y el Aeropuerto Internacional Juan Santamaría (SJO)
+    </h2>
+
+    <p class="mt-2 text-sm">
+      Desde San José hacia La Fortuna hay tres rutas muy usadas: San Ramón,
+      Zarcero–Ciudad Quesada y Varablanca.
+    </p>
+
+    <div class="mt-6">
+      <img
+        src="https://i.ibb.co/9md420wg/Centro-San-Jose.jpg"
+        alt="Ruta desde San José a La Fortuna Costa Rica"
+        class="lg:h-[35rem] w-full h-[20rem] object-cover"
+      />
+    </div>
+
+    <!---------------1-------------------- -->
+
+    <h2 id="ruta1" class="mt-12 text-center lg:text-4xl text-xl font-bold">
+      Ruta 1: La Carretera Panamericana <br />vía San Ramón.
+    </h2>
+
+    <p class="font-Montserrat uppercase my-4 text-center lg:text-1xl text-sm">
+      Distancia: 145 km (90 millas) | Duración: 3 horas 15 minutos
+    </p>
+
+    <div class="w-full h-[400px]">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1SmCUl068SDVohtMw6lZ1jql1TCAD-bY&ehbc=2E312F&noprof=1"
+        class="w-full h-full border-0 rounded-lg"
+        loading="lazy"></iframe>
+    </div>
+
+    <div id="RutaSanRamon" class="mt-6 space-y-6 text-sm leading-relaxed">
+      <p>
+        Esta ruta inicia en la Carretera #1, la Panamericana Norte, la cual
+        puedes tomar cuando vienes desde cualquiera de las ciudades del Valle
+        Central o directamente desde el Aeropuerto Internacional Juan
+        Santamaría.
+      </p>
+
+      <div class="extraParagraphs hidden sm:block">
+        <p>
+          Saliendo del Valle Central y dirigiéndote hacia la ciudad de San Ramón
+          como primer punto de referencia, pasarás cerca de la pequeña ciudad de
+          Palmares, que en enero tiene sus vibrantes fiestas patronales que
+          muestran la auténtica cultura costarricense. Un poco antes de la
+          entrada a Palmares, encontrarás una gasolinera a la derecha, y un poco
+          más adelante a tu izquierda, descubrirás excelentes restaurantes
+          típicos junto con pequeñas tiendas donde puedes abastecerte de bolsas
+          de chips y lo que necesites para tu viaje, además de acceso a baños
+          limpios—perfecto para una parada antes de iniciar el viaje a través de
+          las montañas. Continuando por varios kilómetros más, encontrarás la
+          entrada a tu derecha que lleva a la pintoresca ciudad de San Ramón. Te
+          recomendamos tomar un desvío para explorar el mercado central con su
+          auténtica atmósfera local.
+        </p>
+        <br />
+        <p>
+          Cruzando San Ramón comenzarás el ascenso a la Cordillera Volcánica
+          Central a través de paisajes verdes con frecuencia envueltos en
+          neblina. A lo largo de esta ruta montañosa, pasarás a través del
+          Parque Nacional Juan Castro Blanco junto con varias otras reservas
+          naturales que muestran la sorprendente belleza del bosque lluvioso
+          tropical.
+        </p>
+        <br />
+        <p>
+          Al llegar a la zona de Bajo Rodríguez, tendrás que tomar a la
+          izquierda hasta llegar hasta La Fortuna.
+        </p>
+        <br />
+        <p>
+          En este camino hallarás múltiples actividades, pequeños negocios y
+          ventas de artesanías por si quieres detenerte y ver algo más de la
+          gente del campo costarricense.
+        </p>
+      </div>
+
+      <button
+        class="toggleParagraphs sm:hidden text-botones font-semibold mt-2"
+      >
+        Ver más
+      </button>
+    </div>
+
+    <!-- Imagen -->
+    <div class="mt-6">
+      <img
+        src="https://i.ibb.co/Q7sN2wNR/Catarata.jpg"
+        alt="Ruta Carretera Panamericana vía San Ramón."
+        class="lg:h-[35rem] w-full h-[20rem] object-cover"
+      />
+    </div>
+
+    <!------------------2----------------- -->
+
+    <h2 id="ruta2" class="mt-12 text-center lg:text-4xl text-xl font-bold">
+      Ruta 2: La Ruta Artesanal vía Zarcero <br /> y Ciudad Quesada
+    </h2>
+
+    <p class="font-Montserrat uppercase my-4 text-center lg:text-1xl text-sm">
+      Distancia: 130 km / 81 millas / ~3.5 horas
+    </p>
+
+    <div class="w-full h-[400px]">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1SmCUl068SDVohtMw6lZ1jql1TCAD-bY&ehbc=2E312F&noprof=1"
+        class="w-full h-full border-0 rounded-lg"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="mt-6 space-y-6 text-sm leading-relaxed">
+      <p>
+        Tomando también la Panamericana #1, llegas hasta el cruce que va hacia
+        la pequeña ciudad de Grecia, un pueblo progresista y fértil que es
+        coronado por su icónica iglesia metálica en un majestuoso estilo
+        neoclásico. Luego de pasar por la iglesia te dirigirás al pueblo de
+        Sarchi, cuna de los artesanos más conocidos del Valle Central y de sus
+        magníficas carretas pintadas a mano. En el pueblo de Sarchí encontrarás
+        varias fábricas de carretas y grandes tiendas de souvenirs donde puedes
+        encontrar un regalo para cada persona de tu entorno.
+      </p>
+      <div class="extraParagraphs hidden sm:block">
+        <p>
+          Al salir de Sarchi y luego de un corto viaje a través de pintorescos
+          cafetales, cruzarás el pueblo de Naranjo y comenzarás a ascender a la
+          Cordillera Volcánica Central. En esta ruta encontrarás paisajes
+          montañosos verdes y con vacas lecheras salpicando los campos. Al
+          llegar al pueblo de Zarcero, te recomendamos que conozcas el parque
+          central, un pequeño jardín de figuras podadas en diferentes formas
+          para el encanto de los visitantes. Al salir de Zarcero encontrarás un
+          restaurante que además de delicioso, es muy tradicional en la zona,
+          “La Cocina de Leti”, donde puedes parar a refrescarte, comerte algo
+          delicioso y aprovechar los baños.
+        </p>
+        <br />
+        <p>
+          A partir de ese punto comenzarás a descender a las llanuras de San
+          Carlos, y pronto verás la familiar silueta del Volcán Arenal. Al
+          llegar a las llanuras, pasarás por el pueblo de Florencia, desde donde
+          tomarás la ruta a la izquierda para llegar eventualmente a La Fortuna.
+          Esta ruta es más larga y compleja que la primera; tiene muchísimas
+          curvas y con frecuencia hay mucha neblina. Sin embargo, es igualmente
+          hermosa.
+        </p>
+      </div>
+    </div>
+    <button class="toggleParagraphs sm:hidden text-botones font-semibold mt-2">
+      Ver más
+    </button>
+
+    <!-- Imagen -->
+    <div class="mt-6">
+      <img
+        src="https://i.ibb.co/CpyYqXWC/Volcan-Arenal.jpg"
+        alt="Ruta Artesanal vía Zarcero y Ciudad Quesada"
+        class="lg:h-[35rem] w-full h-[20rem] object-cover"
+      />
+    </div>
+
+    <!------------------3----------------- -->
+
+    <h2 id="ruta3" class="mt-12 text-center lg:text-4xl text-xl font-bold">
+      Ruta 3: Varablanca, Volcán Poás<br /> y Cataratas
+    </h2>
+
+    <p class="font-Montserrat uppercase my-4 text-center lg:text-1xl text-sm">
+      Distancia: 140 km / 87 millas / ~3.5–4 horas.
+    </p>
+
+    <div class="w-full h-[400px]">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1twUlL4iEBIHsafIVt0Y3hDFqpsUoxtA&ehbc=2E312F&noprof=1"
+        class="w-full h-full border-0 rounded-lg"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="mt-6 space-y-6 text-sm leading-relaxed">
+      <p>
+        Si vienes desde San José, toma la Panamericana Norte #1 hasta las
+        inmediaciones del Aeropuerto Internacional Juan Santamaría y desde ahí
+        cruza hacia la derecha pasando por Alajuela, la segunda ciudad más
+        importante de Costa Rica. Pasarás frente al Monumento a nuestro héroe
+        nacional y el parque central de Alajuela, poblado por gigantescos
+        árboles de mango.
+      </p>
+      <div class="extraParagraphs hidden sm:block">
+        <p>
+          Al subir hacia la Cordillera Volcánica Central, pasarás por numerosas
+          plantaciones de café con tours diseñados para el aprendizaje y
+          disfrute de los amantes de nuestra bebida preferida. Conforme subes,
+          el paisaje cambia a fincas lecheras y plantaciones de helechos,
+          flores, y fresas. Aquí puedes seguir por esta carretera hasta su final
+          coronado por el Parque Nacional Volcán Poás.
+        </p>
+        <p class="text-black font-bold">
+          En la fecha en que este artículo está siendo escrito, junio 2025, el
+          volcán Poás ha tenido intensa actividad, por lo que el parque nacional
+          está temporalmente cerrado
+        </p>
+
+        <p>
+          Sin embargo, si prefieres seguir directo en la ruta, toma a la derecha
+          en el cruce a Varablanca, bien señalado, y cruza hermosos parajes de
+          ganado lechero y bosques nubosos. Al llegar a la gasolinera de
+          Varablanca, toma a la izquierda y comienza el descenso de la
+          cordillera entre dos gigantes: el Volcán Poás y el Volcán Barba. En
+          esta ruta curvilínea, que debes manejar con cuidado, encontrarás el
+          Jardín de Cataratas, un parque natural lleno de atracciones. Siguiendo
+          esta misma ruta llegarás al borde de la icónica Catarata de la Paz,
+          rodeada por un denso bosque tropical. Siguiendo la carretera llegarás
+          al pueblo de Cinchona; en esta zona encontrarás diversos miradores
+          para ver cataratas, abundantes colibríes y otras aves como tucancillos
+          y tangaras de diversos colores. Es una parada que vale la pena.
+        </p>
+
+        <p>
+          Al llegar al pueblo de San Miguel de Sarapiquí, toma a la izquierda en
+          una curva fácil de perder si no estás alerta. Sigue hasta el pueblo de
+          Aguas Zarcas, donde tomarás hacia la derecha la ruta al volcán, bien
+          señalizada.
+        </p>
+
+        <p>
+          Las llanuras del norte de Costa Rica son fértiles y verás numerosas
+          plantaciones de frutales y plantas ornamentales, así como campos de
+          ganado de carne. Encontrarás pequeños pueblos, restaurantes y
+          proyectos de diversa índole.
+        </p>
+      </div>
+    </div>
+    <button class="toggleParagraphs sm:hidden text-botones font-semibold mt-2">
+      Ver más
+    </button>
+    <!-- Imagen -->
+    <div class="mt-6">
+      <img
+        src="https://i.ibb.co/whSgWr6Q/Colibri.jpg"
+        alt="Ruta Varablanca, Volcán Poas y Cataratas"
+        class="lg:h-[35rem] w-full h-[20rem] object-cover"
+      />
+    </div>
+
+    <!------------------4----------------- -->
+
+    <h2 id="ruta4" class="mt-12 text-center lg:text-4xl text-xl font-bold">
+      Ruta 4: Guanacaste
+    </h2>
+
+    <p class="font-Montserrat uppercase my-4 text-center lg:text-1xl text-sm">
+      Distancia: Aeropuerto de Liberia a La Fortuna: 140 km / 87 millas / ~2.5–3
+      horas <br />
+      Distancia: Playa Tamarindo a La Fortuna: 200 km / 124 millas / ~4.5–5 horas
+      <br />
+      Distancia: Entrada del Parque Nacional Rincón de la Vieja a La Fortuna: 120
+      km / 75 millas / ~3 horas <br />
+      Distancia: Golfo de Papagayo a La Fortuna: 160 km / 99 millas / ~3.5 horas
+    </p>
+
+    <div class="w-full h-[400px]">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1oq3Uct9Lx-zbprotg45IyekueYXb-SE&ehbc=2E312F&noprof=1"
+        class="w-full h-full border-0 rounded-lg"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="mt-6 space-y-6 text-sm leading-relaxed">
+      <p id="rutaGuanacaste">
+        Las rutas desde cualquier punto de Guanacaste, así como desde Nicaragua,
+        pasan por la ciudad de Liberia, así que en esta descripción iniciaremos
+        la explicación directamente ahí. Desde donde tomarás la Panamericana
+        Norte con rumbo a la ciudad de Cañas, adonde te desviarás para ir hasta
+        la localidad de Tilarán.
+      </p>
+      <div class="extraParagraphs hidden sm:block">
+        <p>
+          No necesitas entrar a la pequeña ciudad, pero es un pueblo bonito y
+          tranquilo al que quizás quieras echarle una ojeada. Luego tomarás la
+          ruta que bordea el lago Arenal, pasando en principio por el pequeño
+          pueblito de Nuevo Arenal. En esta parte de la ruta encontrarás algunas
+          cafeterías con muy buena repostería usando el principal ingrediente
+          que se cultiva en la zona, la deliciosa nuez de macadamia.
+        </p>
+      </div>
+    </div>
+    <button class="toggleParagraphs sm:hidden text-botones font-semibold mt-2">
+      Ver más
+    </button>
+    <!-- Imagen -->
+    <div class="mt-6">
+      <img
+        src="https://i.ibb.co/Q7CxzXcV/Playa-Guanacaste2.jpg"
+        alt="Ruta Guanacaste hacia La Fortuna"
+        class="lg:h-[35rem] w-full h-[20rem] object-cover"
+      />
+    </div>
+
+    <!------------------5----------------- -->
+
+    <h2 id="ruta5" class="mt-12 text-center lg:text-4xl text-xl font-bold">
+      Ruta 5: Monteverde (Santa Elena) <br /> a La Fortuna
+    </h2>
+
+    <p class="font-Montserrat uppercase my-4 text-center lg:text-1xl text-sm">
+      Distancia: 120 km / 75 millas / ~3.5 horas
+    </p>
+
+    <div class="w-full h-[400px]">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1gCgm1ALDm15MxBUdvenOIPzofZ8vktA&ehbc=2E312F&noprof=1"
+        class="w-full h-full border-0 rounded-lg"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="mt-6 space-y-6 text-sm leading-relaxed">
+      <p>
+        Si vienes manejando desde Monteverde hacia La Fortuna, tienes que tomar
+        la ruta del pueblito El Dos, pasando por hermosas vistas del lago,
+        cafetales abundantes y un verdor exuberante. Esta ruta también conecta
+        con la ciudad de Tilarán. Para continuar a partir de ahí, en la misma
+        ruta que describimos anteriormente, bordeando el lago hasta La Fortuna, <a
+          href="#rutaGuanacaste"
+          class="underline text-blue-600">haz click aquí</a
+        >
+      </p>
+      <div class="extraParagraphs hidden sm:block">
+        <p class="text-black font-bold">Bote Coche Bote</p>
+        <p>
+          Si no vienes manejando, contáctanos para coordinarte un viaje mucho
+          más rápido, sencillo y hermoso en el que conectarás con La Fortuna en
+          un viaje a través del lago que te permitirá vistas fascinantes del
+          volcán y de los bosques circundantes.
+        </p>
+        <p>
+          La carretera que bordea el lago Arenal es una de las rutas más
+          hermosas de Costa Rica, especialmente en la estación seca, cuando las
+          vistas son impresionantes y se siente la transición del vibrante
+          bosque tropical lluvioso a la suave simplicidad del bosque tropical
+          seco.
+        </p>
+      </div>
+    </div>
+
+    <button class="toggleParagraphs sm:hidden text-botones font-semibold mt-2">
+      Ver más
+    </button>
+
+    <!-- Imagen -->
+    <div class="mt-6">
+      <img
+        src="https://i.ibb.co/MxGyNRKD/Volcan-Arenal2.jpg"
+        alt="Ruta Monteverde (Santa Elena) a La Fortuna"
+        class="lg:h-[35rem] w-full h-[20rem] object-cover"
+      />
+    </div>
+
+    <!------------------6---------------- -->
+
+    <h2 id="ruta6" class="mt-12 text-center lg:text-4xl text-xl font-bold">
+      Ruta 6: Desde Manuel Antonio <br /> o cualquier parte del Pacífico Central
+      <br /> o Sur hacia la Fortuna
+    </h2>
+
+    <p class="font-Montserrat uppercase my-4 text-center lg:text-1xl text-sm">
+      Distancia: 210 km / 130 millas / ~4.5–5 horas.
+    </p>
+
+    <div class="w-full h-[400px]">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1LZ8PhzCOepuOaV84w3YAq6dmAPTvLYU&ehbc=2E312F&noprof=1"
+        class="w-full h-full border-0 rounded-lg"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="mt-6 space-y-6 text-sm leading-relaxed">
+      <p>
+        Para venir desde Manuel Antonio o cualquier parte en el Pacífico Central
+        o Pacífico Sur la ruta más práctica es tomar la ruta costanera hasta la
+        zona de Puntarenas o el puerto de Caldera, luego al Cruce de Barranca, y
+        siguiendo la Carretera Panamericana Norte, subir hasta llegar a la
+        entrada de San Ramon. <a
+          href="#RutaSanRamon"
+          class="underline text-blue-600">Ruta #1 de esta lista.</a
+        >
+      </p>
+    </div>
+
+    <!-- Imagen -->
+    <div class="mt-6">
+      <img
+        src="https://i.ibb.co/gbvDkyk5/Playa-Guanacaste.jpg"
+        alt="Ruta Desde Manuel Antonio o cualquier parte del Pacífico Central o Sur hacia la Fortuna"
+        class="lg:h-[35rem] w-full h-[20rem] object-cover"
+      />
+    </div>
+
+    <!------------------7----------------- -->
+
+    <h2 id="ruta7" class="mt-12 text-center lg:text-4xl text-xl">
+      Ruta 7: Desde la Costa Caribeña
+    </h2>
+
+    <p class="font-Montserrat uppercase my-4 text-center lg:text-1xl text-sm">
+      Distancia: Puerto Viejo de Limón a La Fortuna: 220 km / 137 millas /
+      ~5.5–6 horas.s <br />
+      Distancia: Cahuita a La Fortuna: 210 km / 130 millas / ~5–5.5 horas.<br />
+      Distancia: La Pavona (Muelle de Tortuguero) a La Fortuna: 150 km / 93 millas
+      / ~3.5–4 horas.<br />
+      Distancia: Caño Blanco Muelle (Tortuguero) a La Fortuna: 160 km / 99 millas
+      / ~4–4.5 horas.<br />
+      Distancia: Sarapiquí a La Fortuna: 85 km / 53 millas / ~2 horas.
+    </p>
+
+    <div class="w-full h-[400px]">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1B-aVoA_WF2iOM1I4bZLArY-kn1cRZIg&ehbc=2E312F&noprof=1"
+        class="w-full h-full border-0 rounded-lg"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="mt-6 space-y-6 text-sm leading-relaxed">
+      <p>
+        Desde cualquier punto de la costa Caribe de Costa Rica, incluyendo los
+        muelles de La Pavona y Caño Blanco, las direcciones son las mismas.
+        Busca la Ruta 32 hasta llegar a la altura del cruce de Río Frío, antes
+        de comenzar a subir las montañas. En ese cruce tomarás la ruta que va
+        paralela al pueblo de Horquetas y en medio de plantaciones de
+        ornamentales, piña y palmito.
+      </p>
+      <div class="extraParagraphs hidden sm:block">
+        <p>
+          Es una ruta en la que podrás parar a comer en uno de los restaurantes
+          de carretera y probar los deliciosos sabores locales. Esta carretera
+          llega a cruzar el Río Sarapiquí antes de llegar al cruce de Puerto
+          Viejo (De Sarapiquí, ojo, que no es el mismo que encuentras en el
+          Caribe Sur). Ahí tomas a mano izquierda y sin virar en ninguna parte
+          llegarás al cruce de San Miguel de Sarapiquí, que te conectará con la <a
+            href="#ruta2"
+            class="underline text-blue-600">Ruta #2 de ésta lista</a
+          >.
+        </p>
+        <p>
+          Te esperamos acá, en el corazón de La Fortuna <br />
+          Y ahora que ya tienes claro cómo llegar, te sugerimos que hagas de DownTown
+          La Fortuna tu base de operaciones en la increíblemente diversa zona de
+          La Fortuna.
+        </p>
+        <p>
+          Llena de aventuras de todo tipo, de bosques con abundante vida salvaje
+          y de deliciosos spas la región ofrece tanto que vale la pena estar en
+          el corazón de todas las experiencias.
+        </p>
+
+        <p>
+          Disfruta de nuestras habitaciones cómodas y amplias, de numerosas
+          opciones para comer, nuestra piscina, y zona de parqueo. Reserva con
+          nosotros y déjanos mostrarte qué nos hace el corazón de todas las
+          experiencias de La Fortuna y Arenal.
+        </p>
+
+        <p>Te esperamos acá, con los brazos abiertos.</p>
+      </div>
+    </div>
+    <button class="toggleParagraphs sm:hidden text-botones font-semibold mt-2">
+      Ver más
+    </button>
+    <!-- Imagen -->
+    <div class="mt-6">
+      <img
+        src="https://i.ibb.co/1GzfRS3k/Playa-Limon.jpg"
+        alt="Desde la Costa Caribeña"
+        class="lg:h-[35rem] w-full h-[20rem] object-cover"
+      />
+    </div>
+  </main>
+  ) : (
+
+    <main class="max-w-4xl mx-auto mt-20 p-6 text-center">
+      <h1 class="text-4xl font-bold">{blog.title}</h1>
+      <img src={blog.imagen} class="my-8 rounded-xl mx-auto" />
+      <p class="text-xl text-gray-600">
+        Próximamente más información sobre {blog.title}. Estamos preparando el mejor contenido para ti.
+      </p>
+      <a href="/blog" class="mt-8 inline-block text-blue-600">← Volver al blog</a>
+    </main>
+  )}
+</BlogLayout>
+<script>
+  const toggleBtn = document.getElementById("toggle-toc");
+  const toc = document.getElementById("toc");
+  let isVisible = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isVisible = !isVisible;
+    toc.classList.toggle("hidden", !isVisible);
+    toggleBtn.textContent = isVisible ? "Ocultar índice" : "Mostrar índice";
+  });
+
+  const buttons = document.querySelectorAll(".toggleParagraphs");
+  const contents = document.querySelectorAll(".extraParagraphs");
+
+  buttons.forEach((button, index) => {
+    let isOpen = false;
+    button.addEventListener("click", () => {
+      isOpen = !isOpen;
+      contents[index].classList.toggle("hidden", !isOpen);
+      button.textContent = isOpen ? "Ver menos" : "Ver más";
+    });
+  });
+
+  document.querySelectorAll(".toc-item").forEach((link) => {
+    const el = link as HTMLElement;
+
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const id = el.dataset.target;
+      const target = document.getElementById(id);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+</script>

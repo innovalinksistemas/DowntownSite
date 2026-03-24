@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "¿Cómo llegar a La Fortuna?",
+    "subtitle": "Guía de transportes",
+    "imagen": "https://i.ibb.co/fYc3JMYn/volcanll.png"
+  },
+  {
+    "id": 2,
+    "title": "¿Por qué todos quieren hospedarse en Downtown La Fortuna Boutique Hotel?",
+    "subtitle": "¡El corazón de las experiencias!",
+    "imagen": "https://i.ibb.co/ZpzrrMjB/downtown.png"
+  },
+
+  {
+    "id": 3,
+    "title": "¿Por qué todos terminan la noche en Selva Negra?",
+    "subtitle": "Noches de tematica",
+    "imagen": "https://i.ibb.co/35cK8bxW/selva.png"
+  },
+  {
+    "id": 4,
+    "title": "Monedas y billetes de Costa Rica.",
+    "subtitle": "Tipo de cambio, impuestos y consejos.",
+    "imagen": "https://i.ibb.co/TDrX8gp9/billetes.png"
+  },
+  {
+    "id": 5,
+    "title": "Historia del Volcán Arenal, Cerro Chato y Cerro Los Perdidos",
+    "subtitle": "Leyendas que viven",
+    "imagen": "https://i.ibb.co/KjSKLTyY/volcan.png"
+  },
+  {
+    "id": 6,
+    "title": "Las 10 mejores aguas termales de La Fortuna",
+    "subtitle": "Elegí tu termal ideal",
+    "imagen": "https://i.ibb.co/yBBJqpLT/termales.png"
+  },
+
+  {
+    "id": 7,
+    "title": "Joyas escondidas de La Fortuna que no te podés perder",
+    "subtitle": "Secretos que sorprenden",
+    "imagen": "https://i.ibb.co/93hJjfP0/llegar.png"
+  }
+]

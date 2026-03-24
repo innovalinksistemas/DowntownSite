@@ -187,7 +187,7 @@ export default function ImageGallery() {
 
       <button
         onClick={prevImage}
-        className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-botones text-white p-1 sm:p-2 rounded-full"
+        className="absolute -left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-botones text-white p-1 sm:p-2 rounded-full"
         aria-label="Imágenes anteriores"
       >
         <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
@@ -195,7 +195,7 @@ export default function ImageGallery() {
 
       <button
         onClick={nextImage}
-        className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-botones text-white p-1 sm:p-2 rounded-full"
+        className="absolute -right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-botones text-white p-1 sm:p-2 rounded-full"
         aria-label="Siguientes imágenes"
       >
         <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
