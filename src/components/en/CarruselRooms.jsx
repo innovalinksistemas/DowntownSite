@@ -118,9 +118,9 @@ export default function ImageGallery() {
                         <img
                           src="https://i.ibb.co/0jC0W3CB/cama.png"
                           alt="bed"
-                          className="w-5 h-5 mr-2"
+                          className="w-5 h-5 mr-2 self-start mt-0.5"
                         />
-                        {room.beds}
+                        <span className="whitespace-pre-line">{room.beds}</span>
                       </div>
 
                       <div className="inline-flex items-center bg-gray-100 px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm text-texto font-Montserrat w-fit">
