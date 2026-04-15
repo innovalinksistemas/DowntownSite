@@ -21,8 +21,8 @@ import Footer from "@components/Footer.astro";
         Oferta exclusiva para nacionales · La Fortuna
       </p>
 
-      <h1 class="font-Lobster text-5xl md:text-7xl mb-2 leading-tight drop-shadow-lg">
-        Hospedaje + Baldi
+      <h1 class="font-Lobster text-4xl md:text-6xl lg:text-7xl mb-2 leading-tight drop-shadow-lg whitespace-nowrap">
+        Hospedaje + Pase del Día Baldi
       </h1>
 
       <p class="font-Montserrat text-sm tracking-[0.3em] text-white/80 mb-4">desde:</p>
@@ -40,7 +40,7 @@ import Footer from "@components/Footer.astro";
       </div>
 
       <div class="inline-block bg-botones text-white font-Montserrat font-semibold text-sm md:text-base px-6 py-2 rounded-full my-5">
-        Hospedaje · Desayuno · Almuerzo · Cena · Baldi
+        Hospedaje - Pase a Baldi - Almuerzo - Cena - Desayuno
       </div>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -114,7 +114,7 @@ import Footer from "@components/Footer.astro";
         </div>
         <div class="p-6">
           <h3 class="font-Lobster text-titulo text-2xl mb-2">Hotel más céntrico</h3>
-          <p class="font-Montserrat text-texto text-sm leading-relaxed">Ubicados en el corazón de La Fortuna, a pasos del parque central y con vista al Volcán Arenal.</p>
+          <p class="font-Montserrat text-texto text-sm leading-relaxed">Ubicados en el corazón de La Fortuna, a pasos del parque central y cerca de las principales experiencias de la zona.</p>
         </div>
         <div class="p-6">
           <h3 class="font-Lobster text-titulo text-2xl mb-2">Termales más grandes</h3>
@@ -150,7 +150,7 @@ import Footer from "@components/Footer.astro";
           </div>
           <h3 class="font-Lobster text-white text-2xl mb-3">Alimentación completa</h3>
           <p class="font-Montserrat text-white/90 text-sm leading-relaxed">
-            Desayuno buffet + Bebida de bienvenida + Almuerzo y Cena en Baldi Hot Springs estilo bufet.
+            Desayuno (a la carta o buffet) + Bebida de bienvenida + Almuerzo y Cena en Baldi Hot Springs estilo bufet.
           </p>
         </div>
 
@@ -162,7 +162,7 @@ import Footer from "@components/Footer.astro";
           </div>
           <h3 class="font-Lobster text-titulo text-2xl mb-3">Aguas Termales Baldi</h3>
           <p class="font-Montserrat text-texto text-sm leading-relaxed">
-            Pase de día completo: 25 piscinas termales, toboganes, sauna natural y jardín termal.
+            Pase de día completo (10AM – 10PM): 25 piscinas termales, toboganes, sauna natural y jardín termal.
           </p>
         </div>
       </div>
@@ -173,11 +173,11 @@ import Footer from "@components/Footer.astro";
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 font-Montserrat text-texto text-sm md:text-base">
           {[
             "Alojamiento de 1 noche en La Fortuna Downtown Boutique Hotel",
-            "Entradas a Baldi Hot Springs (Pase de un día)",
-            "Desayuno buffet",
+            "Entradas a Baldi Hot Springs – Pase del día (10AM – 10PM)",
+            "Desayuno (a la carta o buffet)",
             "Almuerzo y Cena en Baldi Hot Springs (estilo bufet)",
             "Bebida de bienvenida",
-            "Cocteles 2×1 en Selva Negra Bar o María Bonita (12 m.d. – 5 p.m.)",
+            "Cocteles 2×1 – Selva Negra Bar / María Bonita · 12 m.d.–5 p.m.",
             "Parqueo privado gratuito",
             "Acceso a piscina del hotel",
             "WiFi gratuito",
@@ -217,7 +217,7 @@ import Footer from "@components/Footer.astro";
             <p>Actividades y tours con <strong>precios especiales para nacionales</strong></p>
           </div>
           <div class="flex flex-col items-center gap-2">
-            <p><strong>10% de descuento</strong> en el Restaurante María Bonita Steak House</p>
+            <p><strong>10% de descuento</strong> en María Bonita Steak House, Selva Negra y La Ventanita de María Bonita</p>
           </div>
           <div class="flex flex-col items-center gap-2">
             <p>Paquetes de <strong>masajes con precios especiales</strong> para nacionales</p>
@@ -451,7 +451,7 @@ import Footer from "@components/Footer.astro";
     const contacto  = (document.getElementById("contacto")  as HTMLInputElement)?.value  || "";
     const huespedes = (document.getElementById("huespedes") as HTMLSelectElement)?.value || "";
 
-    let msg = "Hola, me interesa el paquete *Hospedaje + Baldi* (₡49.800 i.i por persona).";
+    let msg = "Hola, me interesa el paquete *Hospedaje + Pase del Día Baldi* (₡49.800 i.i por persona).";
     if (nombre)    msg += `\n*Nombre:* ${nombre}`;
     if (fechas)    msg += `\n*Fechas:* ${fechas}`;
     if (huespedes) msg += `\n*Huéspedes:* ${huespedes}`;
