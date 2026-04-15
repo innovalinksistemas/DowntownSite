@@ -1,0 +1,487 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+---
+
+<Layout>
+  <Header />
+
+  <!-- ===== HERO ===== -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <img
+      src="https://i.ibb.co/Xr70WzXY/baldi3.png"
+      alt="Aguas Termales Baldi"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
+      <p class="font-Montserrat text-xs uppercase tracking-widest mb-3 text-white/70">
+        Oferta exclusiva para nacionales · La Fortuna
+      </p>
+
+      <h1 class="font-Lobster text-5xl md:text-7xl mb-2 leading-tight drop-shadow-lg">
+        Hospedaje + Baldi
+      </h1>
+
+      <p class="font-Montserrat text-sm tracking-[0.3em] text-white/80 mb-4">desde:</p>
+
+      <div class="mb-3">
+        <p class="font-Montserrat text-5xl md:text-7xl font-bold drop-shadow-lg">
+          ₡49.800 <span class="text-2xl md:text-4xl font-semibold">i.i</span>
+        </p>
+        <p class="font-Montserrat text-sm md:text-base text-white/75 mt-2">
+          por persona en ocupación doble
+        </p>
+        <p class="font-Montserrat text-xs text-white/60 mt-1">
+          Niños 0–5 GRATIS · Niños 6–10: ₡35.000
+        </p>
+      </div>
+
+      <div class="inline-block bg-botones text-white font-Montserrat font-semibold text-sm md:text-base px-6 py-2 rounded-full my-5">
+        Hospedaje · Desayuno · Almuerzo · Cena · Baldi
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://wa.me/50685274677?text=Hola,%20me%20interesa%20el%20paquete%20Hospedaje%20+%20Baldi%20(₡49.800)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button class="bg-botones hover:bg-red-700 text-white font-Montserrat font-semibold px-8 py-3 rounded-full text-sm md:text-base w-full sm:w-auto transition-colors duration-200">
+            Reservar Oferta
+          </button>
+        </a>
+        <a href="#incluye">
+          <button class="border-2 border-white text-white hover:bg-white hover:text-texto font-Montserrat font-semibold px-8 py-3 rounded-full text-sm md:text-base w-full sm:w-auto transition-colors duration-200">
+            Ver detalles del paquete
+          </button>
+        </a>
+      </div>
+
+      <p class="font-Montserrat text-xs text-white/50 mt-6">
+        *Válido del 10 de abril al 30 de junio · Aplican restricciones
+      </p>
+    </div>
+
+    <a href="#countdown-section" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ===== COUNTDOWN ===== -->
+  <section id="countdown-section" class="bg-botones text-white py-5 px-4">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left">
+        <p class="font-Montserrat text-xs uppercase tracking-widest text-white/70 mb-1">Oferta por tiempo limitado</p>
+        <p class="font-Montserrat text-base font-semibold">Válido del 10 de abril al 30 de junio</p>
+      </div>
+      <div id="countdown" class="flex gap-6">
+        <div class="text-center">
+          <span id="cnt-days"  class="block font-Montserrat font-bold text-4xl leading-none tabular-nums">--</span>
+          <span class="font-Montserrat text-xs text-white/70 uppercase tracking-wide">días</span>
+        </div>
+        <div class="text-center">
+          <span id="cnt-hours" class="block font-Montserrat font-bold text-4xl leading-none tabular-nums">--</span>
+          <span class="font-Montserrat text-xs text-white/70 uppercase tracking-wide">horas</span>
+        </div>
+        <div class="text-center">
+          <span id="cnt-mins"  class="block font-Montserrat font-bold text-4xl leading-none tabular-nums">--</span>
+          <span class="font-Montserrat text-xs text-white/70 uppercase tracking-wide">min</span>
+        </div>
+        <div class="text-center">
+          <span id="cnt-secs"  class="block font-Montserrat font-bold text-4xl leading-none tabular-nums">--</span>
+          <span class="font-Montserrat text-xs text-white/70 uppercase tracking-wide">seg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROPUESTA DE VALOR ===== -->
+  <section class="bg-white py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="font-Montserrat text-sm text-botones uppercase tracking-widest font-semibold">¿Por qué elegirnos?</p>
+        <h2 class="font-Lobster text-titulo text-4xl md:text-5xl mt-2">La mejor experiencia al mejor precio</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="p-6">
+          <h3 class="font-Lobster text-titulo text-2xl mb-2">Mejores precios</h3>
+          <p class="font-Montserrat text-texto text-sm leading-relaxed">Precios especiales para nacionales, mejores que en temporada alta.</p>
+        </div>
+        <div class="p-6">
+          <h3 class="font-Lobster text-titulo text-2xl mb-2">Hotel más céntrico</h3>
+          <p class="font-Montserrat text-texto text-sm leading-relaxed">Ubicados en el corazón de La Fortuna, a pasos del parque central y con vista al Volcán Arenal.</p>
+        </div>
+        <div class="p-6">
+          <h3 class="font-Lobster text-titulo text-2xl mb-2">Termales más grandes</h3>
+          <p class="font-Montserrat text-texto text-sm leading-relaxed">Acceso a Baldi Hot Springs, el complejo termal más grande del mundo con 25 piscinas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUÉ INCLUYE ===== -->
+  <section id="incluye" class="bg-fondog py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="font-Montserrat text-sm text-botones uppercase tracking-widest font-semibold">Paquete completo</p>
+        <h2 class="font-Lobster text-titulo text-4xl md:text-5xl mt-2">¿Qué incluye tu paquete?</h2>
+      </div>
+
+      <!-- Cards principales -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+        <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-200">
+          <div class="w-16 h-16 bg-botones/10 rounded-full flex items-center justify-center mx-auto mb-5">
+            <img src="https://i.ibb.co/0jC0W3CB/cama.png" alt="Hospedaje" class="w-8 h-8" />
+          </div>
+          <h3 class="font-Lobster text-titulo text-2xl mb-3">Hospedaje de Lujo</h3>
+          <p class="font-Montserrat text-texto text-sm leading-relaxed">
+            1 noche en La Fortuna Downtown Boutique Hotel. Piscina, WiFi y parqueo privado gratuito incluidos.
+          </p>
+        </div>
+
+        <div class="bg-botones rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-200">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-5">
+            <img src="https://i.ibb.co/v4nThz4D/cafe.png" alt="Comidas" class="w-8 h-8" />
+          </div>
+          <h3 class="font-Lobster text-white text-2xl mb-3">Alimentación completa</h3>
+          <p class="font-Montserrat text-white/90 text-sm leading-relaxed">
+            Desayuno buffet + Bebida de bienvenida + Almuerzo y Cena en Baldi Hot Springs estilo bufet.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-200">
+          <div class="w-16 h-16 bg-botones/10 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-botones" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m8-9h1M3 12H2m15.364-6.364l.707.707M5.636 18.364l-.707.707M18.364 18.364l.707-.707M5.636 5.636l-.707-.707M12 7a5 5 0 110 10A5 5 0 0112 7z"/>
+            </svg>
+          </div>
+          <h3 class="font-Lobster text-titulo text-2xl mb-3">Aguas Termales Baldi</h3>
+          <p class="font-Montserrat text-texto text-sm leading-relaxed">
+            Pase de día completo: 25 piscinas termales, toboganes, sauna natural y jardín termal.
+          </p>
+        </div>
+      </div>
+
+      <!-- Lista completa de incluye -->
+      <div class="bg-white rounded-2xl p-8 md:p-12">
+        <h3 class="font-Lobster text-titulo text-3xl mb-8 text-center">Todo lo que está incluido</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 font-Montserrat text-texto text-sm md:text-base">
+          {[
+            "Alojamiento de 1 noche en La Fortuna Downtown Boutique Hotel",
+            "Entradas a Baldi Hot Springs (Pase de un día)",
+            "Desayuno buffet",
+            "Almuerzo y Cena en Baldi Hot Springs (estilo bufet)",
+            "Bebida de bienvenida",
+            "Cocteles 2×1 en Selva Negra Bar o María Bonita (12 m.d. – 5 p.m.)",
+            "Parqueo privado gratuito",
+            "Acceso a piscina del hotel",
+            "WiFi gratuito",
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex-shrink-0 w-2 h-2 rounded-full bg-botones mt-2"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <!-- Precios niños -->
+        <div class="mt-8 pt-6 border-t border-fondoF grid grid-cols-1 sm:grid-cols-3 gap-4 text-center font-Montserrat">
+          <div class="bg-fondog rounded-xl p-4">
+            <p class="text-xs text-titulo uppercase tracking-wide mb-1">Adulto</p>
+            <p class="text-2xl font-bold text-texto">₡49.800</p>
+            <p class="text-xs text-titulo mt-1">por persona</p>
+          </div>
+          <div class="bg-fondog rounded-xl p-4">
+            <p class="text-xs text-titulo uppercase tracking-wide mb-1">Niño 6–10 años</p>
+            <p class="text-2xl font-bold text-texto">₡35.000</p>
+            <p class="text-xs text-titulo mt-1">por persona</p>
+          </div>
+          <div class="bg-botones rounded-xl p-4">
+            <p class="text-xs text-white/80 uppercase tracking-wide mb-1">Niño 0–5 años</p>
+            <p class="text-2xl font-bold text-white">GRATIS</p>
+            <p class="text-xs text-white/80 mt-1">sin costo adicional</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beneficios adicionales -->
+      <div class="mt-8 bg-white rounded-2xl p-8">
+        <h3 class="font-Lobster text-titulo text-2xl mb-6 text-center">Beneficios adicionales para nacionales</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-Montserrat text-sm text-texto text-center">
+          <div class="flex flex-col items-center gap-2">
+            <p>Actividades y tours con <strong>precios especiales para nacionales</strong></p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <p><strong>10% de descuento</strong> en el Restaurante María Bonita Steak House</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <p>Paquetes de <strong>masajes con precios especiales</strong> para nacionales</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HABITACIONES ===== -->
+  <section class="bg-white py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="font-Montserrat text-sm text-botones uppercase tracking-widest font-semibold">Nuestras habitaciones</p>
+        <h2 class="font-Lobster text-titulo text-4xl md:text-5xl mt-2">Tu descanso, nuestra prioridad</h2>
+      </div>
+      <p class="font-Montserrat text-texto text-sm text-center mb-8 max-w-2xl mx-auto">
+        La habitación se asigna según disponibilidad y cantidad de personas en la reserva.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          {
+            src: "https://i.ibb.co/PGZPHP1N/Estandar-Doble3.png",
+            label: "Standard Doble",
+            camas: "1 cama Matrimonial",
+            ocupacion: "Hasta 2 personas",
+          },
+          {
+            src: "https://i.ibb.co/SX2LGSHN/Estandar-Triple3.png",
+            label: "Standard Triple",
+            camas: "1 cama Matrimonial + 1 Individual",
+            ocupacion: "Hasta 3 personas",
+          },
+          {
+            src: "https://i.ibb.co/kshJL68d/superior3.png",
+            label: "Superior",
+            camas: "1 cama Queen",
+            ocupacion: "Hasta 2 personas",
+          },
+          {
+            src: "https://i.ibb.co/gbVPz97Z/tropical3.png",
+            label: "Tropical Family",
+            camas: "2 matrimoniales ó 1 matrimonial + 2 individuales",
+            ocupacion: "Hasta 4–5 personas",
+          },
+        ].map(({ src, label, camas, ocupacion }) => (
+          <div class="rounded-2xl overflow-hidden group bg-fondog shadow-sm">
+            <div class="relative overflow-hidden">
+              <img
+                src={src}
+                alt={label}
+                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                <p class="font-Lobster text-white text-lg">{label}</p>
+              </div>
+            </div>
+            <div class="p-4 font-Montserrat text-xs text-texto space-y-1">
+              <p class="flex items-start gap-2">
+                <img src="https://i.ibb.co/0jC0W3CB/cama.png" alt="cama" class="w-4 h-4 mt-0.5 flex-shrink-0" />
+                {camas}
+              </p>
+              <p class="flex items-center gap-2 text-botones font-semibold">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/>
+                </svg>
+                {ocupacion}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA BALDI ===== -->
+  <section class="bg-fondog py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="font-Montserrat text-sm text-botones uppercase tracking-widest font-semibold">La experiencia Baldi</p>
+        <h2 class="font-Lobster text-titulo text-4xl md:text-5xl mt-2">Sumérgete en las termales</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="rounded-2xl overflow-hidden">
+          <img
+            src="https://i.ibb.co/0R16Yc59/baldi1.png"
+            alt="Baldi Hot Springs"
+            class="w-full h-[420px] object-cover hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="bg-white rounded-2xl p-8 flex-1">
+            <h3 class="font-Lobster text-titulo text-3xl mb-4">La Experiencia Baldi</h3>
+            <p class="font-Montserrat text-texto text-sm md:text-base leading-relaxed mb-6">
+              Sumérjase en aguas ricas en minerales, calentadas naturalmente por el corazón del Volcán Arenal. 25 piscinas termales, toboganes, sauna y el jardín termal más grande del mundo lo esperan.
+            </p>
+            <a
+              href="https://wa.me/50685274677?text=Hola,%20me%20interesa%20el%20paquete%20Hospedaje%20+%20Baldi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 font-Montserrat text-sm font-semibold text-botones hover:text-red-700 transition-colors"
+            >
+              Reservar ahora &rarr;
+            </a>
+          </div>
+          <div class="rounded-2xl overflow-hidden h-[200px]">
+            <img
+              src="https://i.ibb.co/KjXW6MkG/baldi2.png"
+              alt="Baldi piscinas"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="bg-white py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="font-Montserrat text-sm text-botones uppercase tracking-widest font-semibold mb-3">Cupos limitados</p>
+      <h2 class="font-Lobster text-titulo text-4xl md:text-5xl mb-4">Asegure su estancia</h2>
+      <p class="font-Montserrat text-texto text-base md:text-lg mb-8">
+        Complete los detalles para verificar disponibilidad y consultar su precio promocional.
+        <br/><span class="text-sm text-titulo">Oferta válida del 10 de abril al 30 de junio.</span>
+      </p>
+
+      <a
+        href="https://wa.me/50685274677?text=Hola,%20me%20interesa%20el%20paquete%20Hospedaje%20+%20Baldi%20(₡49.800%20i.i%20por%20persona)."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block"
+      >
+        <button class="w-full bg-botones hover:bg-red-700 text-white font-Montserrat font-semibold py-4 rounded-xl text-sm md:text-base flex items-center justify-center gap-3 transition-colors duration-200">
+          <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 2a10 10 0 110 20A10 10 0 0112 2"/>
+          </svg>
+          Consultar disponibilidad por WhatsApp
+        </button>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== POLÍTICAS DE CANCELACIÓN ===== -->
+  <section class="bg-fondog py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-8">
+        <p class="font-Montserrat text-sm text-botones uppercase tracking-widest font-semibold">Políticas FIT</p>
+        <h2 class="font-Lobster text-titulo text-3xl md:text-4xl mt-2">Políticas de cancelación</h2>
+      </div>
+      <div class="space-y-4 font-Montserrat text-sm text-texto">
+        <div class="bg-white rounded-xl p-5 flex items-start gap-4 border-l-4 border-green-500">
+          <div class="flex-shrink-0 w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-texto mb-1">Más de 30 días antes de la llegada</p>
+            <p class="text-titulo">Sin cargo por cancelación.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-5 flex items-start gap-4 border-l-4 border-yellow-400">
+          <div class="flex-shrink-0 w-10 h-10 bg-yellow-50 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-texto mb-1">Entre 29 y 15 días antes de la llegada</p>
+            <p class="text-titulo">Cargo del <strong class="text-texto">50%</strong> del total de la reserva.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-5 flex items-start gap-4 border-l-4 border-botones">
+          <div class="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5 text-botones" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-texto mb-1">Entre 14 y 0 días antes de la llegada</p>
+            <p class="text-titulo">Cargo del <strong class="text-texto">100%</strong> del total de la reserva.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  // ── Countdown hasta el 30 de junio 2026 ──────────────────────────────────
+  const endDate = new Date("2026-06-30T23:59:59");
+
+  function updateCountdown() {
+    const diff = endDate.getTime() - Date.now();
+
+    if (diff <= 0) {
+      const el = document.getElementById("countdown");
+      if (el) el.innerHTML = '<span class="font-Montserrat text-sm font-semibold">Oferta finalizada</span>';
+      return;
+    }
+
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000)  / 60000);
+    const secs  = Math.floor((diff % 60000)    / 1000);
+
+    const set = (id: string, val: number) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = String(val).padStart(2, "0");
+    };
+    set("cnt-days",  days);
+    set("cnt-hours", hours);
+    set("cnt-mins",  mins);
+    set("cnt-secs",  secs);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ── WhatsApp con datos del formulario ────────────────────────────────────
+  document.getElementById("btn-whatsapp")?.addEventListener("click", () => {
+    const fechas    = (document.getElementById("fechas")    as HTMLInputElement)?.value  || "";
+    const nombre    = (document.getElementById("nombre")    as HTMLInputElement)?.value  || "";
+    const contacto  = (document.getElementById("contacto")  as HTMLInputElement)?.value  || "";
+    const huespedes = (document.getElementById("huespedes") as HTMLSelectElement)?.value || "";
+
+    let msg = "Hola, me interesa el paquete *Hospedaje + Baldi* (₡49.800 i.i por persona).";
+    if (nombre)    msg += `\n*Nombre:* ${nombre}`;
+    if (fechas)    msg += `\n*Fechas:* ${fechas}`;
+    if (huespedes) msg += `\n*Huéspedes:* ${huespedes}`;
+    if (contacto)  msg += `\n*Contacto:* ${contacto}`;
+
+    window.open(`https://wa.me/50685274677?text=${encodeURIComponent(msg)}`, "_blank");
+  });
+
+  // ── Date picker nativo ────────────────────────────────────────────────────
+  const fechasInput = document.getElementById("fechas") as HTMLInputElement;
+  fechasInput?.addEventListener("click", () => {
+    const picker = document.createElement("input");
+    picker.type = "date";
+    picker.min  = "2026-04-10";
+    picker.max  = "2026-06-30";
+    picker.style.cssText = "position:fixed;opacity:0;pointer-events:none;";
+    document.body.appendChild(picker);
+    picker.focus();
+    picker.click();
+    picker.addEventListener("change", () => {
+      if (picker.value) {
+        const [y, m, d] = picker.value.split("-");
+        fechasInput.value = `${d}/${m}/${y}`;
+      }
+      document.body.removeChild(picker);
+    });
+    picker.addEventListener("blur", () => {
+      setTimeout(() => {
+        if (document.body.contains(picker)) document.body.removeChild(picker);
+      }, 200);
+    });
+  });
+</script>
