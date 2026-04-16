@@ -6,24 +6,183 @@ import Footer from "@components/Footer.astro";
 
 <Layout>
   <Fragment slot="head">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Hospedaje + Pase del Día Baldi | ₡49.800 i.i" />
-    <meta property="og:description" content="Paquete exclusivo para nacionales: 1 noche en Downtown La Fortuna + Pase del día en Baldi Hot Springs + Desayuno + Almuerzo y Cena. Válido del 10 de abril al 30 de junio." />
-    <meta property="og:image" content="https://i.ibb.co/Xr70WzXY/baldi3.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://lafortunadowntown.com/baldi" />
+    <!-- ── Título y descripción ───────────────────────────────────────── -->
+    <title>Paquete Hospedaje + Baldi Hot Springs La Fortuna | ₡49.800 i.i | Downtown</title>
+    <meta name="description" content="Paquete para nacionales en La Fortuna, Costa Rica: 1 noche en hotel boutique céntrico + Pase del día en Baldi Hot Springs (10AM–10PM) + Desayuno + Almuerzo y Cena en Baldi. Desde ₡49.800 i.i por persona. Niños 0–5 GRATIS. Válido del 10 de abril al 30 de junio 2026." />
+
+    <!-- ── Keywords (señal de relevancia temática para crawlers) ─────── -->
+    <meta name="keywords" content="paquetes La Fortuna Costa Rica, hospedaje aguas termales La Fortuna, Baldi Hot Springs paquete, hotel La Fortuna centro, paquete Volcán Arenal, aguas termales La Fortuna precio, paquetes nacionales Costa Rica, hotel boutique La Fortuna, Downtown La Fortuna hotel, paquete todo incluido La Fortuna, termales La Fortuna, turismo La Fortuna San Carlos, paquetes familiares La Fortuna, ofertas hotel La Fortuna" />
+
+    <!-- ── Canónica ───────────────────────────────────────────────────── -->
+    <link rel="canonical" href="https://lafortunadowntown.com/baldi" />
+
+    <!-- ── Geo y región ───────────────────────────────────────────────── -->
+    <meta name="geo.region" content="CR" />
+    <meta name="geo.placename" content="La Fortuna, Costa Rica" />
+    <meta name="geo.position" content="10.4712;-84.6455" />
+    <meta name="ICBM" content="10.4712, -84.6455" />
+    <meta name="language" content="es-CR" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Downtown La Fortuna Boutique Hotel" />
+
+    <!-- ── Open Graph (Facebook, WhatsApp, LinkedIn) ─────────────────── -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Downtown La Fortuna Boutique Hotel" />
     <meta property="og:locale" content="es_CR" />
-    <!-- Twitter / WhatsApp -->
+    <meta property="og:url" content="https://lafortunadowntown.com/baldi" />
+    <meta property="og:title" content="Paquete Hospedaje + Baldi Hot Springs | ₡49.800 i.i – La Fortuna, Costa Rica" />
+    <meta property="og:description" content="Paquete para nacionales: hotel boutique en el centro de La Fortuna + Pase del día en Baldi Hot Springs + Desayuno + Almuerzo y Cena. Niños 0–5 GRATIS. Válido del 10 abril al 30 junio 2026." />
+    <meta property="og:image" content="https://i.ibb.co/Xr70WzXY/baldi3.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Aguas Termales Baldi Hot Springs La Fortuna Costa Rica" />
+
+    <!-- ── Twitter Card ───────────────────────────────────────────────── -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hospedaje + Pase del Día Baldi | ₡49.800 i.i" />
-    <meta name="twitter:description" content="Paquete exclusivo para nacionales: 1 noche en Downtown La Fortuna + Pase del día en Baldi Hot Springs + Desayuno + Almuerzo y Cena. Válido del 10 de abril al 30 de junio." />
+    <meta name="twitter:title" content="Paquete Hospedaje + Baldi Hot Springs | ₡49.800 i.i – La Fortuna" />
+    <meta name="twitter:description" content="Paquete para nacionales en La Fortuna: hotel + Baldi Hot Springs + Desayuno + Almuerzo y Cena. Niños 0–5 GRATIS. Válido del 10 abril al 30 junio 2026." />
     <meta name="twitter:image" content="https://i.ibb.co/Xr70WzXY/baldi3.png" />
-    <!-- SEO -->
-    <meta name="description" content="Paquete exclusivo para nacionales: 1 noche en Downtown La Fortuna + Pase del día en Baldi Hot Springs + Desayuno + Almuerzo y Cena. ₡49.800 i.i por persona. Válido del 10 de abril al 30 de junio." />
-    <title>Hospedaje + Pase del Día Baldi | Downtown La Fortuna</title>
+
+    <!-- ── JSON-LD: Offer + Hotel (Google, Bing, IA crawlers) ─────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Hotel",
+          "@id": "https://lafortunadowntown.com/#hotel",
+          "name": "Downtown La Fortuna Boutique Hotel",
+          "description": "Hotel boutique ubicado en el corazón de La Fortuna, Alajuela, Costa Rica. A pasos del parque central y cerca de las principales experiencias de la zona, incluyendo el Volcán Arenal y las aguas termales Baldi Hot Springs.",
+          "url": "https://lafortunadowntown.com",
+          "telephone": "+50640002027",
+          "email": "reservations@lafortunadowntown.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "25 m sur de la iglesia católica La Fortuna",
+            "addressLocality": "La Fortuna",
+            "addressRegion": "Costa Rica",
+            "addressCountry": "CR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 10.4712,
+            "longitude": -84.6455
+          },
+          "image": "https://i.ibb.co/Xr70WzXY/baldi3.png",
+          "priceRange": "₡₡",
+          "starRating": { "@type": "Rating", "ratingValue": "3" },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WiFi gratuito", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parqueo privado gratuito", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Piscina", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Desayuno incluido", "value": true }
+          ]
+        },
+        {
+          "@type": "Product",
+          "@id": "https://lafortunadowntown.com/baldi#paquete",
+          "name": "Paquete Hospedaje + Pase del Día Baldi Hot Springs – La Fortuna",
+          "description": "Paquete turístico para nacionales costarricenses: 1 noche de alojamiento en Downtown La Fortuna Boutique Hotel + Pase del día en Baldi Hot Springs (10AM–10PM, 25 piscinas termales) + Desayuno (a la carta o buffet) + Almuerzo y Cena en Baldi (buffet) + Bebida de bienvenida + Cocteles 2×1 en Selva Negra Bar o María Bonita Steak House + Parqueo y WiFi gratuito. Niños de 0 a 5 años sin costo. Válido del 10 de abril al 30 de junio de 2026.",
+          "image": "https://i.ibb.co/Xr70WzXY/baldi3.png",
+          "url": "https://lafortunadowntown.com/baldi",
+          "brand": {
+            "@type": "Brand",
+            "name": "Downtown La Fortuna Boutique Hotel"
+          },
+          "offers": {
+            "@type": "Offer",
+            "name": "Paquete Hospedaje + Pase del Día Baldi",
+            "url": "https://lafortunadowntown.com/baldi",
+            "price": "49800",
+            "priceCurrency": "CRC",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "49800",
+              "priceCurrency": "CRC",
+              "unitText": "por persona en ocupación doble"
+            },
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-04-10",
+            "validThrough": "2026-06-30",
+            "seller": {
+              "@type": "Organization",
+              "name": "Downtown La Fortuna Boutique Hotel",
+              "url": "https://lafortunadowntown.com"
+            }
+          },
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Nacionales costarricenses, familias y parejas"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué incluye el paquete Hospedaje + Baldi en La Fortuna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El paquete incluye: 1 noche de alojamiento en Downtown La Fortuna Boutique Hotel, pase del día en Baldi Hot Springs (10AM–10PM con acceso a 25 piscinas termales), desayuno (a la carta o buffet), almuerzo y cena en Baldi Hot Springs (buffet), bebida de bienvenida, cocteles 2×1 en Selva Negra Bar o María Bonita Steak House de 12 m.d. a 5 p.m., parqueo privado gratuito, piscina del hotel y WiFi gratuito."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cuesta el paquete Hospedaje + Baldi en La Fortuna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El paquete cuesta ₡49.800 impuestos incluidos (i.i) por persona en ocupación doble. Los niños de 0 a 5 años no tienen costo adicional. Los niños de 6 a 10 años tienen un precio de ₡35.000."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Hasta cuándo es válida la oferta del paquete Baldi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La oferta es válida del 10 de abril al 30 de junio de 2026. Aplican restricciones según disponibilidad."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Dónde está ubicado el hotel Downtown La Fortuna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Downtown La Fortuna Boutique Hotel está ubicado en el corazón de La Fortuna de San Carlos, Alajuela, Costa Rica, a 25 metros al sur de la iglesia católica, a pasos del parque central y cerca de las principales experiencias de la zona como Baldi Hot Springs y el Volcán Arenal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la política de cancelación del paquete?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cancelaciones con más de 30 días de anticipación: sin cargo. Entre 29 y 15 días antes: cargo del 50% de la reserva. Entre 14 y 0 días antes: cargo del 100% de la reserva."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Los niños entran gratis al paquete Baldi La Fortuna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, los niños de 0 a 5 años entran completamente gratis. Los niños de 6 a 10 años tienen un precio especial de ₡35.000 por persona."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "TouristAttraction",
+          "name": "Baldi Hot Springs – La Fortuna, Costa Rica",
+          "description": "Complejo de aguas termales en La Fortuna, Costa Rica, con 25 piscinas calentadas naturalmente por el Volcán Arenal, toboganes, sauna y jardín termal. Horario: 10AM a 10PM.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "La Fortuna",
+            "addressRegion": "Costa Rica",
+            "addressCountry": "CR"
+          },
+          "touristType": ["Familias", "Parejas", "Turismo nacional", "Turismo internacional"]
+        }
+      ]
+    }
+    </script>
   </Fragment>
 
   <Header />
