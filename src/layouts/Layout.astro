@@ -1,15 +1,23 @@
 ---
 import { SEO } from "astro-seo";
+
+const {
+  title = "Downtown La Fortuna | Pura Vida",
+  description = "UNA EXPERIENCIA ÚNICA DE HOSPEDAJE EN LA FORTUNA",
+  canonical,
+  lang = "es-CR",
+} = Astro.props;
 ---
 
-<html lang="es">
+<html lang={lang}>
 	<head>
 		<SEO
-      title="Downtown La Fortuna | Pura Vida"
-      description="UNA EXPERIENCIA ÚNICA DE HOSPEDAJE EN LA FORTUNA"
+      title={title}
+      description={description}
+      canonical={canonical}
       openGraph={{
         basic: {
-          title: "Downtown La Fortuna | Pura Vida",
+          title: title,
           type: "website",
           image: "https://tudominio.com/icon.ico",
         }
@@ -56,7 +64,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 		</style>
 
-		<title>Downtown La Fortuna | Pura Vida</title>
 	<slot name="head" />
 
 <!-- Meta Pixel Code -->
@@ -89,5 +96,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 	</body>
 	<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-  
+
 </html>
