@@ -1,4 +1,4 @@
-d# robots.txt para https://www.lafortunadowntown.com
+# robots.txt para https://lafortunadowntown.com
 
 User-agent: *
 Disallow: /admin/
@@ -16,13 +16,10 @@ Disallow: /*?ref=
 # Permite rastreo general
 Allow: /
 
-# Sitemap (importantísimo para Google)
-Sitemap: https://lafortunadowntown.com/sitemap.xml
+# Sitemap
+Sitemap: https://lafortunadowntown.com/sitemap-index.xml
 
-# Políticas de rastreo (opcional)
-Crawl-delay: 5
-
-# Bloquear bots maliciosos comunes (opcional)
+# Bloquear bots maliciosos comunes
 User-agent: AhrefsBot
 Disallow: /
 
