@@ -2,9 +2,9 @@
 import { SEO } from "astro-seo";
 
 const {
-  title = "Downtown La Fortuna | Pura Vida",
-  description = "UNA EXPERIENCIA ÚNICA DE HOSPEDAJE EN LA FORTUNA",
-  canonical,
+  title = "Downtown La Fortuna | Hotel Boutique en La Fortuna, Costa Rica",
+  description = "Vive una experiencia única de hospedaje en el corazón de La Fortuna, Costa Rica. Habitaciones modernas, piscina y fácil acceso al Volcán Arenal.",
+  canonical = "https://lafortunadowntown.com/",
   lang = "es-CR",
 } = Astro.props;
 ---
@@ -19,8 +19,27 @@ const {
         basic: {
           title: title,
           type: "website",
-          image: "https://tudominio.com/icon.ico",
-        }
+          image: "https://lafortunadowntown.com/fondo1.png",
+          url: "https://lafortunadowntown.com/",
+        },
+        optional: {
+          description: description,
+          locale: "es_CR",
+          siteName: "Downtown La Fortuna",
+        },
+        image: {
+          alt: "Downtown La Fortuna – Hotel Boutique en La Fortuna, Costa Rica",
+          width: 1920,
+          height: 1080,
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "@lafortunadowntown",
+        title: title,
+        description: description,
+        image: "https://lafortunadowntown.com/fondo1.png",
+        imageAlt: "Downtown La Fortuna – Hotel Boutique en La Fortuna, Costa Rica",
       }}
       extend={{
         link: [
